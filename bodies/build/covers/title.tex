@@ -1,0 +1,81 @@
+\documentclass[11pt]{report}
+
+\usepackage[T1]{fontenc}
+\usepackage[papersize={17in, 11in}]{geometry}
+\usepackage{tikz}
+\usepackage{xltxtra,fontspec,xunicode}
+\usetikzlibrary{calc}
+
+\defaultfontfeatures{Scale=MatchLowercase}
+\setromanfont[Numbers=Uppercase]{Bodoni 72 Book}
+\newlength{\drop}
+\parindent=0pt
+
+\begin{document}
+    \begin{titlepage}
+
+        \begin{tikzpicture}[remember picture, overlay]
+            \draw[line width = 1.6pt]
+                ($(current page.north west) + (1in,-1in)$)
+                rectangle
+                ($(current page.south east) + (-1in,1in)$);
+            \draw[line width = 0.4pt]
+                ($(current page.north west) + (1in,-1in) + (2.8pt,-2.8pt)$)
+                rectangle
+                ($(current page.south east) + (-1in,1in) + (-2.8pt,2.8pt)$);
+        \end{tikzpicture}
+
+        \drop=0.1\textheight
+        \centering
+
+        \vspace*{8\baselineskip}
+
+        \rule{\textwidth}{1.6pt}\vspace*{-\baselineskip}\vspace*{2pt}
+        \rule{\textwidth}{0.4pt}\\[\baselineskip]
+        {
+            \fontsize{2cm}{1em}\selectfont
+            B O D I E S {}{}{} W I T H O U T {}{} {}O R G A N S
+        }
+        \rule{\textwidth}{0.4pt}\vspace*{-\baselineskip}\vspace{3.2pt}
+        \rule{\textwidth}{1.6pt}\\[\baselineskip]
+
+        {
+           \large
+            or,
+        }
+        {
+            \itshape
+            Lagahoo
+            \par
+        }
+
+        \vspace*{3\baselineskip}
+
+        {
+            \itshape
+            for
+        }
+        {
+            \large
+            five Synthesizers
+             \par
+        }
+        \vspace*{13\baselineskip}
+        
+        {
+            \Large
+            T R I N T O N
+            \par
+        }
+
+        \vspace*{4\baselineskip}
+
+        {
+            \Large
+            2022 - 
+        }
+
+        \vfill
+
+    \end{titlepage}
+\end{document}
