@@ -16,8 +16,21 @@
                 \context Voice = "piano 1 voice"
                 {
                     s1 * 3/4
-                    s1 * 1
+                    - \fermata
+                    c'8
+                    - \fermata
+                    c'8
+                    - \fermata
+                    c'8
+                    - \fermata
+                    c'8
+                    - \fermata
+                    c'8
+                    c'8
+                    c'8
+                    c'8
                     s1 * 9/8
+                    - \fermata
                 }
             }
             \context Staff = "piano 2 staff"

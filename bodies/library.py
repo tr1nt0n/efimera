@@ -8,6 +8,7 @@ from abjadext import microtones
 
 # score
 
+
 def bodies_score(time_signatures):
     score = trinton.make_empty_score(
         instruments=[

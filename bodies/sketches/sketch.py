@@ -16,9 +16,13 @@ score = library.bodies_score(
     ]
 )
 
-# test
+# rhythms
 
+# cache leaves
 
+cache = trinton.cache_leaves(score)
+
+# pitching and attachments
 
 # show file
 
