@@ -35,7 +35,6 @@ SynthDef(
 // Synthesizer II
 SynthDef(
 	\synth_II, { | out, freq, dur, gate = 1 pan = 0 |
-		var overlap = dur / 9;
 		var env = Linen.kr(
 			gate,
 			attackTime: dur - (dur * 1/9),
@@ -47,13 +46,47 @@ SynthDef(
 		var grain = GrainSin.ar(
 			numChannels: 1,
 			trigger: Impulse.ar(freq),
-			dur: overlap / freq,
+			dur: (dur / 9) / (freq / 9),
 			freq: freq,
 		);
 
 		grain = LeakDC.ar(grain);
 
 		OffsetOut.ar(out, Pan2.ar(grain, pan, env) );
+	}
+).add;
+)
+
+(
+// Synthesizer III
+SynthDef(
+	\synth_III, { | out, freq, dur, gate = 1 pan = 0 |
+		var env = Linen.kr(
+			gate,
+			attackTime: 0.01,
+			susLevel: 0.9,
+			releaseTime: dur,
+			doneAction: Done.freeSelf,
+		);
+
+		var pluck = Pluck.ar(
+			in: WhiteNoise.ar(freq / 1000),
+			trig: freq,
+			maxdelaytime: dur.reciprocal,
+			delaytime: freq.reciprocal,
+			decaytime: dur * 2,
+		);
+
+		var sin = PMOsc.ar(
+			carfreq: freq * do({ [ 9, 13, 17, ].choose }),
+			modfreq: freq * do({ [ 3, 5, 7, ].choose }),
+			pmindex: 0.4,
+			modphase: 1
+		);
+
+		pluck = LeakDC.ar(pluck + (sin / 150));
+
+		OffsetOut.ar(out, Pan2.ar(pluck, pan, env) );
 	}
 ).add;
 )
