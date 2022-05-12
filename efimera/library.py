@@ -1,7 +1,6 @@
 import abjad
 import trinton
 import evans
-import trio
 import random
 from abjadext import rmakers
 from abjadext import microtones

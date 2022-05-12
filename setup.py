@@ -22,8 +22,8 @@ if __name__ == "__main__":
         author_email="trinton.k.prater@gmail.com",
         install_requires=install_requires,
         keywords=", ".join(keywords),
-        name="bodies",
-        packages=["bodies"],
+        name="efimera",
+        packages=["efimera"],
         platforms="Any",
-        url="https://github.com/tr1nt0n/bodies.git",
+        url="https://github.com/tr1nt0n/efimera.git",
     )
