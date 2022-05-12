@@ -28,11 +28,11 @@ cache = trinton.cache_leaves(score)
 
 trinton.render_file(
     score=score,
-    segment_path="/Users/trintonprater/scores/bodies/bodies/sketches",
-    build_path="/Users/trintonprater/scores/bodies/bodies/build",
+    segment_path="/Users/trintonprater/scores/efimera/efimera/sketches",
+    build_path="/Users/trintonprater/scores/efimera/efimera/build",
     segment_name="sketch",
     includes=[
-        "/Users/trintonprater/scores/bodies/bodies/build/bodies-stylesheet.ily",
+        "/Users/trintonprater/scores/efimera/efimera/build/efimera-stylesheet.ily",
         "/Users/trintonprater/abjad/abjad/_stylesheets/abjad.ily",
     ],
 )

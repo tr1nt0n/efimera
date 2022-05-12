@@ -9,9 +9,9 @@
 \include "/Users/trintonprater/abjad/abjad/_stylesheets/ekmelos-ji-accidental-markups.ily"
 
 \header {
-    dedication = \markup \override #'(font-name . "Bodoni72 Book Italic") \fontsize #3 \center-column {". . . donde quiera que podrían estar ellos siempre recuerdan que el pasado era una mentira, que la memoria no tiene retorno, que cada primavera pasado nunca se pudo recuperar, y que el amor más salvaje y más tenaz era una verdad efímera en el final . . ." \fontsize #0.25 \with-color #white "."}
-    title = \markup \override #'(font-name . "Bodoni72") \fontsize #12 \center-column {"B O D I E S  W I T H O U T  O R G A N S" \fontsize #0.01 \with-color #white "."}
-    subtitle = \markup \override #'(font-name . "Bodoni72") \fontsize #3 \center-column {"or, \"Lagahoo\"" \fontsize #0.01 \with-color #white "."}
+    dedication = \markup \override #'(font-name . "Bodoni72 Book Italic") \fontsize #3 \center-column {". . . donde quiera que podrían estar ellos siempre recuerdan que el pasado era una mentira, que la memoria no tiene retorno, que cada primavera pasado nunca se pudo recuperar, y que el amor más salvaje y más tenaz era una . . ." \fontsize #0.25 \with-color #white "."}
+    title = \markup \override #'(font-name . "Bodoni72 Book Italic") \fontsize #12 \center-column {"verdad efímera en el final" \fontsize #0.01 \with-color #white "."}
+    subtitle = \markup \override #'(font-name . "Bodoni72") \fontsize #3 \center-column {"or, \"Lugarhou\"" \fontsize #0.01 \with-color #white "."}
     composer = \markup \override #'(font-name . "Bodoni72") \fontsize #3 {"Trinton (*2000)"}
 }
 

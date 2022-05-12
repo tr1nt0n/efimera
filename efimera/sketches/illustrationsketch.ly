@@ -1,6 +1,6 @@
 \version "2.20.0"
 \language "english"
-\include "/Users/trintonprater/scores/bodies/bodies/build/bodies-stylesheet.ily"
+\include "/Users/trintonprater/scores/efimera/efimera/build/efimera-stylesheet.ily"
 \include "/Users/trintonprater/abjad/abjad/_stylesheets/abjad.ily"
 \score
 {
@@ -22,21 +22,8 @@
                 \context Voice = "piano 1 voice"
                 {
                     s1 * 3/4
-                    - \fermata
-                    c'8
-                    - \fermata
-                    c'8
-                    - \fermata
-                    c'8
-                    - \fermata
-                    c'8
-                    - \fermata
-                    c'8
-                    c'8
-                    c'8
-                    c'8
+                    s1 * 1
                     s1 * 9/8
-                    - \fermata
                 }
             }
             \context Staff = "piano 2 staff"
