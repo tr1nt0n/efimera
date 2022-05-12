@@ -63,14 +63,18 @@ SynthDef(
 	\synth_III, { | out, freq, dur, gate = 1 pan = 0 |
 		var env = Linen.kr(
 			gate,
-			attackTime: 0.01,
+			attackTime: 0.1,
 			susLevel: 0.9,
 			releaseTime: dur,
 			doneAction: Done.freeSelf,
 		);
 
 		var pluck = Pluck.ar(
-			in: WhiteNoise.ar(freq / 1000),
+			in: Logistic.ar(
+					chaosParam: 3.57,
+					freq: freq * 2,
+					init: dur / 10,
+			),
 			trig: freq,
 			maxdelaytime: dur.reciprocal,
 			delaytime: freq.reciprocal,
@@ -87,6 +91,32 @@ SynthDef(
 		pluck = LeakDC.ar(pluck + (sin / 150));
 
 		OffsetOut.ar(out, Pan2.ar(pluck, pan, env) );
+	}
+).add;
+)
+
+(
+// Synthesizer IV
+SynthDef(
+	\synth_IV, { | out, freq, dur, gate = 1 pan = 0 |
+		var env = Linen.kr(
+			gate,
+			attackTime: 0.001,
+			susLevel: 1,
+			releaseTime: dur,
+			doneAction: Done.freeSelf,
+		);
+
+		var saw = SyncSaw.ar(
+			syncFreq: Logistic.ar(
+				chaosParam: 3.58,
+				freq: (dur * freq) * (1 - freq),
+				init: dur / 10,
+			),
+			sawFreq: freq * 13,
+		);
+
+		OffsetOut.ar(out, Pan2.ar(saw, pan, env) );
 	}
 ).add;
 )
