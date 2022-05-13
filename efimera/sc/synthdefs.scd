@@ -63,7 +63,7 @@ SynthDef(
 	\synth_III, { | out, freq, dur, gate = 1 pan = 0 |
 		var env = Linen.kr(
 			gate,
-			attackTime: 0.1,
+			attackTime: 0.01,
 			susLevel: 0.9,
 			releaseTime: dur,
 			doneAction: Done.freeSelf,
@@ -77,8 +77,22 @@ SynthDef(
 			),
 			trig: freq,
 			maxdelaytime: dur.reciprocal,
-			delaytime: freq.reciprocal,
-			decaytime: dur * 2,
+			delaytime: Vibrato.ar(
+				freq: DC.ar(freq),
+				rate: Logistic.ar(
+					chaosParam: 3.59,
+					freq: freq * 2,
+					init: dur / 10,
+				),
+				depth: freq / (freq * 100),
+				delay: Logistic.ar(
+					chaosParam: 3.58,
+					freq: freq,
+					init: dur / 1000,
+				),
+				onset: freq / (freq * 1000),
+			).reciprocal,
+			decaytime: dur * 2
 		);
 
 		var sin = PMOsc.ar(
@@ -88,7 +102,7 @@ SynthDef(
 			modphase: 1
 		);
 
-		pluck = LeakDC.ar(pluck + (sin / 150));
+		pluck = pluck + (sin / 150);
 
 		OffsetOut.ar(out, Pan2.ar(pluck, pan, env) );
 	}
@@ -116,7 +130,23 @@ SynthDef(
 			sawFreq: freq * 13,
 		);
 
-		OffsetOut.ar(out, Pan2.ar(saw, pan, env) );
+		var noise = Logistic.ar(
+			chaosParam: 3.57,
+			freq: Crackle.ar(
+				chaosParam: dur / 2,
+				mul: freq * 9,
+			),
+			init: 1 / freq,
+		);
+
+		var pm = PMOsc.ar(
+			carfreq: saw * (freq * 7),
+			modfreq: noise * (freq * 5),
+			pmindex: dur / 2,
+			modphase: 1
+		);
+
+		OffsetOut.ar(out, Pan2.ar(pm, pan, env) );
 	}
 ).add;
 )

@@ -8,7 +8,7 @@ from efimera import library
 
 # score
 
-score = library.bodies_score(
+score = library.efimera_score(
     [
         (3, 4),
         (4, 4),

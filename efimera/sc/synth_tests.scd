@@ -1,25 +1,51 @@
 (
-// Synthesizer IV
+// Synthesizer III
 SynthDef(
-	\synth_IV, { | out, freq, dur, gate = 1 pan = 0 |
+	\synth_III, { | out, freq, dur, gate = 1 pan = 0 |
 		var env = Linen.kr(
 			gate,
-			attackTime: 0.001,
-			susLevel: 1,
+			attackTime: 0.01,
+			susLevel: 0.9,
 			releaseTime: dur,
 			doneAction: Done.freeSelf,
 		);
 
-		var saw = SyncSaw.ar(
-			syncFreq: Logistic.ar(
-				chaosParam: 3.58,
-				freq: (dur * freq) * (1 - freq),
-				init: dur / 10,
+		var pluck = Pluck.ar(
+			in: Logistic.ar(
+					chaosParam: 3.57,
+					freq: freq * 2,
+					init: dur / 10,
 			),
-			sawFreq: freq * 13,
+			trig: freq,
+			maxdelaytime: dur.reciprocal,
+			delaytime: Vibrato.ar(
+				freq: DC.ar(freq),
+				rate: Logistic.ar(
+					chaosParam: 3.59,
+					freq: freq * 2,
+					init: dur / 10,
+				),
+				depth: freq / (freq * 100),
+				delay: Logistic.ar(
+					chaosParam: 3.58,
+					freq: freq,
+					init: dur / 1000,
+				),
+				onset: freq / (freq * 1000),
+			).reciprocal,
+			decaytime: dur * 2
 		);
 
-		OffsetOut.ar(out, Pan2.ar(saw, pan, env) );
+		var sin = PMOsc.ar(
+			carfreq: freq * do({ [ 9, 13, 17, ].choose }),
+			modfreq: freq * do({ [ 3, 5, 7, ].choose }),
+			pmindex: 0.4,
+			modphase: 1
+		);
+
+		pluck = pluck + (sin / 150);
+
+		OffsetOut.ar(out, Pan2.ar(pluck, pan, env) );
 	}
 ).add;
 )
@@ -27,7 +53,7 @@ SynthDef(
 (
 	// voice 1
 		Pbind(
-			\instrument, \synth_IV, \freq, Pseq(
+			\instrument, \synth_III, \freq, Pseq(
 				[
 					[
 						391.99543598174927 * 15/8,
@@ -68,7 +94,7 @@ SynthDef(
 		).play;
 	// voice 2
 		Pbind(
-			\instrument, \synth_IV, \freq, Pseq(
+			\instrument, \synth_III, \freq, Pseq(
 				[
 					[
 						391.99543598174927 * 45/32,
@@ -105,7 +131,7 @@ SynthDef(
 		).play;
 	// voice 3
 		Pbind(
-			\instrument, \synth_IV, \freq, Pseq(
+			\instrument, \synth_III, \freq, Pseq(
 				[
 					[
 						195.99771799087463 * 50/27,
@@ -138,7 +164,7 @@ SynthDef(
 		).play;
 	// voice 4
 		Pbind(
-			\instrument, \synth_IV, \freq, Pseq(
+			\instrument, \synth_III, \freq, Pseq(
 				[
 					[
 						195.99771799087463 * 6/5,
@@ -177,7 +203,7 @@ SynthDef(
 (
 	// voice 1
 		Pbind(
-			\instrument, \synth_IV, \freq, Pseq(
+			\instrument, \synth_III, \freq, Pseq(
 				[
 					[
 						Rest(),
