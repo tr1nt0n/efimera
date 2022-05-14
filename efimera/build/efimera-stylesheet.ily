@@ -142,7 +142,7 @@
     evenHeaderMarkup = \markup ""
     oddFooterMarkup = \markup
         \fill-line {
-            "Bodies Without Organs - Trinton"
+            "verdad efímera en el final - Trinton"
         \concat {
             \fontsize #3
                 \fromproperty #'page:page-number-string
@@ -155,6 +155,6 @@
                     \fontsize #3
                         \fromproperty #'page:page-number-string
                 }
-                "Bodies Without Organs - Trinton"
+                "verdad efímera en el final - Trinton"
             }
 }
