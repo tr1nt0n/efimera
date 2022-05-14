@@ -150,3 +150,64 @@ SynthDef(
 	}
 ).add;
 )
+
+(
+// Synthesizer V
+SynthDef(
+	\synth_V, { | out, freq, dur, gate = 1 pan = 0 |
+
+		var saw = Saw.ar(freq: freq * 5);
+
+		var syncsaw = SyncSaw.ar(
+			syncFreq: Slope.ar(in: saw),
+			sawFreq: freq,
+		);
+
+		var spring = Spring.ar(
+			in: syncsaw,
+			spring: dur,
+			damp: freq / 1000,
+		);
+
+		var grain = GrainFM.ar(
+			trigger: Impulse.kr(freq / 1000),
+			dur: dur / 5,
+			carfreq: freq,
+			modfreq: freq * 13,
+		);
+
+		var conv = Convolution.ar(
+			in: spring,
+			kernel: grain,
+			framesize: 1024,
+		);
+
+		var rings = Ringz.ar(
+			in: conv,
+			freq: freq * 13,
+			decaytime: dur,
+		);
+
+		var blip = Blip.ar(
+			freq: freq / 1.5,
+			numharm: dur * 5,
+		);
+
+		var output = Convolution.ar(
+			in: rings,
+			kernel: blip,
+			framesize: 1024,
+		);
+
+		var env = Linen.kr(
+				gate,
+				attackTime: dur / 13,
+				susLevel: 0.01,
+				releaseTime: dur,
+				doneAction: Done.freeSelf,
+		);
+
+		OffsetOut.ar(out, Pan2.ar(output, pan, env) );
+	}
+).add;
+)
