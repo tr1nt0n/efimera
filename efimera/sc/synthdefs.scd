@@ -2,6 +2,7 @@
 // Synthesizer I
 SynthDef(
 	\synth_I, { | out, freq = 440 gate = 1 pan = 0 |
+
 		var pm = PMOsc.ar(
 			carfreq: Vibrato.ar(
 				freq: DC.ar(freq),
@@ -12,8 +13,10 @@ SynthDef(
 			),
 			modfreq: freq * 1/9,
 			pmindex: 0.4,
-			modphase: 1
+			modphase: 1,
+			mul: 2.5
 		);
+
 		var pulse = LFPulse.ar(
 			freq: Vibrato.ar(
 				freq: DC.ar((freq * 4) * 1/7),
@@ -24,9 +27,31 @@ SynthDef(
 		    ),
 			iphase: freq / (freq * 100),
 			width: freq / 1000,
+			mul: 1/5
 		);
-		var env = Linen.kr(gate, attackTime: 1, susLevel: 0.25, releaseTime: 1, doneAction: Done.freeSelf);
-		OffsetOut.ar(out, Pan2.ar(((pulse / 4) * 1/5) + pm, pan, env) );
+
+		var env = Linen.kr(
+			gate,
+			attackTime: 1,
+			susLevel: 0.25,
+			releaseTime: 1,
+			doneAction: Done.freeSelf
+		);
+
+		var conv = Convolution.ar(
+			in: pm,
+			kernel: pulse,
+			framesize: 1024,
+			mul: 1/9
+		);
+
+		var output = Limiter.ar(
+			in: Mix.ar([pm, pulse, conv,]),
+			level: 1,
+			dur: 0.01,
+		);
+
+		OffsetOut.ar(out, Pan2.ar(output, pan, env) );
 	}
 ).add;
 )
@@ -50,9 +75,13 @@ SynthDef(
 			freq: freq,
 		);
 
-		grain = LeakDC.ar(grain);
+		var output = Limiter.ar(
+			in: LeakDC.ar(grain),
+			level: 1,
+			dur: 0.01,
+		);
 
-		OffsetOut.ar(out, Pan2.ar(grain, pan, env) );
+		OffsetOut.ar(out, Pan2.ar(output, pan, env) );
 	}
 ).add;
 )
@@ -99,12 +128,23 @@ SynthDef(
 			carfreq: freq * do({ [ 9, 13, 17, ].choose }),
 			modfreq: freq * do({ [ 3, 5, 7, ].choose }),
 			pmindex: 0.4,
-			modphase: 1
+			modphase: 1,
+			mul: 1/150
 		);
 
-		pluck = pluck + (sin / 150);
+		var conv = Convolution.ar(
+			in: pluck,
+			kernel: sin,
+			framesize: 1024,
+		);
 
-		OffsetOut.ar(out, Pan2.ar(pluck, pan, env) );
+		var output = Limiter.ar(
+			in: conv,
+			level: 1,
+			dur: 0.01,
+		)
+
+		OffsetOut.ar(out, Pan2.ar(output, pan, env) );
 	}
 ).add;
 )
@@ -146,7 +186,13 @@ SynthDef(
 			modphase: 1
 		);
 
-		OffsetOut.ar(out, Pan2.ar(pm, pan, env) );
+		var output = Limiter.ar(
+			in: pm,
+			level: 0.5,
+			dur: 0.01,
+		);
+
+		OffsetOut.ar(out, Pan2.ar(output, pan, env) );
 	}
 ).add;
 )
@@ -155,6 +201,14 @@ SynthDef(
 // Synthesizer V
 SynthDef(
 	\synth_V, { | out, freq, dur, gate = 1 pan = 0 |
+
+		var env = Linen.kr(
+			gate,
+			attackTime: dur / 13,
+			susLevel: 0.9,
+			releaseTime: dur,
+			doneAction: Done.freeSelf,
+		);
 
 		var saw = Saw.ar(freq: freq * 5);
 
@@ -176,14 +230,14 @@ SynthDef(
 			modfreq: freq * 13,
 		);
 
-		var conv = Convolution.ar(
+		var conv1 = Convolution.ar(
 			in: spring,
 			kernel: grain,
 			framesize: 1024,
 		);
 
 		var rings = Ringz.ar(
-			in: conv,
+			in: conv1,
 			freq: freq * 13,
 			decaytime: dur,
 		);
@@ -193,18 +247,16 @@ SynthDef(
 			numharm: dur * 5,
 		);
 
-		var output = Convolution.ar(
+		var conv2 = Convolution.ar(
 			in: rings,
 			kernel: blip,
 			framesize: 1024,
 		);
 
-		var env = Linen.kr(
-				gate,
-				attackTime: dur / 13,
-				susLevel: 0.01,
-				releaseTime: dur,
-				doneAction: Done.freeSelf,
+		var output = Limiter.ar(
+			in: conv2,
+			level: 1,
+			dur: 0.01,
 		);
 
 		OffsetOut.ar(out, Pan2.ar(output, pan, env) );
