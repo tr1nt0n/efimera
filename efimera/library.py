@@ -39,10 +39,153 @@ def efimera_score(time_signatures):
 # attachment functions
 
 
+def grid1_attachments():
+    def att_func(selections):
+        pties = abjad.select.logical_ties(selections, pitched=True)
+
+        exclude_last = abjad.select.exclude(pties, [-1])
+
+        skip_one = exclude_last[1:]
+
+        for (
+            tie1,
+            tie2,
+        ) in zip(exclude_last, skip_one):
+            if tie1.written_duration > tie2.written_duration:
+                abjad.attach(abjad.Dynamic("ff"), tie1[0])
+                abjad.attach(abjad.Dynamic("pp"), tie2[0])
+
+    return att_func
+
+
+def grid2_attachments(clef=True):
+    def att_func(selections):
+        if clef is True:
+            abjad.attach(abjad.Clef("bass"), selections[0])
+        for leaf in selections:
+            abjad.attach(abjad.Dynamic("fp"), leaf)
+            abjad.attach(abjad.Articulation(">"), leaf)
+
+    return att_func
+
+
 # pitchhandlers
 
 
+def grid2_pitching():
+    def handler(selections):
+
+        pair = (
+            [
+                -26,
+            ],
+            [
+                [
+                    quicktions.Fraction(_)
+                    for _ in [
+                        "1/1",
+                        "9/8",
+                        "27/20",
+                    ]
+                ]
+            ],
+        )
+
+        pitch_list, ratio_list = pair
+
+        handler = evans.PitchHandler(pitch_list=pitch_list, forget=False)
+
+        handler(selections)
+
+        ratio_handler = evans.PitchHandler(
+            pitch_list=[_ for _ in ratio_list],
+            forget=False,
+            as_ratios=True,
+        )
+
+        ratio_handler(selections)
+
+    return handler
+
+
 # music commands
+
+
+def grid(
+    voices,
+    measures,
+    talea_index=0,
+    pitch_index=0,
+    rewrite_meter=None,
+    preprocessor=None,
+):
+
+    talea = trinton.rotated_sequence(
+        [
+            1,
+            2,
+            1,
+            1,
+            4,
+            1,
+            3,
+            1,
+            1,
+            1,
+            2,
+        ],
+        talea_index,
+    )
+
+    rest_selector = trinton.patterned_leaf_index_selector(
+        [
+            0,
+            4,
+        ],
+        8,
+    )
+
+    trinton.music_command(
+        voice=voices[0],
+        measures=measures,
+        rmaker=rmakers.talea(
+            talea,
+            16,
+            extra_counts=[
+                1,
+                0,
+                3,
+            ],
+        ),
+        rmaker_commands=[
+            rmakers.beam(),
+            rmakers.force_rest(rest_selector),
+        ],
+        rewrite_meter=rewrite_meter,
+        preprocessor=preprocessor,
+        attachment_function=grid1_attachments(),
+    )
+
+    trinton.music_command(
+        voice=voices[1],
+        measures=measures,
+        rmaker=rmakers.talea(
+            [
+                1,
+                1,
+                1,
+                1,
+            ],
+            4,
+        ),
+        rmaker_commands=[
+            rmakers.beam(),
+        ],
+        rewrite_meter=rewrite_meter,
+        preprocessor=preprocessor,
+        pitch_handler=grid2_pitching(),
+        attachment_function=grid2_attachments(),
+    )
 
 
 # sc tools
