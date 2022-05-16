@@ -35,6 +35,7 @@ def efimera_score(time_signatures):
 
     return score
 
+
 # attachment functions
 
 

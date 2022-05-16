@@ -4,6 +4,8 @@ __pycache__/
 *$py.class
 *.pdf
 *.aux
+*.wav
+*.midi
 # C extensions
 *.so
 .DS_Store

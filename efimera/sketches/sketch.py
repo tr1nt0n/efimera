@@ -18,6 +18,7 @@ score = library.efimera_score(
 
 # rhythms
 
+
 def attachment_function(trill=False):
     def english_horn_gliss_attachments(selections, trill=trill):
         for group in abjad.select.group_by_contiguity(selections):
@@ -35,7 +36,9 @@ def attachment_function(trill=False):
             if trill is True:
                 abjad.attach(abjad.StartTrillSpan(), group[0])
                 abjad.attach(abjad.StopTrillSpan(), group[-1])
+
     return english_horn_gliss_attachments
+
 
 for voice_name in [
     "piano 1 voice",
@@ -46,12 +49,29 @@ for voice_name in [
 ]:
     trinton.music_command(
         voice=score[voice_name],
-        measures=[1, 2, 3,],
+        measures=[
+            1,
+            2,
+            3,
+        ],
         rmaker=rmakers.note(),
-        preprocessor=trinton.fuse_quarters_preprocessor((1, 1, 1,)),
+        preprocessor=trinton.fuse_quarters_preprocessor(
+            (
+                1,
+                1,
+                1,
+            )
+        ),
         rmaker_commands=[rmakers.beam()],
         rewrite_meter=-1,
-        pitch_handler=evans.PitchHandler([0, 2, 3, 1,]),
+        pitch_handler=evans.PitchHandler(
+            [
+                0,
+                2,
+                3,
+                1,
+            ]
+        ),
         attachment_function=attachment_function(trill=True),
     )
 
