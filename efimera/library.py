@@ -35,11 +35,19 @@ def efimera_score(time_signatures):
 
     return score
 
+# attachment functions
+
+
+# pitchhandlers
+
+
+# music commands
+
 
 # sc tools
 
 
-def write_sc_file(score, tempo, current_directory):
+def write_sc_file(score, tempo, section_number, current_directory):
     print("Writing SuperCollider file...")
     info = trinton._extract_voice_info(score)
     dir = os.path.dirname(__file__)
@@ -88,7 +96,7 @@ def write_sc_file(score, tempo, current_directory):
         lines += "\t\t\t\t]\n"
         lines += "\t\t\t,1),\n"
         lines += f"\t\t\t\\amp, {1 / len(info)},\n"
-        lines += "\t\t\t\\legato, 1,\n\t\t).play;"
+        lines += f'\t\t\t\\legato, 1,\n\t\t).record(\n\tpath: "{current_directory}/voice{i + 1}_section{section_number}_recording.wav", \n\tbus: 1, \n\tnumChannels: 1,\n);'
 
     lines += ")"
 
