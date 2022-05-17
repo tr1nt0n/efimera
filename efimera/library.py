@@ -158,7 +158,6 @@ def grid(
             ],
         ),
         rmaker_commands=[
-            rmakers.beam(),
             rmakers.force_rest(rest_selector),
         ],
         rewrite_meter=rewrite_meter,

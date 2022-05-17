@@ -30,13 +30,7 @@ library.grid(
 
 # cache leaves
 
-cache = trinton.cache_leaves(score)
-
-info = trinton._extract_voice_info(score)
-
-for _ in info:
-    print(_)
-    print("")
+# cache = trinton.cache_leaves(score)
 
 # pitching and attachments
 
