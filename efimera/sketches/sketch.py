@@ -25,6 +25,7 @@ library.grid(
         2,
         3,
     ],
+    talea_index=3,
     rewrite_meter=-1,
 )
 
@@ -37,6 +38,12 @@ library.grid(
 # beaming
 
 trinton.beam_score_without_splitting(score)
+
+# markups
+
+library.write_startmarkups(score)
+
+library.write_marginmarkups(score)
 
 # write sc file
 

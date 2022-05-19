@@ -53,6 +53,7 @@ def grid1_attachments():
         ) in zip(exclude_last, skip_one):
             if tie1.written_duration > tie2.written_duration:
                 abjad.attach(abjad.Dynamic("ff"), tie1[0])
+                abjad.attach(abjad.Articulation(">"), tie1[0])
                 abjad.attach(abjad.Dynamic("pp"), tie2[0])
 
     return att_func
@@ -70,6 +71,59 @@ def grid2_attachments(clef=True):
 
 
 # pitchhandlers
+
+
+def grid1_pitching(index=0):
+    def handler(selections):
+
+        sel1 = []
+
+        sel2 = []
+
+        ratios1 = trinton.rotated_sequence(
+            [
+                "9/8",
+                "10/9",
+            ],
+            index,
+        )
+
+        ratios2 = trinton.rotated_sequence(
+            [
+                "8/5",
+                "9/5",
+                "50/27",
+                "8/5",
+                "50/27",
+            ],
+            index,
+        )
+
+        for tie in abjad.select.logical_ties(selections, pitched=True):
+
+            if tie.written_duration == abjad.Duration((1, 16)):
+                sel1.append(tie)
+
+            else:
+                sel2.append(tie)
+
+        ratio_handler1 = evans.PitchHandler(
+            pitch_list=[_ for _ in ratios1],
+            forget=False,
+            as_ratios=True,
+        )
+
+        ratio_handler1(sel1)
+
+        ratio_handler2 = evans.PitchHandler(
+            pitch_list=[_ for _ in ratios2],
+            forget=False,
+            as_ratios=True,
+        )
+
+        ratio_handler2(sel2)
+
+    return handler
 
 
 def grid2_pitching():
@@ -116,6 +170,8 @@ def grid(
     measures,
     talea_index=0,
     pitch_index=0,
+    pitch_handler_1=grid1_pitching(),
+    pitch_handler_2=grid2_pitching(),
     rewrite_meter=None,
     preprocessor=None,
 ):
@@ -162,6 +218,7 @@ def grid(
         ],
         rewrite_meter=rewrite_meter,
         preprocessor=preprocessor,
+        pitch_handler=pitch_handler_1,
         attachment_function=grid1_attachments(),
     )
 
@@ -182,9 +239,52 @@ def grid(
         ],
         rewrite_meter=rewrite_meter,
         preprocessor=preprocessor,
-        pitch_handler=grid2_pitching(),
+        pitch_handler=pitch_handler_2,
         attachment_function=grid2_attachments(),
     )
+
+
+# notation tools
+
+all_voice_names = eval(
+    """[
+        "piano 1 voice",
+        "piano 2 voice",
+        "piano 3 voice",
+        "piano 4 voice",
+        "piano 5 voice"
+    ]"""
+)
+
+all_startmarkups = eval(
+    """[
+    abjad.StartMarkup(markup=abjad.Markup(r"\markup \\bold { I }")),
+    abjad.StartMarkup(markup=abjad.Markup(r"\markup \\bold { II }")),
+    abjad.StartMarkup(markup=abjad.Markup(r"\markup \\bold { III }")),
+    abjad.StartMarkup(markup=abjad.Markup(r"\markup \\bold { IV }")),
+    abjad.StartMarkup(markup=abjad.Markup(r"\markup \\bold { V }")),
+]"""
+)
+
+all_marginmarkups = eval(
+    """[
+    abjad.MarginMarkup(markup=abjad.Markup(r"\markup \\bold { I }")),
+    abjad.MarginMarkup(markup=abjad.Markup(r"\markup \\bold { II }")),
+    abjad.MarginMarkup(markup=abjad.Markup(r"\markup \\bold { III }")),
+    abjad.MarginMarkup(markup=abjad.Markup(r"\markup \\bold{ IV }")),
+    abjad.MarginMarkup(markup=abjad.Markup(r"\markup \\bold{ V }")),
+]"""
+)
+
+
+def write_startmarkups(score):
+    for voice_name, markup in zip(all_voice_names, all_startmarkups):
+        trinton.attach(voice=score[voice_name], leaves=[0], attachment=markup)
+
+
+def write_marginmarkups(score):
+    for voice_name, markup in zip(all_voice_names, all_marginmarkups):
+        trinton.attach(voice=score[voice_name], leaves=[0], attachment=markup)
 
 
 # sc tools
