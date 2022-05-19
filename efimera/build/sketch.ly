@@ -2,12 +2,8 @@
     <<
         \context TimeSignatureContext = "Global Context"
         {
-            \time 4/4
-            s1 * 1
-            \time 5/4
-            s1 * 5/4
-            \time 2/4
-            s1 * 1/2
+            \time 3/4
+            s1 * 3/4
         }
         \context GrandStaff = "Staff Group"
         <<
@@ -19,9 +15,18 @@
                     \markup \bold { I }
                     \set Staff.shortInstrumentName =
                     \markup \bold { I }
-                    s1 * 1
-                    s1 * 5/4
-                    s1 * 1/2
+                    \tweak Accidental.stencil #ly:text-interface::print
+                    \tweak Accidental.text \markup \concat { \one-tridecimal-third-tone-down \hspace #0.125 \abjad-sharp  }
+                    as''4
+                    ^ \markup \center-align { NamedPitchCla\raise #0.75 { \hspace #-0.5 \teeny \smaller \sharp}\hspace #-0.5 \raise #0.75 { \hspace #-0.5 \teeny \smaller \sharp}\hspace #-0.5 ('a')+41 }
+                    \tweak Accidental.stencil #ly:text-interface::print
+                    \tweak Accidental.text \markup { \abjad-sharp  }
+                    ds''4
+                    ^ \markup \center-align { +4 }
+                    \tweak Accidental.stencil #ly:text-interface::print
+                    \tweak Accidental.text \markup { \sharp-one-syntonic-comma-down  }
+                    gs''4
+                    ^ \markup \center-align { -20 }
                 }
             }
             \context Staff = "piano 2 staff"
@@ -32,179 +37,38 @@
                     \markup \bold { II }
                     \set Staff.shortInstrumentName =
                     \markup \bold { II }
-                    s1 * 1
-                    s1 * 5/4
-                    s1 * 1/2
+                    \tweak Accidental.stencil #ly:text-interface::print
+                    \tweak Accidental.text \markup { \sharp-one-syntonic-comma-down  }
+                    es'4
+                    ^ \markup \center-align { -14 }
+                    \tweak Accidental.stencil #ly:text-interface::print
+                    \tweak Accidental.text \markup { \sharp-one-syntonic-comma-down  }
+                    es'4
+                    ^ \markup \center-align { -14 }
+                    d'4
+                    ^ \markup \center-align -22
                 }
             }
             \context Staff = "piano 3 staff"
             {
                 \context Voice = "piano 3 voice"
                 {
-                    \times 16/17
-                    {
-                        \set Staff.instrumentName =
-                        \markup \bold { III }
-                        \set Staff.shortInstrumentName =
-                        \markup \bold { III }
-                        r16
-                        \tweak Accidental.stencil #ly:text-interface::print
-                        \tweak Accidental.text \markup { \flat-one-syntonic-comma-up  }
-                        af'4
-                        \ff
-                        - \accent
-                        ^ \markup \center-align { +14 }
-                        \override Staff.Stem.stemlet-length = 0.75
-                        \tweak Accidental.stencil #ly:text-interface::print
-                        \tweak Accidental.text \markup { \abjad-natural  }
-                        d'16
-                        \pp
-                        ^ \markup \center-align { +4 }
-                        [
-                        \revert Staff.Stem.stemlet-length
-                        \tweak Accidental.stencil #ly:text-interface::print
-                        \tweak Accidental.text \markup { \flat-one-syntonic-comma-up  }
-                        bf'8.
-                        \ff
-                        - \accent
-                        ^ \markup \center-align { +18 }
-                        ]
-                        r16
-                        \override Staff.Stem.stemlet-length = 0.75
-                        \tweak Accidental.stencil #ly:text-interface::print
-                        \tweak Accidental.text \markup { \natural-one-syntonic-comma-down  }
-                        d'16
-                        \pp
-                        ^ \markup \center-align { -18 }
-                        [
-                        \tweak Accidental.stencil #ly:text-interface::print
-                        \tweak Accidental.text \markup { \abjad-natural  }
-                        d'16
-                        ^ \markup \center-align { +4 }
-                        \revert Staff.Stem.stemlet-length
-                        \tweak Accidental.stencil #ly:text-interface::print
-                        \tweak Accidental.text \markup { \natural-two-syntonic-comma-down  }
-                        b'8
-                        ^ \markup \center-align { -33 }
-                        ]
-                        r16
-                        \tweak Accidental.stencil #ly:text-interface::print
-                        \tweak Accidental.text \markup { \flat-one-syntonic-comma-up  }
-                        af'8
-                        \ff
-                        - \accent
-                        ^ \markup \center-align { +14 }
-                    }
-                    \override Staff.Stem.stemlet-length = 0.75
+                    \set Staff.instrumentName =
+                    \markup \bold { III }
+                    \set Staff.shortInstrumentName =
+                    \markup \bold { III }
                     \tweak Accidental.stencil #ly:text-interface::print
-                    \tweak Accidental.text \markup { \natural-one-syntonic-comma-down  }
-                    d'16
-                    \pp
-                    ^ \markup \center-align { -18 }
-                    [
-                    \revert Staff.Stem.stemlet-length
-                    \tweak Accidental.stencil #ly:text-interface::print
-                    \tweak Accidental.text \markup { \abjad-natural  }
-                    d'16
+                    \tweak Accidental.text \markup { \abjad-sharp  }
+                    ds''4
                     ^ \markup \center-align { +4 }
-                    ]
-                    r8
-                    r8
-                    \override Staff.Stem.stemlet-length = 0.75
                     \tweak Accidental.stencil #ly:text-interface::print
-                    \tweak Accidental.text \markup { \natural-one-syntonic-comma-down  }
-                    d'16
-                    ^ \markup \center-align { -18 }
-                    [
-                    \revert Staff.Stem.stemlet-length
+                    \tweak Accidental.text \markup { \one-septimal-comma-down  }
+                    b'4
+                    ^ \markup \center-align { -31 }
                     \tweak Accidental.stencil #ly:text-interface::print
-                    \tweak Accidental.text \markup { \natural-two-syntonic-comma-down  }
-                    b'16
-                    \ff
-                    - \accent
-                    ^ \markup \center-align { -33 }
-                    ~
-                    ]
-                    \override Staff.Stem.stemlet-length = 0.75
-                    \tweak Accidental.stencil #ly:text-interface::print
-                    \tweak Accidental.text \markup { \natural-two-syntonic-comma-down  }
-                    b'8
-                    [
-                    \revert Staff.Stem.stemlet-length
-                    \tweak Accidental.stencil #ly:text-interface::print
-                    \tweak Accidental.text \markup { \abjad-natural  }
-                    d'16
-                    \pp
-                    ^ \markup \center-align { +4 }
-                    ]
-                    r16
-                    \override Staff.Stem.stemlet-length = 0.75
-                    \tweak Accidental.stencil #ly:text-interface::print
-                    \tweak Accidental.text \markup { \natural-one-syntonic-comma-down  }
-                    d'16
-                    ^ \markup \center-align { -18 }
-                    [
-                    \tweak Accidental.stencil #ly:text-interface::print
-                    \tweak Accidental.text \markup { \flat-one-syntonic-comma-up  }
-                    af'16
-                    \ff
-                    - \accent
-                    ^ \markup \center-align { +14 }
-                    ~
-                    \tweak Accidental.stencil #ly:text-interface::print
-                    \tweak Accidental.text \markup { \flat-one-syntonic-comma-up  }
-                    af'16
-                    \revert Staff.Stem.stemlet-length
-                    \tweak Accidental.stencil #ly:text-interface::print
-                    \tweak Accidental.text \markup { \abjad-natural  }
-                    d'16
-                    \pp
-                    ^ \markup \center-align { +4 }
-                    ]
-                    r8
-                    \override Staff.Stem.stemlet-length = 0.75
-                    \tweak Accidental.stencil #ly:text-interface::print
-                    \tweak Accidental.text \markup { \natural-one-syntonic-comma-down  }
-                    d'16
-                    ^ \markup \center-align { -18 }
-                    [
-                    \revert Staff.Stem.stemlet-length
-                    \tweak Accidental.stencil #ly:text-interface::print
-                    \tweak Accidental.text \markup { \abjad-natural  }
-                    d'16
-                    ^ \markup \center-align { +4 }
-                    ]
-                    \times 8/11
-                    {
-                        \tweak Accidental.stencil #ly:text-interface::print
-                        \tweak Accidental.text \markup { \flat-one-syntonic-comma-up  }
-                        bf'4
-                        \ff
-                        - \accent
-                        ^ \markup \center-align { +18 }
-                        r16
-                        \override Staff.Stem.stemlet-length = 0.75
-                        \tweak Accidental.stencil #ly:text-interface::print
-                        \tweak Accidental.text \markup { \natural-two-syntonic-comma-down  }
-                        b'8.
-                        \pp
-                        \ff
-                        - \accent
-                        ^ \markup \center-align { -33 }
-                        [
-                        \tweak Accidental.stencil #ly:text-interface::print
-                        \tweak Accidental.text \markup { \natural-one-syntonic-comma-down  }
-                        d'16
-                        \pp
-                        ^ \markup \center-align { -18 }
-                        \revert Staff.Stem.stemlet-length
-                        \tweak Accidental.stencil #ly:text-interface::print
-                        \tweak Accidental.text \markup { \abjad-natural  }
-                        d'16
-                        ^ \markup \center-align { +4 }
-                        ]
-                        r16
-                    }
+                    \tweak Accidental.text \markup \concat { \one-seventeen-limit-schisma-down \hspace #0.125 \one-tridecimal-third-tone-down \hspace #0.125 \double-sharp  }
+                    css''4
+                    ^ \markup \center-align { NamedPitchCla\raise #0.75 { \hspace #-0.5 \teeny \smaller \sharp}\hspace #-0.5 \raise #0.75 { \hspace #-0.5 \teeny \smaller \sharp}\hspace #-0.5 ('c\raise #0.75 { \hspace #-0.5 \teeny \smaller \sharp}\hspace #-0.5 ')+40 }
                 }
             }
             \context Staff = "piano 4 staff"
@@ -215,161 +79,16 @@
                     \markup \bold { IV }
                     \set Staff.shortInstrumentName =
                     \markup \bold{ IV }
-                    \clef "bass"
-                    <
-                        \tweak Accidental.stencil #ly:text-interface::print
-                        \tweak Accidental.text \markup { \abjad-flat  }
-                        bf,,
-                        \tweak Accidental.stencil #ly:text-interface::print
-                        \tweak Accidental.text \markup { \abjad-natural  }
-                        c,
-                        \tweak Accidental.stencil #ly:text-interface::print
-                        \tweak Accidental.text \markup { \flat-one-syntonic-comma-up  }
-                        ef,
-                    >4
-                    \fp
-                    - \accent
-                    ^ \markup \center-align \center-column { +20 +4 +0  }
-                    <
-                        \tweak Accidental.stencil #ly:text-interface::print
-                        \tweak Accidental.text \markup { \abjad-flat  }
-                        bf,,
-                        \tweak Accidental.stencil #ly:text-interface::print
-                        \tweak Accidental.text \markup { \abjad-natural  }
-                        c,
-                        \tweak Accidental.stencil #ly:text-interface::print
-                        \tweak Accidental.text \markup { \flat-one-syntonic-comma-up  }
-                        ef,
-                    >4
-                    \fp
-                    - \accent
-                    ^ \markup \center-align \center-column { +20 +4 +0  }
-                    <
-                        \tweak Accidental.stencil #ly:text-interface::print
-                        \tweak Accidental.text \markup { \abjad-flat  }
-                        bf,,
-                        \tweak Accidental.stencil #ly:text-interface::print
-                        \tweak Accidental.text \markup { \abjad-natural  }
-                        c,
-                        \tweak Accidental.stencil #ly:text-interface::print
-                        \tweak Accidental.text \markup { \flat-one-syntonic-comma-up  }
-                        ef,
-                    >4
-                    \fp
-                    - \accent
-                    ^ \markup \center-align \center-column { +20 +4 +0  }
-                    <
-                        \tweak Accidental.stencil #ly:text-interface::print
-                        \tweak Accidental.text \markup { \abjad-flat  }
-                        bf,,
-                        \tweak Accidental.stencil #ly:text-interface::print
-                        \tweak Accidental.text \markup { \abjad-natural  }
-                        c,
-                        \tweak Accidental.stencil #ly:text-interface::print
-                        \tweak Accidental.text \markup { \flat-one-syntonic-comma-up  }
-                        ef,
-                    >4
-                    \fp
-                    - \accent
-                    ^ \markup \center-align \center-column { +20 +4 +0  }
-                    <
-                        \tweak Accidental.stencil #ly:text-interface::print
-                        \tweak Accidental.text \markup { \abjad-flat  }
-                        bf,,
-                        \tweak Accidental.stencil #ly:text-interface::print
-                        \tweak Accidental.text \markup { \abjad-natural  }
-                        c,
-                        \tweak Accidental.stencil #ly:text-interface::print
-                        \tweak Accidental.text \markup { \flat-one-syntonic-comma-up  }
-                        ef,
-                    >4
-                    \fp
-                    - \accent
-                    ^ \markup \center-align \center-column { +20 +4 +0  }
-                    <
-                        \tweak Accidental.stencil #ly:text-interface::print
-                        \tweak Accidental.text \markup { \abjad-flat  }
-                        bf,,
-                        \tweak Accidental.stencil #ly:text-interface::print
-                        \tweak Accidental.text \markup { \abjad-natural  }
-                        c,
-                        \tweak Accidental.stencil #ly:text-interface::print
-                        \tweak Accidental.text \markup { \flat-one-syntonic-comma-up  }
-                        ef,
-                    >4
-                    \fp
-                    - \accent
-                    ^ \markup \center-align \center-column { +20 +4 +0  }
-                    <
-                        \tweak Accidental.stencil #ly:text-interface::print
-                        \tweak Accidental.text \markup { \abjad-flat  }
-                        bf,,
-                        \tweak Accidental.stencil #ly:text-interface::print
-                        \tweak Accidental.text \markup { \abjad-natural  }
-                        c,
-                        \tweak Accidental.stencil #ly:text-interface::print
-                        \tweak Accidental.text \markup { \flat-one-syntonic-comma-up  }
-                        ef,
-                    >4
-                    \fp
-                    - \accent
-                    ^ \markup \center-align \center-column { +20 +4 +0  }
-                    <
-                        \tweak Accidental.stencil #ly:text-interface::print
-                        \tweak Accidental.text \markup { \abjad-flat  }
-                        bf,,
-                        \tweak Accidental.stencil #ly:text-interface::print
-                        \tweak Accidental.text \markup { \abjad-natural  }
-                        c,
-                        \tweak Accidental.stencil #ly:text-interface::print
-                        \tweak Accidental.text \markup { \flat-one-syntonic-comma-up  }
-                        ef,
-                    >4
-                    \fp
-                    - \accent
-                    ^ \markup \center-align \center-column { +20 +4 +0  }
-                    <
-                        \tweak Accidental.stencil #ly:text-interface::print
-                        \tweak Accidental.text \markup { \abjad-flat  }
-                        bf,,
-                        \tweak Accidental.stencil #ly:text-interface::print
-                        \tweak Accidental.text \markup { \abjad-natural  }
-                        c,
-                        \tweak Accidental.stencil #ly:text-interface::print
-                        \tweak Accidental.text \markup { \flat-one-syntonic-comma-up  }
-                        ef,
-                    >4
-                    \fp
-                    - \accent
-                    ^ \markup \center-align \center-column { +20 +4 +0  }
-                    <
-                        \tweak Accidental.stencil #ly:text-interface::print
-                        \tweak Accidental.text \markup { \abjad-flat  }
-                        bf,,
-                        \tweak Accidental.stencil #ly:text-interface::print
-                        \tweak Accidental.text \markup { \abjad-natural  }
-                        c,
-                        \tweak Accidental.stencil #ly:text-interface::print
-                        \tweak Accidental.text \markup { \flat-one-syntonic-comma-up  }
-                        ef,
-                    >4
-                    \fp
-                    - \accent
-                    ^ \markup \center-align \center-column { +20 +4 +0  }
-                    <
-                        \tweak Accidental.stencil #ly:text-interface::print
-                        \tweak Accidental.text \markup { \abjad-flat  }
-                        bf,,
-                        \tweak Accidental.stencil #ly:text-interface::print
-                        \tweak Accidental.text \markup { \abjad-natural  }
-                        c,
-                        \tweak Accidental.stencil #ly:text-interface::print
-                        \tweak Accidental.text \markup { \flat-one-syntonic-comma-up  }
-                        ef,
-                    >4
-                    \fp
-                    - \accent
-                    ^ \markup \center-align \center-column { +20 +4 +0  }
+                    c,4
+                    ^ \markup \center-align +9
+                    \tweak Accidental.stencil #ly:text-interface::print
+                    \tweak Accidental.text \markup { \abjad-sharp  }
+                    gs4
+                    ^ \markup \center-align { +2 }
+                    \tweak Accidental.stencil #ly:text-interface::print
+                    \tweak Accidental.text \markup { \abjad-sharp  }
+                    ds''4
+                    ^ \markup \center-align { +4 }
                 }
             }
             \context Staff = "piano 5 staff"
@@ -380,9 +99,18 @@
                     \markup \bold { V }
                     \set Staff.shortInstrumentName =
                     \markup \bold{ V }
-                    s1 * 1
-                    s1 * 5/4
-                    s1 * 1/2
+                    \tweak Accidental.stencil #ly:text-interface::print
+                    \tweak Accidental.text \markup { \sharp-one-syntonic-comma-down  }
+                    ds,4
+                    ^ \markup \center-align { -18 }
+                    \tweak Accidental.stencil #ly:text-interface::print
+                    \tweak Accidental.text \markup { \abjad-sharp  }
+                    cs,4
+                    ^ \markup \center-align { +0 }
+                    \tweak Accidental.stencil #ly:text-interface::print
+                    \tweak Accidental.text \markup { \abjad-natural  }
+                    e,4
+                    ^ \markup \center-align { -6 }
                 }
             }
         >>

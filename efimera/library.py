@@ -162,6 +162,98 @@ def grid2_pitching():
     return handler
 
 
+def skyward_solo_pitching(chord=2):
+    def handler(selections):
+        pair = (
+            [
+                -23,
+            ],
+            trinton.rotated_sequence(
+                [
+                    [
+                        quicktions.Fraction(_)
+                        for _ in [
+                            "10/9",
+                            "37/9",
+                            "5/1",
+                            "9/1",
+                            "13/1",
+                        ]
+                    ],
+                    [
+                        quicktions.Fraction(_)
+                        for _ in [
+                            "1/1",
+                            "3/1",
+                            "5/1",
+                            "7/1",
+                            "9/1",
+                        ]
+                    ],
+                    [
+                        quicktions.Fraction(_)
+                        for _ in [
+                            "32/27",
+                            "9/1",
+                            "113/27",
+                            "221/27",
+                            "320/27",
+                        ]
+                    ],
+                ],
+                chord - 1,
+            ),
+        )
+
+        pitch_list, ratio_list = pair
+
+        handler = evans.PitchHandler(pitch_list=pitch_list, forget=False)
+
+        handler(selections)
+
+        ratio_handler = evans.PitchHandler(
+            pitch_list=[_ for _ in ratio_list],
+            forget=False,
+            as_ratios=True,
+        )
+
+        ratio_handler(selections)
+
+    return handler
+
+
+def skyward_ensemble_pitching(
+    ratio_list,
+    chord=2,
+):
+    def handler(selections, ratio_list=ratio_list):
+        pair = (
+            [
+                -23,
+            ],
+            trinton.rotated_sequence(
+                ratio_list,
+                chord - 1,
+            ),
+        )
+
+        pitch_list, ratio_list = pair
+
+        handler = evans.PitchHandler(pitch_list=pitch_list, forget=False)
+
+        handler(selections)
+
+        ratio_handler = evans.PitchHandler(
+            pitch_list=[_ for _ in ratio_list],
+            forget=False,
+            as_ratios=True,
+        )
+
+        ratio_handler(selections)
+
+    return handler
+
+
 # music commands
 
 
@@ -169,7 +261,6 @@ def grid(
     voices,
     measures,
     talea_index=0,
-    pitch_index=0,
     pitch_handler_1=grid1_pitching(),
     pitch_handler_2=grid2_pitching(),
     rewrite_meter=None,
@@ -242,6 +333,95 @@ def grid(
         pitch_handler=pitch_handler_2,
         attachment_function=grid2_attachments(),
     )
+
+
+def skyward(
+    voices,
+    measures,
+    pitch_handler=None,
+    chord=2,
+    rewrite_meter=None,
+    preprocessor=None,
+):
+    if pitch_handler is not None:
+        for voice in voices:
+            trinton.music_command(
+                voice=voice,
+                measures=measures,
+                rmaker=rmakers.note(),
+                rmaker_commands=[
+                    rmakers.beam(),
+                ],
+                rewrite_meter=rewrite_meter,
+                preprocessor=preprocessor,
+                pitch_handler=pitch_handler,
+                attachment_function=None,
+            )
+
+    else:
+        if len(voices) == 1:
+
+            trinton.music_command(
+                voice=voices[0],
+                measures=measures,
+                rmaker=rmakers.note(),
+                rmaker_commands=[
+                    rmakers.beam(),
+                ],
+                rewrite_meter=rewrite_meter,
+                preprocessor=preprocessor,
+                pitch_handler=skyward_solo_pitching(
+                    chord=chord,
+                ),
+                attachment_function=None,
+            )
+
+        else:
+
+            for voice, ratio_list in zip(
+                voices,
+                [
+                    [
+                        "13/1",
+                        "9/1",
+                        "320/27",
+                    ],
+                    [
+                        "5/1",
+                        "5/1",
+                        "113/27",
+                    ],
+                    [
+                        "9/1",
+                        "7/1",
+                        "221/27",
+                    ],
+                    [
+                        "37/39",
+                        "3/1",
+                        "9/1",
+                    ],
+                    [
+                        "10/9",
+                        "1/1",
+                        "32/27",
+                    ],
+                ],
+            ):
+                trinton.music_command(
+                    voice=voice,
+                    measures=measures,
+                    rmaker=rmakers.note(),
+                    rmaker_commands=[
+                        rmakers.beam(),
+                    ],
+                    rewrite_meter=rewrite_meter,
+                    preprocessor=preprocessor,
+                    pitch_handler=skyward_ensemble_pitching(
+                        ratio_list=ratio_list, chord=chord
+                    ),
+                    attachment_function=None,
+                )
 
 
 # notation tools

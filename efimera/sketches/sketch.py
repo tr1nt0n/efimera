@@ -8,25 +8,28 @@ from efimera import library
 
 # score
 
-score = library.efimera_score(
-    [
-        (4, 4),
-        (5, 4),
-        (2, 4),
-    ]
-)
+score = library.efimera_score([(3, 4)])
 
 # rhythms
 
-library.grid(
-    voices=[score["piano 3 voice"], score["piano 4 voice"]],
-    measures=[
-        1,
-        2,
-        3,
+library.skyward(
+    voices=[
+        score["piano 1 voice"],
+        score["piano 2 voice"],
+        score["piano 3 voice"],
+        score["piano 4 voice"],
+        score["piano 5 voice"],
     ],
-    talea_index=3,
+    measures=[1],
+    chord=1,
     rewrite_meter=-1,
+    preprocessor=trinton.fuse_quarters_preprocessor(
+        (
+            1,
+            1,
+            1,
+        )
+    ),
 )
 
 # cache leaves
@@ -47,12 +50,12 @@ library.write_marginmarkups(score)
 
 # write sc file
 
-# library.write_sc_file(
-#     score=score,
-#     tempo=((1, 4), 60),
-#     section_number="sketch",
-#     current_directory="/Users/trintonprater/scores/efimera/efimera/sketches",
-# )
+library.write_sc_file(
+    score=score,
+    tempo=((1, 4), 20),
+    section_number="sketch",
+    current_directory="/Users/trintonprater/scores/efimera/efimera/sketches",
+)
 
 # show file
 
