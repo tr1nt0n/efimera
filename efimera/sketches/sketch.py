@@ -8,39 +8,40 @@ from efimera import library
 
 # score
 
-score = library.efimera_score([(3, 4)])
+score = library.efimera_score(
+    [
+        (13, 4),
+    ]
+)
 
-# rhythms
+# music commands
 
-library.skyward(
-    voices=[
-        score["piano 1 voice"],
-        score["piano 2 voice"],
-        score["piano 3 voice"],
-        score["piano 4 voice"],
-        score["piano 5 voice"],
-    ],
+library.win(
+    voice=score["piano 1 voice"],
     measures=[1],
-    chord=1,
-    rewrite_meter=-1,
+    fundamentals=[-5],
+    dyn_list=["p", "mp", "mf", "f", "mf", "mp"],
     preprocessor=trinton.fuse_quarters_preprocessor(
         (
-            1,
-            1,
-            1,
+            4,
+            5,
         )
     ),
 )
+
+trinton.reduce_tuplets(score=score, voice="piano 1 voice", tuplets="all")
+
+abjad.attach(abjad.Clef("tenor"), abjad.select.leaf(score["piano 1 voice"], 0))
+
+# trinton.make_sc_file(score=score, tempo=((1, 4), 30), current_directory="/Users/trintonprater/scores/efimera/efimera/sketches",)
 
 # cache leaves
 
 # cache = trinton.cache_leaves(score)
 
-# pitching and attachments
-
 # beaming
 
-trinton.beam_score_without_splitting(score)
+# trinton.beam_score_without_splitting(score)
 
 # markups
 
@@ -50,12 +51,12 @@ library.write_marginmarkups(score)
 
 # write sc file
 
-library.write_sc_file(
-    score=score,
-    tempo=((1, 4), 20),
-    section_number="sketch",
-    current_directory="/Users/trintonprater/scores/efimera/efimera/sketches",
-)
+# library.write_sc_file(
+#     score=score,
+#     tempo=((1, 4), 20),
+#     section_number="sketch",
+#     current_directory="/Users/trintonprater/scores/efimera/efimera/sketches",
+# )
 
 # show file
 

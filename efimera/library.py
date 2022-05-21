@@ -36,6 +36,17 @@ def efimera_score(time_signatures):
     return score
 
 
+# number sorcery
+
+logistic_map = eval(
+    """trinton.logistic_map(
+        x=3,
+        r=-1,
+        n=9,
+        seed=13,
+    )"""
+)
+
 # attachment functions
 
 
@@ -66,6 +77,71 @@ def grid2_attachments(clef=True):
         for leaf in selections:
             abjad.attach(abjad.Dynamic("fp"), leaf)
             abjad.attach(abjad.Articulation(">"), leaf)
+
+    return att_func
+
+
+def skyward_attachments(index=None):
+    def att_func(selections):
+
+        ties = abjad.select.logical_ties(selections, pitched=True)
+
+        for tie in ties:
+            abjad.attach(abjad.Articulation("espressivo"), tie[0])
+
+        if index is not None:
+
+            _map_to_string = {
+                0: "pp",
+                1: "p",
+                2: "p",
+                3: "mp",
+                4: "mp",
+                5: "mf",
+                6: "mf",
+                7: "f",
+                8: "f",
+                9: "ff",
+            }
+
+            map = trinton.rotated_sequence(
+                logistic_map,
+                index,
+            )
+
+            for string, tie in zip(map, ties):
+                abjad.attach(abjad.Dynamic(_map_to_string[string]), tie[0])
+
+    return att_func
+
+
+def win_attachments(dyn_list=None):
+    def att_func(selections):
+        pleaves = abjad.select.leaves(selections, pitched=True)
+        contiguous = abjad.select.group_by_contiguity(pleaves)
+        for leaf in pleaves:
+            abjad.detach(abjad.Markup, leaf)
+        for group in contiguous:
+            if len(group) < 6:
+                pass
+            else:
+                exclude_last = abjad.select.exclude(group, [-1])
+                for leaf in exclude_last:
+                    abjad.attach(abjad.Tie(), leaf)
+                abjad.attach(abjad.StartHairpin("o<"), group[0])
+                abjad.attach(
+                    abjad.StartHairpin(">o"),
+                    group[4],
+                )
+                abjad.attach(
+                    abjad.StopHairpin(), abjad.select.with_next_leaf(group[-1])[-1]
+                )
+        if dyn_list is not None:
+            if len(group) < 6:
+                pass
+            else:
+                for group, dyn in zip(contiguous, dyn_list):
+                    abjad.attach(abjad.Dynamic(dyn), group[4])
 
     return att_func
 
@@ -254,6 +330,454 @@ def skyward_ensemble_pitching(
     return handler
 
 
+def win_pitching(index, fundamentals):
+    def handler(selections):
+        pair = (
+            fundamentals,
+            trinton.rotated_sequence(
+                [
+                    "5/8",
+                    [
+                        quicktions.Fraction(_)
+                        for _ in [
+                            "5/8",
+                            "243/256",
+                        ]
+                    ],
+                    [
+                        quicktions.Fraction(_)
+                        for _ in [
+                            "5/8",
+                            "243/256",
+                            "2187/896",
+                        ]
+                    ],
+                    [
+                        quicktions.Fraction(_)
+                        for _ in [
+                            "5/8",
+                            "243/256",
+                            "2187/896",
+                            "6561/2240",
+                        ]
+                    ],
+                    [
+                        quicktions.Fraction(_)
+                        for _ in [
+                            "5/8",
+                            "243/256",
+                            "2187/896",
+                            "6561/2240",
+                            "405/128",
+                        ]
+                    ],
+                    [
+                        quicktions.Fraction(_)
+                        for _ in [
+                            "5/8",
+                            "243/256",
+                            "2187/896",
+                            "6561/2240",
+                        ]
+                    ],
+                    [
+                        quicktions.Fraction(_)
+                        for _ in [
+                            "5/8",
+                            "243/256",
+                            "2187/896",
+                        ]
+                    ],
+                    [
+                        quicktions.Fraction(_)
+                        for _ in [
+                            "5/8",
+                            "243/256",
+                        ]
+                    ],
+                    "5/8",
+                    "75/128",
+                    [
+                        quicktions.Fraction(_)
+                        for _ in [
+                            "75/128",
+                            "6561/6400",
+                        ]
+                    ],
+                    [
+                        quicktions.Fraction(_)
+                        for _ in [
+                            "75/128",
+                            "6561/6400",
+                            "2187/896",
+                        ]
+                    ],
+                    [
+                        quicktions.Fraction(_)
+                        for _ in [
+                            "75/128",
+                            "6561/6400",
+                            "2187/896",
+                            "59049/22400",
+                        ]
+                    ],
+                    [
+                        quicktions.Fraction(_)
+                        for _ in [
+                            "75/128",
+                            "6561/6400",
+                            "2187/896",
+                            "59049/22400",
+                            "405/128",
+                        ]
+                    ],
+                    [
+                        quicktions.Fraction(_)
+                        for _ in [
+                            "75/128",
+                            "6561/6400",
+                            "2187/896",
+                            "59049/22400",
+                        ]
+                    ],
+                    [
+                        quicktions.Fraction(_)
+                        for _ in [
+                            "75/128",
+                            "6561/6400",
+                            "2187/896",
+                        ]
+                    ],
+                    [
+                        quicktions.Fraction(_)
+                        for _ in [
+                            "75/128",
+                            "6561/6400",
+                        ]
+                    ],
+                    "75/128",
+                    "75/128",
+                    [
+                        quicktions.Fraction(_)
+                        for _ in [
+                            "75/128",
+                            "243/256",
+                        ]
+                    ],
+                    [
+                        quicktions.Fraction(_)
+                        for _ in [
+                            "75/128",
+                            "243/256",
+                            "19683/7168",
+                        ]
+                    ],
+                    [
+                        quicktions.Fraction(_)
+                        for _ in [
+                            "75/128",
+                            "243/256",
+                            "19683/7168",
+                            "59049/22400",
+                        ]
+                    ],
+                    [
+                        quicktions.Fraction(_)
+                        for _ in [
+                            "75/128",
+                            "243/256",
+                            "19683/7168",
+                            "59049/22400",
+                            "45/16",
+                        ]
+                    ],
+                    [
+                        quicktions.Fraction(_)
+                        for _ in [
+                            "75/128",
+                            "243/256",
+                            "19683/7168",
+                            "59049/22400",
+                        ]
+                    ],
+                    [
+                        quicktions.Fraction(_)
+                        for _ in [
+                            "75/128",
+                            "243/256",
+                            "19683/7168",
+                        ]
+                    ],
+                    [
+                        quicktions.Fraction(_)
+                        for _ in [
+                            "75/128",
+                            "243/256",
+                        ]
+                    ],
+                    "75/128",
+                    "25/48",
+                    [
+                        quicktions.Fraction(_)
+                        for _ in [
+                            "25/48",
+                            "243/256",
+                        ]
+                    ],
+                    [
+                        quicktions.Fraction(_)
+                        for _ in [
+                            "25/48",
+                            "243/256",
+                            "19683/7168",
+                        ]
+                    ],
+                    [
+                        quicktions.Fraction(_)
+                        for _ in [
+                            "25/48",
+                            "243/256",
+                            "19683/7168",
+                            "486/175",
+                        ]
+                    ],
+                    [
+                        quicktions.Fraction(_)
+                        for _ in [
+                            "25/48",
+                            "243/256",
+                            "19683/7168",
+                            "486/175",
+                            "25/8",
+                        ]
+                    ],
+                    [
+                        quicktions.Fraction(_)
+                        for _ in [
+                            "25/48",
+                            "243/256",
+                            "19683/7168",
+                            "486/175",
+                        ]
+                    ],
+                    [
+                        quicktions.Fraction(_)
+                        for _ in [
+                            "25/48",
+                            "243/256",
+                            "19683/7168",
+                        ]
+                    ],
+                    [
+                        quicktions.Fraction(_)
+                        for _ in [
+                            "25/48",
+                            "243/256",
+                        ]
+                    ],
+                    "25/48",
+                    "675/1024",
+                    [
+                        quicktions.Fraction(_)
+                        for _ in [
+                            "675/1024",
+                            "243/256",
+                        ]
+                    ],
+                    [
+                        quicktions.Fraction(_)
+                        for _ in [
+                            "675/1024",
+                            "243/256",
+                            "9/4",
+                        ]
+                    ],
+                    [
+                        quicktions.Fraction(_)
+                        for _ in [
+                            "675/1024",
+                            "243/256",
+                            "9/4",
+                            "486/175",
+                        ]
+                    ],
+                    [
+                        quicktions.Fraction(_)
+                        for _ in [
+                            "675/1024",
+                            "243/256",
+                            "9/4",
+                            "486/175",
+                            "100/27",
+                        ]
+                    ],
+                    [
+                        quicktions.Fraction(_)
+                        for _ in [
+                            "675/1024",
+                            "243/256",
+                            "9/4",
+                            "486/175",
+                        ]
+                    ],
+                    [
+                        quicktions.Fraction(_)
+                        for _ in [
+                            "675/1024",
+                            "243/256",
+                            "9/4",
+                        ]
+                    ],
+                    [
+                        quicktions.Fraction(_)
+                        for _ in [
+                            "675/1024",
+                            "243/256",
+                        ]
+                    ],
+                    "675/1024",
+                    "6075/8192",
+                    [
+                        quicktions.Fraction(_)
+                        for _ in [
+                            "6075/8192",
+                            "27/32",
+                        ]
+                    ],
+                    [
+                        quicktions.Fraction(_)
+                        for _ in [
+                            "6075/8192",
+                            "27/32",
+                            "9/4",
+                        ]
+                    ],
+                    [
+                        quicktions.Fraction(_)
+                        for _ in [
+                            "6075/8192",
+                            "27/32",
+                            "9/4",
+                            "486/175",
+                        ]
+                    ],
+                    [
+                        quicktions.Fraction(_)
+                        for _ in [
+                            "6075/8192",
+                            "27/32",
+                            "9/4",
+                            "486/175",
+                            "1000/243",
+                        ]
+                    ],
+                    [
+                        quicktions.Fraction(_)
+                        for _ in [
+                            "6075/8192",
+                            "27/32",
+                            "9/4",
+                            "486/175",
+                        ]
+                    ],
+                    [
+                        quicktions.Fraction(_)
+                        for _ in [
+                            "6075/8192",
+                            "27/32",
+                            "9/4",
+                        ]
+                    ],
+                    [
+                        quicktions.Fraction(_)
+                        for _ in [
+                            "6075/8192",
+                            "27/32",
+                        ]
+                    ],
+                    "6075/8192",
+                    "6075/8192",
+                    [
+                        quicktions.Fraction(_)
+                        for _ in [
+                            "6075/8192",
+                            "8/9",
+                        ]
+                    ],
+                    [
+                        quicktions.Fraction(_)
+                        for _ in [
+                            "6075/8192",
+                            "8/9",
+                            "9/4",
+                        ]
+                    ],
+                    [
+                        quicktions.Fraction(_)
+                        for _ in [
+                            "6075/8192",
+                            "8/9",
+                            "9/4",
+                            "432/175",
+                        ]
+                    ],
+                    [
+                        quicktions.Fraction(_)
+                        for _ in [
+                            "6075/8192",
+                            "8/9",
+                            "9/4",
+                            "432/175",
+                            "27/8",
+                        ]
+                    ],
+                    [
+                        quicktions.Fraction(_)
+                        for _ in [
+                            "6075/8192",
+                            "8/9",
+                            "9/4",
+                            "432/175",
+                        ]
+                    ],
+                    [
+                        quicktions.Fraction(_)
+                        for _ in [
+                            "6075/8192",
+                            "8/9",
+                            "9/4",
+                        ]
+                    ],
+                    [
+                        quicktions.Fraction(_)
+                        for _ in [
+                            "6075/8192",
+                            "8/9",
+                        ]
+                    ],
+                    "6075/8192",
+                ],
+                index,
+            ),
+        )
+
+        pitch_list, ratio_list = pair
+
+        handler = evans.PitchHandler(pitch_list=pitch_list, forget=False)
+
+        handler(selections)
+
+        ratio_handler = evans.PitchHandler(
+            pitch_list=[_ for _ in ratio_list],
+            forget=False,
+            as_ratios=True,
+        )
+
+        ratio_handler(selections)
+
+    return handler
+
+
 # music commands
 
 
@@ -340,6 +864,7 @@ def skyward(
     measures,
     pitch_handler=None,
     chord=2,
+    dyn_index=None,
     rewrite_meter=None,
     preprocessor=None,
 ):
@@ -355,7 +880,7 @@ def skyward(
                 rewrite_meter=rewrite_meter,
                 preprocessor=preprocessor,
                 pitch_handler=pitch_handler,
-                attachment_function=None,
+                attachment_function=skyward_attachments(index=dyn_index),
             )
 
     else:
@@ -373,7 +898,7 @@ def skyward(
                 pitch_handler=skyward_solo_pitching(
                     chord=chord,
                 ),
-                attachment_function=None,
+                attachment_function=skyward_attachments(index=dyn_index),
             )
 
         else:
@@ -420,8 +945,93 @@ def skyward(
                     pitch_handler=skyward_ensemble_pitching(
                         ratio_list=ratio_list, chord=chord
                     ),
-                    attachment_function=None,
+                    attachment_function=skyward_attachments(index=dyn_index),
                 )
+
+
+def win(
+    voice,
+    measures,
+    pitch_handler=None,
+    fundamentals=None,
+    pitch_index=0,
+    dyn_list=None,
+    rewrite_meter=None,
+    preprocessor=None,
+):
+    rest_selector = trinton.patterned_tie_index_selector(
+        [
+            0,
+        ],
+        10,
+    )
+
+    if pitch_handler is not None:
+
+        trinton.music_command(
+            voice=voice,
+            measures=measures,
+            rmaker=rmakers.tuplet(
+                [
+                    (
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                    )
+                ]
+            ),
+            rmaker_commands=[
+                rmakers.force_rest(rest_selector),
+                rmakers.beam_groups(beam_rests=True),
+            ],
+            rewrite_meter=rewrite_meter,
+            preprocessor=preprocessor,
+            pitch_handler=pitch_handler,
+            attachment_function=win_attachments(dyn_list=dyn_list),
+        )
+
+    else:
+
+        trinton.music_command(
+            voice=voice,
+            measures=measures,
+            rmaker=rmakers.tuplet(
+                [
+                    (
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                    )
+                ]
+            ),
+            rmaker_commands=[
+                rmakers.force_rest(rest_selector),
+                rmakers.beam_groups(beam_rests=True),
+            ],
+            rewrite_meter=rewrite_meter,
+            preprocessor=preprocessor,
+            pitch_handler=win_pitching(
+                fundamentals=fundamentals,
+                index=pitch_index,
+            ),
+            attachment_function=win_attachments(dyn_list=dyn_list),
+        )
 
 
 # notation tools
