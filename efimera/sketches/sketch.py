@@ -10,30 +10,129 @@ from efimera import library
 
 score = library.efimera_score(
     [
-        (13, 4),
+        (7, 4),
+        (1, 2),
+        (8, 4),
+        (5, 8),
+        (8, 4),
+        (1, 2),
+        (8, 4),
+        (3, 4),
+        (7, 8),
+        (1, 8),
+        (7, 8),
+        (1, 8),
+        (15, 8),
+        (5, 8),
+        (8, 4),
+        (1, 2),
+        (9, 4),
     ]
 )
 
 # music commands
 
-library.win(
-    voice=score["piano 1 voice"],
-    measures=[1],
-    fundamentals=[-5],
-    dyn_list=["p", "mp", "mf", "f", "mf", "mp"],
-    preprocessor=trinton.fuse_quarters_preprocessor(
-        (
-            4,
-            5,
-        )
-    ),
+for voice_name in ["piano 1 voice", "piano 2 voice", "piano 3 voice", "piano 4 voice"]:
+    library.parting_glass(
+        voice=score[voice_name],
+        measures=list(range(1, 18)),
+        rewrite_meter=-1,
+    )
+
+handler = evans.PitchHandler(pitch_list=[5], forget=False)
+
+for voice_name in ["piano 1 voice", "piano 2 voice", "piano 3 voice"]:
+
+    handler(abjad.select.leaves(score[voice_name], pitched=True))
+
+ratio_list = [
+    "79/64",
+    "11/10",
+    "1/1",
+    "128/154",
+    "3/4",
+    "5/6",
+    "1/1",
+    "71/64",
+    "1/1",
+    "11/10",
+    "161/128",
+    "5/4",
+    "11/10",
+    "1/1",
+    "71/64",
+    "323/256",
+    "3/4",
+    "79/64",
+    "11/10",
+    "1/1",
+    "128/154",
+    "3/4",
+    "5/6",
+    "1/1",
+    "71/64",
+    "1/1",
+    "71/64",
+    "14/11",
+    "128/77",
+    "3/2",
+    "14/11",
+    "11/10",
+    "1/1",
+    "437/512",
+    "3/2",
+    "14/11",
+    "128/77",
+    "3/2",
+    "1024/675",
+    "1024/675",
+    "14/11",
+    "128/77",
+    "1024/675",
+    "3/2",
+    "5/4",
+    "4/3",
+    "5/4",
+    "9/8",
+    "1/1",
+    "10/9",
+    "8192/6561",
+    "3/4",
+    "14/11",
+    "11/10",
+    "1/1",
+    "128/154",
+    "3/4",
+    "5/6",
+    "1/1",
+    "1/1",
+    "9/8",
+    "1/1",
+    "71/64",
+    "5/4",
+    "5/3",
+    "3/2",
+    "5/4",
+    "10/9",
+    "1/1",
+    "5/6",
+]
+
+ratio_handler = evans.PitchHandler(
+    pitch_list=[_ for _ in ratio_list],
+    forget=False,
+    as_ratios=True,
 )
 
-trinton.reduce_tuplets(score=score, voice="piano 1 voice", tuplets="all")
+ratio_handler(abjad.select.leaves(score["piano 1 voice"], pitched=True))
 
-abjad.attach(abjad.Clef("tenor"), abjad.select.leaf(score["piano 1 voice"], 0))
+abjad.attach(abjad.Clef("bass"), abjad.select.leaf(score["piano 4 voice"], 0))
 
-# trinton.make_sc_file(score=score, tempo=((1, 4), 30), current_directory="/Users/trintonprater/scores/efimera/efimera/sketches",)
+trinton.make_sc_file(
+    score=score,
+    tempo=((1, 4), 50),
+    current_directory="/Users/trintonprater/scores/efimera/efimera/sketches",
+)
 
 # cache leaves
 
@@ -41,7 +140,7 @@ abjad.attach(abjad.Clef("tenor"), abjad.select.leaf(score["piano 1 voice"], 0))
 
 # beaming
 
-# trinton.beam_score_without_splitting(score)
+trinton.beam_score_without_splitting(score)
 
 # markups
 
