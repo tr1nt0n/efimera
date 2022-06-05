@@ -512,221 +512,405 @@
                     \set Staff.shortInstrumentName =
                     \markup \bold { II }
                     \override Staff.Stem.stemlet-length = 0.75
-                    f'8
+                    \tweak Accidental.stencil #ly:text-interface::print
+                    \tweak Accidental.text \markup \concat { \one-tridecimal-third-tone-up \hspace #0.125 \abjad-flat  }
+                    af'8
+                    ^ \markup \center-align { A-41 }
                     [
                     \revert Staff.Stem.stemlet-length
-                    f'8
+                    \tweak Accidental.stencil #ly:text-interface::print
+                    \tweak Accidental.text \markup { \natural-two-syntonic-comma-down  }
+                    g'8
+                    ^ \markup \center-align { -39 }
                     ]
+                    \tweak Accidental.stencil #ly:text-interface::print
+                    \tweak Accidental.text \markup { \abjad-natural  }
                     f'4
+                    ^ \markup \center-align { +0 }
                     ~
                     \override Staff.Stem.stemlet-length = 0.75
+                    \tweak Accidental.stencil #ly:text-interface::print
+                    \tweak Accidental.text \markup { \abjad-natural  }
                     f'8
                     [
                     \revert Staff.Stem.stemlet-length
+                    \tweak Accidental.stencil #ly:text-interface::print
+                    \tweak Accidental.text \markup { \abjad-natural  }
                     f'8
+                    ^ \markup \center-align { +0 }
                     ~
                     ]
                     \override Staff.Stem.stemlet-length = 0.75
+                    \tweak Accidental.stencil #ly:text-interface::print
+                    \tweak Accidental.text \markup { \abjad-natural  }
                     f'8
                     [
                     \revert Staff.Stem.stemlet-length
+                    \tweak Accidental.stencil #ly:text-interface::print
+                    \tweak Accidental.text \markup { \abjad-natural  }
                     f'8
+                    ^ \markup \center-align { +0 }
                     ~
                     ]
                     \override Staff.Stem.stemlet-length = 0.75
+                    \tweak Accidental.stencil #ly:text-interface::print
+                    \tweak Accidental.text \markup { \abjad-natural  }
                     f'8
                     [
                     \revert Staff.Stem.stemlet-length
+                    \tweak Accidental.stencil #ly:text-interface::print
+                    \tweak Accidental.text \markup { \abjad-natural  }
                     f'8
+                    ^ \markup \center-align { +0 }
                     ]
                     f'4
-                    f'4
+                    ^ \markup \center-align +13
+                    e'4
+                    ^ \markup \center-align -47
                     r2
                     \override Staff.Stem.stemlet-length = 0.75
                     f'8
+                    ^ \markup \center-align +13
                     [
                     \revert Staff.Stem.stemlet-length
-                    f'8
+                    \tweak Accidental.stencil #ly:text-interface::print
+                    \tweak Accidental.text \markup { \natural-two-syntonic-comma-down  }
+                    g'8
+                    ^ \markup \center-align { -39 }
                     ]
+                    \tweak Accidental.stencil #ly:text-interface::print
+                    \tweak Accidental.text \markup { \abjad-natural  }
                     f'4
+                    ^ \markup \center-align { +0 }
                     ~
                     \override Staff.Stem.stemlet-length = 0.75
+                    \tweak Accidental.stencil #ly:text-interface::print
+                    \tweak Accidental.text \markup { \abjad-natural  }
                     f'8
                     [
                     \revert Staff.Stem.stemlet-length
                     f'8
+                    ^ \markup \center-align +13
                     ~
                     ]
                     \override Staff.Stem.stemlet-length = 0.75
                     f'8
                     [
                     \revert Staff.Stem.stemlet-length
-                    f'8
+                    \tweak Accidental.stencil #ly:text-interface::print
+                    \tweak Accidental.text \markup \concat { \one-undecimal-quarter-tone-up \hspace #0.125 \double-flat-one-syntonic-comma-up  }
+                    bff8
+                    ^ \markup \center-align { B\raise #0.5 { \hspace #-0.5 \teeny \flat}\hspace #-0.5 -41 }
                     ]
                     \override Staff.Stem.stemlet-length = 0.75
-                    f'8
+                    a8
+                    ^ \markup \center-align +47
                     [
                     \revert Staff.Stem.stemlet-length
-                    f'8
+                    bf8
+                    ^ \markup \center-align -50
                     ]
+                    \tweak Accidental.stencil #ly:text-interface::print
+                    \tweak Accidental.text \markup \concat { \one-nineteen-limit-schisma-up \hspace #0.125 \one-seventeen-limit-schisma-down \hspace #0.125 \one-septimal-comma-down  }
                     f'4
+                    ^ \markup \center-align { -33 }
                     ~
                     \override Staff.Stem.stemlet-length = 0.75
+                    \tweak Accidental.stencil #ly:text-interface::print
+                    \tweak Accidental.text \markup \concat { \one-nineteen-limit-schisma-up \hspace #0.125 \one-seventeen-limit-schisma-down \hspace #0.125 \one-septimal-comma-down  }
                     f'8
                     [
                     \revert Staff.Stem.stemlet-length
-                    f'8
+                    \tweak Accidental.stencil #ly:text-interface::print
+                    \tweak Accidental.text \markup { \natural-one-syntonic-comma-down  }
+                    e'8
+                    ^ \markup \center-align { -12 }
                     ~
                     ]
-                    f'4
+                    \tweak Accidental.stencil #ly:text-interface::print
+                    \tweak Accidental.text \markup { \natural-one-syntonic-comma-down  }
+                    e'4
                     r4.
                     r4
                     \override Staff.Stem.stemlet-length = 0.75
-                    f'8
+                    \tweak Accidental.stencil #ly:text-interface::print
+                    \tweak Accidental.text \markup \concat { \one-tridecimal-third-tone-up \hspace #0.125 \abjad-flat  }
+                    af'8
+                    ^ \markup \center-align { A-41 }
                     [
                     \revert Staff.Stem.stemlet-length
-                    f'8
+                    \tweak Accidental.stencil #ly:text-interface::print
+                    \tweak Accidental.text \markup { \natural-two-syntonic-comma-down  }
+                    g'8
+                    ^ \markup \center-align { -39 }
                     ]
+                    \tweak Accidental.stencil #ly:text-interface::print
+                    \tweak Accidental.text \markup { \abjad-natural  }
                     f'4
+                    ^ \markup \center-align { +0 }
                     ~
                     \override Staff.Stem.stemlet-length = 0.75
+                    \tweak Accidental.stencil #ly:text-interface::print
+                    \tweak Accidental.text \markup { \abjad-natural  }
                     f'8
                     [
                     \revert Staff.Stem.stemlet-length
-                    f'8
+                    \tweak Accidental.stencil #ly:text-interface::print
+                    \tweak Accidental.text \markup \concat { \one-undecimal-quarter-tone-down \hspace #0.125 \one-septimal-comma-up  }
+                    d'8
+                    ^ \markup \center-align { -20 }
                     ~
                     ]
-                    f'4
+                    \tweak Accidental.stencil #ly:text-interface::print
+                    \tweak Accidental.text \markup \concat { \one-undecimal-quarter-tone-down \hspace #0.125 \one-septimal-comma-up  }
+                    d'4
                     ~
                     \override Staff.Stem.stemlet-length = 0.75
-                    f'8
+                    \tweak Accidental.stencil #ly:text-interface::print
+                    \tweak Accidental.text \markup \concat { \one-undecimal-quarter-tone-down \hspace #0.125 \one-septimal-comma-up  }
+                    d'8
                     [
                     \revert Staff.Stem.stemlet-length
-                    f'8
+                    c'8
+                    ^ \markup \center-align +20
                     ]
+                    \tweak Accidental.stencil #ly:text-interface::print
+                    \tweak Accidental.text \markup { \abjad-natural  }
                     f'4
+                    ^ \markup \center-align { +0 }
                     f'4
-                    f'4
+                    ^ \markup \center-align +13
+                    e'4
+                    ^ \markup \center-align -47
                     r2
                     \override Staff.Stem.stemlet-length = 0.75
-                    f'8
+                    \tweak Accidental.stencil #ly:text-interface::print
+                    \tweak Accidental.text \markup \concat { \one-undecimal-quarter-tone-down \hspace #0.125 \one-septimal-comma-up  }
+                    d'8
+                    ^ \markup \center-align { -20 }
                     [
                     \revert Staff.Stem.stemlet-length
-                    f'8
+                    e'8
+                    ^ \markup \center-align -36
                     ]
                     f'4
-                    f'4
-                    f'4
+                    ^ \markup \center-align +7
+                    \tweak Accidental.stencil #ly:text-interface::print
+                    \tweak Accidental.text \markup \concat { \one-undecimal-quarter-tone-down \hspace #0.125 \abjad-flat  }
+                    bf'4
+                    ^ \markup \center-align { A+45 }
+                    \tweak Accidental.stencil #ly:text-interface::print
+                    \tweak Accidental.text \markup { \natural-one-syntonic-comma-down  }
+                    a'4
+                    ^ \markup \center-align { -14 }
                     \override Staff.Stem.stemlet-length = 0.75
-                    f'8
+                    \tweak Accidental.stencil #ly:text-interface::print
+                    \tweak Accidental.text \markup \concat { \one-undecimal-quarter-tone-down \hspace #0.125 \one-septimal-comma-down \hspace #0.125 \sharp-two-syntonic-comma-down  }
+                    fs'8
+                    ^ \markup \center-align { F-10 }
                     [
                     \revert Staff.Stem.stemlet-length
-                    f'8
+                    \tweak Accidental.stencil #ly:text-interface::print
+                    \tweak Accidental.text \markup \concat { \one-septimal-comma-up \hspace #0.125 \flat-one-syntonic-comma-up  }
+                    ef'8
+                    ^ \markup \center-align { +45 }
                     ]
                     f'4
+                    ^ \markup \center-align +13
                     ~
                     \override Staff.Stem.stemlet-length = 0.75
                     f'8
                     [
                     \revert Staff.Stem.stemlet-length
-                    f'8
+                    \tweak Accidental.stencil #ly:text-interface::print
+                    \tweak Accidental.text \markup \concat { \one-undecimal-quarter-tone-down \hspace #0.125 \abjad-flat  }
+                    bf'8
+                    ^ \markup \center-align { A+45 }
                     ~
                     ]
-                    f'4
+                    \tweak Accidental.stencil #ly:text-interface::print
+                    \tweak Accidental.text \markup \concat { \one-undecimal-quarter-tone-down \hspace #0.125 \abjad-flat  }
+                    bf'4
                     r2.
                     \override Staff.Stem.stemlet-length = 0.75
-                    f'8
+                    \tweak Accidental.stencil #ly:text-interface::print
+                    \tweak Accidental.text \markup { \abjad-natural  }
+                    c''8
+                    ^ \markup \center-align { +2 }
                     [
-                    f'8
+                    a'8
+                    ^ \markup \center-align -25
                     \revert Staff.Stem.stemlet-length
-                    f'8
+                    bf'8
+                    ^ \markup \center-align -22
                     ]
-                    f'8
-                    f'4.
+                    a'8
+                    ^ \markup \center-align -8
+                    a'4.
+                    ^ \markup \center-align -8
                     r8
                     \override Staff.Stem.stemlet-length = 0.75
-                    f'8
+                    a'8
+                    ^ \markup \center-align +11
                     [
-                    f'8
+                    a'8
+                    ^ \markup \center-align -25
                     \revert Staff.Stem.stemlet-length
-                    f'8
+                    bf'8
+                    ^ \markup \center-align -22
                     ]
-                    f'8
-                    f'4.
+                    a'8
+                    ^ \markup \center-align +11
+                    a'4.
+                    ^ \markup \center-align +11
                     r8
+                    \tweak Accidental.stencil #ly:text-interface::print
+                    \tweak Accidental.text \markup { \natural-one-syntonic-comma-down  }
                     f'8
-                    f'4
+                    ^ \markup \center-align { -22 }
+                    \tweak Accidental.stencil #ly:text-interface::print
+                    \tweak Accidental.text \markup { \abjad-natural  }
+                    g'4
+                    ^ \markup \center-align { +4 }
                     ~
                     \override Staff.Stem.stemlet-length = 0.75
-                    f'8
+                    \tweak Accidental.stencil #ly:text-interface::print
+                    \tweak Accidental.text \markup { \abjad-natural  }
+                    g'8
                     [
                     \revert Staff.Stem.stemlet-length
-                    f'8
+                    \tweak Accidental.stencil #ly:text-interface::print
+                    \tweak Accidental.text \markup { \natural-one-syntonic-comma-down  }
+                    e'8
+                    ^ \markup \center-align { -12 }
                     ]
-                    f'4
-                    f'8
+                    e'4
+                    ^ \markup \center-align +26
+                    \tweak Accidental.stencil #ly:text-interface::print
+                    \tweak Accidental.text \markup { \abjad-natural  }
+                    d'8
+                    ^ \markup \center-align { +6 }
                     \override Staff.Stem.stemlet-length = 0.75
-                    f'8
+                    \tweak Accidental.stencil #ly:text-interface::print
+                    \tweak Accidental.text \markup { \natural-one-syntonic-comma-down  }
+                    e'8
+                    ^ \markup \center-align { -12 }
                     [
                     \revert Staff.Stem.stemlet-length
+                    \tweak Accidental.stencil #ly:text-interface::print
+                    \tweak Accidental.text \markup { \abjad-natural  }
                     f'8
+                    ^ \markup \center-align { +0 }
                     ~
                     ]
+                    \tweak Accidental.stencil #ly:text-interface::print
+                    \tweak Accidental.text \markup { \abjad-natural  }
                     f'4
-                    f'4.
+                    \tweak Accidental.stencil #ly:text-interface::print
+                    \tweak Accidental.text \markup { \abjad-natural  }
+                    e'4.
+                    ^ \markup \center-align { +10 }
                     r4.
                     r4
                     \override Staff.Stem.stemlet-length = 0.75
-                    f'8
+                    \tweak Accidental.stencil #ly:text-interface::print
+                    \tweak Accidental.text \markup \concat { \one-tridecimal-third-tone-up \hspace #0.125 \abjad-flat  }
+                    af'8
+                    ^ \markup \center-align { A-41 }
                     [
                     \revert Staff.Stem.stemlet-length
-                    f'8
+                    \tweak Accidental.stencil #ly:text-interface::print
+                    \tweak Accidental.text \markup { \natural-two-syntonic-comma-down  }
+                    g'8
+                    ^ \markup \center-align { -39 }
                     ]
+                    \tweak Accidental.stencil #ly:text-interface::print
+                    \tweak Accidental.text \markup { \abjad-natural  }
                     f'4
+                    ^ \markup \center-align { +0 }
                     ~
                     \override Staff.Stem.stemlet-length = 0.75
+                    \tweak Accidental.stencil #ly:text-interface::print
+                    \tweak Accidental.text \markup { \abjad-natural  }
                     f'8
                     [
                     \revert Staff.Stem.stemlet-length
+                    \tweak Accidental.stencil #ly:text-interface::print
+                    \tweak Accidental.text \markup { \abjad-natural  }
                     f'8
+                    ^ \markup \center-align { +0 }
                     ~
                     ]
+                    \tweak Accidental.stencil #ly:text-interface::print
+                    \tweak Accidental.text \markup { \abjad-natural  }
                     f'4
                     \override Staff.Stem.stemlet-length = 0.75
+                    \tweak Accidental.stencil #ly:text-interface::print
+                    \tweak Accidental.text \markup { \abjad-natural  }
                     f'8
+                    ^ \markup \center-align { +0 }
                     [
                     \revert Staff.Stem.stemlet-length
+                    \tweak Accidental.stencil #ly:text-interface::print
+                    \tweak Accidental.text \markup { \abjad-natural  }
                     f'8
+                    ^ \markup \center-align { +0 }
                     ]
                     f'4
+                    ^ \markup \center-align +13
                     f'4
-                    f'4
+                    ^ \markup \center-align +13
+                    e'4
+                    ^ \markup \center-align +26
                     r2
                     \override Staff.Stem.stemlet-length = 0.75
-                    f'8
+                    \tweak Accidental.stencil #ly:text-interface::print
+                    \tweak Accidental.text \markup \concat { \one-undecimal-quarter-tone-down \hspace #0.125 \one-septimal-comma-up  }
+                    d'8
+                    ^ \markup \center-align { -20 }
                     [
                     \revert Staff.Stem.stemlet-length
-                    f'8
+                    e'8
+                    ^ \markup \center-align -36
                     ]
                     f'4
-                    f'4
-                    f'4
+                    ^ \markup \center-align +7
+                    \tweak Accidental.stencil #ly:text-interface::print
+                    \tweak Accidental.text \markup \concat { \one-undecimal-quarter-tone-down \hspace #0.125 \abjad-flat  }
+                    bf'4
+                    ^ \markup \center-align { A+45 }
+                    \tweak Accidental.stencil #ly:text-interface::print
+                    \tweak Accidental.text \markup { \natural-one-syntonic-comma-down  }
+                    a'4
+                    ^ \markup \center-align { -14 }
                     \override Staff.Stem.stemlet-length = 0.75
-                    f'8
+                    \tweak Accidental.stencil #ly:text-interface::print
+                    \tweak Accidental.text \markup \concat { \one-undecimal-quarter-tone-down \hspace #0.125 \one-septimal-comma-down \hspace #0.125 \sharp-two-syntonic-comma-down  }
+                    fs'8
+                    ^ \markup \center-align { F-10 }
                     [
                     \revert Staff.Stem.stemlet-length
-                    f'8
+                    \tweak Accidental.stencil #ly:text-interface::print
+                    \tweak Accidental.text \markup \concat { \one-septimal-comma-up \hspace #0.125 \flat-one-syntonic-comma-up  }
+                    ef'8
+                    ^ \markup \center-align { +45 }
                     ]
                     f'4
+                    ^ \markup \center-align +13
                     ~
                     \override Staff.Stem.stemlet-length = 0.75
                     f'8
                     [
                     \revert Staff.Stem.stemlet-length
-                    f'8
+                    \tweak Accidental.stencil #ly:text-interface::print
+                    \tweak Accidental.text \markup \concat { \one-undecimal-quarter-tone-down \hspace #0.125 \abjad-flat  }
+                    bf'8
+                    ^ \markup \center-align { A+45 }
                     ~
                     ]
-                    f'2
+                    \tweak Accidental.stencil #ly:text-interface::print
+                    \tweak Accidental.text \markup \concat { \one-undecimal-quarter-tone-down \hspace #0.125 \abjad-flat  }
+                    bf'2
                 }
             }
             \context Staff = "piano 3 staff"
@@ -739,220 +923,414 @@
                     \markup \bold { III }
                     \override Staff.Stem.stemlet-length = 0.75
                     f'8
+                    ^ \markup \center-align -22
                     [
                     \revert Staff.Stem.stemlet-length
-                    f'8
+                    \tweak Accidental.stencil #ly:text-interface::print
+                    \tweak Accidental.text \markup \concat { \one-undecimal-quarter-tone-up \hspace #0.125 \abjad-flat  }
+                    ef'8
+                    ^ \markup \center-align { +49 }
                     ]
-                    f'4
+                    \tweak Accidental.stencil #ly:text-interface::print
+                    \tweak Accidental.text \markup { \natural-one-syntonic-comma-down  }
+                    d'4
+                    ^ \markup \center-align { -16 }
                     ~
                     \override Staff.Stem.stemlet-length = 0.75
-                    f'8
+                    \tweak Accidental.stencil #ly:text-interface::print
+                    \tweak Accidental.text \markup { \natural-one-syntonic-comma-down  }
+                    d'8
                     [
                     \revert Staff.Stem.stemlet-length
-                    f'8
+                    \tweak Accidental.stencil #ly:text-interface::print
+                    \tweak Accidental.text \markup { \two-septimal-comma-up  }
+                    a8
+                    ^ \markup \center-align { B\raise #0.5 { \hspace #-0.5 \teeny \flat}\hspace #-0.5 -38 }
                     ~
                     ]
                     \override Staff.Stem.stemlet-length = 0.75
-                    f'8
+                    \tweak Accidental.stencil #ly:text-interface::print
+                    \tweak Accidental.text \markup { \two-septimal-comma-up  }
+                    a8
                     [
                     \revert Staff.Stem.stemlet-length
-                    f'8
+                    \tweak Accidental.stencil #ly:text-interface::print
+                    \tweak Accidental.text \markup \concat { \one-undecimal-quarter-tone-up \hspace #0.125 \one-septimal-comma-up  }
+                    g8
+                    ^ \markup \center-align { A\raise #0.5 { \hspace #-0.5 \teeny \flat}\hspace #-0.5 -16 }
                     ~
                     ]
                     \override Staff.Stem.stemlet-length = 0.75
-                    f'8
+                    \tweak Accidental.stencil #ly:text-interface::print
+                    \tweak Accidental.text \markup \concat { \one-undecimal-quarter-tone-up \hspace #0.125 \one-septimal-comma-up  }
+                    g8
                     [
                     \revert Staff.Stem.stemlet-length
-                    f'8
+                    \tweak Accidental.stencil #ly:text-interface::print
+                    \tweak Accidental.text \markup \concat { \one-septimal-comma-down \hspace #0.125 \natural-one-syntonic-comma-down  }
+                    c'8
+                    ^ \markup \center-align { -47 }
                     ]
-                    f'4
-                    f'4
+                    \tweak Accidental.stencil #ly:text-interface::print
+                    \tweak Accidental.text \markup { \abjad-natural  }
+                    c'4
+                    ^ \markup \center-align { +2 }
+                    c'4
+                    ^ \markup \center-align -22
                     r2
                     \override Staff.Stem.stemlet-length = 0.75
-                    f'8
+                    \tweak Accidental.stencil #ly:text-interface::print
+                    \tweak Accidental.text \markup { \abjad-natural  }
+                    c'8
+                    ^ \markup \center-align { +2 }
                     [
                     \revert Staff.Stem.stemlet-length
-                    f'8
+                    \tweak Accidental.stencil #ly:text-interface::print
+                    \tweak Accidental.text \markup \concat { \one-undecimal-quarter-tone-up \hspace #0.125 \flat-one-syntonic-comma-up  }
+                    df'8
+                    ^ \markup \center-align { D-33 }
                     ]
-                    f'4
+                    c'4
+                    ^ \markup \center-align +16
                     ~
                     \override Staff.Stem.stemlet-length = 0.75
-                    f'8
+                    c'8
                     [
                     \revert Staff.Stem.stemlet-length
-                    f'8
+                    \tweak Accidental.stencil #ly:text-interface::print
+                    \tweak Accidental.text \markup \concat { \one-undecimal-quarter-tone-up \hspace #0.125 \one-septimal-comma-down \hspace #0.125 \natural-one-syntonic-comma-down  }
+                    c'8
+                    ^ \markup \center-align { +6 }
                     ~
                     ]
                     \override Staff.Stem.stemlet-length = 0.75
-                    f'8
+                    \tweak Accidental.stencil #ly:text-interface::print
+                    \tweak Accidental.text \markup \concat { \one-undecimal-quarter-tone-up \hspace #0.125 \one-septimal-comma-down \hspace #0.125 \natural-one-syntonic-comma-down  }
+                    c'8
                     [
                     \revert Staff.Stem.stemlet-length
-                    f'8
+                    \tweak Accidental.stencil #ly:text-interface::print
+                    \tweak Accidental.text \markup \concat { \one-undecimal-quarter-tone-up \hspace #0.125 \double-flat-two-syntonic-comma-up  }
+                    bff8
+                    ^ \markup \center-align { B\raise #0.5 { \hspace #-0.5 \teeny \flat}\hspace #-0.5 -19 }
                     ]
                     \override Staff.Stem.stemlet-length = 0.75
-                    f'8
+                    \tweak Accidental.stencil #ly:text-interface::print
+                    \tweak Accidental.text \markup { \flat-one-syntonic-comma-up  }
+                    af8
+                    ^ \markup \center-align { +16 }
                     [
                     \revert Staff.Stem.stemlet-length
-                    f'8
+                    bf8
+                    ^ \markup \center-align -5
                     ]
-                    f'4
+                    \tweak Accidental.stencil #ly:text-interface::print
+                    \tweak Accidental.text \markup \concat { \one-nineteen-limit-schisma-up \hspace #0.125 \one-seventeen-limit-schisma-down \hspace #0.125 \one-septimal-comma-up \hspace #0.125 \sharp-two-syntonic-comma-down  }
+                    bs4
+                    ^ \markup \center-align { +4 }
                     ~
                     \override Staff.Stem.stemlet-length = 0.75
-                    f'8
+                    \tweak Accidental.stencil #ly:text-interface::print
+                    \tweak Accidental.text \markup \concat { \one-nineteen-limit-schisma-up \hspace #0.125 \one-seventeen-limit-schisma-down \hspace #0.125 \one-septimal-comma-up \hspace #0.125 \sharp-two-syntonic-comma-down  }
+                    bs8
                     [
                     \revert Staff.Stem.stemlet-length
-                    f'8
+                    c'8
+                    ^ \markup \center-align +13
                     ~
                     ]
-                    f'4
+                    c'4
                     r4.
                     r4
                     \override Staff.Stem.stemlet-length = 0.75
                     f'8
+                    ^ \markup \center-align -22
                     [
                     \revert Staff.Stem.stemlet-length
-                    f'8
+                    \tweak Accidental.stencil #ly:text-interface::print
+                    \tweak Accidental.text \markup \concat { \one-undecimal-quarter-tone-up \hspace #0.125 \abjad-flat  }
+                    ef'8
+                    ^ \markup \center-align { +49 }
                     ]
-                    f'4
+                    \tweak Accidental.stencil #ly:text-interface::print
+                    \tweak Accidental.text \markup { \natural-one-syntonic-comma-down  }
+                    d'4
+                    ^ \markup \center-align { -16 }
                     ~
                     \override Staff.Stem.stemlet-length = 0.75
-                    f'8
+                    \tweak Accidental.stencil #ly:text-interface::print
+                    \tweak Accidental.text \markup { \natural-one-syntonic-comma-down  }
+                    d'8
                     [
                     \revert Staff.Stem.stemlet-length
-                    f'8
+                    \tweak Accidental.stencil #ly:text-interface::print
+                    \tweak Accidental.text \markup { \two-septimal-comma-up  }
+                    a8
+                    ^ \markup \center-align { B\raise #0.5 { \hspace #-0.5 \teeny \flat}\hspace #-0.5 -38 }
                     ~
                     ]
-                    f'4
+                    \tweak Accidental.stencil #ly:text-interface::print
+                    \tweak Accidental.text \markup { \two-septimal-comma-up  }
+                    a4
                     ~
                     \override Staff.Stem.stemlet-length = 0.75
-                    f'8
+                    \tweak Accidental.stencil #ly:text-interface::print
+                    \tweak Accidental.text \markup { \two-septimal-comma-up  }
+                    a8
                     [
                     \revert Staff.Stem.stemlet-length
-                    f'8
+                    \tweak Accidental.stencil #ly:text-interface::print
+                    \tweak Accidental.text \markup \concat { \one-undecimal-quarter-tone-up \hspace #0.125 \one-septimal-comma-up  }
+                    g8
+                    ^ \markup \center-align { A\raise #0.5 { \hspace #-0.5 \teeny \flat}\hspace #-0.5 -16 }
                     ]
-                    f'4
-                    f'4
-                    f'4
+                    \tweak Accidental.stencil #ly:text-interface::print
+                    \tweak Accidental.text \markup \concat { \one-septimal-comma-down \hspace #0.125 \natural-one-syntonic-comma-down  }
+                    c'4
+                    ^ \markup \center-align { -47 }
+                    \tweak Accidental.stencil #ly:text-interface::print
+                    \tweak Accidental.text \markup { \abjad-natural  }
+                    c'4
+                    ^ \markup \center-align { +2 }
+                    c'4
+                    ^ \markup \center-align -22
                     r2
                     \override Staff.Stem.stemlet-length = 0.75
-                    f'8
+                    \tweak Accidental.stencil #ly:text-interface::print
+                    \tweak Accidental.text \markup { \abjad-natural  }
+                    c'8
+                    ^ \markup \center-align { +2 }
                     [
                     \revert Staff.Stem.stemlet-length
-                    f'8
+                    c'8
+                    ^ \markup \center-align -22
                     ]
+                    \tweak Accidental.stencil #ly:text-interface::print
+                    \tweak Accidental.text \markup \concat { \one-undecimal-quarter-tone-down \hspace #0.125 \one-septimal-comma-down \hspace #0.125 \flat-two-syntonic-comma-up  }
+                    df'4
+                    ^ \markup \center-align { -45 }
+                    \tweak Accidental.stencil #ly:text-interface::print
+                    \tweak Accidental.text \markup \concat { \one-seventeen-limit-schisma-down \hspace #0.125 \one-undecimal-quarter-tone-down \hspace #0.125 \two-septimal-comma-up \hspace #0.125 \abjad-sharp  }
+                    es'4
+                    ^ \markup \center-align { +16 }
                     f'4
-                    f'4
-                    f'4
+                    ^ \markup \center-align +13
                     \override Staff.Stem.stemlet-length = 0.75
-                    f'8
+                    \tweak Accidental.stencil #ly:text-interface::print
+                    \tweak Accidental.text \markup \concat { \one-undecimal-quarter-tone-down \hspace #0.125 \one-septimal-comma-down \hspace #0.125 \natural-one-syntonic-comma-down  }
+                    g'8
+                    ^ \markup \center-align { F\raise #0.75 { \hspace #-0.5 \teeny \smaller \sharp}\hspace #-0.5 +2 }
                     [
                     \revert Staff.Stem.stemlet-length
-                    f'8
+                    \tweak Accidental.stencil #ly:text-interface::print
+                    \tweak Accidental.text \markup \concat { \one-undecimal-quarter-tone-up \hspace #0.125 \abjad-flat  }
+                    ef'8
+                    ^ \markup \center-align { +49 }
                     ]
-                    f'4
+                    \tweak Accidental.stencil #ly:text-interface::print
+                    \tweak Accidental.text \markup { \natural-one-syntonic-comma-down  }
+                    d'4
+                    ^ \markup \center-align { -16 }
                     ~
                     \override Staff.Stem.stemlet-length = 0.75
-                    f'8
+                    \tweak Accidental.stencil #ly:text-interface::print
+                    \tweak Accidental.text \markup { \natural-one-syntonic-comma-down  }
+                    d'8
                     [
                     \revert Staff.Stem.stemlet-length
-                    f'8
+                    b8
+                    ^ \markup \center-align -50
                     ~
                     ]
-                    f'4
+                    b4
                     r2.
                     \override Staff.Stem.stemlet-length = 0.75
                     f'8
+                    ^ \markup \center-align -22
                     [
-                    f'8
+                    \tweak Accidental.stencil #ly:text-interface::print
+                    \tweak Accidental.text \markup \concat { \one-undecimal-quarter-tone-up \hspace #0.125 \abjad-flat  }
+                    ef'8
+                    ^ \markup \center-align { +49 }
                     \revert Staff.Stem.stemlet-length
-                    f'8
+                    \tweak Accidental.stencil #ly:text-interface::print
+                    \tweak Accidental.text \markup { \natural-one-syntonic-comma-down  }
+                    d'8
+                    ^ \markup \center-align { -16 }
                     ]
-                    f'8
-                    f'4.
+                    \tweak Accidental.stencil #ly:text-interface::print
+                    \tweak Accidental.text \markup { \two-septimal-comma-up  }
+                    a8
+                    ^ \markup \center-align { B\raise #0.5 { \hspace #-0.5 \teeny \flat}\hspace #-0.5 -38 }
+                    \tweak Accidental.stencil #ly:text-interface::print
+                    \tweak Accidental.text \markup \concat { \one-undecimal-quarter-tone-up \hspace #0.125 \one-septimal-comma-up  }
+                    g4.
+                    ^ \markup \center-align { A\raise #0.5 { \hspace #-0.5 \teeny \flat}\hspace #-0.5 -16 }
                     r8
                     \override Staff.Stem.stemlet-length = 0.75
-                    f'8
+                    \tweak Accidental.stencil #ly:text-interface::print
+                    \tweak Accidental.text \markup \concat { \one-septimal-comma-down \hspace #0.125 \natural-one-syntonic-comma-down  }
+                    c'8
+                    ^ \markup \center-align { -47 }
                     [
-                    f'8
+                    \tweak Accidental.stencil #ly:text-interface::print
+                    \tweak Accidental.text \markup { \abjad-natural  }
+                    c'8
+                    ^ \markup \center-align { +2 }
                     \revert Staff.Stem.stemlet-length
-                    f'8
+                    c'8
+                    ^ \markup \center-align -22
                     ]
-                    f'8
-                    f'4.
+                    \tweak Accidental.stencil #ly:text-interface::print
+                    \tweak Accidental.text \markup { \abjad-natural  }
+                    c'8
+                    ^ \markup \center-align { +2 }
+                    \tweak Accidental.stencil #ly:text-interface::print
+                    \tweak Accidental.text \markup \concat { \one-undecimal-quarter-tone-up \hspace #0.125 \flat-one-syntonic-comma-up  }
+                    df'4.
+                    ^ \markup \center-align { D-33 }
                     r8
-                    f'8
-                    f'4
+                    c'8
+                    ^ \markup \center-align +16
+                    \tweak Accidental.stencil #ly:text-interface::print
+                    \tweak Accidental.text \markup \concat { \one-undecimal-quarter-tone-up \hspace #0.125 \one-septimal-comma-down \hspace #0.125 \natural-one-syntonic-comma-down  }
+                    c'4
+                    ^ \markup \center-align { +6 }
                     ~
                     \override Staff.Stem.stemlet-length = 0.75
-                    f'8
+                    \tweak Accidental.stencil #ly:text-interface::print
+                    \tweak Accidental.text \markup \concat { \one-undecimal-quarter-tone-up \hspace #0.125 \one-septimal-comma-down \hspace #0.125 \natural-one-syntonic-comma-down  }
+                    c'8
                     [
                     \revert Staff.Stem.stemlet-length
-                    f'8
+                    \tweak Accidental.stencil #ly:text-interface::print
+                    \tweak Accidental.text \markup \concat { \one-undecimal-quarter-tone-up \hspace #0.125 \double-flat-two-syntonic-comma-up  }
+                    bff8
+                    ^ \markup \center-align { B\raise #0.5 { \hspace #-0.5 \teeny \flat}\hspace #-0.5 -19 }
                     ]
-                    f'4
-                    f'8
+                    \tweak Accidental.stencil #ly:text-interface::print
+                    \tweak Accidental.text \markup { \flat-one-syntonic-comma-up  }
+                    af4
+                    ^ \markup \center-align { +16 }
+                    bf8
+                    ^ \markup \center-align -5
                     \override Staff.Stem.stemlet-length = 0.75
-                    f'8
+                    \tweak Accidental.stencil #ly:text-interface::print
+                    \tweak Accidental.text \markup \concat { \one-nineteen-limit-schisma-up \hspace #0.125 \one-seventeen-limit-schisma-down \hspace #0.125 \one-septimal-comma-up \hspace #0.125 \sharp-two-syntonic-comma-down  }
+                    bs8
+                    ^ \markup \center-align { +4 }
                     [
                     \revert Staff.Stem.stemlet-length
-                    f'8
+                    c'8
+                    ^ \markup \center-align +13
                     ~
                     ]
-                    f'4
+                    c'4
                     f'4.
+                    ^ \markup \center-align -22
                     r4.
                     r4
                     \override Staff.Stem.stemlet-length = 0.75
-                    f'8
+                    \tweak Accidental.stencil #ly:text-interface::print
+                    \tweak Accidental.text \markup \concat { \one-undecimal-quarter-tone-up \hspace #0.125 \abjad-flat  }
+                    ef'8
+                    ^ \markup \center-align { +49 }
                     [
                     \revert Staff.Stem.stemlet-length
-                    f'8
+                    \tweak Accidental.stencil #ly:text-interface::print
+                    \tweak Accidental.text \markup { \natural-one-syntonic-comma-down  }
+                    d'8
+                    ^ \markup \center-align { -16 }
                     ]
-                    f'4
+                    \tweak Accidental.stencil #ly:text-interface::print
+                    \tweak Accidental.text \markup { \two-septimal-comma-up  }
+                    a4
+                    ^ \markup \center-align { B\raise #0.5 { \hspace #-0.5 \teeny \flat}\hspace #-0.5 -38 }
                     ~
                     \override Staff.Stem.stemlet-length = 0.75
-                    f'8
+                    \tweak Accidental.stencil #ly:text-interface::print
+                    \tweak Accidental.text \markup { \two-septimal-comma-up  }
+                    a8
                     [
                     \revert Staff.Stem.stemlet-length
-                    f'8
+                    \tweak Accidental.stencil #ly:text-interface::print
+                    \tweak Accidental.text \markup \concat { \one-undecimal-quarter-tone-up \hspace #0.125 \one-septimal-comma-up  }
+                    g8
+                    ^ \markup \center-align { A\raise #0.5 { \hspace #-0.5 \teeny \flat}\hspace #-0.5 -16 }
                     ~
                     ]
-                    f'4
+                    \tweak Accidental.stencil #ly:text-interface::print
+                    \tweak Accidental.text \markup \concat { \one-undecimal-quarter-tone-up \hspace #0.125 \one-septimal-comma-up  }
+                    g4
                     \override Staff.Stem.stemlet-length = 0.75
-                    f'8
+                    \tweak Accidental.stencil #ly:text-interface::print
+                    \tweak Accidental.text \markup \concat { \one-septimal-comma-down \hspace #0.125 \natural-one-syntonic-comma-down  }
+                    c'8
+                    ^ \markup \center-align { -47 }
                     [
                     \revert Staff.Stem.stemlet-length
-                    f'8
+                    \tweak Accidental.stencil #ly:text-interface::print
+                    \tweak Accidental.text \markup { \abjad-natural  }
+                    c'8
+                    ^ \markup \center-align { +2 }
                     ]
-                    f'4
-                    f'4
-                    f'4
+                    c'4
+                    ^ \markup \center-align -22
+                    \tweak Accidental.stencil #ly:text-interface::print
+                    \tweak Accidental.text \markup { \abjad-natural  }
+                    c'4
+                    ^ \markup \center-align { +2 }
+                    c'4
+                    ^ \markup \center-align -22
                     r2
                     \override Staff.Stem.stemlet-length = 0.75
-                    f'8
+                    \tweak Accidental.stencil #ly:text-interface::print
+                    \tweak Accidental.text \markup \concat { \one-undecimal-quarter-tone-down \hspace #0.125 \one-septimal-comma-down \hspace #0.125 \flat-two-syntonic-comma-up  }
+                    df'8
+                    ^ \markup \center-align { -45 }
                     [
                     \revert Staff.Stem.stemlet-length
-                    f'8
+                    \tweak Accidental.stencil #ly:text-interface::print
+                    \tweak Accidental.text \markup \concat { \one-seventeen-limit-schisma-down \hspace #0.125 \one-undecimal-quarter-tone-down \hspace #0.125 \two-septimal-comma-up \hspace #0.125 \abjad-sharp  }
+                    es'8
+                    ^ \markup \center-align { +16 }
                     ]
                     f'4
-                    f'4
-                    f'4
+                    ^ \markup \center-align +13
+                    \tweak Accidental.stencil #ly:text-interface::print
+                    \tweak Accidental.text \markup \concat { \one-undecimal-quarter-tone-down \hspace #0.125 \one-septimal-comma-down \hspace #0.125 \natural-one-syntonic-comma-down  }
+                    g'4
+                    ^ \markup \center-align { F\raise #0.75 { \hspace #-0.5 \teeny \smaller \sharp}\hspace #-0.5 +2 }
+                    \tweak Accidental.stencil #ly:text-interface::print
+                    \tweak Accidental.text \markup \concat { \one-undecimal-quarter-tone-up \hspace #0.125 \abjad-flat  }
+                    ef'4
+                    ^ \markup \center-align { +49 }
                     \override Staff.Stem.stemlet-length = 0.75
-                    f'8
+                    \tweak Accidental.stencil #ly:text-interface::print
+                    \tweak Accidental.text \markup { \natural-one-syntonic-comma-down  }
+                    d'8
+                    ^ \markup \center-align { -16 }
                     [
                     \revert Staff.Stem.stemlet-length
-                    f'8
+                    b8
+                    ^ \markup \center-align -50
                     ]
                     f'4
+                    ^ \markup \center-align -22
                     ~
                     \override Staff.Stem.stemlet-length = 0.75
                     f'8
                     [
                     \revert Staff.Stem.stemlet-length
-                    f'8
+                    \tweak Accidental.stencil #ly:text-interface::print
+                    \tweak Accidental.text \markup \concat { \one-undecimal-quarter-tone-up \hspace #0.125 \abjad-flat  }
+                    ef'8
+                    ^ \markup \center-align { +49 }
                     ~
                     ]
-                    f'2
+                    \tweak Accidental.stencil #ly:text-interface::print
+                    \tweak Accidental.text \markup \concat { \one-undecimal-quarter-tone-up \hspace #0.125 \abjad-flat  }
+                    ef'2
                 }
             }
             \context Staff = "piano 4 staff"
