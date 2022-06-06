@@ -49,7 +49,10 @@
         \override StaffGrouper.staff-staff-spacing = #'((basic-distance . 12) (minimum distance . 12) (padding . 6))
 
         \override AccidentalSuggestion.avoid-slur = #'ignore
+        \override Accidental.X-extent = ##f
 
+        \override BarLine.bar-extent = #'(-2 . 2)
+        \override BarLine.X-extent = #'(0 . 0)
         \override BarLine.hair-thickness = 0.5
         \override BarLine.transparent = ##t
         \override BarLine.thick-thickness = #8
