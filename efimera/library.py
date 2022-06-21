@@ -946,6 +946,46 @@ def win_pitching(index, fundamentals):
 
     return handler
 
+def slashes_pitching(fundamental, index=0):
+    def handler(selections):
+        _pc_to_ratio = {
+            0: "1/1",
+            1: "17/16",
+            2: "145/128",
+            4: "161/128",
+            5: "43/32",
+            7: "3/2",
+            8: "51/32",
+            10: "57/32",
+            11: "119/64",
+        }
+
+        ath = [0, 1, 2, 4, 7, 8,]
+
+        ath_trans = [5, 4, 10, 8, 0, 11,]
+
+        seq = []
+
+        for a1, a2 in zip(ath, ath_trans):
+            seq.append(_pc_to_ratio[a1])
+            seq.append(_pc_to_ratio[a2])
+
+        pitch_handler = evans.PitchHandler([fundamental], forget=False)
+
+        final_seq = trinton.rotated_sequence(seq, index)
+
+        ratio_handler = evans.PitchHandler(
+            pitch_list=[_ for _ in final_seq],
+            forget=False,
+            as_ratios=True,
+        )
+
+        pitch_handler(selections)
+
+        ratio_handler(selections)
+
+    return handler
+
 
 # music commands
 
@@ -1402,9 +1442,9 @@ def parting_glass(
 def slashes(
     voice,
     measures,
-    tale_index=0,
+    talea_index=0,
     density_stage=1,
-    pitch_handler=None,
+    pitch_handler=slashes_pitching(fundamental=0, index=0),
     pitch_index=0,
     rewrite_meter=None,
     preprocessor=None,
@@ -1518,7 +1558,7 @@ def slashes(
         ],
         rewrite_meter=rewrite_meter,
         preprocessor=preprocessor,
-        pitch_handler=None,
+        pitch_handler=pitch_handler,
         attachment_function=None,
     )
 

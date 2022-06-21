@@ -20,15 +20,15 @@ score = library.efimera_score(
 # music commands
 
 library.slashes(
-    voice=score["piano 1 voice"],
+    voice=score["piano 2 voice"],
     measures=[
         1,
         2,
         3,
         4,
     ],
-    density_stage=1,
-    pitch_handler=None,
+    density_stage=3,
+    talea_index=2,
     pitch_index=0,
     rewrite_meter=-1,
     preprocessor=trinton.fuse_quarters_preprocessor(
@@ -44,16 +44,16 @@ library.slashes(
 
 # trinton.make_sc_file(
 #     score=score,
-#     tempo=((1, 4), 50),
+#     tempo=((1, 4), 80),
 #     current_directory="/Users/trintonprater/scores/efimera/efimera/sketches",
 # )
 
-# library.write_sc_file(
-#     score=score,
-#     tempo=((1, 4), 50),
-#     section_number=1,
-#     current_directory="/Users/trintonprater/scores/efimera/efimera/sketches",
-# )
+library.write_sc_file(
+    score=score,
+    tempo=((1, 4), 80),
+    section_number=1,
+    current_directory="/Users/trintonprater/scores/efimera/efimera/sketches",
+)
 
 # cache leaves
 
