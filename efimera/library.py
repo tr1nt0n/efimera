@@ -946,6 +946,7 @@ def win_pitching(index, fundamentals):
 
     return handler
 
+
 def slashes_pitching(fundamental, index=0):
     def handler(selections):
         _pc_to_ratio = {
@@ -960,9 +961,23 @@ def slashes_pitching(fundamental, index=0):
             11: "119/64",
         }
 
-        ath = [0, 1, 2, 4, 7, 8,]
+        ath = [
+            0,
+            1,
+            2,
+            4,
+            7,
+            8,
+        ]
 
-        ath_trans = [5, 4, 10, 8, 0, 11,]
+        ath_trans = [
+            5,
+            4,
+            10,
+            8,
+            0,
+            11,
+        ]
 
         seq = []
 
