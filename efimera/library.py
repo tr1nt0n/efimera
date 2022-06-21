@@ -47,6 +47,158 @@ logistic_map = eval(
     )"""
 )
 
+
+def parting_glass_chords():
+    out = []
+    ratio_list1 = [
+        "16/13",
+        "800/729",
+        "1/1",
+        "1/1",
+        "1/1",
+        "1/1",
+        "129/128",
+        "3763/4096",
+        "129/128",
+        "800/729",
+        "1/1",
+        "129/128",
+        "88/135",
+        "1136/1755",
+        "83/128",
+        "2261/2304",
+        "15/16",
+        "16/13",
+        "800/729",
+        "1/1",
+        "128/154",
+        "97/128",
+        "1/1",
+        "129/128",
+        "3763/4096",
+        "128/154",
+        "355/384",
+        "707/704",
+        "128/99",
+        "5/4",
+        "175/176",
+        "32/35",
+        "129/128",
+        "128/99",
+        "3/2",
+        "159/128",
+        "29/22",
+        "321/256",
+        "321/256",
+        "856/675",
+        "159/128",
+        "29/22",
+        "856/675",
+        "856/675",
+        "80/81",
+        "9/8",
+        "15/16",
+        "981/1024",
+        "27/32",
+        "15/16",
+        "1/1",
+        "243/256",
+        "16/13",
+        "800/729",
+        "1/1",
+        "1/1",
+        "1/1",
+        "1/1",
+        "129/128",
+        "129/128",
+        "981/1024",
+        "128/154",
+        "355/384",
+        "707/704",
+        "128/99",
+        "5/4",
+        "175/176",
+        "32/35",
+        "129/128",
+        "128/99",
+    ]
+    ratio_list2 = [
+        "79/80",
+        "11/12",
+        "5/6",
+        "32/49",
+        "33/56",
+        "35/48",
+        "3/4",
+        "71/96",
+        "3/4",
+        "33/40",
+        "12387/16384",
+        "385/512",
+        "33/50",
+        "3/5",
+        "213/320",
+        "8075/10752",
+        "40/53",
+        "79/80",
+        "11/12",
+        "5/6",
+        "32/49",
+        "33/56",
+        "35/48",
+        "3/4",
+        "71/96",
+        "3/4",
+        "71/96",
+        "1701/2200",
+        "544/539",
+        "129/128",
+        "35/33",
+        "11/12",
+        "5/6",
+        "1/1",
+        "129/128",
+        "45927/45056",
+        "1/1",
+        "513/512",
+        "76/75",
+        "76/75",
+        "45927/45056",
+        "1/1",
+        "76/75",
+        "513/512",
+        "32805/32768",
+        "107/96",
+        "81/80",
+        "2048/2187",
+        "15/16",
+        "5/6",
+        "8192/10935",
+        "2/3",
+        "79/80",
+        "11/12",
+        "5/6",
+        "32/49",
+        "33/56",
+        "35/48",
+        "3/4",
+        "71/96",
+        "3/4",
+        "71/96",
+        "1701/2200",
+        "544/539",
+        "129/128",
+        "35/33",
+        "11/12",
+        "5/6",
+        "1/1",
+    ]
+
+    for ratio_1, ratio_2 in zip(ratio_list1, ratio_list2):
+        out.append([quicktions.Fraction(ratio_1), quicktions.Fraction(ratio_2)])
+    return out
+
+
 # attachment functions
 
 
@@ -147,6 +299,23 @@ def win_attachments(dyn_list=None):
 
 
 # pitchhandlers
+
+
+def parting_glass_pitching(ratio_list):
+    def handler(selections):
+        pitch_handler = evans.PitchHandler(pitch_list=[5], forget=False)
+
+        ratio_handler = evans.PitchHandler(
+            pitch_list=[_ for _ in ratio_list],
+            forget=False,
+            as_ratios=True,
+        )
+
+        pitch_handler(selections)
+
+        ratio_handler(selections)
+
+    return handler
 
 
 def grid1_pitching(index=0):
@@ -1037,9 +1206,85 @@ def win(
 def parting_glass(
     voice,
     measures,
+    index=0,
     preprocessor=None,
     rewrite_meter=None,
 ):
+    _voice_name_to_ratios = {
+        "piano 1 voice": [
+            "79/64",
+            "11/10",
+            "1/1",
+            "128/154",
+            "3/4",
+            "5/6",
+            "1/1",
+            "71/64",
+            "1/1",
+            "11/10",
+            "161/128",
+            "5/4",
+            "11/10",
+            "1/1",
+            "71/64",
+            "323/256",
+            "3/4",
+            "79/64",
+            "11/10",
+            "1/1",
+            "128/154",
+            "3/4",
+            "5/6",
+            "1/1",
+            "71/64",
+            "1/1",
+            "71/64",
+            "14/11",
+            "128/77",
+            "3/2",
+            "14/11",
+            "11/10",
+            "1/1",
+            "437/512",
+            "3/2",
+            "14/11",
+            "128/77",
+            "3/2",
+            "1024/675",
+            "1024/675",
+            "14/11",
+            "128/77",
+            "1024/675",
+            "3/2",
+            "5/4",
+            "4/3",
+            "5/4",
+            "9/8",
+            "1/1",
+            "10/9",
+            "8192/6561",
+            "3/4",
+            "14/11",
+            "11/10",
+            "1/1",
+            "128/154",
+            "3/4",
+            "5/6",
+            "1/1",
+            "1/1",
+            "9/8",
+            "1/1",
+            "71/64",
+            "5/4",
+            "5/3",
+            "3/2",
+            "5/4",
+            "10/9",
+            "1/1",
+            "5/6",
+        ],
+        "piano 2 voice": parting_glass_chords(),
+    }
     if voice.name == "piano 4 voice":
         trinton.music_command(
             voice=voice,
@@ -1052,7 +1297,7 @@ def parting_glass(
             preprocessor=preprocessor,
             pitch_handler=evans.PitchHandler([-31]),
             attachment_function=None,
-        ),
+        )
     else:
         trinton.music_command(
             voice=voice,
@@ -1145,9 +1390,152 @@ def parting_glass(
             ],
             rewrite_meter=rewrite_meter,
             preprocessor=preprocessor,
-            pitch_handler=None,
+            pitch_handler=parting_glass_pitching(
+                ratio_list=trinton.rotated_sequence(
+                    _voice_name_to_ratios[voice.name], index
+                ),
+            ),
             attachment_function=None,
         )
+
+
+def slashes(
+    voice,
+    measures,
+    tale_index=0,
+    density_stage=1,
+    pitch_handler=None,
+    pitch_index=0,
+    rewrite_meter=None,
+    preprocessor=None,
+):
+    _stage_to_rest_selector = {
+        1: trinton.patterned_tie_index_selector(
+            [
+                2,
+                14,
+                19,
+                29,
+            ],
+            37,
+        ),
+        2: trinton.patterned_tie_index_selector(
+            [
+                1,
+                9,
+                13,
+                14,
+                17,
+                18,
+                19,
+                24,
+            ],
+            25,
+        ),
+        3: trinton.patterned_tie_index_selector(
+            [
+                0,
+                2,
+                5,
+                6,
+                8,
+                9,
+                10,
+                11,
+                14,
+                15,
+                16,
+                17,
+                18,
+                20,
+            ],
+            21,
+        ),
+        4: trinton.patterned_tie_index_selector(
+            [
+                1,
+                2,
+                3,
+                4,
+                6,
+                7,
+                8,
+                9,
+                10,
+                11,
+                15,
+                16,
+                21,
+                22,
+                23,
+                24,
+                25,
+                26,
+                27,
+                28,
+                29,
+                30,
+            ],
+            30,
+        ),
+        5: trinton.patterned_tie_index_selector(
+            [
+                0,
+                1,
+                2,
+            ],
+            2,
+        ),
+    }
+
+    trinton.music_command(
+        voice=voice,
+        measures=measures,
+        rmaker=rmakers.talea(
+            [
+                1,
+                1,
+                1,
+                1,
+                1,
+            ],
+            16,
+            extra_counts=trinton.rotated_sequence(logistic_map, talea_index),
+        ),
+        rmaker_commands=[
+            rmakers.force_rest(
+                trinton.patterned_tie_index_selector(
+                    [
+                        0,
+                        1,
+                        2,
+                    ],
+                    2,
+                )
+            ),
+            rmakers.force_note(_stage_to_rest_selector[density_stage]),
+            # rmakers.beam(),
+        ],
+        rewrite_meter=rewrite_meter,
+        preprocessor=preprocessor,
+        pitch_handler=None,
+        attachment_function=None,
+    )
+
+    trinton.fuse_tuplet_rests(voice)
+
+    if density_stage > 3:
+        pass
+    else:
+        selected_measures = abjad.select.group_by_measure(
+            abjad.select.leaves(voice, pitched=True)
+        )
+
+        for measure in measures:
+            groups = abjad.select.group_by_contiguity(selected_measures[measure - 1])
+
+            for group in groups:
+                abjad.mutate.fuse(group)
 
 
 # notation tools
