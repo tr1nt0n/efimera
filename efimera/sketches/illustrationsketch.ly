@@ -37,7 +37,7 @@
             {
                 \context Voice = "piano 2 voice"
                 {
-                    \times 4/7
+                    \times 4/5
                     {
                         \set Staff.instrumentName =
                         \markup \bold { II }
@@ -51,13 +51,14 @@
                         f'16
                         ^ \markup \center-align +12
                         r8
+                    }
+                    \tweak text #tuplet-number::calc-fraction-text
+                    \times 12/13
+                    {
                         \tweak Accidental.stencil #ly:text-interface::print
                         \tweak Accidental.text \markup \concat { \one-seventeen-limit-schisma-down \hspace #0.125 \abjad-sharp  }
                         cs'8
                         ^ \markup \center-align { +5 }
-                    }
-                    \times 4/7
-                    {
                         r16
                         d'4
                         ^ \markup \center-align +16
@@ -66,10 +67,13 @@
                         \tweak Accidental.text \markup { \abjad-natural  }
                         g'4
                         ^ \markup \center-align { +2 }
-                        ~
+                    }
+                    \times 4/7
+                    {
                         \tweak Accidental.stencil #ly:text-interface::print
                         \tweak Accidental.text \markup { \abjad-natural  }
-                        g'16
+                        c'16
+                        ^ \markup \center-align { +0 }
                         r16
                         f'8
                         ^ \markup \center-align +12
@@ -78,12 +82,13 @@
                         \tweak Accidental.text \markup \concat { \one-twenty-three-limit-comma-up \hspace #0.125 \one-septimal-comma-down  }
                         e'16
                         ^ \markup \center-align { -3 }
-                        r8
+                        r16
+                    }
+                    \times 8/9
+                    {
+                        r16
                         d'8
                         ^ \markup \center-align +16
-                    }
-                    \times 2/3
-                    {
                         r16
                         \tweak Accidental.stencil #ly:text-interface::print
                         \tweak Accidental.text \markup \concat { \one-twenty-three-limit-comma-up \hspace #0.125 \one-septimal-comma-down  }
@@ -91,7 +96,7 @@
                         ^ \markup \center-align { -3 }
                         r16
                     }
-                    \times 8/13
+                    \times 2/3
                     {
                         r16
                         \tweak Accidental.stencil #ly:text-interface::print
@@ -102,6 +107,9 @@
                         \tweak Accidental.stencil #ly:text-interface::print
                         \tweak Accidental.text \markup \concat { \one-seventeen-limit-schisma-down \hspace #0.125 \abjad-sharp  }
                         gs'16
+                    }
+                    \times 4/5
+                    {
                         r16
                         \tweak Accidental.stencil #ly:text-interface::print
                         \tweak Accidental.text \markup \concat { \one-twenty-three-limit-comma-up \hspace #0.125 \one-septimal-comma-down  }
@@ -112,11 +120,11 @@
                         \tweak Accidental.text \markup \concat { \one-nineteen-limit-schisma-up \hspace #0.125 \abjad-flat  }
                         bf'16
                         ^ \markup \center-align { -1 }
-                        r8
                     }
-                    \tweak edge-height #'(0.7 . 0)
-                    \times 2/3
+                    \tweak text #tuplet-number::calc-fraction-text
+                    \times 6/7
                     {
+                        r8
                         \tweak Accidental.stencil #ly:text-interface::print
                         \tweak Accidental.text \markup \concat { \one-twenty-three-limit-comma-up \hspace #0.125 \one-septimal-comma-down  }
                         e'8
@@ -126,87 +134,40 @@
                         \tweak Accidental.text \markup { \abjad-natural  }
                         g'4
                         ^ \markup \center-align { +2 }
-                    }
-                    \tweak edge-height #'(0.7 . 0)
-                    \times 4/5
-                    {
                         r8
                         \tweak Accidental.stencil #ly:text-interface::print
                         \tweak Accidental.text \markup { \abjad-natural  }
-                        c'8
+                        c'8.
                         ^ \markup \center-align { +0 }
                     }
-                    \tweak text #tuplet-number::calc-fraction-text
-                    \tweak edge-height #'(0.7 . 0)
-                    \times 3/5
+                    \times 4/5
                     {
                         \tweak Accidental.stencil #ly:text-interface::print
-                        \tweak Accidental.text \markup \concat { \one-seventeen-limit-schisma-down \hspace #0.125 \abjad-sharp  }
-                        cs'8.
-                        ^ \markup \center-align { +5 }
+                        \tweak Accidental.text \markup \concat { \one-twenty-three-limit-comma-up \hspace #0.125 \one-septimal-comma-down  }
+                        e'8
+                        ^ \markup \center-align { -3 }
                         r16
                         \tweak Accidental.stencil #ly:text-interface::print
                         \tweak Accidental.text \markup \concat { \one-nineteen-limit-schisma-up \hspace #0.125 \abjad-flat  }
                         bf'8
                         ^ \markup \center-align { -1 }
-                        r16
-                        \tweak Accidental.stencil #ly:text-interface::print
-                        \tweak Accidental.text \markup \concat { \one-seventeen-limit-schisma-down \hspace #0.125 \abjad-sharp  }
-                        gs'16
-                        ^ \markup \center-align { +7 }
-                        r8
-                        \tweak Accidental.stencil #ly:text-interface::print
-                        \tweak Accidental.text \markup { \abjad-natural  }
-                        g'8
-                        ^ \markup \center-align { +2 }
-                        r16
-                        \override Staff.Stem.stemlet-length = 0.75
-                        \tweak Accidental.stencil #ly:text-interface::print
-                        \tweak Accidental.text \markup \concat { \one-seventeen-limit-schisma-down \hspace #0.125 \abjad-sharp  }
-                        gs'16
-                        ^ \markup \center-align { +7 }
-                        [
-                        \revert Staff.Stem.stemlet-length
-                        \tweak Accidental.stencil #ly:text-interface::print
-                        \tweak Accidental.text \markup \concat { \one-seventeen-limit-schisma-down \hspace #0.125 \one-septimal-comma-down  }
-                        b'8.
-                        ^ \markup \center-align { -26 }
-                        ]
-                        r8
-                        \tweak Accidental.stencil #ly:text-interface::print
-                        \tweak Accidental.text \markup \concat { \one-seventeen-limit-schisma-down \hspace #0.125 \abjad-sharp  }
-                        cs'4
-                        ^ \markup \center-align { +5 }
-                        ~
-                        \tweak Accidental.stencil #ly:text-interface::print
-                        \tweak Accidental.text \markup \concat { \one-seventeen-limit-schisma-down \hspace #0.125 \abjad-sharp  }
-                        cs'16
-                    }
-                    \tweak edge-height #'(0.7 . 0)
-                    \times 4/7
-                    {
-                        r16
-                        \tweak Accidental.stencil #ly:text-interface::print
-                        \tweak Accidental.text \markup \concat { \one-seventeen-limit-schisma-down \hspace #0.125 \abjad-sharp  }
-                        gs'8
-                        ^ \markup \center-align { +7 }
                     }
                     r32.
                     \tweak Accidental.stencil #ly:text-interface::print
-                    \tweak Accidental.text \markup { \abjad-natural  }
-                    c'32.
-                    ^ \markup \center-align { +0 }
+                    \tweak Accidental.text \markup \concat { \one-seventeen-limit-schisma-down \hspace #0.125 \abjad-sharp  }
+                    gs'32.
+                    ^ \markup \center-align { +7 }
                     r32
                     r16
                     \tweak Accidental.stencil #ly:text-interface::print
-                    \tweak Accidental.text \markup \concat { \one-seventeen-limit-schisma-down \hspace #0.125 \abjad-sharp  }
-                    gs'16.
-                    ^ \markup \center-align { +7 }
+                    \tweak Accidental.text \markup { \abjad-natural  }
+                    g'16.
+                    ^ \markup \center-align { +2 }
                     r32.
                     \tweak Accidental.stencil #ly:text-interface::print
-                    \tweak Accidental.text \markup { \abjad-natural  }
-                    c'32.
-                    ^ \markup \center-align { +0 }
+                    \tweak Accidental.text \markup \concat { \one-seventeen-limit-schisma-down \hspace #0.125 \abjad-sharp  }
+                    gs'32.
+                    ^ \markup \center-align { +7 }
                 }
             }
             \context Staff = "piano 3 staff"

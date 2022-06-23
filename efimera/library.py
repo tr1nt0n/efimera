@@ -1582,14 +1582,34 @@ def slashes(
     if density_stage > 3:
         pass
     else:
-        selected_measures = abjad.select.group_by_measure(
-            abjad.select.leaves(voice, pitched=True)
-        )
+        selected_measures = abjad.select.group_by_measure(voice)
+
+        def exclude_tuplets(selection):
+            out = []
+
+            for component in trinton.get_top_level_components_from_leaves(selection):
+                if isinstance(component, abjad.Tuplet):
+                    pass
+                else:
+                    out.append(component)
+            return out
 
         for measure in measures:
-            groups = abjad.select.group_by_contiguity(selected_measures[measure - 1])
+            for tuplet in abjad.select.tuplets(selected_measures[measure - 1]):
+                groups = abjad.select.group_by_contiguity(
+                    abjad.select.leaves(tuplet, pitched=True)
+                )
 
-            for group in groups:
+                for group in groups:
+                    abjad.mutate.fuse(group)
+
+            non_tuplets = abjad.select.group_by_contiguity(
+                abjad.select.leaves(
+                    exclude_tuplets(selected_measures[measure - 1]), pitched=True
+                )
+            )
+
+            for group in non_tuplets:
                 abjad.mutate.fuse(group)
 
 

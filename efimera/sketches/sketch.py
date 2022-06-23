@@ -28,7 +28,7 @@ library.slashes(
         4,
     ],
     density_stage=3,
-    talea_index=2,
+    talea_index=0,
     pitch_index=0,
     rewrite_meter=-1,
     preprocessor=trinton.fuse_quarters_preprocessor(
@@ -48,12 +48,12 @@ library.slashes(
 #     current_directory="/Users/trintonprater/scores/efimera/efimera/sketches",
 # )
 
-library.write_sc_file(
-    score=score,
-    tempo=((1, 4), 80),
-    section_number=1,
-    current_directory="/Users/trintonprater/scores/efimera/efimera/sketches",
-)
+# library.write_sc_file(
+#     score=score,
+#     tempo=((1, 4), 80),
+#     section_number=1,
+#     current_directory="/Users/trintonprater/scores/efimera/efimera/sketches",
+# )
 
 # cache leaves
 
