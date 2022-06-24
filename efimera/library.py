@@ -1823,7 +1823,6 @@ def plane(
     talea_division=16,
     rewrite_meter=None,
     preprocessor=None,
-    pitch_handler=None,
 ):
     _voice_to_talea = {
         "piano 1 voice": [
