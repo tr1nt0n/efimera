@@ -21,147 +21,160 @@
                     \markup \bold { I }
                     \set Staff.shortInstrumentName =
                     \markup \bold { I }
-                    s1 * 1
-                    s1 * 5/4
-                    s1 * 1/2
-                    s1 * 7/8
+                    \override Staff.Stem.stemlet-length = 0.75
+                    ef'16
+                    [
+                    fs16
+                    ~
+                    fs16
+                    \revert Staff.Stem.stemlet-length
+                    cs'16
+                    ~
+                    ]
+                    cs'4
+                    \override Staff.Stem.stemlet-length = 0.75
+                    f8.
+                    [
+                    \revert Staff.Stem.stemlet-length
+                    e'''16
+                    ~
+                    ]
+                    e'''4
+                    ~
+                    \override Staff.Stem.stemlet-length = 0.75
+                    e'''16
+                    [
+                    \revert Staff.Stem.stemlet-length
+                    b'8.
+                    ~
+                    ]
+                    \override Staff.Stem.stemlet-length = 0.75
+                    b'16
+                    [
+                    \revert Staff.Stem.stemlet-length
+                    f'''8.
+                    ~
+                    ]
+                    f'''4
+                    \override Staff.Stem.stemlet-length = 0.75
+                    fs8
+                    [
+                    ef'16
+                    \revert Staff.Stem.stemlet-length
+                    ef'16
+                    ]
+                    \override Staff.Stem.stemlet-length = 0.75
+                    fs8
+                    [
+                    \revert Staff.Stem.stemlet-length
+                    cs'8
+                    ~
+                    ]
+                    \override Staff.Stem.stemlet-length = 0.75
+                    cs'8.
+                    [
+                    \revert Staff.Stem.stemlet-length
+                    f16
+                    ~
+                    ]
+                    \override Staff.Stem.stemlet-length = 0.75
+                    f8
+                    [
+                    \revert Staff.Stem.stemlet-length
+                    e'''8
+                    ~
+                    ]
+                    e'''4
+                    b'8
+                    ~
+                    b'8
+                    e'''4.
                 }
             }
             \context Staff = "piano 2 staff"
             {
                 \context Voice = "piano 2 voice"
                 {
-                    \times 4/5
-                    {
-                        \set Staff.instrumentName =
-                        \markup \bold { II }
-                        \set Staff.shortInstrumentName =
-                        \markup \bold { II }
-                        \tweak Accidental.stencil #ly:text-interface::print
-                        \tweak Accidental.text \markup { \abjad-natural  }
-                        c'16
-                        ^ \markup \center-align { +0 }
-                        r16
-                        f'16
-                        ^ \markup \center-align +12
-                        r8
-                    }
-                    \tweak text #tuplet-number::calc-fraction-text
-                    \times 12/13
-                    {
-                        \tweak Accidental.stencil #ly:text-interface::print
-                        \tweak Accidental.text \markup \concat { \one-seventeen-limit-schisma-down \hspace #0.125 \abjad-sharp  }
-                        cs'8
-                        ^ \markup \center-align { +5 }
-                        r16
-                        d'4
-                        ^ \markup \center-align +16
-                        r8
-                        \tweak Accidental.stencil #ly:text-interface::print
-                        \tweak Accidental.text \markup { \abjad-natural  }
-                        g'4
-                        ^ \markup \center-align { +2 }
-                    }
-                    \times 4/7
-                    {
-                        \tweak Accidental.stencil #ly:text-interface::print
-                        \tweak Accidental.text \markup { \abjad-natural  }
-                        c'16
-                        ^ \markup \center-align { +0 }
-                        r16
-                        f'8
-                        ^ \markup \center-align +12
-                        r16
-                        \tweak Accidental.stencil #ly:text-interface::print
-                        \tweak Accidental.text \markup \concat { \one-twenty-three-limit-comma-up \hspace #0.125 \one-septimal-comma-down  }
-                        e'16
-                        ^ \markup \center-align { -3 }
-                        r16
-                    }
-                    \times 8/9
-                    {
-                        r16
-                        d'8
-                        ^ \markup \center-align +16
-                        r16
-                        \tweak Accidental.stencil #ly:text-interface::print
-                        \tweak Accidental.text \markup \concat { \one-twenty-three-limit-comma-up \hspace #0.125 \one-septimal-comma-down  }
-                        e'4
-                        ^ \markup \center-align { -3 }
-                        r16
-                    }
-                    \times 2/3
-                    {
-                        r16
-                        \tweak Accidental.stencil #ly:text-interface::print
-                        \tweak Accidental.text \markup \concat { \one-seventeen-limit-schisma-down \hspace #0.125 \abjad-sharp  }
-                        gs'4
-                        ^ \markup \center-align { +7 }
-                        ~
-                        \tweak Accidental.stencil #ly:text-interface::print
-                        \tweak Accidental.text \markup \concat { \one-seventeen-limit-schisma-down \hspace #0.125 \abjad-sharp  }
-                        gs'16
-                    }
-                    \times 4/5
-                    {
-                        r16
-                        \tweak Accidental.stencil #ly:text-interface::print
-                        \tweak Accidental.text \markup \concat { \one-twenty-three-limit-comma-up \hspace #0.125 \one-septimal-comma-down  }
-                        e'8
-                        ^ \markup \center-align { -3 }
-                        r16
-                        \tweak Accidental.stencil #ly:text-interface::print
-                        \tweak Accidental.text \markup \concat { \one-nineteen-limit-schisma-up \hspace #0.125 \abjad-flat  }
-                        bf'16
-                        ^ \markup \center-align { -1 }
-                    }
-                    \tweak text #tuplet-number::calc-fraction-text
-                    \times 6/7
-                    {
-                        r8
-                        \tweak Accidental.stencil #ly:text-interface::print
-                        \tweak Accidental.text \markup \concat { \one-twenty-three-limit-comma-up \hspace #0.125 \one-septimal-comma-down  }
-                        e'8
-                        ^ \markup \center-align { -3 }
-                        r16
-                        \tweak Accidental.stencil #ly:text-interface::print
-                        \tweak Accidental.text \markup { \abjad-natural  }
-                        g'4
-                        ^ \markup \center-align { +2 }
-                        r8
-                        \tweak Accidental.stencil #ly:text-interface::print
-                        \tweak Accidental.text \markup { \abjad-natural  }
-                        c'8.
-                        ^ \markup \center-align { +0 }
-                    }
-                    \times 4/5
-                    {
-                        \tweak Accidental.stencil #ly:text-interface::print
-                        \tweak Accidental.text \markup \concat { \one-twenty-three-limit-comma-up \hspace #0.125 \one-septimal-comma-down  }
-                        e'8
-                        ^ \markup \center-align { -3 }
-                        r16
-                        \tweak Accidental.stencil #ly:text-interface::print
-                        \tweak Accidental.text \markup \concat { \one-nineteen-limit-schisma-up \hspace #0.125 \abjad-flat  }
-                        bf'8
-                        ^ \markup \center-align { -1 }
-                    }
-                    r32.
-                    \tweak Accidental.stencil #ly:text-interface::print
-                    \tweak Accidental.text \markup \concat { \one-seventeen-limit-schisma-down \hspace #0.125 \abjad-sharp  }
-                    gs'32.
-                    ^ \markup \center-align { +7 }
-                    r32
-                    r16
-                    \tweak Accidental.stencil #ly:text-interface::print
-                    \tweak Accidental.text \markup { \abjad-natural  }
-                    g'16.
-                    ^ \markup \center-align { +2 }
-                    r32.
-                    \tweak Accidental.stencil #ly:text-interface::print
-                    \tweak Accidental.text \markup \concat { \one-seventeen-limit-schisma-down \hspace #0.125 \abjad-sharp  }
-                    gs'32.
-                    ^ \markup \center-align { +7 }
+                    \set Staff.instrumentName =
+                    \markup \bold { II }
+                    \set Staff.shortInstrumentName =
+                    \markup \bold { II }
+                    \override Staff.Stem.stemlet-length = 0.75
+                    ef'16
+                    [
+                    fs16
+                    ~
+                    fs16
+                    \revert Staff.Stem.stemlet-length
+                    f'''16
+                    ~
+                    ]
+                    f'''4
+                    ~
+                    \override Staff.Stem.stemlet-length = 0.75
+                    f'''8
+                    [
+                    \revert Staff.Stem.stemlet-length
+                    b'8
+                    ~
+                    ]
+                    \override Staff.Stem.stemlet-length = 0.75
+                    b'8
+                    [
+                    \revert Staff.Stem.stemlet-length
+                    e'''8
+                    ~
+                    ]
+                    e'''4
+                    \override Staff.Stem.stemlet-length = 0.75
+                    f8.
+                    [
+                    \revert Staff.Stem.stemlet-length
+                    cs'16
+                    ~
+                    ]
+                    cs'4
+                    \override Staff.Stem.stemlet-length = 0.75
+                    fs8
+                    [
+                    ef'16
+                    \revert Staff.Stem.stemlet-length
+                    ef'16
+                    ]
+                    \override Staff.Stem.stemlet-length = 0.75
+                    fs8
+                    [
+                    \revert Staff.Stem.stemlet-length
+                    f'''8
+                    ~
+                    ]
+                    f'''4
+                    ~
+                    \override Staff.Stem.stemlet-length = 0.75
+                    f'''16
+                    [
+                    \revert Staff.Stem.stemlet-length
+                    b'8.
+                    ~
+                    ]
+                    \override Staff.Stem.stemlet-length = 0.75
+                    b'16
+                    [
+                    \revert Staff.Stem.stemlet-length
+                    e'''16
+                    ~
+                    ]
+                    e'''4
+                    ~
+                    \override Staff.Stem.stemlet-length = 0.75
+                    e'''16
+                    [
+                    f16
+                    ~
+                    \revert Staff.Stem.stemlet-length
+                    f8
+                    ]
+                    b'4
                 }
             }
             \context Staff = "piano 3 staff"
@@ -172,10 +185,74 @@
                     \markup \bold { III }
                     \set Staff.shortInstrumentName =
                     \markup \bold { III }
-                    s1 * 1
-                    s1 * 5/4
-                    s1 * 1/2
-                    s1 * 7/8
+                    \override Staff.Stem.stemlet-length = 0.75
+                    <f fs cs' ef' b' e''' f'''>16
+                    [
+                    <f fs cs' ef' b' e'''>16
+                    ~
+                    <f fs cs' ef' b' e'''>16
+                    \revert Staff.Stem.stemlet-length
+                    <f fs cs' ef' b'>16
+                    ~
+                    ]
+                    <f fs cs' ef' b'>4
+                    \override Staff.Stem.stemlet-length = 0.75
+                    <f fs ef' b'>8.
+                    [
+                    \revert Staff.Stem.stemlet-length
+                    <f fs ef'>16
+                    ~
+                    ]
+                    <f fs ef'>4
+                    ~
+                    \override Staff.Stem.stemlet-length = 0.75
+                    <f fs ef'>16
+                    [
+                    \revert Staff.Stem.stemlet-length
+                    <fs ef'>8.
+                    ~
+                    ]
+                    \override Staff.Stem.stemlet-length = 0.75
+                    <fs ef'>16
+                    [
+                    \revert Staff.Stem.stemlet-length
+                    ef'8.
+                    ~
+                    ]
+                    ef'4
+                    \override Staff.Stem.stemlet-length = 0.75
+                    <f fs cs' ef' b' e'''>8
+                    [
+                    <f fs cs' ef' b' e''' f'''>16
+                    \revert Staff.Stem.stemlet-length
+                    <f fs cs' ef' b' e''' f'''>16
+                    ]
+                    \override Staff.Stem.stemlet-length = 0.75
+                    <f fs cs' ef' b' e'''>8
+                    [
+                    \revert Staff.Stem.stemlet-length
+                    <f fs cs' ef' b'>8
+                    ~
+                    ]
+                    \override Staff.Stem.stemlet-length = 0.75
+                    <f fs cs' ef' b'>8.
+                    [
+                    \revert Staff.Stem.stemlet-length
+                    <f fs ef' b'>16
+                    ~
+                    ]
+                    \override Staff.Stem.stemlet-length = 0.75
+                    <f fs ef' b'>8
+                    [
+                    \revert Staff.Stem.stemlet-length
+                    <f fs ef'>8
+                    ~
+                    ]
+                    <f fs ef'>4
+                    <fs ef'>8
+                    ~
+                    <fs ef'>8
+                    <f fs ef'>4.
                 }
             }
             \context Staff = "piano 4 staff"
@@ -186,10 +263,82 @@
                     \markup \bold { IV }
                     \set Staff.shortInstrumentName =
                     \markup \bold{ IV }
-                    s1 * 1
-                    s1 * 5/4
-                    s1 * 1/2
-                    s1 * 7/8
+                    \override Staff.Stem.stemlet-length = 0.75
+                    <f fs cs' ef' b' e''' f'''>16
+                    [
+                    <f fs cs' ef' b' e'''>16
+                    ~
+                    <f fs cs' ef' b' e'''>16
+                    \revert Staff.Stem.stemlet-length
+                    ef'16
+                    ~
+                    ]
+                    ef'4
+                    ~
+                    \override Staff.Stem.stemlet-length = 0.75
+                    ef'8
+                    [
+                    \revert Staff.Stem.stemlet-length
+                    <fs ef'>8
+                    ~
+                    ]
+                    \override Staff.Stem.stemlet-length = 0.75
+                    <fs ef'>8
+                    [
+                    \revert Staff.Stem.stemlet-length
+                    <f fs ef'>8
+                    ~
+                    ]
+                    <f fs ef'>4
+                    \override Staff.Stem.stemlet-length = 0.75
+                    <f fs ef' b'>8.
+                    [
+                    \revert Staff.Stem.stemlet-length
+                    <f fs cs' ef' b'>16
+                    ~
+                    ]
+                    <f fs cs' ef' b'>4
+                    \override Staff.Stem.stemlet-length = 0.75
+                    <f fs cs' ef' b' e'''>8
+                    [
+                    <f fs cs' ef' b' e''' f'''>16
+                    \revert Staff.Stem.stemlet-length
+                    <f fs cs' ef' b' e''' f'''>16
+                    ]
+                    \override Staff.Stem.stemlet-length = 0.75
+                    <f fs cs' ef' b' e'''>8
+                    [
+                    \revert Staff.Stem.stemlet-length
+                    ef'8
+                    ~
+                    ]
+                    ef'4
+                    ~
+                    \override Staff.Stem.stemlet-length = 0.75
+                    ef'16
+                    [
+                    \revert Staff.Stem.stemlet-length
+                    <fs ef'>8.
+                    ~
+                    ]
+                    \override Staff.Stem.stemlet-length = 0.75
+                    <fs ef'>16
+                    [
+                    \revert Staff.Stem.stemlet-length
+                    <f fs ef'>16
+                    ~
+                    ]
+                    <f fs ef'>4
+                    ~
+                    \override Staff.Stem.stemlet-length = 0.75
+                    <f fs ef'>16
+                    [
+                    <f fs ef' b'>16
+                    ~
+                    \revert Staff.Stem.stemlet-length
+                    <f fs ef' b'>8
+                    ]
+                    <fs ef'>4
                 }
             }
             \context Staff = "piano 5 staff"

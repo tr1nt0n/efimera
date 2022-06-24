@@ -19,28 +19,17 @@ score = library.efimera_score(
 
 # music commands
 
-library.slashes(
-    voice=score["piano 2 voice"],
-    measures=[
-        1,
-        2,
-        3,
-        4,
-    ],
-    density_stage=3,
-    talea_index=0,
-    pitch_index=0,
-    rewrite_meter=-1,
-    preprocessor=trinton.fuse_quarters_preprocessor(
-        (
-            1,
-            3,
+for voice_name in ["piano 1 voice", "piano 2 voice", "piano 3 voice", "piano 4 voice"]:
+    library.plane(
+        voice=score[voice_name],
+        measures=[
             1,
             2,
-            1,
-        )
-    ),
-)
+            3,
+            4,
+        ],
+        rewrite_meter=-1,
+    )
 
 # trinton.make_sc_file(
 #     score=score,

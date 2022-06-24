@@ -298,6 +298,27 @@ def win_attachments(dyn_list=None):
     return att_func
 
 
+def slashes_attachments(transposition):
+    def att_func(selections):
+        ties = abjad.select.logical_ties(selections, pitched=True)
+        for tie in ties:
+            abjad.attach(abjad.Articulation("espressivo"), tie[0])
+
+        transpose = trinton.patterned_tie_index_selector(
+            [
+                1,
+                5,
+                7,
+                9,
+            ],
+            10,
+        )
+        ties_to_transpose = transpose(ties)
+        abjad.mutate.transpose(ties_to_transpose, transposition)
+
+    return att_func
+
+
 # pitchhandlers
 
 
@@ -985,7 +1006,7 @@ def slashes_pitching(fundamental, index=0):
             seq.append(_pc_to_ratio[a1])
             seq.append(_pc_to_ratio[a2])
 
-        pitch_handler = evans.PitchHandler([fundamental], forget=False)
+        pitch_handler = evans.PitchHandler(fundamental, forget=False)
 
         final_seq = trinton.rotated_sequence(seq, index)
 
@@ -998,6 +1019,187 @@ def slashes_pitching(fundamental, index=0):
         pitch_handler(selections)
 
         ratio_handler(selections)
+
+    return handler
+
+
+def plane_pitching(voice_name, division):
+    def handler(argument):
+        _voice_to_pitch_list = {
+            "piano 1 voice": [
+                [
+                    3,
+                ],
+                [
+                    -6,
+                ],
+                [
+                    -7,
+                ],
+                [
+                    11,
+                ],
+                [
+                    1,
+                ],
+                [
+                    28,
+                ],
+                [
+                    29,
+                ],
+            ],
+            "piano 2 voice": [
+                [
+                    3,
+                ],
+                [
+                    -6,
+                ],
+                [
+                    -7,
+                ],
+                [
+                    11,
+                ],
+                [
+                    1,
+                ],
+                [
+                    28,
+                ],
+                [
+                    29,
+                ],
+            ],
+            "piano 3 voice": [
+                [
+                    [
+                        3,
+                        -6,
+                        -7,
+                        11,
+                        1,
+                        28,
+                        29,
+                    ]
+                ],
+                [
+                    [
+                        3,
+                        -6,
+                        -7,
+                        11,
+                        1,
+                        28,
+                    ]
+                ],
+                [
+                    [
+                        3,
+                        -6,
+                        -7,
+                        11,
+                    ]
+                ],
+                [
+                    [
+                        3,
+                        -6,
+                    ]
+                ],
+                [
+                    [
+                        3,
+                        -6,
+                        -7,
+                        11,
+                        1,
+                    ]
+                ],
+                [
+                    [
+                        3,
+                        -6,
+                        -7,
+                    ]
+                ],
+                [
+                    3,
+                ],
+            ],
+            "piano 4 voice": [
+                [
+                    [
+                        3,
+                        -6,
+                        -7,
+                        11,
+                        1,
+                        28,
+                        29,
+                    ]
+                ],
+                [
+                    [
+                        3,
+                        -6,
+                        -7,
+                        11,
+                        1,
+                        28,
+                    ]
+                ],
+                [
+                    [
+                        3,
+                        -6,
+                        -7,
+                        11,
+                    ]
+                ],
+                [
+                    [
+                        3,
+                        -6,
+                    ]
+                ],
+                [
+                    [
+                        3,
+                        -6,
+                        -7,
+                        11,
+                        1,
+                    ]
+                ],
+                [
+                    [
+                        3,
+                        -6,
+                        -7,
+                    ]
+                ],
+                [
+                    3,
+                ],
+            ],
+        }
+
+        trinton.durational_pitch_association(
+            selection=abjad.select.logical_ties(argument),
+            durations=[
+                abjad.Duration((1, division)),
+                abjad.Duration((2, division)),
+                abjad.Duration((3, division)),
+                abjad.Duration((4, division)),
+                abjad.Duration((5, division)),
+                abjad.Duration((6, division)),
+                abjad.Duration((7, division)),
+            ],
+            pitch_lists=_voice_to_pitch_list[voice_name],
+            forget=False,
+        )
 
     return handler
 
@@ -1459,7 +1661,8 @@ def slashes(
     measures,
     talea_index=0,
     density_stage=1,
-    pitch_handler=slashes_pitching(fundamental=0, index=0),
+    pitch_handler=slashes_pitching(fundamental=[0], index=0),
+    transposition=0,
     pitch_index=0,
     rewrite_meter=None,
     preprocessor=None,
@@ -1574,7 +1777,7 @@ def slashes(
         rewrite_meter=rewrite_meter,
         preprocessor=preprocessor,
         pitch_handler=pitch_handler,
-        attachment_function=None,
+        attachment_function=slashes_attachments(transposition=transposition),
     )
 
     trinton.fuse_tuplet_rests(voice)
@@ -1611,6 +1814,79 @@ def slashes(
 
             for group in non_tuplets:
                 abjad.mutate.fuse(group)
+
+
+def plane(
+    voice,
+    measures,
+    talea_index=0,
+    talea_division=16,
+    rewrite_meter=None,
+    preprocessor=None,
+    pitch_handler=None,
+):
+    _voice_to_talea = {
+        "piano 1 voice": [
+            1,
+            2,
+            5,
+            3,
+            6,
+            4,
+            7,
+            2,
+            1,
+        ],
+        "piano 2 voice": [
+            1,
+            2,
+            7,
+            4,
+            6,
+            3,
+            5,
+            2,
+            1,
+        ],
+        "piano 3 voice": [
+            1,
+            2,
+            5,
+            3,
+            6,
+            4,
+            7,
+            2,
+            1,
+        ],
+        "piano 4 voice": [
+            1,
+            2,
+            7,
+            4,
+            6,
+            3,
+            5,
+            2,
+            1,
+        ],
+    }
+
+    trinton.music_command(
+        voice=voice,
+        measures=measures,
+        rmaker=rmakers.talea(
+            trinton.rotated_sequence(_voice_to_talea[voice.name], talea_index),
+            talea_division,
+        ),
+        rmaker_commands=[
+            rmakers.beam(),
+        ],
+        rewrite_meter=rewrite_meter,
+        preprocessor=preprocessor,
+        pitch_handler=plane_pitching(voice.name, talea_division),
+        attachment_function=None,
+    )
 
 
 # notation tools
