@@ -19,17 +19,19 @@ score = library.efimera_score(
 
 # music commands
 
-for voice_name in ["piano 1 voice", "piano 2 voice", "piano 3 voice", "piano 4 voice"]:
-    library.plane(
+for voice_name, talea_index, pitch_index in zip(["piano 1 voice", "piano 2 voice", "piano 3 voice", "piano 4 voice", "piano 5 voice"], [5, 0, 1, 4, 6,], [0, 1, 2, 3, 4,]):
+    library.slashes(
         voice=score[voice_name],
-        measures=[
-            1,
-            2,
-            3,
-            4,
-        ],
+        measures=[1, 2, 3, 4,],
+        talea_index=talea_index,
+        density_stage=5,
+        pitch_handler=library.slashes_pitching(fundamental=[0, 1, 2,], index=pitch_index),
+        transposition=13,
         rewrite_meter=-1,
+        preprocessor=trinton.fuse_quarters_preprocessor((1, 3, 2,)),
     )
+#
+# trinton.continuous_beams(score=score)
 
 # trinton.make_sc_file(
 #     score=score,
