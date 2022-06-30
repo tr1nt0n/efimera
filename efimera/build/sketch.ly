@@ -4,12 +4,12 @@
         {
             \time 4/4
             s1 * 1
+            \time 3/4
+            s1 * 3/4
+            \time 6/8
+            s1 * 3/4
             \time 5/4
             s1 * 5/4
-            \time 2/4
-            s1 * 1/2
-            \time 7/8
-            s1 * 7/8
         }
         \context GrandStaff = "Staff Group"
         <<
@@ -23,363 +23,136 @@
                         \markup \bold { I }
                         \set Staff.shortInstrumentName =
                         \markup \bold { I }
-                        \override Staff.Stem.stemlet-length = 0.75
                         \tweak Accidental.stencil #ly:text-interface::print
                         \tweak Accidental.text \markup { \abjad-natural  }
                         c'16
                         - \espressivo
                         ^ \markup \center-align { +0 }
-                        [
+                        r16
                         g''16
                         - \espressivo
                         ^ \markup \center-align +12
-                        \tweak Accidental.stencil #ly:text-interface::print
-                        \tweak Accidental.text \markup \concat { \one-seventeen-limit-schisma-down \hspace #0.125 \abjad-sharp  }
-                        ds'16
-                        - \espressivo
-                        ^ \markup \center-align { +5 }
-                        \tweak Accidental.stencil #ly:text-interface::print
-                        \tweak Accidental.text \markup \concat { \one-twenty-three-limit-comma-up \hspace #0.125 \one-septimal-comma-down  }
-                        e'16
-                        - \espressivo
-                        ^ \markup \center-align { -3 }
-                        \revert Staff.Stem.stemlet-length
-                        ef'16
-                        - \espressivo
-                        ^ \markup \center-align +16
-                        ]
+                        r8
                     }
                     \tweak text #tuplet-number::calc-fraction-text
                     \times 6/7
                     {
-                        \override Staff.Stem.stemlet-length = 0.75
                         \tweak Accidental.stencil #ly:text-interface::print
-                        \tweak Accidental.text \markup { \one-nineteen-limit-schisma-up  }
-                        df'''16
+                        \tweak Accidental.text \markup \concat { \one-seventeen-limit-schisma-down \hspace #0.125 \abjad-sharp  }
+                        ds'8
                         - \espressivo
-                        ^ \markup \center-align { -1 }
-                        [
+                        ^ \markup \center-align { +5 }
+                        r16
+                        ef'4
+                        - \espressivo
+                        ^ \markup \center-align +16
+                        r8
                         \tweak Accidental.stencil #ly:text-interface::print
-                        \tweak Accidental.text \markup \concat { \one-twenty-three-limit-comma-up \hspace #0.125 \one-septimal-comma-down  }
-                        e'16
+                        \tweak Accidental.text \markup { \abjad-natural  }
+                        a'4
                         - \espressivo
-                        ^ \markup \center-align { -3 }
-                        \tweak Accidental.stencil #ly:text-interface::print
-                        \tweak Accidental.text \markup \concat { \one-seventeen-limit-schisma-down \hspace #0.125 \double-sharp  }
-                        as''16
-                        - \espressivo
-                        ^ \markup \center-align { +7 }
+                        ^ \markup \center-align { +2 }
+                        ~
                         \tweak Accidental.stencil #ly:text-interface::print
                         \tweak Accidental.text \markup { \abjad-natural  }
                         a'16
-                        - \espressivo
-                        ^ \markup \center-align { +2 }
-                        \tweak Accidental.stencil #ly:text-interface::print
-                        \tweak Accidental.text \markup { \abjad-natural  }
-                        df''16
-                        - \espressivo
-                        ^ \markup \center-align { +0 }
-                        \tweak Accidental.stencil #ly:text-interface::print
-                        \tweak Accidental.text \markup \concat { \one-seventeen-limit-schisma-down \hspace #0.125 \double-sharp  }
-                        gss'16
-                        - \espressivo
-                        ^ \markup \center-align { +7 }
-                        \tweak Accidental.stencil #ly:text-interface::print
-                        \tweak Accidental.text \markup \concat { \one-seventeen-limit-schisma-down \hspace #0.125 \one-septimal-comma-down \hspace #0.125 \abjad-sharp  }
-                        d'''16
-                        - \espressivo
-                        ^ \markup \center-align { -26 }
-                        \tweak Accidental.stencil #ly:text-interface::print
-                        \tweak Accidental.text \markup { \abjad-natural  }
-                        c'16
-                        - \espressivo
-                        ^ \markup \center-align { +0 }
-                        fs'16
-                        - \espressivo
-                        ^ \markup \center-align +12
-                        \tweak Accidental.stencil #ly:text-interface::print
-                        \tweak Accidental.text \markup \concat { \one-seventeen-limit-schisma-down \hspace #0.125 \abjad-sharp  }
-                        ds'16
-                        - \espressivo
-                        ^ \markup \center-align { +5 }
-                        \tweak Accidental.stencil #ly:text-interface::print
-                        \tweak Accidental.text \markup \concat { \one-twenty-three-limit-comma-up \hspace #0.125 \one-septimal-comma-down  }
-                        f''16
-                        - \espressivo
-                        ^ \markup \center-align { -3 }
-                        ef'16
-                        - \espressivo
-                        ^ \markup \center-align +16
-                        \tweak Accidental.stencil #ly:text-interface::print
-                        \tweak Accidental.text \markup { \one-nineteen-limit-schisma-up  }
-                        df'''16
-                        - \espressivo
-                        ^ \markup \center-align { -1 }
-                        \revert Staff.Stem.stemlet-length
-                        \tweak Accidental.stencil #ly:text-interface::print
-                        \tweak Accidental.text \markup \concat { \one-twenty-three-limit-comma-up \hspace #0.125 \one-septimal-comma-down  }
-                        e'16
-                        - \espressivo
-                        ^ \markup \center-align { -3 }
-                        ]
                     }
                     \times 8/9
                     {
-                        \override Staff.Stem.stemlet-length = 0.75
-                        \tweak Accidental.stencil #ly:text-interface::print
-                        \tweak Accidental.text \markup \concat { \one-seventeen-limit-schisma-down \hspace #0.125 \double-sharp  }
-                        as''16
+                        r16
+                        fs'8
                         - \espressivo
-                        ^ \markup \center-align { +7 }
-                        [
+                        ^ \markup \center-align +12
+                        r16
                         \tweak Accidental.stencil #ly:text-interface::print
-                        \tweak Accidental.text \markup { \abjad-natural  }
-                        a'16
+                        \tweak Accidental.text \markup \concat { \one-twenty-three-limit-comma-up \hspace #0.125 \one-septimal-comma-down  }
+                        f''16
                         - \espressivo
-                        ^ \markup \center-align { +2 }
+                        ^ \markup \center-align { -3 }
+                        r8
+                        ef'8
+                        - \espressivo
+                        ^ \markup \center-align +16
+                    }
+                    r16
+                    \tweak Accidental.stencil #ly:text-interface::print
+                    \tweak Accidental.text \markup \concat { \one-twenty-three-limit-comma-up \hspace #0.125 \one-septimal-comma-down  }
+                    e'8.
+                    - \espressivo
+                    ^ \markup \center-align { -3 }
+                    \times 4/5
+                    {
                         \tweak Accidental.stencil #ly:text-interface::print
                         \tweak Accidental.text \markup { \abjad-natural  }
                         df''16
                         - \espressivo
                         ^ \markup \center-align { +0 }
+                        r8
+                        \tweak Accidental.stencil #ly:text-interface::print
+                        \tweak Accidental.text \markup \concat { \one-seventeen-limit-schisma-down \hspace #0.125 \double-sharp  }
+                        gss'4
+                        - \espressivo
+                        ^ \markup \center-align { +7 }
+                        ~
                         \tweak Accidental.stencil #ly:text-interface::print
                         \tweak Accidental.text \markup \concat { \one-seventeen-limit-schisma-down \hspace #0.125 \double-sharp  }
                         gss'16
-                        - \espressivo
-                        ^ \markup \center-align { +7 }
-                        \tweak Accidental.stencil #ly:text-interface::print
-                        \tweak Accidental.text \markup \concat { \one-seventeen-limit-schisma-down \hspace #0.125 \one-septimal-comma-down \hspace #0.125 \abjad-sharp  }
-                        cs''16
-                        - \espressivo
-                        ^ \markup \center-align { -26 }
-                        \tweak Accidental.stencil #ly:text-interface::print
-                        \tweak Accidental.text \markup { \abjad-natural  }
-                        c'16
-                        - \espressivo
-                        ^ \markup \center-align { +0 }
-                        g''16
-                        - \espressivo
-                        ^ \markup \center-align +12
-                        \tweak Accidental.stencil #ly:text-interface::print
-                        \tweak Accidental.text \markup \concat { \one-seventeen-limit-schisma-down \hspace #0.125 \abjad-sharp  }
-                        ds'16
-                        - \espressivo
-                        ^ \markup \center-align { +5 }
-                        \revert Staff.Stem.stemlet-length
+                        r16
                         \tweak Accidental.stencil #ly:text-interface::print
                         \tweak Accidental.text \markup \concat { \one-twenty-three-limit-comma-up \hspace #0.125 \one-septimal-comma-down  }
-                        f''16
+                        f''8
                         - \espressivo
                         ^ \markup \center-align { -3 }
-                        ]
-                    }
-                    \override Staff.Stem.stemlet-length = 0.75
-                    ef'16
-                    - \espressivo
-                    ^ \markup \center-align +16
-                    [
-                    \tweak Accidental.stencil #ly:text-interface::print
-                    \tweak Accidental.text \markup { \one-nineteen-limit-schisma-up  }
-                    df'''16
-                    - \espressivo
-                    ^ \markup \center-align { -1 }
-                    \tweak Accidental.stencil #ly:text-interface::print
-                    \tweak Accidental.text \markup \concat { \one-twenty-three-limit-comma-up \hspace #0.125 \one-septimal-comma-down  }
-                    e'16
-                    - \espressivo
-                    ^ \markup \center-align { -3 }
-                    \revert Staff.Stem.stemlet-length
-                    \tweak Accidental.stencil #ly:text-interface::print
-                    \tweak Accidental.text \markup \concat { \one-seventeen-limit-schisma-down \hspace #0.125 \double-sharp  }
-                    as''16
-                    - \espressivo
-                    ^ \markup \center-align { +7 }
-                    ]
-                    \times 4/5
-                    {
-                        \override Staff.Stem.stemlet-length = 0.75
-                        \tweak Accidental.stencil #ly:text-interface::print
-                        \tweak Accidental.text \markup { \abjad-natural  }
-                        a'16
-                        - \espressivo
-                        ^ \markup \center-align { +2 }
-                        [
-                        \tweak Accidental.stencil #ly:text-interface::print
-                        \tweak Accidental.text \markup { \abjad-natural  }
-                        c'16
-                        - \espressivo
-                        ^ \markup \center-align { +0 }
-                        \tweak Accidental.stencil #ly:text-interface::print
-                        \tweak Accidental.text \markup \concat { \one-seventeen-limit-schisma-down \hspace #0.125 \double-sharp  }
-                        gss'16
-                        - \espressivo
-                        ^ \markup \center-align { +7 }
-                        \tweak Accidental.stencil #ly:text-interface::print
-                        \tweak Accidental.text \markup \concat { \one-seventeen-limit-schisma-down \hspace #0.125 \one-septimal-comma-down \hspace #0.125 \abjad-sharp  }
-                        d'''16
-                        - \espressivo
-                        ^ \markup \center-align { -26 }
-                        \tweak Accidental.stencil #ly:text-interface::print
-                        \tweak Accidental.text \markup { \abjad-natural  }
-                        c'16
-                        - \espressivo
-                        ^ \markup \center-align { +0 }
-                        g''16
-                        - \espressivo
-                        ^ \markup \center-align +12
-                        \tweak Accidental.stencil #ly:text-interface::print
-                        \tweak Accidental.text \markup \concat { \one-seventeen-limit-schisma-down \hspace #0.125 \abjad-sharp  }
-                        ds'16
-                        - \espressivo
-                        ^ \markup \center-align { +5 }
-                        \tweak Accidental.stencil #ly:text-interface::print
-                        \tweak Accidental.text \markup \concat { \one-twenty-three-limit-comma-up \hspace #0.125 \one-septimal-comma-down  }
-                        f''16
-                        - \espressivo
-                        ^ \markup \center-align { -3 }
-                        ef'16
-                        - \espressivo
-                        ^ \markup \center-align +16
+                        r16
                         \tweak Accidental.stencil #ly:text-interface::print
                         \tweak Accidental.text \markup { \one-nineteen-limit-schisma-up  }
                         df'''16
                         - \espressivo
                         ^ \markup \center-align { -1 }
-                        \tweak Accidental.stencil #ly:text-interface::print
-                        \tweak Accidental.text \markup \concat { \one-twenty-three-limit-comma-up \hspace #0.125 \one-septimal-comma-down  }
-                        e'16
-                        - \espressivo
-                        ^ \markup \center-align { -3 }
-                        \tweak Accidental.stencil #ly:text-interface::print
-                        \tweak Accidental.text \markup \concat { \one-seventeen-limit-schisma-down \hspace #0.125 \double-sharp  }
-                        gss'16
-                        - \espressivo
-                        ^ \markup \center-align { +7 }
-                        \tweak Accidental.stencil #ly:text-interface::print
-                        \tweak Accidental.text \markup { \abjad-natural  }
-                        a'16
-                        - \espressivo
-                        ^ \markup \center-align { +2 }
-                        \tweak Accidental.stencil #ly:text-interface::print
-                        \tweak Accidental.text \markup { \abjad-natural  }
-                        df''16
-                        - \espressivo
-                        ^ \markup \center-align { +0 }
-                        \revert Staff.Stem.stemlet-length
-                        \tweak Accidental.stencil #ly:text-interface::print
-                        \tweak Accidental.text \markup \concat { \one-seventeen-limit-schisma-down \hspace #0.125 \double-sharp  }
-                        gss'16
-                        - \espressivo
-                        ^ \markup \center-align { +7 }
-                        ]
+                        r8
                     }
                     \times 4/5
                     {
-                        \override Staff.Stem.stemlet-length = 0.75
                         \tweak Accidental.stencil #ly:text-interface::print
-                        \tweak Accidental.text \markup \concat { \one-seventeen-limit-schisma-down \hspace #0.125 \one-septimal-comma-down \hspace #0.125 \abjad-sharp  }
-                        d'''16
+                        \tweak Accidental.text \markup \concat { \one-twenty-three-limit-comma-up \hspace #0.125 \one-septimal-comma-down  }
+                        e'8
                         - \espressivo
-                        ^ \markup \center-align { -26 }
-                        [
+                        ^ \markup \center-align { -3 }
+                        r16
+                        \tweak Accidental.stencil #ly:text-interface::print
+                        \tweak Accidental.text \markup { \abjad-natural  }
+                        a'4
+                        - \espressivo
+                        ^ \markup \center-align { +2 }
+                        r8
                         \tweak Accidental.stencil #ly:text-interface::print
                         \tweak Accidental.text \markup { \abjad-natural  }
                         c'16
                         - \espressivo
                         ^ \markup \center-align { +0 }
-                        g''16
-                        - \espressivo
-                        ^ \markup \center-align +12
-                        \tweak Accidental.stencil #ly:text-interface::print
-                        \tweak Accidental.text \markup \concat { \one-seventeen-limit-schisma-down \hspace #0.125 \abjad-sharp  }
-                        ds'16
-                        - \espressivo
-                        ^ \markup \center-align { +5 }
-                        \tweak Accidental.stencil #ly:text-interface::print
-                        \tweak Accidental.text \markup \concat { \one-twenty-three-limit-comma-up \hspace #0.125 \one-septimal-comma-down  }
-                        f''16
-                        - \espressivo
-                        ^ \markup \center-align { -3 }
-                        ef'16
-                        - \espressivo
-                        ^ \markup \center-align +16
-                        \tweak Accidental.stencil #ly:text-interface::print
-                        \tweak Accidental.text \markup { \one-nineteen-limit-schisma-up  }
-                        c''16
-                        - \espressivo
-                        ^ \markup \center-align { -1 }
-                        \tweak Accidental.stencil #ly:text-interface::print
-                        \tweak Accidental.text \markup \concat { \one-twenty-three-limit-comma-up \hspace #0.125 \one-septimal-comma-down  }
-                        e'16
-                        - \espressivo
-                        ^ \markup \center-align { -3 }
-                        \tweak Accidental.stencil #ly:text-interface::print
-                        \tweak Accidental.text \markup \concat { \one-seventeen-limit-schisma-down \hspace #0.125 \double-sharp  }
-                        as''16
-                        - \espressivo
-                        ^ \markup \center-align { +7 }
-                        \revert Staff.Stem.stemlet-length
-                        \tweak Accidental.stencil #ly:text-interface::print
-                        \tweak Accidental.text \markup { \abjad-natural  }
-                        a'16
-                        - \espressivo
-                        ^ \markup \center-align { +2 }
-                        ]
                     }
-                    \override Staff.Stem.stemlet-length = 0.75
-                    \tweak Accidental.stencil #ly:text-interface::print
-                    \tweak Accidental.text \markup { \abjad-natural  }
-                    df''16
+                    g''4
                     - \espressivo
-                    ^ \markup \center-align { +0 }
-                    [
-                    \revert Staff.Stem.stemlet-length
+                    ^ \markup \center-align +12
+                    r16
+                    \tweak Accidental.stencil #ly:text-interface::print
+                    \tweak Accidental.text \markup { \one-nineteen-limit-schisma-up  }
+                    df'''8
+                    - \espressivo
+                    ^ \markup \center-align { -1 }
+                    r16
                     \tweak Accidental.stencil #ly:text-interface::print
                     \tweak Accidental.text \markup \concat { \one-seventeen-limit-schisma-down \hspace #0.125 \double-sharp  }
                     gss'16
                     - \espressivo
                     ^ \markup \center-align { +7 }
-                    ]
-                    \override Staff.Stem.stemlet-length = 0.75
-                    \tweak Accidental.stencil #ly:text-interface::print
-                    \tweak Accidental.text \markup \concat { \one-seventeen-limit-schisma-down \hspace #0.125 \one-septimal-comma-down \hspace #0.125 \abjad-sharp  }
-                    d'''16
-                    - \espressivo
-                    ^ \markup \center-align { -26 }
-                    [
+                    r16
+                    r16
                     \tweak Accidental.stencil #ly:text-interface::print
                     \tweak Accidental.text \markup { \abjad-natural  }
-                    c'16
+                    a'16
                     - \espressivo
-                    ^ \markup \center-align { +0 }
-                    g''16
-                    - \espressivo
-                    ^ \markup \center-align +12
-                    \revert Staff.Stem.stemlet-length
-                    \tweak Accidental.stencil #ly:text-interface::print
-                    \tweak Accidental.text \markup \concat { \one-seventeen-limit-schisma-down \hspace #0.125 \abjad-sharp  }
-                    ds'16
-                    - \espressivo
-                    ^ \markup \center-align { +5 }
-                    ]
-                    \tweak Accidental.stencil #ly:text-interface::print
-                    \tweak Accidental.text \markup \concat { \one-twenty-three-limit-comma-up \hspace #0.125 \one-septimal-comma-down  }
-                    e'16
-                    - \espressivo
-                    ^ \markup \center-align { -3 }
-                    ef'16
-                    - \espressivo
-                    ^ \markup \center-align +16
-                    \tweak Accidental.stencil #ly:text-interface::print
-                    \tweak Accidental.text \markup { \one-nineteen-limit-schisma-up  }
-                    df'''16
-                    - \espressivo
-                    ^ \markup \center-align { -1 }
-                    \tweak Accidental.stencil #ly:text-interface::print
-                    \tweak Accidental.text \markup \concat { \one-twenty-three-limit-comma-up \hspace #0.125 \one-septimal-comma-down  }
-                    e'16
-                    - \espressivo
-                    ^ \markup \center-align { -3 }
+                    ^ \markup \center-align { +2 }
                 }
             }
             \context Staff = "piano 2 staff"
@@ -392,406 +165,151 @@
                         \markup \bold { II }
                         \set Staff.shortInstrumentName =
                         \markup \bold { II }
-                        \override Staff.Stem.stemlet-length = 0.75
                         f'16
                         - \espressivo
                         ^ \markup \center-align +12
-                        [
+                        r16
                         \tweak Accidental.stencil #ly:text-interface::print
                         \tweak Accidental.text \markup \concat { \one-seventeen-limit-schisma-down \hspace #0.125 \double-sharp  }
                         ds''16
                         - \espressivo
                         ^ \markup \center-align { +5 }
-                        \tweak Accidental.stencil #ly:text-interface::print
-                        \tweak Accidental.text \markup \concat { \one-twenty-three-limit-comma-up \hspace #0.125 \one-septimal-comma-down \hspace #0.125 \abjad-sharp  }
-                        fs'16
-                        - \espressivo
-                        ^ \markup \center-align { -3 }
-                        d'16
-                        - \espressivo
-                        ^ \markup \center-align +16
-                        \revert Staff.Stem.stemlet-length
-                        \tweak Accidental.stencil #ly:text-interface::print
-                        \tweak Accidental.text \markup { \one-nineteen-limit-schisma-up  }
-                        b'16
-                        - \espressivo
-                        ^ \markup \center-align { -1 }
-                        ]
+                        r8
                     }
                     \tweak text #tuplet-number::calc-fraction-text
                     \times 12/13
                     {
-                        \override Staff.Stem.stemlet-length = 0.75
                         \tweak Accidental.stencil #ly:text-interface::print
                         \tweak Accidental.text \markup \concat { \one-twenty-three-limit-comma-up \hspace #0.125 \one-septimal-comma-down \hspace #0.125 \abjad-sharp  }
-                        g''16
+                        fs'8
                         - \espressivo
                         ^ \markup \center-align { -3 }
-                        [
-                        \tweak Accidental.stencil #ly:text-interface::print
-                        \tweak Accidental.text \markup \concat { \one-seventeen-limit-schisma-down \hspace #0.125 \abjad-sharp  }
-                        gs'16
-                        - \espressivo
-                        ^ \markup \center-align { +7 }
-                        \tweak Accidental.stencil #ly:text-interface::print
-                        \tweak Accidental.text \markup { \abjad-sharp  }
-                        a''16
-                        - \espressivo
-                        ^ \markup \center-align { +2 }
-                        \tweak Accidental.stencil #ly:text-interface::print
-                        \tweak Accidental.text \markup { \abjad-natural  }
-                        d'16
-                        - \espressivo
-                        ^ \markup \center-align { +0 }
-                        \tweak Accidental.stencil #ly:text-interface::print
-                        \tweak Accidental.text \markup \concat { \one-seventeen-limit-schisma-down \hspace #0.125 \abjad-sharp  }
-                        a''16
-                        - \espressivo
-                        ^ \markup \center-align { +7 }
-                        \tweak Accidental.stencil #ly:text-interface::print
-                        \tweak Accidental.text \markup \concat { \one-seventeen-limit-schisma-down \hspace #0.125 \one-septimal-comma-down \hspace #0.125 \abjad-sharp  }
-                        bs'16
-                        - \espressivo
-                        ^ \markup \center-align { -26 }
-                        \tweak Accidental.stencil #ly:text-interface::print
-                        \tweak Accidental.text \markup { \abjad-natural  }
-                        ef''16
-                        - \espressivo
-                        ^ \markup \center-align { +0 }
-                        f'16
-                        - \espressivo
-                        ^ \markup \center-align +12
-                        \tweak Accidental.stencil #ly:text-interface::print
-                        \tweak Accidental.text \markup \concat { \one-seventeen-limit-schisma-down \hspace #0.125 \double-sharp  }
-                        css'16
-                        - \espressivo
-                        ^ \markup \center-align { +5 }
-                        \tweak Accidental.stencil #ly:text-interface::print
-                        \tweak Accidental.text \markup \concat { \one-twenty-three-limit-comma-up \hspace #0.125 \one-septimal-comma-down \hspace #0.125 \abjad-sharp  }
-                        fs'16
-                        - \espressivo
-                        ^ \markup \center-align { -3 }
-                        ef''16
-                        - \espressivo
-                        ^ \markup \center-align +16
+                        r16
                         \tweak Accidental.stencil #ly:text-interface::print
                         \tweak Accidental.text \markup { \one-nineteen-limit-schisma-up  }
-                        b'16
+                        b'4
                         - \espressivo
                         ^ \markup \center-align { -1 }
-                        \revert Staff.Stem.stemlet-length
+                        r8
                         \tweak Accidental.stencil #ly:text-interface::print
-                        \tweak Accidental.text \markup \concat { \one-twenty-three-limit-comma-up \hspace #0.125 \one-septimal-comma-down \hspace #0.125 \abjad-sharp  }
-                        g''16
+                        \tweak Accidental.text \markup { \abjad-natural  }
+                        d'4
                         - \espressivo
-                        ^ \markup \center-align { -3 }
-                        ]
+                        ^ \markup \center-align { +0 }
                     }
                     \times 8/11
                     {
-                        \override Staff.Stem.stemlet-length = 0.75
-                        \tweak Accidental.stencil #ly:text-interface::print
-                        \tweak Accidental.text \markup \concat { \one-seventeen-limit-schisma-down \hspace #0.125 \abjad-sharp  }
-                        gs'16
-                        - \espressivo
-                        ^ \markup \center-align { +7 }
-                        [
-                        \tweak Accidental.stencil #ly:text-interface::print
-                        \tweak Accidental.text \markup { \abjad-sharp  }
-                        a''16
-                        - \espressivo
-                        ^ \markup \center-align { +2 }
-                        \tweak Accidental.stencil #ly:text-interface::print
-                        \tweak Accidental.text \markup { \abjad-natural  }
-                        d'16
-                        - \espressivo
-                        ^ \markup \center-align { +0 }
-                        \tweak Accidental.stencil #ly:text-interface::print
-                        \tweak Accidental.text \markup \concat { \one-seventeen-limit-schisma-down \hspace #0.125 \abjad-sharp  }
-                        a''16
-                        - \espressivo
-                        ^ \markup \center-align { +7 }
-                        \tweak Accidental.stencil #ly:text-interface::print
-                        \tweak Accidental.text \markup \concat { \one-seventeen-limit-schisma-down \hspace #0.125 \one-septimal-comma-down \hspace #0.125 \abjad-sharp  }
-                        bs'16
-                        - \espressivo
-                        ^ \markup \center-align { -26 }
-                        \tweak Accidental.stencil #ly:text-interface::print
-                        \tweak Accidental.text \markup { \abjad-natural  }
-                        d'16
-                        - \espressivo
-                        ^ \markup \center-align { +0 }
                         f'16
                         - \espressivo
                         ^ \markup \center-align +12
+                        r16
                         \tweak Accidental.stencil #ly:text-interface::print
                         \tweak Accidental.text \markup \concat { \one-seventeen-limit-schisma-down \hspace #0.125 \double-sharp  }
-                        ds''16
+                        css'8
                         - \espressivo
                         ^ \markup \center-align { +5 }
-                        \tweak Accidental.stencil #ly:text-interface::print
-                        \tweak Accidental.text \markup \concat { \one-twenty-three-limit-comma-up \hspace #0.125 \one-septimal-comma-down \hspace #0.125 \abjad-sharp  }
-                        fs'16
-                        - \espressivo
-                        ^ \markup \center-align { -3 }
+                        r16
                         ef''16
                         - \espressivo
                         ^ \markup \center-align +16
-                        \revert Staff.Stem.stemlet-length
+                        r8
                         \tweak Accidental.stencil #ly:text-interface::print
                         \tweak Accidental.text \markup { \one-nineteen-limit-schisma-up  }
-                        b'16
+                        b'8
                         - \espressivo
                         ^ \markup \center-align { -1 }
-                        ]
+                        r16
                     }
                     \times 4/5
                     {
-                        \override Staff.Stem.stemlet-length = 0.75
-                        \tweak Accidental.stencil #ly:text-interface::print
-                        \tweak Accidental.text \markup \concat { \one-twenty-three-limit-comma-up \hspace #0.125 \one-septimal-comma-down \hspace #0.125 \abjad-sharp  }
-                        g''16
-                        - \espressivo
-                        ^ \markup \center-align { -3 }
-                        [
                         \tweak Accidental.stencil #ly:text-interface::print
                         \tweak Accidental.text \markup \concat { \one-seventeen-limit-schisma-down \hspace #0.125 \abjad-sharp  }
-                        gs'16
+                        gs'4
                         - \espressivo
                         ^ \markup \center-align { +7 }
-                        \tweak Accidental.stencil #ly:text-interface::print
-                        \tweak Accidental.text \markup { \abjad-sharp  }
-                        a''16
-                        - \espressivo
-                        ^ \markup \center-align { +2 }
-                        \tweak Accidental.stencil #ly:text-interface::print
-                        \tweak Accidental.text \markup { \abjad-natural  }
-                        d'16
-                        - \espressivo
-                        ^ \markup \center-align { +0 }
-                        \revert Staff.Stem.stemlet-length
-                        \tweak Accidental.stencil #ly:text-interface::print
-                        \tweak Accidental.text \markup \concat { \one-seventeen-limit-schisma-down \hspace #0.125 \abjad-sharp  }
-                        gs'16
-                        - \espressivo
-                        ^ \markup \center-align { +7 }
-                        ]
+                        r16
                     }
                     \tweak text #tuplet-number::calc-fraction-text
                     \times 6/7
                     {
-                        \override Staff.Stem.stemlet-length = 0.75
+                        r16
+                        \tweak Accidental.stencil #ly:text-interface::print
+                        \tweak Accidental.text \markup \concat { \one-seventeen-limit-schisma-down \hspace #0.125 \one-septimal-comma-down \hspace #0.125 \abjad-sharp  }
+                        bs'4
+                        - \espressivo
+                        ^ \markup \center-align { -26 }
+                        ~
                         \tweak Accidental.stencil #ly:text-interface::print
                         \tweak Accidental.text \markup \concat { \one-seventeen-limit-schisma-down \hspace #0.125 \one-septimal-comma-down \hspace #0.125 \abjad-sharp  }
                         bs'16
-                        - \espressivo
-                        ^ \markup \center-align { -26 }
-                        [
-                        \tweak Accidental.stencil #ly:text-interface::print
-                        \tweak Accidental.text \markup { \abjad-natural  }
-                        ef''16
-                        - \espressivo
-                        ^ \markup \center-align { +0 }
-                        f'16
-                        - \espressivo
-                        ^ \markup \center-align +12
-                        \tweak Accidental.stencil #ly:text-interface::print
-                        \tweak Accidental.text \markup \concat { \one-seventeen-limit-schisma-down \hspace #0.125 \double-sharp  }
-                        ds''16
-                        - \espressivo
-                        ^ \markup \center-align { +5 }
-                        \tweak Accidental.stencil #ly:text-interface::print
-                        \tweak Accidental.text \markup \concat { \one-twenty-three-limit-comma-up \hspace #0.125 \one-septimal-comma-down \hspace #0.125 \abjad-sharp  }
-                        fs'16
-                        - \espressivo
-                        ^ \markup \center-align { -3 }
-                        ef''16
+                        r16
+                        ef''8
                         - \espressivo
                         ^ \markup \center-align +16
-                        \tweak Accidental.stencil #ly:text-interface::print
-                        \tweak Accidental.text \markup { \one-nineteen-limit-schisma-up  }
-                        b'16
-                        - \espressivo
-                        ^ \markup \center-align { -1 }
+                        r16
                         \tweak Accidental.stencil #ly:text-interface::print
                         \tweak Accidental.text \markup \concat { \one-twenty-three-limit-comma-up \hspace #0.125 \one-septimal-comma-down \hspace #0.125 \abjad-sharp  }
                         g''16
                         - \espressivo
                         ^ \markup \center-align { -3 }
+                        r8
                         \tweak Accidental.stencil #ly:text-interface::print
                         \tweak Accidental.text \markup \concat { \one-seventeen-limit-schisma-down \hspace #0.125 \abjad-sharp  }
                         gs'16
                         - \espressivo
                         ^ \markup \center-align { +7 }
-                        \tweak Accidental.stencil #ly:text-interface::print
-                        \tweak Accidental.text \markup { \abjad-sharp  }
-                        gs'16
-                        - \espressivo
-                        ^ \markup \center-align { +2 }
-                        \tweak Accidental.stencil #ly:text-interface::print
-                        \tweak Accidental.text \markup { \abjad-natural  }
-                        d'16
-                        - \espressivo
-                        ^ \markup \center-align { +0 }
-                        \tweak Accidental.stencil #ly:text-interface::print
-                        \tweak Accidental.text \markup \concat { \one-seventeen-limit-schisma-down \hspace #0.125 \abjad-sharp  }
-                        a''16
-                        - \espressivo
-                        ^ \markup \center-align { +7 }
-                        \tweak Accidental.stencil #ly:text-interface::print
-                        \tweak Accidental.text \markup \concat { \one-seventeen-limit-schisma-down \hspace #0.125 \one-septimal-comma-down \hspace #0.125 \abjad-sharp  }
-                        bs'16
-                        - \espressivo
-                        ^ \markup \center-align { -26 }
-                        \revert Staff.Stem.stemlet-length
-                        \tweak Accidental.stencil #ly:text-interface::print
-                        \tweak Accidental.text \markup { \abjad-natural  }
-                        ef''16
-                        - \espressivo
-                        ^ \markup \center-align { +0 }
-                        ]
                     }
                     \times 8/13
                     {
-                        \override Staff.Stem.stemlet-length = 0.75
-                        f'16
-                        - \espressivo
-                        ^ \markup \center-align +12
-                        [
-                        \tweak Accidental.stencil #ly:text-interface::print
-                        \tweak Accidental.text \markup \concat { \one-seventeen-limit-schisma-down \hspace #0.125 \double-sharp  }
-                        ds''16
-                        - \espressivo
-                        ^ \markup \center-align { +5 }
-                        \tweak Accidental.stencil #ly:text-interface::print
-                        \tweak Accidental.text \markup \concat { \one-twenty-three-limit-comma-up \hspace #0.125 \one-septimal-comma-down \hspace #0.125 \abjad-sharp  }
-                        fs'16
-                        - \espressivo
-                        ^ \markup \center-align { -3 }
-                        ef''16
-                        - \espressivo
-                        ^ \markup \center-align +16
-                        \tweak Accidental.stencil #ly:text-interface::print
-                        \tweak Accidental.text \markup { \one-nineteen-limit-schisma-up  }
-                        b'16
-                        - \espressivo
-                        ^ \markup \center-align { -1 }
-                        \tweak Accidental.stencil #ly:text-interface::print
-                        \tweak Accidental.text \markup \concat { \one-twenty-three-limit-comma-up \hspace #0.125 \one-septimal-comma-down \hspace #0.125 \abjad-sharp  }
-                        fs'16
-                        - \espressivo
-                        ^ \markup \center-align { -3 }
-                        \tweak Accidental.stencil #ly:text-interface::print
-                        \tweak Accidental.text \markup \concat { \one-seventeen-limit-schisma-down \hspace #0.125 \abjad-sharp  }
-                        gs'16
-                        - \espressivo
-                        ^ \markup \center-align { +7 }
                         \tweak Accidental.stencil #ly:text-interface::print
                         \tweak Accidental.text \markup { \abjad-sharp  }
                         a''16
                         - \espressivo
                         ^ \markup \center-align { +2 }
+                        r16
                         \tweak Accidental.stencil #ly:text-interface::print
                         \tweak Accidental.text \markup { \abjad-natural  }
-                        d'16
+                        d'4
                         - \espressivo
                         ^ \markup \center-align { +0 }
-                        \tweak Accidental.stencil #ly:text-interface::print
-                        \tweak Accidental.text \markup \concat { \one-seventeen-limit-schisma-down \hspace #0.125 \abjad-sharp  }
-                        a''16
-                        - \espressivo
-                        ^ \markup \center-align { +7 }
-                        \tweak Accidental.stencil #ly:text-interface::print
-                        \tweak Accidental.text \markup \concat { \one-seventeen-limit-schisma-down \hspace #0.125 \one-septimal-comma-down \hspace #0.125 \abjad-sharp  }
-                        bs'16
-                        - \espressivo
-                        ^ \markup \center-align { -26 }
-                        \tweak Accidental.stencil #ly:text-interface::print
-                        \tweak Accidental.text \markup { \abjad-natural  }
-                        ef''16
-                        - \espressivo
-                        ^ \markup \center-align { +0 }
-                        \revert Staff.Stem.stemlet-length
-                        f'16
+                        r8
+                        f'4
                         - \espressivo
                         ^ \markup \center-align +12
-                        ]
+                        ~
+                        f'16
                     }
                     \times 2/3
                     {
-                        \override Staff.Stem.stemlet-length = 0.75
-                        \tweak Accidental.stencil #ly:text-interface::print
-                        \tweak Accidental.text \markup \concat { \one-seventeen-limit-schisma-down \hspace #0.125 \double-sharp  }
-                        ds''16
-                        - \espressivo
-                        ^ \markup \center-align { +5 }
-                        [
+                        r16
                         \tweak Accidental.stencil #ly:text-interface::print
                         \tweak Accidental.text \markup \concat { \one-twenty-three-limit-comma-up \hspace #0.125 \one-septimal-comma-down \hspace #0.125 \abjad-sharp  }
-                        fs'16
+                        g''8
                         - \espressivo
                         ^ \markup \center-align { -3 }
-                        d'16
-                        - \espressivo
-                        ^ \markup \center-align +16
-                        \tweak Accidental.stencil #ly:text-interface::print
-                        \tweak Accidental.text \markup { \one-nineteen-limit-schisma-up  }
-                        b'16
-                        - \espressivo
-                        ^ \markup \center-align { -1 }
-                        \tweak Accidental.stencil #ly:text-interface::print
-                        \tweak Accidental.text \markup \concat { \one-twenty-three-limit-comma-up \hspace #0.125 \one-septimal-comma-down \hspace #0.125 \abjad-sharp  }
-                        g''16
-                        - \espressivo
-                        ^ \markup \center-align { -3 }
-                        \revert Staff.Stem.stemlet-length
-                        \tweak Accidental.stencil #ly:text-interface::print
-                        \tweak Accidental.text \markup \concat { \one-seventeen-limit-schisma-down \hspace #0.125 \abjad-sharp  }
-                        gs'16
-                        - \espressivo
-                        ^ \markup \center-align { +7 }
-                        ]
-                    }
-                    \tweak text #tuplet-number::calc-fraction-text
-                    \times 6/7
-                    {
-                        \override Staff.Stem.stemlet-length = 0.75
+                        r16
                         \tweak Accidental.stencil #ly:text-interface::print
                         \tweak Accidental.text \markup { \abjad-sharp  }
-                        a''16
+                        gs'16
                         - \espressivo
                         ^ \markup \center-align { +2 }
-                        [
+                        r16
+                    }
+                    \times 8/9
+                    {
+                        r16
                         \tweak Accidental.stencil #ly:text-interface::print
                         \tweak Accidental.text \markup { \abjad-natural  }
-                        d'16
+                        d'8
                         - \espressivo
                         ^ \markup \center-align { +0 }
-                        \tweak Accidental.stencil #ly:text-interface::print
-                        \tweak Accidental.text \markup \concat { \one-seventeen-limit-schisma-down \hspace #0.125 \abjad-sharp  }
-                        a''16
-                        - \espressivo
-                        ^ \markup \center-align { +7 }
+                        r16
                         \tweak Accidental.stencil #ly:text-interface::print
                         \tweak Accidental.text \markup \concat { \one-seventeen-limit-schisma-down \hspace #0.125 \one-septimal-comma-down \hspace #0.125 \abjad-sharp  }
-                        bs'16
+                        bs'4
                         - \espressivo
                         ^ \markup \center-align { -26 }
-                        \tweak Accidental.stencil #ly:text-interface::print
-                        \tweak Accidental.text \markup { \abjad-natural  }
-                        ef''16
-                        - \espressivo
-                        ^ \markup \center-align { +0 }
-                        f'16
-                        - \espressivo
-                        ^ \markup \center-align +12
-                        \revert Staff.Stem.stemlet-length
-                        \tweak Accidental.stencil #ly:text-interface::print
-                        \tweak Accidental.text \markup \concat { \one-seventeen-limit-schisma-down \hspace #0.125 \double-sharp  }
-                        css'16
-                        - \espressivo
-                        ^ \markup \center-align { +5 }
-                        ]
+                        r16
                     }
                 }
             }
@@ -805,415 +323,155 @@
                         \markup \bold { III }
                         \set Staff.shortInstrumentName =
                         \markup \bold { III }
-                        \override Staff.Stem.stemlet-length = 0.75
                         \tweak Accidental.stencil #ly:text-interface::print
                         \tweak Accidental.text \markup \concat { \one-seventeen-limit-schisma-down \hspace #0.125 \abjad-sharp  }
                         cs'16
                         - \espressivo
                         ^ \markup \center-align { +5 }
-                        [
+                        r16
                         \tweak Accidental.stencil #ly:text-interface::print
                         \tweak Accidental.text \markup \concat { \one-twenty-three-limit-comma-up \hspace #0.125 \one-septimal-comma-down \hspace #0.125 \abjad-sharp  }
                         fs''16
                         - \espressivo
                         ^ \markup \center-align { -3 }
-                        e'16
-                        - \espressivo
-                        ^ \markup \center-align +16
-                        \tweak Accidental.stencil #ly:text-interface::print
-                        \tweak Accidental.text \markup \concat { \one-nineteen-limit-schisma-up \hspace #0.125 \abjad-flat  }
-                        bf'16
-                        - \espressivo
-                        ^ \markup \center-align { -1 }
-                        \revert Staff.Stem.stemlet-length
-                        \tweak Accidental.stencil #ly:text-interface::print
-                        \tweak Accidental.text \markup \concat { \one-twenty-three-limit-comma-up \hspace #0.125 \one-septimal-comma-down \hspace #0.125 \abjad-sharp  }
-                        es'16
-                        - \espressivo
-                        ^ \markup \center-align { -3 }
-                        ]
+                        r8
                     }
                     \times 4/5
                     {
-                        \override Staff.Stem.stemlet-length = 0.75
+                        e'8
+                        - \espressivo
+                        ^ \markup \center-align +16
+                        r16
+                        \tweak Accidental.stencil #ly:text-interface::print
+                        \tweak Accidental.text \markup \concat { \one-twenty-three-limit-comma-up \hspace #0.125 \one-septimal-comma-down \hspace #0.125 \abjad-sharp  }
+                        es'4
+                        - \espressivo
+                        ^ \markup \center-align { -3 }
+                        r8
                         \tweak Accidental.stencil #ly:text-interface::print
                         \tweak Accidental.text \markup \concat { \one-seventeen-limit-schisma-down \hspace #0.125 \abjad-sharp  }
-                        b''16
+                        as'4
                         - \espressivo
                         ^ \markup \center-align { +7 }
-                        [
-                        \tweak Accidental.stencil #ly:text-interface::print
-                        \tweak Accidental.text \markup { \abjad-natural  }
-                        g'16
-                        - \espressivo
-                        ^ \markup \center-align { +2 }
-                        \tweak Accidental.stencil #ly:text-interface::print
-                        \tweak Accidental.text \markup { \abjad-sharp  }
-                        d''16
-                        - \espressivo
-                        ^ \markup \center-align { +0 }
+                        ~
                         \tweak Accidental.stencil #ly:text-interface::print
                         \tweak Accidental.text \markup \concat { \one-seventeen-limit-schisma-down \hspace #0.125 \abjad-sharp  }
                         as'16
-                        - \espressivo
-                        ^ \markup \center-align { +7 }
-                        \tweak Accidental.stencil #ly:text-interface::print
-                        \tweak Accidental.text \markup \concat { \one-seventeen-limit-schisma-down \hspace #0.125 \one-septimal-comma-down  }
-                        c'''16
-                        - \espressivo
-                        ^ \markup \center-align { -26 }
-                        \tweak Accidental.stencil #ly:text-interface::print
-                        \tweak Accidental.text \markup { \abjad-sharp  }
-                        cs'16
-                        - \espressivo
-                        ^ \markup \center-align { +0 }
-                        af''16
-                        - \espressivo
-                        ^ \markup \center-align +12
-                        \tweak Accidental.stencil #ly:text-interface::print
-                        \tweak Accidental.text \markup \concat { \one-seventeen-limit-schisma-down \hspace #0.125 \abjad-sharp  }
-                        cs'16
-                        - \espressivo
-                        ^ \markup \center-align { +5 }
-                        \tweak Accidental.stencil #ly:text-interface::print
-                        \tweak Accidental.text \markup \concat { \one-twenty-three-limit-comma-up \hspace #0.125 \one-septimal-comma-down \hspace #0.125 \abjad-sharp  }
-                        es'16
-                        - \espressivo
-                        ^ \markup \center-align { -3 }
-                        e'16
-                        - \espressivo
-                        ^ \markup \center-align +16
-                        \tweak Accidental.stencil #ly:text-interface::print
-                        \tweak Accidental.text \markup \concat { \one-nineteen-limit-schisma-up \hspace #0.125 \abjad-flat  }
-                        cf'''16
-                        - \espressivo
-                        ^ \markup \center-align { -1 }
-                        \tweak Accidental.stencil #ly:text-interface::print
-                        \tweak Accidental.text \markup \concat { \one-twenty-three-limit-comma-up \hspace #0.125 \one-septimal-comma-down \hspace #0.125 \abjad-sharp  }
-                        es'16
-                        - \espressivo
-                        ^ \markup \center-align { -3 }
-                        \tweak Accidental.stencil #ly:text-interface::print
-                        \tweak Accidental.text \markup \concat { \one-seventeen-limit-schisma-down \hspace #0.125 \abjad-sharp  }
-                        b''16
-                        - \espressivo
-                        ^ \markup \center-align { +7 }
-                        \tweak Accidental.stencil #ly:text-interface::print
-                        \tweak Accidental.text \markup { \abjad-natural  }
-                        g'16
-                        - \espressivo
-                        ^ \markup \center-align { +2 }
-                        \revert Staff.Stem.stemlet-length
-                        \tweak Accidental.stencil #ly:text-interface::print
-                        \tweak Accidental.text \markup { \abjad-sharp  }
-                        d''16
-                        - \espressivo
-                        ^ \markup \center-align { +0 }
-                        ]
+                        r16
                     }
                     \times 8/9
                     {
-                        \override Staff.Stem.stemlet-length = 0.75
-                        \tweak Accidental.stencil #ly:text-interface::print
-                        \tweak Accidental.text \markup \concat { \one-seventeen-limit-schisma-down \hspace #0.125 \abjad-sharp  }
-                        as'16
-                        - \espressivo
-                        ^ \markup \center-align { +7 }
-                        [
-                        \tweak Accidental.stencil #ly:text-interface::print
-                        \tweak Accidental.text \markup \concat { \one-seventeen-limit-schisma-down \hspace #0.125 \one-septimal-comma-down  }
-                        c'''16
-                        - \espressivo
-                        ^ \markup \center-align { -26 }
-                        \tweak Accidental.stencil #ly:text-interface::print
-                        \tweak Accidental.text \markup { \abjad-sharp  }
-                        cs'16
-                        - \espressivo
-                        ^ \markup \center-align { +0 }
-                        g'16
-                        - \espressivo
-                        ^ \markup \center-align +12
-                        \tweak Accidental.stencil #ly:text-interface::print
-                        \tweak Accidental.text \markup \concat { \one-seventeen-limit-schisma-down \hspace #0.125 \abjad-sharp  }
-                        cs'16
-                        - \espressivo
-                        ^ \markup \center-align { +5 }
                         \tweak Accidental.stencil #ly:text-interface::print
                         \tweak Accidental.text \markup \concat { \one-twenty-three-limit-comma-up \hspace #0.125 \one-septimal-comma-down \hspace #0.125 \abjad-sharp  }
-                        fs''16
+                        es'8
                         - \espressivo
                         ^ \markup \center-align { -3 }
-                        e'16
-                        - \espressivo
-                        ^ \markup \center-align +16
+                        r16
                         \tweak Accidental.stencil #ly:text-interface::print
                         \tweak Accidental.text \markup \concat { \one-nineteen-limit-schisma-up \hspace #0.125 \abjad-flat  }
                         cf'''16
                         - \espressivo
                         ^ \markup \center-align { -1 }
-                        \revert Staff.Stem.stemlet-length
+                        r8
                         \tweak Accidental.stencil #ly:text-interface::print
                         \tweak Accidental.text \markup \concat { \one-twenty-three-limit-comma-up \hspace #0.125 \one-septimal-comma-down \hspace #0.125 \abjad-sharp  }
-                        es'16
+                        es'8
                         - \espressivo
                         ^ \markup \center-align { -3 }
-                        ]
+                        r16
                     }
                     \times 2/3
                     {
-                        \override Staff.Stem.stemlet-length = 0.75
-                        \tweak Accidental.stencil #ly:text-interface::print
-                        \tweak Accidental.text \markup \concat { \one-seventeen-limit-schisma-down \hspace #0.125 \abjad-sharp  }
-                        b''16
-                        - \espressivo
-                        ^ \markup \center-align { +7 }
-                        [
                         \tweak Accidental.stencil #ly:text-interface::print
                         \tweak Accidental.text \markup { \abjad-natural  }
-                        g'16
+                        g'4
                         - \espressivo
                         ^ \markup \center-align { +2 }
-                        \tweak Accidental.stencil #ly:text-interface::print
-                        \tweak Accidental.text \markup { \abjad-sharp  }
-                        d''16
-                        - \espressivo
-                        ^ \markup \center-align { +0 }
-                        \tweak Accidental.stencil #ly:text-interface::print
-                        \tweak Accidental.text \markup \concat { \one-seventeen-limit-schisma-down \hspace #0.125 \abjad-sharp  }
-                        as'16
-                        - \espressivo
-                        ^ \markup \center-align { +7 }
-                        \tweak Accidental.stencil #ly:text-interface::print
-                        \tweak Accidental.text \markup \concat { \one-seventeen-limit-schisma-down \hspace #0.125 \one-septimal-comma-down  }
-                        b'16
-                        - \espressivo
-                        ^ \markup \center-align { -26 }
-                        \revert Staff.Stem.stemlet-length
-                        \tweak Accidental.stencil #ly:text-interface::print
-                        \tweak Accidental.text \markup { \abjad-sharp  }
-                        cs'16
-                        - \espressivo
-                        ^ \markup \center-align { +0 }
-                        ]
+                        r8
                     }
                     \tweak text #tuplet-number::calc-fraction-text
                     \times 12/17
                     {
-                        \override Staff.Stem.stemlet-length = 0.75
-                        af''16
-                        - \espressivo
-                        ^ \markup \center-align +12
-                        [
                         \tweak Accidental.stencil #ly:text-interface::print
-                        \tweak Accidental.text \markup \concat { \one-seventeen-limit-schisma-down \hspace #0.125 \abjad-sharp  }
+                        \tweak Accidental.text \markup { \abjad-sharp  }
+                        cs'4
+                        - \espressivo
+                        ^ \markup \center-align { +0 }
+                        ~
+                        \tweak Accidental.stencil #ly:text-interface::print
+                        \tweak Accidental.text \markup { \abjad-sharp  }
                         cs'16
-                        - \espressivo
-                        ^ \markup \center-align { +5 }
-                        \tweak Accidental.stencil #ly:text-interface::print
-                        \tweak Accidental.text \markup \concat { \one-twenty-three-limit-comma-up \hspace #0.125 \one-septimal-comma-down \hspace #0.125 \abjad-sharp  }
-                        fs''16
-                        - \espressivo
-                        ^ \markup \center-align { -3 }
-                        e'16
-                        - \espressivo
-                        ^ \markup \center-align +16
+                        r16
                         \tweak Accidental.stencil #ly:text-interface::print
                         \tweak Accidental.text \markup \concat { \one-nineteen-limit-schisma-up \hspace #0.125 \abjad-flat  }
-                        cf'''16
+                        cf'''8
                         - \espressivo
                         ^ \markup \center-align { -1 }
-                        \tweak Accidental.stencil #ly:text-interface::print
-                        \tweak Accidental.text \markup \concat { \one-twenty-three-limit-comma-up \hspace #0.125 \one-septimal-comma-down \hspace #0.125 \abjad-sharp  }
-                        es'16
-                        - \espressivo
-                        ^ \markup \center-align { -3 }
+                        r16
                         \tweak Accidental.stencil #ly:text-interface::print
                         \tweak Accidental.text \markup \concat { \one-seventeen-limit-schisma-down \hspace #0.125 \abjad-sharp  }
                         b''16
                         - \espressivo
                         ^ \markup \center-align { +7 }
+                        r8
                         \tweak Accidental.stencil #ly:text-interface::print
                         \tweak Accidental.text \markup { \abjad-natural  }
-                        g'16
+                        g'8
                         - \espressivo
                         ^ \markup \center-align { +2 }
-                        \tweak Accidental.stencil #ly:text-interface::print
-                        \tweak Accidental.text \markup { \abjad-sharp  }
-                        cs'16
-                        - \espressivo
-                        ^ \markup \center-align { +0 }
+                        r16
                         \tweak Accidental.stencil #ly:text-interface::print
                         \tweak Accidental.text \markup \concat { \one-seventeen-limit-schisma-down \hspace #0.125 \abjad-sharp  }
-                        as'16
+                        as'8
                         - \espressivo
                         ^ \markup \center-align { +7 }
-                        \tweak Accidental.stencil #ly:text-interface::print
-                        \tweak Accidental.text \markup \concat { \one-seventeen-limit-schisma-down \hspace #0.125 \one-septimal-comma-down  }
-                        c'''16
-                        - \espressivo
-                        ^ \markup \center-align { -26 }
-                        \tweak Accidental.stencil #ly:text-interface::print
-                        \tweak Accidental.text \markup { \abjad-sharp  }
-                        cs'16
-                        - \espressivo
-                        ^ \markup \center-align { +0 }
-                        af''16
-                        - \espressivo
-                        ^ \markup \center-align +12
-                        \tweak Accidental.stencil #ly:text-interface::print
-                        \tweak Accidental.text \markup \concat { \one-seventeen-limit-schisma-down \hspace #0.125 \abjad-sharp  }
-                        cs'16
-                        - \espressivo
-                        ^ \markup \center-align { +5 }
-                        \tweak Accidental.stencil #ly:text-interface::print
-                        \tweak Accidental.text \markup \concat { \one-twenty-three-limit-comma-up \hspace #0.125 \one-septimal-comma-down \hspace #0.125 \abjad-sharp  }
-                        fs''16
-                        - \espressivo
-                        ^ \markup \center-align { -3 }
-                        e'16
-                        - \espressivo
-                        ^ \markup \center-align +16
-                        \revert Staff.Stem.stemlet-length
-                        \tweak Accidental.stencil #ly:text-interface::print
-                        \tweak Accidental.text \markup \concat { \one-nineteen-limit-schisma-up \hspace #0.125 \abjad-flat  }
-                        cf'''16
-                        - \espressivo
-                        ^ \markup \center-align { -1 }
-                        ]
                     }
                     \times 4/5
                     {
-                        \override Staff.Stem.stemlet-length = 0.75
-                        \tweak Accidental.stencil #ly:text-interface::print
-                        \tweak Accidental.text \markup \concat { \one-twenty-three-limit-comma-up \hspace #0.125 \one-septimal-comma-down \hspace #0.125 \abjad-sharp  }
-                        es'16
-                        - \espressivo
-                        ^ \markup \center-align { -3 }
-                        [
-                        \tweak Accidental.stencil #ly:text-interface::print
-                        \tweak Accidental.text \markup \concat { \one-seventeen-limit-schisma-down \hspace #0.125 \abjad-sharp  }
-                        as'16
-                        - \espressivo
-                        ^ \markup \center-align { +7 }
-                        \tweak Accidental.stencil #ly:text-interface::print
-                        \tweak Accidental.text \markup { \abjad-natural  }
-                        g'16
-                        - \espressivo
-                        ^ \markup \center-align { +2 }
                         \tweak Accidental.stencil #ly:text-interface::print
                         \tweak Accidental.text \markup { \abjad-sharp  }
-                        d''16
+                        cs'8
                         - \espressivo
                         ^ \markup \center-align { +0 }
+                        r8
                         \tweak Accidental.stencil #ly:text-interface::print
                         \tweak Accidental.text \markup \concat { \one-seventeen-limit-schisma-down \hspace #0.125 \abjad-sharp  }
-                        as'16
-                        - \espressivo
-                        ^ \markup \center-align { +7 }
-                        \tweak Accidental.stencil #ly:text-interface::print
-                        \tweak Accidental.text \markup \concat { \one-seventeen-limit-schisma-down \hspace #0.125 \one-septimal-comma-down  }
-                        c'''16
-                        - \espressivo
-                        ^ \markup \center-align { -26 }
-                        \tweak Accidental.stencil #ly:text-interface::print
-                        \tweak Accidental.text \markup { \abjad-sharp  }
-                        cs'16
-                        - \espressivo
-                        ^ \markup \center-align { +0 }
-                        af''16
-                        - \espressivo
-                        ^ \markup \center-align +12
-                        \tweak Accidental.stencil #ly:text-interface::print
-                        \tweak Accidental.text \markup \concat { \one-seventeen-limit-schisma-down \hspace #0.125 \abjad-sharp  }
-                        cs'16
+                        cs'4
                         - \espressivo
                         ^ \markup \center-align { +5 }
-                        \revert Staff.Stem.stemlet-length
+                        ~
                         \tweak Accidental.stencil #ly:text-interface::print
-                        \tweak Accidental.text \markup \concat { \one-twenty-three-limit-comma-up \hspace #0.125 \one-septimal-comma-down \hspace #0.125 \abjad-sharp  }
-                        fs''16
-                        - \espressivo
-                        ^ \markup \center-align { -3 }
-                        ]
+                        \tweak Accidental.text \markup \concat { \one-seventeen-limit-schisma-down \hspace #0.125 \abjad-sharp  }
+                        cs'16
+                        r16
                     }
                     \times 4/5
                     {
-                        \override Staff.Stem.stemlet-length = 0.75
-                        e'16
-                        - \espressivo
-                        ^ \markup \center-align +16
-                        [
-                        \tweak Accidental.stencil #ly:text-interface::print
-                        \tweak Accidental.text \markup \concat { \one-nineteen-limit-schisma-up \hspace #0.125 \abjad-flat  }
-                        bf'16
-                        - \espressivo
-                        ^ \markup \center-align { -1 }
-                        \tweak Accidental.stencil #ly:text-interface::print
-                        \tweak Accidental.text \markup \concat { \one-twenty-three-limit-comma-up \hspace #0.125 \one-septimal-comma-down \hspace #0.125 \abjad-sharp  }
-                        es'16
-                        - \espressivo
-                        ^ \markup \center-align { -3 }
                         \tweak Accidental.stencil #ly:text-interface::print
                         \tweak Accidental.text \markup \concat { \one-seventeen-limit-schisma-down \hspace #0.125 \abjad-sharp  }
-                        b''16
+                        b''8
                         - \espressivo
                         ^ \markup \center-align { +7 }
-                        \revert Staff.Stem.stemlet-length
+                        r16
                         \tweak Accidental.stencil #ly:text-interface::print
-                        \tweak Accidental.text \markup { \abjad-natural  }
-                        g'16
+                        \tweak Accidental.text \markup { \abjad-sharp  }
+                        cs'16
                         - \espressivo
-                        ^ \markup \center-align { +2 }
-                        ]
+                        ^ \markup \center-align { +0 }
+                        r16
                     }
-                    \override Staff.Stem.stemlet-length = 0.75
-                    \tweak Accidental.stencil #ly:text-interface::print
-                    \tweak Accidental.text \markup { \abjad-sharp  }
-                    d''32.
-                    - \espressivo
-                    ^ \markup \center-align { +0 }
-                    [
+                    r16
                     \tweak Accidental.stencil #ly:text-interface::print
                     \tweak Accidental.text \markup \concat { \one-seventeen-limit-schisma-down \hspace #0.125 \abjad-sharp  }
-                    as'32.
+                    as'8
                     - \espressivo
                     ^ \markup \center-align { +7 }
-                    \revert Staff.Stem.stemlet-length
-                    \tweak Accidental.stencil #ly:text-interface::print
-                    \tweak Accidental.text \markup \concat { \one-seventeen-limit-schisma-down \hspace #0.125 \one-septimal-comma-down  }
-                    c'''32
-                    - \espressivo
-                    ^ \markup \center-align { -26 }
-                    ~
-                    ]
-                    \tweak Accidental.stencil #ly:text-interface::print
-                    \tweak Accidental.text \markup \concat { \one-seventeen-limit-schisma-down \hspace #0.125 \one-septimal-comma-down  }
-                    c'''64
+                    r16
                     \tweak Accidental.stencil #ly:text-interface::print
                     \tweak Accidental.text \markup { \abjad-sharp  }
-                    cs'32.
+                    cs'4
                     - \espressivo
                     ^ \markup \center-align { +0 }
-                    af''32.
-                    - \espressivo
-                    ^ \markup \center-align +12
-                    \tweak Accidental.stencil #ly:text-interface::print
-                    \tweak Accidental.text \markup \concat { \one-seventeen-limit-schisma-down \hspace #0.125 \abjad-sharp  }
-                    cs'64
-                    - \espressivo
-                    ^ \markup \center-align { +5 }
-                    ~
-                    \tweak Accidental.stencil #ly:text-interface::print
-                    \tweak Accidental.text \markup \concat { \one-seventeen-limit-schisma-down \hspace #0.125 \abjad-sharp  }
-                    cs'32
-                    \tweak Accidental.stencil #ly:text-interface::print
-                    \tweak Accidental.text \markup \concat { \one-twenty-three-limit-comma-up \hspace #0.125 \one-septimal-comma-down \hspace #0.125 \abjad-sharp  }
-                    es'32.
-                    - \espressivo
-                    ^ \markup \center-align { -3 }
-                    e'32.
-                    - \espressivo
-                    ^ \markup \center-align +16
                 }
             }
             \context Staff = "piano 4 staff"
@@ -1226,454 +484,165 @@
                         \markup \bold { IV }
                         \set Staff.shortInstrumentName =
                         \markup \bold{ IV }
-                        \override Staff.Stem.stemlet-length = 0.75
                         \tweak Accidental.stencil #ly:text-interface::print
                         \tweak Accidental.text \markup \concat { \one-twenty-three-limit-comma-up \hspace #0.125 \one-septimal-comma-down  }
                         e'16
                         - \espressivo
                         ^ \markup \center-align { -3 }
-                        [
+                        r16
                         ff''16
                         - \espressivo
                         ^ \markup \center-align +16
+                        r8
                         \tweak Accidental.stencil #ly:text-interface::print
                         \tweak Accidental.text \markup { \one-nineteen-limit-schisma-up  }
                         c''16
                         - \espressivo
                         ^ \markup \center-align { -1 }
-                        \tweak Accidental.stencil #ly:text-interface::print
-                        \tweak Accidental.text \markup \concat { \one-twenty-three-limit-comma-up \hspace #0.125 \one-septimal-comma-down  }
-                        e'16
-                        - \espressivo
-                        ^ \markup \center-align { -3 }
-                        \tweak Accidental.stencil #ly:text-interface::print
-                        \tweak Accidental.text \markup \concat { \one-seventeen-limit-schisma-down \hspace #0.125 \double-sharp  }
-                        gss'16
-                        - \espressivo
-                        ^ \markup \center-align { +7 }
-                        \revert Staff.Stem.stemlet-length
-                        \tweak Accidental.stencil #ly:text-interface::print
-                        \tweak Accidental.text \markup { \abjad-natural  }
-                        bf''16
-                        - \espressivo
-                        ^ \markup \center-align { +2 }
-                        ]
                     }
                     \tweak text #tuplet-number::calc-fraction-text
                     \times 12/17
                     {
-                        \override Staff.Stem.stemlet-length = 0.75
-                        \tweak Accidental.stencil #ly:text-interface::print
-                        \tweak Accidental.text \markup { \abjad-natural  }
-                        c'16
-                        - \espressivo
-                        ^ \markup \center-align { +0 }
-                        [
-                        \tweak Accidental.stencil #ly:text-interface::print
-                        \tweak Accidental.text \markup \concat { \one-seventeen-limit-schisma-down \hspace #0.125 \double-sharp  }
-                        as''16
-                        - \espressivo
-                        ^ \markup \center-align { +7 }
-                        \tweak Accidental.stencil #ly:text-interface::print
-                        \tweak Accidental.text \markup \concat { \one-seventeen-limit-schisma-down \hspace #0.125 \one-septimal-comma-down \hspace #0.125 \abjad-sharp  }
-                        cs''16
-                        - \espressivo
-                        ^ \markup \center-align { -26 }
-                        \tweak Accidental.stencil #ly:text-interface::print
-                        \tweak Accidental.text \markup { \abjad-natural  }
-                        df''16
-                        - \espressivo
-                        ^ \markup \center-align { +0 }
-                        fs'16
-                        - \espressivo
-                        ^ \markup \center-align +12
-                        \tweak Accidental.stencil #ly:text-interface::print
-                        \tweak Accidental.text \markup \concat { \one-seventeen-limit-schisma-down \hspace #0.125 \abjad-sharp  }
-                        e''16
-                        - \espressivo
-                        ^ \markup \center-align { +5 }
                         \tweak Accidental.stencil #ly:text-interface::print
                         \tweak Accidental.text \markup \concat { \one-twenty-three-limit-comma-up \hspace #0.125 \one-septimal-comma-down  }
                         e'16
                         - \espressivo
                         ^ \markup \center-align { -3 }
-                        ef'16
+                        r16
+                        \tweak Accidental.stencil #ly:text-interface::print
+                        \tweak Accidental.text \markup \concat { \one-seventeen-limit-schisma-down \hspace #0.125 \double-sharp  }
+                        gss'4
+                        - \espressivo
+                        ^ \markup \center-align { +7 }
+                        r8
+                        \tweak Accidental.stencil #ly:text-interface::print
+                        \tweak Accidental.text \markup \concat { \one-seventeen-limit-schisma-down \hspace #0.125 \one-septimal-comma-down \hspace #0.125 \abjad-sharp  }
+                        cs''4
+                        - \espressivo
+                        ^ \markup \center-align { -26 }
+                        ~
+                        \tweak Accidental.stencil #ly:text-interface::print
+                        \tweak Accidental.text \markup \concat { \one-seventeen-limit-schisma-down \hspace #0.125 \one-septimal-comma-down \hspace #0.125 \abjad-sharp  }
+                        cs''16
+                        r16
+                        ef'8
                         - \espressivo
                         ^ \markup \center-align +16
-                        \tweak Accidental.stencil #ly:text-interface::print
-                        \tweak Accidental.text \markup { \one-nineteen-limit-schisma-up  }
-                        c''16
-                        - \espressivo
-                        ^ \markup \center-align { -1 }
+                        r16
+                    }
+                    \times 4/5
+                    {
                         \tweak Accidental.stencil #ly:text-interface::print
                         \tweak Accidental.text \markup \concat { \one-twenty-three-limit-comma-up \hspace #0.125 \one-septimal-comma-down  }
                         f''16
                         - \espressivo
                         ^ \markup \center-align { -3 }
+                        r8
                         \tweak Accidental.stencil #ly:text-interface::print
                         \tweak Accidental.text \markup \concat { \one-seventeen-limit-schisma-down \hspace #0.125 \double-sharp  }
-                        gss'16
+                        gss'8
                         - \espressivo
                         ^ \markup \center-align { +7 }
+                        r16
                         \tweak Accidental.stencil #ly:text-interface::print
                         \tweak Accidental.text \markup { \abjad-natural  }
-                        bf''16
-                        - \espressivo
-                        ^ \markup \center-align { +2 }
-                        \tweak Accidental.stencil #ly:text-interface::print
-                        \tweak Accidental.text \markup { \abjad-natural  }
-                        c'16
+                        c'4
                         - \espressivo
                         ^ \markup \center-align { +0 }
-                        \tweak Accidental.stencil #ly:text-interface::print
-                        \tweak Accidental.text \markup \concat { \one-seventeen-limit-schisma-down \hspace #0.125 \double-sharp  }
-                        as''16
-                        - \espressivo
-                        ^ \markup \center-align { +7 }
-                        \tweak Accidental.stencil #ly:text-interface::print
-                        \tweak Accidental.text \markup \concat { \one-seventeen-limit-schisma-down \hspace #0.125 \one-septimal-comma-down \hspace #0.125 \abjad-sharp  }
-                        cs''16
-                        - \espressivo
-                        ^ \markup \center-align { -26 }
-                        \tweak Accidental.stencil #ly:text-interface::print
-                        \tweak Accidental.text \markup { \abjad-natural  }
-                        df''16
-                        - \espressivo
-                        ^ \markup \center-align { +0 }
-                        \revert Staff.Stem.stemlet-length
-                        fs'16
-                        - \espressivo
-                        ^ \markup \center-align +12
-                        ]
                     }
                     \times 4/5
                     {
-                        \override Staff.Stem.stemlet-length = 0.75
-                        \tweak Accidental.stencil #ly:text-interface::print
-                        \tweak Accidental.text \markup \concat { \one-seventeen-limit-schisma-down \hspace #0.125 \abjad-sharp  }
-                        ds'16
-                        - \espressivo
-                        ^ \markup \center-align { +5 }
-                        [
-                        \tweak Accidental.stencil #ly:text-interface::print
-                        \tweak Accidental.text \markup \concat { \one-twenty-three-limit-comma-up \hspace #0.125 \one-septimal-comma-down  }
-                        e'16
-                        - \espressivo
-                        ^ \markup \center-align { -3 }
-                        ff''16
-                        - \espressivo
-                        ^ \markup \center-align +16
-                        \tweak Accidental.stencil #ly:text-interface::print
-                        \tweak Accidental.text \markup { \one-nineteen-limit-schisma-up  }
-                        c''16
-                        - \espressivo
-                        ^ \markup \center-align { -1 }
-                        \tweak Accidental.stencil #ly:text-interface::print
-                        \tweak Accidental.text \markup \concat { \one-twenty-three-limit-comma-up \hspace #0.125 \one-septimal-comma-down  }
-                        f''16
-                        - \espressivo
-                        ^ \markup \center-align { -3 }
-                        \tweak Accidental.stencil #ly:text-interface::print
-                        \tweak Accidental.text \markup \concat { \one-seventeen-limit-schisma-down \hspace #0.125 \double-sharp  }
-                        gss'16
-                        - \espressivo
-                        ^ \markup \center-align { +7 }
-                        \tweak Accidental.stencil #ly:text-interface::print
-                        \tweak Accidental.text \markup { \abjad-natural  }
-                        bf''16
-                        - \espressivo
-                        ^ \markup \center-align { +2 }
-                        \tweak Accidental.stencil #ly:text-interface::print
-                        \tweak Accidental.text \markup { \abjad-natural  }
-                        c'16
-                        - \espressivo
-                        ^ \markup \center-align { +0 }
-                        \tweak Accidental.stencil #ly:text-interface::print
-                        \tweak Accidental.text \markup \concat { \one-seventeen-limit-schisma-down \hspace #0.125 \double-sharp  }
-                        as''16
-                        - \espressivo
-                        ^ \markup \center-align { +7 }
-                        \revert Staff.Stem.stemlet-length
-                        \tweak Accidental.stencil #ly:text-interface::print
-                        \tweak Accidental.text \markup \concat { \one-seventeen-limit-schisma-down \hspace #0.125 \one-septimal-comma-down \hspace #0.125 \abjad-sharp  }
-                        cs''16
-                        - \espressivo
-                        ^ \markup \center-align { -26 }
-                        ]
-                    }
-                    \times 4/5
-                    {
-                        \override Staff.Stem.stemlet-length = 0.75
-                        \tweak Accidental.stencil #ly:text-interface::print
-                        \tweak Accidental.text \markup { \abjad-natural  }
-                        c'16
-                        - \espressivo
-                        ^ \markup \center-align { +0 }
-                        [
-                        fs'16
+                        r8
+                        fs'8.
                         - \espressivo
                         ^ \markup \center-align +12
-                        \tweak Accidental.stencil #ly:text-interface::print
-                        \tweak Accidental.text \markup \concat { \one-seventeen-limit-schisma-down \hspace #0.125 \abjad-sharp  }
-                        e''16
-                        - \espressivo
-                        ^ \markup \center-align { +5 }
-                        \tweak Accidental.stencil #ly:text-interface::print
-                        \tweak Accidental.text \markup \concat { \one-twenty-three-limit-comma-up \hspace #0.125 \one-septimal-comma-down  }
-                        e'16
-                        - \espressivo
-                        ^ \markup \center-align { -3 }
-                        \revert Staff.Stem.stemlet-length
-                        ff''16
-                        - \espressivo
-                        ^ \markup \center-align +16
-                        ]
                     }
                     \tweak text #tuplet-number::calc-fraction-text
                     \times 3/5
                     {
-                        \override Staff.Stem.stemlet-length = 0.75
-                        \tweak Accidental.stencil #ly:text-interface::print
-                        \tweak Accidental.text \markup { \one-nineteen-limit-schisma-up  }
-                        c''16
+                        ff''8
                         - \espressivo
-                        ^ \markup \center-align { -1 }
-                        [
+                        ^ \markup \center-align +16
+                        r16
                         \tweak Accidental.stencil #ly:text-interface::print
                         \tweak Accidental.text \markup \concat { \one-twenty-three-limit-comma-up \hspace #0.125 \one-septimal-comma-down  }
-                        f''16
+                        f''8
                         - \espressivo
                         ^ \markup \center-align { -3 }
-                        \tweak Accidental.stencil #ly:text-interface::print
-                        \tweak Accidental.text \markup \concat { \one-seventeen-limit-schisma-down \hspace #0.125 \double-sharp  }
-                        gss'16
-                        - \espressivo
-                        ^ \markup \center-align { +7 }
+                        r16
                         \tweak Accidental.stencil #ly:text-interface::print
                         \tweak Accidental.text \markup { \abjad-natural  }
                         bf''16
                         - \espressivo
                         ^ \markup \center-align { +2 }
+                        r8
                         \tweak Accidental.stencil #ly:text-interface::print
                         \tweak Accidental.text \markup { \abjad-natural  }
-                        c'16
+                        c'8
                         - \espressivo
                         ^ \markup \center-align { +0 }
-                        \tweak Accidental.stencil #ly:text-interface::print
-                        \tweak Accidental.text \markup \concat { \one-seventeen-limit-schisma-down \hspace #0.125 \double-sharp  }
-                        gss'16
-                        - \espressivo
-                        ^ \markup \center-align { +7 }
+                        r16
                         \tweak Accidental.stencil #ly:text-interface::print
                         \tweak Accidental.text \markup \concat { \one-seventeen-limit-schisma-down \hspace #0.125 \one-septimal-comma-down \hspace #0.125 \abjad-sharp  }
-                        cs''16
+                        cs''4
                         - \espressivo
                         ^ \markup \center-align { -26 }
-                        \tweak Accidental.stencil #ly:text-interface::print
-                        \tweak Accidental.text \markup { \abjad-natural  }
-                        df''16
-                        - \espressivo
-                        ^ \markup \center-align { +0 }
-                        fs'16
-                        - \espressivo
-                        ^ \markup \center-align +12
-                        \tweak Accidental.stencil #ly:text-interface::print
-                        \tweak Accidental.text \markup \concat { \one-seventeen-limit-schisma-down \hspace #0.125 \abjad-sharp  }
-                        e''16
-                        - \espressivo
-                        ^ \markup \center-align { +5 }
+                        r8
                         \tweak Accidental.stencil #ly:text-interface::print
                         \tweak Accidental.text \markup \concat { \one-twenty-three-limit-comma-up \hspace #0.125 \one-septimal-comma-down  }
-                        e'16
+                        e'8
                         - \espressivo
                         ^ \markup \center-align { -3 }
-                        ff''16
-                        - \espressivo
-                        ^ \markup \center-align +16
-                        \tweak Accidental.stencil #ly:text-interface::print
-                        \tweak Accidental.text \markup { \one-nineteen-limit-schisma-up  }
-                        c''16
-                        - \espressivo
-                        ^ \markup \center-align { -1 }
-                        \tweak Accidental.stencil #ly:text-interface::print
-                        \tweak Accidental.text \markup \concat { \one-twenty-three-limit-comma-up \hspace #0.125 \one-septimal-comma-down  }
-                        f''16
-                        - \espressivo
-                        ^ \markup \center-align { -3 }
-                        \tweak Accidental.stencil #ly:text-interface::print
-                        \tweak Accidental.text \markup \concat { \one-seventeen-limit-schisma-down \hspace #0.125 \double-sharp  }
-                        gss'16
-                        - \espressivo
-                        ^ \markup \center-align { +7 }
-                        \tweak Accidental.stencil #ly:text-interface::print
-                        \tweak Accidental.text \markup { \abjad-natural  }
-                        a'16
-                        - \espressivo
-                        ^ \markup \center-align { +2 }
-                        \tweak Accidental.stencil #ly:text-interface::print
-                        \tweak Accidental.text \markup { \abjad-natural  }
-                        c'16
-                        - \espressivo
-                        ^ \markup \center-align { +0 }
-                        \tweak Accidental.stencil #ly:text-interface::print
-                        \tweak Accidental.text \markup \concat { \one-seventeen-limit-schisma-down \hspace #0.125 \double-sharp  }
-                        as''16
-                        - \espressivo
-                        ^ \markup \center-align { +7 }
-                        \tweak Accidental.stencil #ly:text-interface::print
-                        \tweak Accidental.text \markup \concat { \one-seventeen-limit-schisma-down \hspace #0.125 \one-septimal-comma-down \hspace #0.125 \abjad-sharp  }
-                        cs''16
-                        - \espressivo
-                        ^ \markup \center-align { -26 }
-                        \revert Staff.Stem.stemlet-length
-                        \tweak Accidental.stencil #ly:text-interface::print
-                        \tweak Accidental.text \markup { \abjad-natural  }
-                        df''16
-                        - \espressivo
-                        ^ \markup \center-align { +0 }
-                        ]
                     }
                     \times 8/11
                     {
-                        \override Staff.Stem.stemlet-length = 0.75
-                        fs'16
-                        - \espressivo
-                        ^ \markup \center-align +12
-                        [
-                        \tweak Accidental.stencil #ly:text-interface::print
-                        \tweak Accidental.text \markup \concat { \one-seventeen-limit-schisma-down \hspace #0.125 \abjad-sharp  }
-                        e''16
-                        - \espressivo
-                        ^ \markup \center-align { +5 }
-                        \tweak Accidental.stencil #ly:text-interface::print
-                        \tweak Accidental.text \markup \concat { \one-twenty-three-limit-comma-up \hspace #0.125 \one-septimal-comma-down  }
-                        e'16
-                        - \espressivo
-                        ^ \markup \center-align { -3 }
-                        ff''16
-                        - \espressivo
-                        ^ \markup \center-align +16
                         \tweak Accidental.stencil #ly:text-interface::print
                         \tweak Accidental.text \markup { \one-nineteen-limit-schisma-up  }
-                        c''16
+                        c''8.
                         - \espressivo
                         ^ \markup \center-align { -1 }
+                        r16
                         \tweak Accidental.stencil #ly:text-interface::print
-                        \tweak Accidental.text \markup \concat { \one-twenty-three-limit-comma-up \hspace #0.125 \one-septimal-comma-down  }
-                        e'16
+                        \tweak Accidental.text \markup { \abjad-natural  }
+                        bf''8
                         - \espressivo
-                        ^ \markup \center-align { -3 }
+                        ^ \markup \center-align { +2 }
+                        r16
                         \tweak Accidental.stencil #ly:text-interface::print
                         \tweak Accidental.text \markup \concat { \one-seventeen-limit-schisma-down \hspace #0.125 \double-sharp  }
                         gss'16
                         - \espressivo
                         ^ \markup \center-align { +7 }
-                        \tweak Accidental.stencil #ly:text-interface::print
-                        \tweak Accidental.text \markup { \abjad-natural  }
-                        bf''16
-                        - \espressivo
-                        ^ \markup \center-align { +2 }
-                        \tweak Accidental.stencil #ly:text-interface::print
-                        \tweak Accidental.text \markup { \abjad-natural  }
-                        c'16
-                        - \espressivo
-                        ^ \markup \center-align { +0 }
-                        \tweak Accidental.stencil #ly:text-interface::print
-                        \tweak Accidental.text \markup \concat { \one-seventeen-limit-schisma-down \hspace #0.125 \double-sharp  }
-                        as''16
-                        - \espressivo
-                        ^ \markup \center-align { +7 }
-                        \revert Staff.Stem.stemlet-length
+                        r8
                         \tweak Accidental.stencil #ly:text-interface::print
                         \tweak Accidental.text \markup \concat { \one-seventeen-limit-schisma-down \hspace #0.125 \one-septimal-comma-down \hspace #0.125 \abjad-sharp  }
                         cs''16
                         - \espressivo
                         ^ \markup \center-align { -26 }
-                        ]
                     }
                     \times 2/3
                     {
-                        \override Staff.Stem.stemlet-length = 0.75
                         \tweak Accidental.stencil #ly:text-interface::print
                         \tweak Accidental.text \markup { \abjad-natural  }
                         df''16
                         - \espressivo
                         ^ \markup \center-align { +0 }
-                        [
-                        fs'16
+                        r16
+                        fs'4
                         - \espressivo
                         ^ \markup \center-align +12
-                        \tweak Accidental.stencil #ly:text-interface::print
-                        \tweak Accidental.text \markup \concat { \one-seventeen-limit-schisma-down \hspace #0.125 \abjad-sharp  }
-                        e''16
-                        - \espressivo
-                        ^ \markup \center-align { +5 }
-                        \tweak Accidental.stencil #ly:text-interface::print
-                        \tweak Accidental.text \markup \concat { \one-twenty-three-limit-comma-up \hspace #0.125 \one-septimal-comma-down  }
-                        e'16
-                        - \espressivo
-                        ^ \markup \center-align { -3 }
-                        ef'16
-                        - \espressivo
-                        ^ \markup \center-align +16
-                        \revert Staff.Stem.stemlet-length
-                        \tweak Accidental.stencil #ly:text-interface::print
-                        \tweak Accidental.text \markup { \one-nineteen-limit-schisma-up  }
-                        c''16
-                        - \espressivo
-                        ^ \markup \center-align { -1 }
-                        ]
                     }
-                    \override Staff.Stem.stemlet-length = 0.75
+                    r8
                     \tweak Accidental.stencil #ly:text-interface::print
-                    \tweak Accidental.text \markup \concat { \one-twenty-three-limit-comma-up \hspace #0.125 \one-septimal-comma-down  }
-                    f''32.
+                    \tweak Accidental.text \markup { \one-nineteen-limit-schisma-up  }
+                    c''4
                     - \espressivo
-                    ^ \markup \center-align { -3 }
-                    [
-                    \tweak Accidental.stencil #ly:text-interface::print
-                    \tweak Accidental.text \markup \concat { \one-seventeen-limit-schisma-down \hspace #0.125 \double-sharp  }
-                    gss'32.
-                    - \espressivo
-                    ^ \markup \center-align { +7 }
-                    \revert Staff.Stem.stemlet-length
-                    \tweak Accidental.stencil #ly:text-interface::print
-                    \tweak Accidental.text \markup { \abjad-natural  }
-                    bf''32
-                    - \espressivo
-                    ^ \markup \center-align { +2 }
-                    ~
-                    ]
-                    \tweak Accidental.stencil #ly:text-interface::print
-                    \tweak Accidental.text \markup { \abjad-natural  }
-                    bf''64
-                    \tweak Accidental.stencil #ly:text-interface::print
-                    \tweak Accidental.text \markup { \abjad-natural  }
-                    c'32.
-                    - \espressivo
-                    ^ \markup \center-align { +0 }
-                    \tweak Accidental.stencil #ly:text-interface::print
-                    \tweak Accidental.text \markup \concat { \one-seventeen-limit-schisma-down \hspace #0.125 \double-sharp  }
-                    as''32.
-                    - \espressivo
-                    ^ \markup \center-align { +7 }
-                    \tweak Accidental.stencil #ly:text-interface::print
-                    \tweak Accidental.text \markup \concat { \one-seventeen-limit-schisma-down \hspace #0.125 \one-septimal-comma-down \hspace #0.125 \abjad-sharp  }
-                    cs''64
-                    - \espressivo
-                    ^ \markup \center-align { -26 }
+                    ^ \markup \center-align { -1 }
                     ~
                     \tweak Accidental.stencil #ly:text-interface::print
-                    \tweak Accidental.text \markup \concat { \one-seventeen-limit-schisma-down \hspace #0.125 \one-septimal-comma-down \hspace #0.125 \abjad-sharp  }
-                    cs''32
-                    \tweak Accidental.stencil #ly:text-interface::print
-                    \tweak Accidental.text \markup { \abjad-natural  }
-                    df''32.
-                    - \espressivo
-                    ^ \markup \center-align { +0 }
-                    fs'32.
-                    - \espressivo
-                    ^ \markup \center-align +12
+                    \tweak Accidental.text \markup { \one-nineteen-limit-schisma-up  }
+                    c''16
+                    r16
                 }
             }
             \context Staff = "piano 5 staff"
@@ -1686,370 +655,159 @@
                         \markup \bold { V }
                         \set Staff.shortInstrumentName =
                         \markup \bold{ V }
-                        \override Staff.Stem.stemlet-length = 0.75
                         d'16
                         - \espressivo
                         ^ \markup \center-align +16
-                        [
+                        r16
                         \tweak Accidental.stencil #ly:text-interface::print
                         \tweak Accidental.text \markup { \one-nineteen-limit-schisma-up  }
                         c'''16
                         - \espressivo
                         ^ \markup \center-align { -1 }
+                        r8
                         \tweak Accidental.stencil #ly:text-interface::print
                         \tweak Accidental.text \markup \concat { \one-twenty-three-limit-comma-up \hspace #0.125 \one-septimal-comma-down \hspace #0.125 \abjad-sharp  }
                         fs'16
                         - \espressivo
                         ^ \markup \center-align { -3 }
-                        \tweak Accidental.stencil #ly:text-interface::print
-                        \tweak Accidental.text \markup \concat { \one-seventeen-limit-schisma-down \hspace #0.125 \abjad-sharp  }
-                        gs'16
-                        - \espressivo
-                        ^ \markup \center-align { +7 }
-                        \tweak Accidental.stencil #ly:text-interface::print
-                        \tweak Accidental.text \markup { \abjad-sharp  }
-                        gs'16
-                        - \espressivo
-                        ^ \markup \center-align { +2 }
-                        \revert Staff.Stem.stemlet-length
-                        \tweak Accidental.stencil #ly:text-interface::print
-                        \tweak Accidental.text \markup { \abjad-natural  }
-                        ef''16
-                        - \espressivo
-                        ^ \markup \center-align { +0 }
-                        ]
                     }
                     \tweak text #tuplet-number::calc-fraction-text
                     \times 12/13
                     {
-                        \override Staff.Stem.stemlet-length = 0.75
                         \tweak Accidental.stencil #ly:text-interface::print
                         \tweak Accidental.text \markup \concat { \one-seventeen-limit-schisma-down \hspace #0.125 \abjad-sharp  }
                         gs'16
                         - \espressivo
                         ^ \markup \center-align { +7 }
-                        [
-                        \tweak Accidental.stencil #ly:text-interface::print
-                        \tweak Accidental.text \markup \concat { \one-seventeen-limit-schisma-down \hspace #0.125 \one-septimal-comma-down \hspace #0.125 \abjad-sharp  }
-                        cs'''16
-                        - \espressivo
-                        ^ \markup \center-align { -26 }
-                        \tweak Accidental.stencil #ly:text-interface::print
-                        \tweak Accidental.text \markup { \abjad-natural  }
-                        d'16
-                        - \espressivo
-                        ^ \markup \center-align { +0 }
-                        gf''16
-                        - \espressivo
-                        ^ \markup \center-align +12
-                        \tweak Accidental.stencil #ly:text-interface::print
-                        \tweak Accidental.text \markup \concat { \one-seventeen-limit-schisma-down \hspace #0.125 \double-sharp  }
-                        css'16
-                        - \espressivo
-                        ^ \markup \center-align { +5 }
-                        \tweak Accidental.stencil #ly:text-interface::print
-                        \tweak Accidental.text \markup \concat { \one-twenty-three-limit-comma-up \hspace #0.125 \one-septimal-comma-down \hspace #0.125 \abjad-sharp  }
-                        g''16
-                        - \espressivo
-                        ^ \markup \center-align { -3 }
-                        d'16
-                        - \espressivo
-                        ^ \markup \center-align +16
-                        \tweak Accidental.stencil #ly:text-interface::print
-                        \tweak Accidental.text \markup { \one-nineteen-limit-schisma-up  }
-                        b'16
-                        - \espressivo
-                        ^ \markup \center-align { -1 }
-                        \tweak Accidental.stencil #ly:text-interface::print
-                        \tweak Accidental.text \markup \concat { \one-twenty-three-limit-comma-up \hspace #0.125 \one-septimal-comma-down \hspace #0.125 \abjad-sharp  }
-                        fs'16
-                        - \espressivo
-                        ^ \markup \center-align { -3 }
-                        \tweak Accidental.stencil #ly:text-interface::print
-                        \tweak Accidental.text \markup \concat { \one-seventeen-limit-schisma-down \hspace #0.125 \abjad-sharp  }
-                        a''16
-                        - \espressivo
-                        ^ \markup \center-align { +7 }
+                        r16
                         \tweak Accidental.stencil #ly:text-interface::print
                         \tweak Accidental.text \markup { \abjad-sharp  }
-                        gs'16
+                        gs'4
                         - \espressivo
                         ^ \markup \center-align { +2 }
+                        r8
                         \tweak Accidental.stencil #ly:text-interface::print
                         \tweak Accidental.text \markup { \abjad-natural  }
-                        ef''16
+                        d'4
                         - \espressivo
                         ^ \markup \center-align { +0 }
-                        \revert Staff.Stem.stemlet-length
+                        ~
                         \tweak Accidental.stencil #ly:text-interface::print
-                        \tweak Accidental.text \markup \concat { \one-seventeen-limit-schisma-down \hspace #0.125 \abjad-sharp  }
-                        gs'16
-                        - \espressivo
-                        ^ \markup \center-align { +7 }
-                        ]
+                        \tweak Accidental.text \markup { \abjad-natural  }
+                        d'16
                     }
-                    \override Staff.Stem.stemlet-length = 0.75
-                    \tweak Accidental.stencil #ly:text-interface::print
-                    \tweak Accidental.text \markup \concat { \one-seventeen-limit-schisma-down \hspace #0.125 \one-septimal-comma-down \hspace #0.125 \abjad-sharp  }
-                    cs'''16
-                    - \espressivo
-                    ^ \markup \center-align { -26 }
-                    [
-                    \tweak Accidental.stencil #ly:text-interface::print
-                    \tweak Accidental.text \markup { \abjad-natural  }
-                    d'16
-                    - \espressivo
-                    ^ \markup \center-align { +0 }
-                    gf''16
-                    - \espressivo
-                    ^ \markup \center-align +12
-                    \revert Staff.Stem.stemlet-length
-                    \tweak Accidental.stencil #ly:text-interface::print
-                    \tweak Accidental.text \markup \concat { \one-seventeen-limit-schisma-down \hspace #0.125 \double-sharp  }
-                    css'16
-                    - \espressivo
-                    ^ \markup \center-align { +5 }
-                    ]
-                    \override Staff.Stem.stemlet-length = 0.75
-                    \tweak Accidental.stencil #ly:text-interface::print
-                    \tweak Accidental.text \markup \concat { \one-twenty-three-limit-comma-up \hspace #0.125 \one-septimal-comma-down \hspace #0.125 \abjad-sharp  }
-                    fs'16
-                    - \espressivo
-                    ^ \markup \center-align { -3 }
-                    [
-                    d'16
-                    - \espressivo
-                    ^ \markup \center-align +16
+                    r16
                     \tweak Accidental.stencil #ly:text-interface::print
                     \tweak Accidental.text \markup { \one-nineteen-limit-schisma-up  }
-                    c'''16
+                    b'8
                     - \espressivo
                     ^ \markup \center-align { -1 }
-                    \revert Staff.Stem.stemlet-length
-                    \tweak Accidental.stencil #ly:text-interface::print
-                    \tweak Accidental.text \markup \concat { \one-twenty-three-limit-comma-up \hspace #0.125 \one-septimal-comma-down \hspace #0.125 \abjad-sharp  }
-                    fs'16
-                    - \espressivo
-                    ^ \markup \center-align { -3 }
-                    ]
-                    \times 4/7
-                    {
-                        \override Staff.Stem.stemlet-length = 0.75
-                        \tweak Accidental.stencil #ly:text-interface::print
-                        \tweak Accidental.text \markup \concat { \one-seventeen-limit-schisma-down \hspace #0.125 \abjad-sharp  }
-                        a''16
-                        - \espressivo
-                        ^ \markup \center-align { +7 }
-                        [
-                        \tweak Accidental.stencil #ly:text-interface::print
-                        \tweak Accidental.text \markup { \abjad-sharp  }
-                        gs'16
-                        - \espressivo
-                        ^ \markup \center-align { +2 }
-                        \tweak Accidental.stencil #ly:text-interface::print
-                        \tweak Accidental.text \markup { \abjad-natural  }
-                        ef''16
-                        - \espressivo
-                        ^ \markup \center-align { +0 }
-                        \tweak Accidental.stencil #ly:text-interface::print
-                        \tweak Accidental.text \markup \concat { \one-seventeen-limit-schisma-down \hspace #0.125 \abjad-sharp  }
-                        gs'16
-                        - \espressivo
-                        ^ \markup \center-align { +7 }
-                        \tweak Accidental.stencil #ly:text-interface::print
-                        \tweak Accidental.text \markup \concat { \one-seventeen-limit-schisma-down \hspace #0.125 \one-septimal-comma-down \hspace #0.125 \abjad-sharp  }
-                        cs'''16
-                        - \espressivo
-                        ^ \markup \center-align { -26 }
-                        \tweak Accidental.stencil #ly:text-interface::print
-                        \tweak Accidental.text \markup { \abjad-natural  }
-                        d'16
-                        - \espressivo
-                        ^ \markup \center-align { +0 }
-                        \revert Staff.Stem.stemlet-length
-                        f'16
-                        - \espressivo
-                        ^ \markup \center-align +12
-                        ]
-                    }
-                    \tweak text #tuplet-number::calc-fraction-text
-                    \times 6/7
-                    {
-                        \override Staff.Stem.stemlet-length = 0.75
-                        \tweak Accidental.stencil #ly:text-interface::print
-                        \tweak Accidental.text \markup \concat { \one-seventeen-limit-schisma-down \hspace #0.125 \double-sharp  }
-                        css'16
-                        - \espressivo
-                        ^ \markup \center-align { +5 }
-                        [
-                        \tweak Accidental.stencil #ly:text-interface::print
-                        \tweak Accidental.text \markup \concat { \one-twenty-three-limit-comma-up \hspace #0.125 \one-septimal-comma-down \hspace #0.125 \abjad-sharp  }
-                        g''16
-                        - \espressivo
-                        ^ \markup \center-align { -3 }
-                        d'16
-                        - \espressivo
-                        ^ \markup \center-align +16
-                        \tweak Accidental.stencil #ly:text-interface::print
-                        \tweak Accidental.text \markup { \one-nineteen-limit-schisma-up  }
-                        c'''16
-                        - \espressivo
-                        ^ \markup \center-align { -1 }
-                        \tweak Accidental.stencil #ly:text-interface::print
-                        \tweak Accidental.text \markup \concat { \one-twenty-three-limit-comma-up \hspace #0.125 \one-septimal-comma-down \hspace #0.125 \abjad-sharp  }
-                        fs'16
-                        - \espressivo
-                        ^ \markup \center-align { -3 }
-                        \tweak Accidental.stencil #ly:text-interface::print
-                        \tweak Accidental.text \markup \concat { \one-seventeen-limit-schisma-down \hspace #0.125 \abjad-sharp  }
-                        a''16
-                        - \espressivo
-                        ^ \markup \center-align { +7 }
-                        \tweak Accidental.stencil #ly:text-interface::print
-                        \tweak Accidental.text \markup { \abjad-sharp  }
-                        gs'16
-                        - \espressivo
-                        ^ \markup \center-align { +2 }
-                        \tweak Accidental.stencil #ly:text-interface::print
-                        \tweak Accidental.text \markup { \abjad-natural  }
-                        ef''16
-                        - \espressivo
-                        ^ \markup \center-align { +0 }
-                        \tweak Accidental.stencil #ly:text-interface::print
-                        \tweak Accidental.text \markup \concat { \one-seventeen-limit-schisma-down \hspace #0.125 \abjad-sharp  }
-                        gs'16
-                        - \espressivo
-                        ^ \markup \center-align { +7 }
-                        \tweak Accidental.stencil #ly:text-interface::print
-                        \tweak Accidental.text \markup \concat { \one-seventeen-limit-schisma-down \hspace #0.125 \one-septimal-comma-down \hspace #0.125 \abjad-sharp  }
-                        bs'16
-                        - \espressivo
-                        ^ \markup \center-align { -26 }
-                        \tweak Accidental.stencil #ly:text-interface::print
-                        \tweak Accidental.text \markup { \abjad-natural  }
-                        d'16
-                        - \espressivo
-                        ^ \markup \center-align { +0 }
-                        gf''16
-                        - \espressivo
-                        ^ \markup \center-align +12
-                        \tweak Accidental.stencil #ly:text-interface::print
-                        \tweak Accidental.text \markup \concat { \one-seventeen-limit-schisma-down \hspace #0.125 \double-sharp  }
-                        css'16
-                        - \espressivo
-                        ^ \markup \center-align { +5 }
-                        \revert Staff.Stem.stemlet-length
-                        \tweak Accidental.stencil #ly:text-interface::print
-                        \tweak Accidental.text \markup \concat { \one-twenty-three-limit-comma-up \hspace #0.125 \one-septimal-comma-down \hspace #0.125 \abjad-sharp  }
-                        g''16
-                        - \espressivo
-                        ^ \markup \center-align { -3 }
-                        ]
-                    }
-                    d'16
-                    - \espressivo
-                    ^ \markup \center-align +16
-                    \tweak Accidental.stencil #ly:text-interface::print
-                    \tweak Accidental.text \markup { \one-nineteen-limit-schisma-up  }
-                    c'''16
-                    - \espressivo
-                    ^ \markup \center-align { -1 }
-                    \tweak Accidental.stencil #ly:text-interface::print
-                    \tweak Accidental.text \markup \concat { \one-twenty-three-limit-comma-up \hspace #0.125 \one-septimal-comma-down \hspace #0.125 \abjad-sharp  }
-                    fs'16
-                    - \espressivo
-                    ^ \markup \center-align { -3 }
+                    r16
                     \tweak Accidental.stencil #ly:text-interface::print
                     \tweak Accidental.text \markup \concat { \one-seventeen-limit-schisma-down \hspace #0.125 \abjad-sharp  }
                     a''16
                     - \espressivo
                     ^ \markup \center-align { +7 }
-                    \override Staff.Stem.stemlet-length = 0.75
+                    r16
+                    r16
                     \tweak Accidental.stencil #ly:text-interface::print
                     \tweak Accidental.text \markup { \abjad-sharp  }
                     gs'16
                     - \espressivo
                     ^ \markup \center-align { +2 }
-                    [
-                    \tweak Accidental.stencil #ly:text-interface::print
-                    \tweak Accidental.text \markup { \abjad-natural  }
-                    d'16
-                    - \espressivo
-                    ^ \markup \center-align { +0 }
-                    \tweak Accidental.stencil #ly:text-interface::print
-                    \tweak Accidental.text \markup \concat { \one-seventeen-limit-schisma-down \hspace #0.125 \abjad-sharp  }
-                    gs'16
-                    - \espressivo
-                    ^ \markup \center-align { +7 }
-                    \tweak Accidental.stencil #ly:text-interface::print
-                    \tweak Accidental.text \markup \concat { \one-seventeen-limit-schisma-down \hspace #0.125 \one-septimal-comma-down \hspace #0.125 \abjad-sharp  }
-                    cs'''16
-                    - \espressivo
-                    ^ \markup \center-align { -26 }
-                    \tweak Accidental.stencil #ly:text-interface::print
-                    \tweak Accidental.text \markup { \abjad-natural  }
-                    d'16
-                    - \espressivo
-                    ^ \markup \center-align { +0 }
-                    \revert Staff.Stem.stemlet-length
-                    gf''16
-                    - \espressivo
-                    ^ \markup \center-align +12
-                    ]
-                    \override Staff.Stem.stemlet-length = 0.75
-                    \tweak Accidental.stencil #ly:text-interface::print
-                    \tweak Accidental.text \markup \concat { \one-seventeen-limit-schisma-down \hspace #0.125 \double-sharp  }
-                    css'16
-                    - \espressivo
-                    ^ \markup \center-align { +5 }
-                    [
-                    \revert Staff.Stem.stemlet-length
-                    \tweak Accidental.stencil #ly:text-interface::print
-                    \tweak Accidental.text \markup \concat { \one-twenty-three-limit-comma-up \hspace #0.125 \one-septimal-comma-down \hspace #0.125 \abjad-sharp  }
-                    g''16
-                    - \espressivo
-                    ^ \markup \center-align { -3 }
-                    ]
-                    \tweak text #tuplet-number::calc-fraction-text
-                    \times 6/7
+                    \times 4/7
                     {
-                        \override Staff.Stem.stemlet-length = 0.75
-                        d'16
-                        - \espressivo
-                        ^ \markup \center-align +16
-                        [
-                        \tweak Accidental.stencil #ly:text-interface::print
-                        \tweak Accidental.text \markup { \one-nineteen-limit-schisma-up  }
-                        c'''16
-                        - \espressivo
-                        ^ \markup \center-align { -1 }
-                        \tweak Accidental.stencil #ly:text-interface::print
-                        \tweak Accidental.text \markup \concat { \one-twenty-three-limit-comma-up \hspace #0.125 \one-septimal-comma-down \hspace #0.125 \abjad-sharp  }
-                        fs'16
-                        - \espressivo
-                        ^ \markup \center-align { -3 }
-                        \tweak Accidental.stencil #ly:text-interface::print
-                        \tweak Accidental.text \markup \concat { \one-seventeen-limit-schisma-down \hspace #0.125 \abjad-sharp  }
-                        gs'16
-                        - \espressivo
-                        ^ \markup \center-align { +7 }
-                        \tweak Accidental.stencil #ly:text-interface::print
-                        \tweak Accidental.text \markup { \abjad-sharp  }
-                        gs'16
-                        - \espressivo
-                        ^ \markup \center-align { +2 }
                         \tweak Accidental.stencil #ly:text-interface::print
                         \tweak Accidental.text \markup { \abjad-natural  }
                         ef''16
                         - \espressivo
                         ^ \markup \center-align { +0 }
-                        \revert Staff.Stem.stemlet-length
+                        r16
+                        \tweak Accidental.stencil #ly:text-interface::print
+                        \tweak Accidental.text \markup \concat { \one-seventeen-limit-schisma-down \hspace #0.125 \abjad-sharp  }
+                        gs'4
+                        - \espressivo
+                        ^ \markup \center-align { +7 }
+                        r16
+                    }
+                    \tweak text #tuplet-number::calc-fraction-text
+                    \times 6/7
+                    {
+                        r16
+                        \tweak Accidental.stencil #ly:text-interface::print
+                        \tweak Accidental.text \markup \concat { \one-seventeen-limit-schisma-down \hspace #0.125 \double-sharp  }
+                        css'4
+                        - \espressivo
+                        ^ \markup \center-align { +5 }
+                        ~
+                        \tweak Accidental.stencil #ly:text-interface::print
+                        \tweak Accidental.text \markup \concat { \one-seventeen-limit-schisma-down \hspace #0.125 \double-sharp  }
+                        css'16
+                        r16
+                        \tweak Accidental.stencil #ly:text-interface::print
+                        \tweak Accidental.text \markup \concat { \one-seventeen-limit-schisma-down \hspace #0.125 \abjad-sharp  }
+                        a''8
+                        - \espressivo
+                        ^ \markup \center-align { +7 }
+                        r16
+                        \tweak Accidental.stencil #ly:text-interface::print
+                        \tweak Accidental.text \markup { \abjad-natural  }
+                        ef''16
+                        - \espressivo
+                        ^ \markup \center-align { +0 }
+                        r8
                         \tweak Accidental.stencil #ly:text-interface::print
                         \tweak Accidental.text \markup \concat { \one-seventeen-limit-schisma-down \hspace #0.125 \abjad-sharp  }
                         gs'16
                         - \espressivo
                         ^ \markup \center-align { +7 }
-                        ]
+                    }
+                    \tweak Accidental.stencil #ly:text-interface::print
+                    \tweak Accidental.text \markup \concat { \one-seventeen-limit-schisma-down \hspace #0.125 \one-septimal-comma-down \hspace #0.125 \abjad-sharp  }
+                    cs'''16
+                    - \espressivo
+                    ^ \markup \center-align { -26 }
+                    r16
+                    \tweak Accidental.stencil #ly:text-interface::print
+                    \tweak Accidental.text \markup { \abjad-natural  }
+                    d'4
+                    - \espressivo
+                    ^ \markup \center-align { +0 }
+                    r8
+                    d'4
+                    - \espressivo
+                    ^ \markup \center-align +16
+                    \times 8/15
+                    {
+                        \tweak Accidental.stencil #ly:text-interface::print
+                        \tweak Accidental.text \markup { \abjad-sharp  }
+                        gs'16
+                        - \espressivo
+                        ^ \markup \center-align { +2 }
+                        r16
+                        \tweak Accidental.stencil #ly:text-interface::print
+                        \tweak Accidental.text \markup { \abjad-natural  }
+                        ef''8
+                        - \espressivo
+                        ^ \markup \center-align { +0 }
+                        r16
+                        \tweak Accidental.stencil #ly:text-interface::print
+                        \tweak Accidental.text \markup \concat { \one-seventeen-limit-schisma-down \hspace #0.125 \one-septimal-comma-down \hspace #0.125 \abjad-sharp  }
+                        bs'16
+                        - \espressivo
+                        ^ \markup \center-align { -26 }
+                        r8
+                        \tweak Accidental.stencil #ly:text-interface::print
+                        \tweak Accidental.text \markup { \abjad-natural  }
+                        d'8
+                        - \espressivo
+                        ^ \markup \center-align { +0 }
+                        r16
+                        \tweak Accidental.stencil #ly:text-interface::print
+                        \tweak Accidental.text \markup \concat { \one-seventeen-limit-schisma-down \hspace #0.125 \double-sharp  }
+                        css'4
+                        - \espressivo
+                        ^ \markup \center-align { +5 }
                     }
                 }
             }

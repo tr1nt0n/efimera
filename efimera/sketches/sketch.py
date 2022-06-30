@@ -5,30 +5,64 @@ import trinton
 from abjadext import rmakers
 from abjadext import microtones
 from efimera import library
+from efimera import ts
 
 # score
 
-score = library.efimera_score(
-    [
-        (4, 4),
-        (5, 4),
-        (2, 4),
-        (7, 8),
-    ]
-)
+score = library.efimera_score(ts.final_ts[2])
 
 # music commands
 
-for voice_name, talea_index, pitch_index in zip(["piano 1 voice", "piano 2 voice", "piano 3 voice", "piano 4 voice", "piano 5 voice"], [5, 0, 1, 4, 6,], [0, 1, 2, 3, 4,]):
+for voice_name, talea_index, pitch_index in zip(
+    [
+        "piano 1 voice",
+        "piano 2 voice",
+        "piano 3 voice",
+        "piano 4 voice",
+        "piano 5 voice",
+    ],
+    [
+        5,
+        0,
+        1,
+        4,
+        6,
+    ],
+    [
+        0,
+        1,
+        2,
+        3,
+        4,
+    ],
+):
     library.slashes(
         voice=score[voice_name],
-        measures=[1, 2, 3, 4,],
+        measures=[
+            1,
+            2,
+            3,
+            4,
+        ],
         talea_index=talea_index,
-        density_stage=5,
-        pitch_handler=library.slashes_pitching(fundamental=[0, 1, 2,], index=pitch_index),
+        density_stage=3,
+        pitch_handler=library.slashes_pitching(
+            fundamental=[
+                0,
+                1,
+                2,
+            ],
+            index=pitch_index,
+        ),
         transposition=13,
         rewrite_meter=-1,
-        preprocessor=trinton.fuse_quarters_preprocessor((1, 3, 2,)),
+        preprocessor=trinton.fuse_quarters_preprocessor(
+            (
+                1,
+                3,
+                2,
+            )
+        ),
     )
 #
 # trinton.continuous_beams(score=score)

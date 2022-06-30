@@ -1930,7 +1930,10 @@ def write_marginmarkups(score):
     for voice_name, markup in zip(all_voice_names, all_marginmarkups):
         trinton.attach(voice=score[voice_name], leaves=[0], attachment=markup)
 
-def write_space_spanners(voice, spanner_ID, start_pairs, stop_pairs, left_text, right_text, padding=7):
+
+def write_space_spanners(
+    voice, spanner_ID, start_pairs, stop_pairs, left_text, right_text, padding=7
+):
     measures = abjad.select.group_by_measure(voice)
 
     for start_pair, stop_pair in zip(start_pairs, stop_pairs):
@@ -1945,7 +1948,7 @@ def write_space_spanners(voice, spanner_ID, start_pairs, stop_pairs, left_text, 
             id=spanner_ID,
             start_selection=measures[measure1][leaf1],
             stop_selection=measures[measure2][leaf2],
-            padding=padding
+            padding=padding,
         )
 
 
