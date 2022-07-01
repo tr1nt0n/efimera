@@ -1,0 +1,19 @@
+1. Skyward (blue): three big spectral chords, center by itself at first, show all three towards the middle of the piece. A monolith. 
+	- primary instrument: synth 1
+	- secondary: all 5
+
+2. Grid (yellow): bottom voice hammers away at single chord on quarter notes, upper voice plays jaunty syncopated thing. 
+	- primary pair: synth 3, synth 4
+
+3. Win (purple): concatenating arpeggios
+	- primary instrument: synth 1
+
+4. Slashes (green): Spectral ATH row gets gradually rhythmically denser and higher. 
+	- primary instrument: synth 2
+
+5. Plane (red): A four-voice counterpoint
+	- primary instruments: synths 1, 2, 3, 5,
+
+Ghost 1 (orange): same bass line in synth 4 repeated three times with 2/4 pause, then once more but continuing in the 3/4 and then repeating again the following measure (continuing through the 2/4 this time), after which the bass line continues on different rhythms in the following measures. During all of this, other materials gently float on top of the bass line. When the bass line continues, the materials accumulate and get louder then softer as the bass line crescendos. No flash-forwards to this. 
+
+Ghost 2 (pink): JI chorale. Flash forward twice. 

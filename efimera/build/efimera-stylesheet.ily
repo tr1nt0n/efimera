@@ -99,7 +99,6 @@
 
         tupletFullLength = ##t
         \override TupletBracket.full-length-to-extent = ##f
-        % \override TupletBracket.padding = 3
         \override TupletNumber.font-size = 1.5
         \override TupletBracket.bracket-visibility = ##t
         \override TupletNumber.text = #tuplet-number::calc-fraction-text
@@ -112,7 +111,6 @@
                                    (min (car pos)(cdr pos)))))
                  (ly:grob-set-property! grob 'positions (cons new-pos new-pos))
                  (ly:tuplet-bracket::print grob)))
-        % \override TupletBracket.direction = #up
     }
 
     \context {
@@ -120,7 +118,7 @@
         fontSize = #-1
         \remove Time_signature_engraver
         \override InstrumentName.self-alignment-X = #CENTER
-        \RemoveAllEmptyStaves
+        % \RemoveAllEmptyStaves
     }
 
     \context {

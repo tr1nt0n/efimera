@@ -16,11 +16,16 @@ score = library.efimera_score(
 
 
 # markups and beams
-#
-# library.write_startmarkups(score)
-#
-# library.write_marginmarkups(score)
-#
+
+library.write_marginmarkups(score)
+
+trinton.attach(
+    voice=score["Global Context"],
+    leaves=[
+        -1,
+    ],
+    attachment=abjad.BarLine("||"),
+)
 # trinton.beam_score_without_splitting(score)
 #
 # trinton.fill_empty_staves_with_skips(score)

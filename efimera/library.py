@@ -1835,6 +1835,13 @@ def plane(
             7,
             2,
             1,
+            2,
+            7,
+            4,
+            6,
+            3,
+            5,
+            2,
         ],
         "piano 2 voice": [
             1,
@@ -1846,6 +1853,13 @@ def plane(
             5,
             2,
             1,
+            2,
+            5,
+            3,
+            6,
+            4,
+            7,
+            2,
         ],
         "piano 3 voice": [
             1,
@@ -1857,6 +1871,13 @@ def plane(
             7,
             2,
             1,
+            2,
+            7,
+            4,
+            6,
+            3,
+            5,
+            2,
         ],
         "piano 4 voice": [
             1,
@@ -1868,6 +1889,13 @@ def plane(
             5,
             2,
             1,
+            2,
+            5,
+            3,
+            6,
+            4,
+            7,
+            2,
         ],
     }
 
@@ -1889,6 +1917,14 @@ def plane(
 
 
 # notation tools
+
+tempo_1 = abjad.MetronomeMark((1, 4), 27)
+tempo_2 = abjad.MetronomeMark((1, 4), 41)
+tempo_3 = abjad.MetronomeMark((1, 4), 68)
+tempo_4 = abjad.MetronomeMark((1, 4), 85)
+tempo_5 = abjad.MetronomeMark((1, 4), 170)
+
+
 
 all_voice_names = eval(
     """[

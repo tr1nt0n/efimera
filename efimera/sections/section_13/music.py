@@ -16,10 +16,21 @@ score = library.efimera_score(
 
 
 # markups and beams
-#
-# library.write_startmarkups(score)
-#
-# library.write_marginmarkups(score)
+
+library.write_marginmarkups(score)
+
+trinton.attach_multiple(
+    score=score,
+    voice="Global Context",
+    leaves=[-1],
+    attachments=[
+        abjad.LilyPondLiteral(
+            r"\once \override Score.BarLine.transparent = ##f",
+            "absolute_after",
+        ),
+        abjad.BarLine("|."),
+    ],
+)
 #
 # trinton.beam_score_without_splitting(score)
 #

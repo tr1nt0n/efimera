@@ -67,9 +67,15 @@ abjad.attach(abjad.Clef("bass"), abjad.select.leaf(score["piano 4 voice"], 0))
 
 # markups and beams
 
-library.write_startmarkups(score)
-
 library.write_marginmarkups(score)
+
+trinton.attach(
+    voice=score["Global Context"],
+    leaves=[
+        -1,
+    ],
+    attachment=abjad.BarLine("||"),
+)
 
 trinton.beam_score_without_splitting(score)
 
@@ -79,7 +85,7 @@ trinton.fill_empty_staves_with_skips(score)
 
 trinton.render_file(
     score=score,
-    segment_path="/Users/trintonprater/scores/efimera/efimera/sections/ghost_1",
+    segment_path="/Users/trintonprater/scores/efimera/efimera/sections/ghost_2",
     build_path="/Users/trintonprater/scores/efimera/efimera/build",
     segment_name="ghost_2",
     includes=[

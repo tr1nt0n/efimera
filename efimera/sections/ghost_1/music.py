@@ -22,8 +22,10 @@ score = library.efimera_score(
         (2, 4),
         (3, 8),
         (1, 3),
-        (2, 4),
         (3, 4),
+        (3, 8),
+        (1, 3),
+        (2, 4),
         (12, 17),
         (2, 3),
         (12, 19),
@@ -36,10 +38,16 @@ score = library.efimera_score(
 
 
 # markups and beams
-#
-# library.write_startmarkups(score)
-#
-# library.write_marginmarkups(score)
+
+library.write_marginmarkups(score)
+
+trinton.attach(
+    voice=score["Global Context"],
+    leaves=[
+        -1,
+    ],
+    attachment=abjad.BarLine("||"),
+)
 #
 # trinton.beam_score_without_splitting(score)
 #
