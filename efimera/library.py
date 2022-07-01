@@ -1925,7 +1925,6 @@ tempo_4 = abjad.MetronomeMark((1, 4), 85)
 tempo_5 = abjad.MetronomeMark((1, 4), 170)
 
 
-
 all_voice_names = eval(
     """[
         "piano 1 voice",

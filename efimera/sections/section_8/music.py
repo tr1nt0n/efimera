@@ -9,10 +9,7 @@ from efimera import ts
 
 # score
 
-score = library.efimera_score(
-    ts.final_ts[7]
-)
-
+score = library.efimera_score(ts.final_ts[7])
 
 
 # markups and beams

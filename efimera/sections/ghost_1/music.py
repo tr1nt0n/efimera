@@ -36,7 +36,6 @@ score = library.efimera_score(
 )
 
 
-
 # markups and beams
 
 library.write_marginmarkups(score)
