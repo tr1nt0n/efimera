@@ -79,9 +79,9 @@ trinton.fill_empty_staves_with_skips(score)
 
 trinton.render_file(
     score=score,
-    segment_path="/Users/trintonprater/scores/efimera/efimera/sections/ghost",
+    segment_path="/Users/trintonprater/scores/efimera/efimera/sections/ghost_1",
     build_path="/Users/trintonprater/scores/efimera/efimera/build",
-    segment_name="ghost",
+    segment_name="ghost_2",
     includes=[
         "/Users/trintonprater/scores/efimera/efimera/build/efimera-stylesheet.ily",
         "/Users/trintonprater/abjad/abjad/_stylesheets/abjad.ily",
