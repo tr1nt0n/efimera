@@ -1242,47 +1242,50 @@ def grid(
         8,
     )
 
-    trinton.music_command(
-        voice=voices[0],
-        measures=measures,
-        rmaker=rmakers.talea(
-            talea,
-            16,
-            extra_counts=[
-                1,
-                0,
-                3,
-            ],
-        ),
-        rmaker_commands=[
-            rmakers.force_rest(rest_selector),
-        ],
-        rewrite_meter=rewrite_meter,
-        preprocessor=preprocessor,
-        pitch_handler=pitch_handler_1,
-        attachment_function=grid1_attachments(),
-    )
+    for voice in voices:
+        if voice.name == "piano 4 voice":
+            trinton.music_command(
+                voice=voice,
+                measures=measures,
+                rmaker=rmakers.talea(
+                    [
+                        1,
+                        1,
+                        1,
+                        1,
+                    ],
+                    4,
+                ),
+                rmaker_commands=[
+                    rmakers.beam(),
+                ],
+                rewrite_meter=rewrite_meter,
+                preprocessor=preprocessor,
+                pitch_handler=pitch_handler_2,
+                attachment_function=grid2_attachments(),
+            )
 
-    trinton.music_command(
-        voice=voices[1],
-        measures=measures,
-        rmaker=rmakers.talea(
-            [
-                1,
-                1,
-                1,
-                1,
-            ],
-            4,
-        ),
-        rmaker_commands=[
-            rmakers.beam(),
-        ],
-        rewrite_meter=rewrite_meter,
-        preprocessor=preprocessor,
-        pitch_handler=pitch_handler_2,
-        attachment_function=grid2_attachments(),
-    )
+        else:
+            trinton.music_command(
+                voice=voice,
+                measures=measures,
+                rmaker=rmakers.talea(
+                    talea,
+                    16,
+                    extra_counts=[
+                        1,
+                        0,
+                        3,
+                    ],
+                ),
+                rmaker_commands=[
+                    rmakers.force_rest(rest_selector),
+                ],
+                rewrite_meter=rewrite_meter,
+                preprocessor=preprocessor,
+                pitch_handler=pitch_handler_1,
+                attachment_function=grid1_attachments(),
+            )
 
 
 def skyward(
@@ -1416,7 +1419,7 @@ def win(
             ),
             rmaker_commands=[
                 rmakers.force_rest(rest_selector),
-                rmakers.beam_groups(beam_rests=True),
+                # rmakers.beam_groups(beam_rests=True),
             ],
             rewrite_meter=rewrite_meter,
             preprocessor=preprocessor,
@@ -1448,7 +1451,7 @@ def win(
             ),
             rmaker_commands=[
                 rmakers.force_rest(rest_selector),
-                rmakers.beam_groups(beam_rests=True),
+                # rmakers.beam_groups(beam_rests=True),
             ],
             rewrite_meter=rewrite_meter,
             preprocessor=preprocessor,
