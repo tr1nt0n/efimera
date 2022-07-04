@@ -120,7 +120,6 @@ for n in [
     abjad.attach(abjad.Dynamic("ppp"), abjad.select.leaf(score["piano 1 voice"], n))
 
 
-
 # markups and beams
 
 library.write_startmarkups(score)

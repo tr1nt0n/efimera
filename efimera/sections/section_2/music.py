@@ -21,12 +21,32 @@ for voice_name, indeces in zip(
         "piano 5 voice",
     ],
     [
-        [0, 2, 4,],
-        [2, 4, 6,],
-        [4, 6, 8,],
-        [6, 8, 10,],
-        [8, 10, 12,],
-    ]
+        [
+            0,
+            2,
+            4,
+        ],
+        [
+            2,
+            4,
+            6,
+        ],
+        [
+            4,
+            6,
+            8,
+        ],
+        [
+            6,
+            8,
+            10,
+        ],
+        [
+            8,
+            10,
+            12,
+        ],
+    ],
 ):
     library.plane(
         voice=score[voice_name],
@@ -102,7 +122,7 @@ for voice_name in ["piano 1 voice", "piano 2 voice", "piano 3 voice", "piano 5 v
         attachments=[
             abjad.Dynamic("fffff"),
             abjad.StartHairpin("--"),
-        ]
+        ],
     )
 
     trinton.attach(
