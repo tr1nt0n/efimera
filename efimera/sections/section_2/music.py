@@ -88,7 +88,6 @@ for voice_name, indeces in zip(
             9,
             10,
             11,
-            12,
         ],
         talea_index=indeces[2],
         talea_division=4,

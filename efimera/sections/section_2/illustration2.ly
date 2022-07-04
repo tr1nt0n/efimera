@@ -170,8 +170,7 @@
                     e,8.
                     ~
                     e,16.
-                    ~
-                    e,1
+                    s1 * 1
                     \!
                 }
             }
@@ -301,19 +300,11 @@
                     d,2
                     bf,4
                     cs,2
-                    es,8.
+                    e,8.
                     ~
-                    es,16.
-                    ~
-                    es,2..
-                    ~
-                    \override Staff.Stem.stemlet-length = 0.75
-                    es,16.
-                    [
-                    \revert Staff.Stem.stemlet-length
-                    df,32
+                    e,16.
+                    s1 * 1
                     \!
-                    ]
                 }
             }
             \context Staff = "piano 3 staff"
@@ -450,22 +441,10 @@
                     d2.
                     ~
                     d2.
-                    <as,, g,>8.
+                    e,8.
                     ~
-                    <as,, g,>16.
-                    ~
-                    <as,, g,>2
-                    ~
-                    \override Staff.Stem.stemlet-length = 0.75
-                    <as,, g,>8
-                    ~
-                    [
-                    <as,, g,>16.
-                    \revert Staff.Stem.stemlet-length
-                    df,32
-                    ~
-                    ]
-                    df,4
+                    e,16.
+                    s1 * 1
                     \!
                 }
             }
@@ -620,24 +599,12 @@
                     <df, d, cf g>2
                     ~
                     <df, d, cf g>4
-                    <c, cs, bf,>2
+                    g,2
                     ~
-                    <c, cs, bf,>8.
+                    g,8.
                     ~
-                    <c, cs, bf,>16.
-                    ~
-                    <c, cs, bf,>2
-                    ~
-                    \override Staff.Stem.stemlet-length = 0.75
-                    <c, cs, bf,>8
-                    ~
-                    [
-                    <c, cs, bf,>16.
-                    \revert Staff.Stem.stemlet-length
-                    df,32
-                    ~
-                    ]
-                    df,4
+                    g,16.
+                    s1 * 1
                     \!
                 }
             }
