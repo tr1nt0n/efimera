@@ -1128,7 +1128,7 @@ def plane_pitching(voice_name, division):
                     3,
                 ],
             ],
-            "piano 4 voice": [
+            "piano 5 voice": [
                 [
                     [
                         3,
@@ -1882,7 +1882,7 @@ def plane(
             5,
             2,
         ],
-        "piano 4 voice": [
+        "piano 5 voice": [
             1,
             2,
             7,
@@ -1967,27 +1967,6 @@ def write_startmarkups(score):
 def write_marginmarkups(score):
     for voice_name, markup in zip(all_voice_names, all_marginmarkups):
         trinton.attach(voice=score[voice_name], leaves=[0], attachment=markup)
-
-
-def write_space_spanners(
-    voice, spanner_ID, start_pairs, stop_pairs, left_text, right_text, padding=7
-):
-    measures = abjad.select.group_by_measure(voice)
-
-    for start_pair, stop_pair in zip(start_pairs, stop_pairs):
-        measure1, leaf1 = start_pair
-
-        measure2, leaf2 = stop_pair
-
-        trinton.write_id_spanner(
-            style="dashed-line-with-arrow",
-            left_text=left_text,
-            right_text=right_text,
-            id=spanner_ID,
-            start_selection=measures[measure1][leaf1],
-            stop_selection=measures[measure2][leaf2],
-            padding=padding,
-        )
 
 
 # sc tools
