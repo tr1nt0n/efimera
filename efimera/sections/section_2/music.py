@@ -95,6 +95,29 @@ for voice_name, indeces in zip(
         rewrite_meter=-1,
     )
 
+# surgery
+
+for voice_name in ["piano 1 voice", "piano 2 voice", "piano 3 voice", "piano 5 voice"]:
+    measures = abjad.select.group_by_measure(score[voice_name])
+
+    for measure, transpose in zip(
+        measures[1:],
+        [
+            -1,
+            -3,
+            -6,
+            -7,
+            -9,
+            -10,
+            -13,
+            -16,
+            -17,
+            -20,
+            -23,
+        ],
+    ):
+        abjad.mutate.transpose(abjad.select.logical_ties(measure), transpose)
+
 # markups and beams
 
 library.write_marginmarkups(score)
@@ -112,6 +135,8 @@ trinton.attach(voice=score["Global Context"], leaves=[0], attachment=library.tem
 trinton.beam_score_without_splitting(score)
 
 # attachments
+
+# trinton.annotate_leaves(score)
 
 for voice_name in ["piano 1 voice", "piano 2 voice", "piano 3 voice", "piano 5 voice"]:
 
@@ -131,6 +156,56 @@ for voice_name in ["piano 1 voice", "piano 2 voice", "piano 3 voice", "piano 5 v
         attachment=abjad.StopHairpin(),
     )
 
+trinton.attach(
+    voice=score["piano 1 voice"],
+    leaves=[
+        34,
+        47,
+    ],
+    attachment=abjad.Clef("bass"),
+)
+
+trinton.attach(
+    voice=score["piano 1 voice"],
+    leaves=[
+        38,
+    ],
+    attachment=abjad.Clef("treble"),
+)
+
+trinton.attach(
+    voice=score["piano 2 voice"],
+    leaves=[
+        22,
+        36,
+    ],
+    attachment=abjad.Clef("bass"),
+)
+
+trinton.attach(
+    voice=score["piano 2 voice"],
+    leaves=[
+        35,
+    ],
+    attachment=abjad.Clef("treble"),
+)
+
+trinton.attach(
+    voice=score["piano 3 voice"],
+    leaves=[
+        44,
+    ],
+    attachment=abjad.Clef("bass"),
+)
+
+trinton.attach(
+    voice=score["piano 5 voice"],
+    leaves=[
+        38,
+    ],
+    attachment=abjad.Clef("bass"),
+)
+
 # library.write_sc_file(
 #     score=score,
 #     tempo=((1, 4), 170),
@@ -138,7 +213,11 @@ for voice_name in ["piano 1 voice", "piano 2 voice", "piano 3 voice", "piano 5 v
 #     current_directory="/Users/trintonprater/scores/efimera/efimera/sections/section_2",
 # )
 
-# trinton.make_sc_file(score=score, tempo=((1, 4), 170), current_directory="/Users/trintonprater/scores/efimera/efimera/sections/section_2")
+trinton.make_sc_file(
+    score=score,
+    tempo=((1, 4), 170),
+    current_directory="/Users/trintonprater/scores/efimera/efimera/sections/section_2",
+)
 
 # trinton.fill_empty_staves_with_skips(score)
 

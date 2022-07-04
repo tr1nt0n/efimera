@@ -83,92 +83,95 @@
                     ef'32
                     ]
                     \override Staff.Stem.stemlet-length = 0.75
-                    ef'16
+                    d'16
                     [
-                    fs16
+                    es16
                     ~
-                    fs16
+                    es16
                     \revert Staff.Stem.stemlet-length
-                    cs'16
+                    bs16
                     ~
                     ]
-                    cs'4
+                    bs4
                     \override Staff.Stem.stemlet-length = 0.75
-                    f8.
+                    e8.
                     [
                     \revert Staff.Stem.stemlet-length
-                    e'''16
+                    ds'''16
+                    ~
+                    ]
+                    ds'''4
+                    ~
+                    \override Staff.Stem.stemlet-length = 0.75
+                    ds'''16
+                    [
+                    \revert Staff.Stem.stemlet-length
+                    as'8.
+                    ~
+                    ]
+                    \override Staff.Stem.stemlet-length = 0.75
+                    as'16
+                    [
+                    \revert Staff.Stem.stemlet-length
+                    e'''8.
                     ~
                     ]
                     e'''4
-                    ~
                     \override Staff.Stem.stemlet-length = 0.75
-                    e'''16
+                    es8
                     [
+                    d'16
                     \revert Staff.Stem.stemlet-length
-                    b'8.
+                    es16
                     ~
                     ]
                     \override Staff.Stem.stemlet-length = 0.75
-                    b'16
+                    es16
                     [
                     \revert Staff.Stem.stemlet-length
-                    f'''8.
+                    d'''16
                     ~
                     ]
-                    f'''4
-                    \override Staff.Stem.stemlet-length = 0.75
-                    fs8
-                    [
-                    ef'16
-                    \revert Staff.Stem.stemlet-length
-                    fs16
-                    ~
-                    ]
-                    \override Staff.Stem.stemlet-length = 0.75
-                    fs16
-                    [
-                    \revert Staff.Stem.stemlet-length
-                    f'''16
-                    ~
-                    ]
-                    f'''4.
-                    cs'2
+                    d'''4.
+                    \clef "bass"
+                    fss2
                     ~
                     \override Staff.Stem.stemlet-length = 0.75
-                    cs'8
+                    fss8
                     [
                     \revert Staff.Stem.stemlet-length
-                    f8
+                    b,8
                     ~
                     ]
-                    f4
-                    e'''2.
-                    b'4
+                    b,4
+                    \clef "treble"
+                    as''2.
+                    es'4
                     ~
-                    b'8
+                    es'8
                     ~
                     \override Staff.Stem.stemlet-length = 0.75
-                    b'8
+                    es'8
                     [
                     \revert Staff.Stem.stemlet-length
-                    e'''8
+                    g''8
                     ~
                     ]
-                    e'''4.
+                    g''4.
                     ~
-                    e'''4
-                    e'''1
+                    g''4
+                    ds''1
                     ~
-                    e'''2
-                    b'4
+                    ds''2
+                    \clef "bass"
+                    g4
                     ~
-                    b'2.
-                    c'8.
+                    g2.
+                    e,8.
                     ~
-                    c'16.
+                    e,16.
                     ~
-                    c'1
+                    e,1
                     \!
                 }
             }
@@ -217,95 +220,98 @@
                     \revert Staff.Stem.stemlet-length
                     ef'32
                     ]
-                    f'''4
-                    ~
-                    \override Staff.Stem.stemlet-length = 0.75
-                    f'''8.
-                    [
-                    \revert Staff.Stem.stemlet-length
-                    b'16
-                    ~
-                    ]
-                    \override Staff.Stem.stemlet-length = 0.75
-                    b'8.
-                    [
-                    \revert Staff.Stem.stemlet-length
-                    e'''16
-                    ~
-                    ]
                     e'''4
                     ~
                     \override Staff.Stem.stemlet-length = 0.75
-                    e'''16
+                    e'''8.
                     [
                     \revert Staff.Stem.stemlet-length
-                    f8.
-                    ]
-                    cs'4
-                    ~
-                    \override Staff.Stem.stemlet-length = 0.75
-                    cs'16
-                    [
-                    fs16
-                    ~
-                    fs16
-                    \revert Staff.Stem.stemlet-length
-                    ef'16
-                    ]
-                    \override Staff.Stem.stemlet-length = 0.75
-                    fs8
-                    [
-                    \revert Staff.Stem.stemlet-length
-                    cs'8
+                    as'16
                     ~
                     ]
                     \override Staff.Stem.stemlet-length = 0.75
-                    cs'8
-                    ~
-                    [
-                    cs'16
-                    f16
-                    ~
-                    f8
-                    \revert Staff.Stem.stemlet-length
-                    fs8
-                    ]
-                    e'''2.
-                    f4
-                    ~
-                    \override Staff.Stem.stemlet-length = 0.75
-                    f8
+                    as'8.
                     [
                     \revert Staff.Stem.stemlet-length
-                    cs'8
+                    ds'''16
                     ~
                     ]
-                    cs'4
-                    ~
-                    cs'4
-                    fs4
-                    ef'8
-                    fs4
-                    cs'4.
-                    ~
-                    cs'4
-                    cs'1
-                    ~
-                    cs'4
-                    fs2
-                    ef'4
-                    fs2
-                    cs'8.
-                    ~
-                    cs'16.
-                    ~
-                    cs'2..
+                    ds'''4
                     ~
                     \override Staff.Stem.stemlet-length = 0.75
-                    cs'16.
+                    ds'''16
+                    [
+                    \clef "bass"
+                    \revert Staff.Stem.stemlet-length
+                    e8.
+                    ]
+                    bs4
+                    ~
+                    \override Staff.Stem.stemlet-length = 0.75
+                    bs16
+                    [
+                    es16
+                    ~
+                    es16
+                    \revert Staff.Stem.stemlet-length
+                    d'16
+                    ]
+                    \override Staff.Stem.stemlet-length = 0.75
+                    es8
                     [
                     \revert Staff.Stem.stemlet-length
-                    c'32
+                    bs8
+                    ~
+                    ]
+                    \override Staff.Stem.stemlet-length = 0.75
+                    bs8
+                    ~
+                    [
+                    bs16
+                    d16
+                    ~
+                    d8
+                    \revert Staff.Stem.stemlet-length
+                    ds8
+                    ]
+                    \clef "treble"
+                    as''2.
+                    \clef "bass"
+                    b,4
+                    ~
+                    \override Staff.Stem.stemlet-length = 0.75
+                    b,8
+                    [
+                    \revert Staff.Stem.stemlet-length
+                    fss8
+                    ~
+                    ]
+                    fss4
+                    ~
+                    fss4
+                    bs,4
+                    af8
+                    a,4
+                    ds4.
+                    ~
+                    ds4
+                    bs,1
+                    ~
+                    bs,4
+                    d,2
+                    bf,4
+                    cs,2
+                    es,8.
+                    ~
+                    es,16.
+                    ~
+                    es,2..
+                    ~
+                    \override Staff.Stem.stemlet-length = 0.75
+                    es,16.
+                    [
+                    \revert Staff.Stem.stemlet-length
+                    df,32
                     \!
                     ]
                 }
@@ -355,110 +361,111 @@
                     \revert Staff.Stem.stemlet-length
                     <f fs cs' ef' b' e''' f'''>32
                     ]
-                    <f fs ef'>4
+                    <e es d'>4
                     ~
                     \override Staff.Stem.stemlet-length = 0.75
-                    <f fs ef'>8
+                    <e es d'>8
                     [
                     \revert Staff.Stem.stemlet-length
-                    <fs ef'>8
+                    <es d'>8
                     ~
                     ]
                     \override Staff.Stem.stemlet-length = 0.75
-                    <fs ef'>8
+                    <es d'>8
                     [
                     \revert Staff.Stem.stemlet-length
-                    ef'8
+                    d'8
                     ~
                     ]
-                    ef'4
+                    d'4
                     ~
                     \override Staff.Stem.stemlet-length = 0.75
-                    ef'16
+                    d'16
                     [
-                    <f fs cs' ef' b' e'''>16
+                    <e es bs d' as' ds'''>16
                     ~
-                    <f fs cs' ef' b' e'''>16
+                    <e es bs d' as' ds'''>16
                     \revert Staff.Stem.stemlet-length
-                    <f fs cs' ef' b' e''' f'''>16
+                    <e es bs d' as' ds''' e'''>16
                     ]
                     \override Staff.Stem.stemlet-length = 0.75
-                    <f fs cs' ef' b' e'''>8
+                    <e es bs d' as' ds'''>8
                     [
                     \revert Staff.Stem.stemlet-length
-                    ef'8
+                    d'8
                     ~
                     ]
-                    ef'4
+                    d'4
                     ~
                     \override Staff.Stem.stemlet-length = 0.75
-                    ef'16
+                    d'16
                     [
                     \revert Staff.Stem.stemlet-length
-                    <fs ef'>8.
-                    ~
-                    ]
-                    \override Staff.Stem.stemlet-length = 0.75
-                    <fs ef'>16
-                    [
-                    \revert Staff.Stem.stemlet-length
-                    <f fs ef'>16
-                    ~
-                    ]
-                    <f fs ef'>4
-                    ~
-                    \override Staff.Stem.stemlet-length = 0.75
-                    <f fs ef'>16
-                    [
-                    \revert Staff.Stem.stemlet-length
-                    <f fs cs' ef' b' e''' f'''>16
-                    ]
-                    ef'2.
-                    ~
-                    \override Staff.Stem.stemlet-length = 0.75
-                    ef'8
-                    [
-                    \revert Staff.Stem.stemlet-length
-                    <f fs cs' ef' b' e'''>8
+                    <es d'>8.
                     ~
                     ]
                     \override Staff.Stem.stemlet-length = 0.75
-                    <f fs cs' ef' b' e'''>8
+                    <es d'>16
                     [
                     \revert Staff.Stem.stemlet-length
-                    <f fs cs' ef' b' e''' f'''>8
+                    <d ds c'>16
+                    ~
                     ]
-                    <f fs cs' ef' b' e'''>4
-                    ef'2
-                    ~
-                    ef'8
-                    ~
-                    ef'4
-                    <fs ef'>2
-                    <f fs cs' ef' b' e''' f'''>8
-                    <f fs cs' ef' b' e''' f'''>4
-                    <f fs cs' ef' b' e'''>2
-                    ef'4
-                    ~
-                    ef'2.
-                    ~
-                    ef'2.
-                    <fs ef'>8.
-                    ~
-                    <fs ef'>16.
-                    ~
-                    <fs ef'>2
+                    <d ds c'>4
                     ~
                     \override Staff.Stem.stemlet-length = 0.75
-                    <fs ef'>8
-                    ~
+                    <d ds c'>16
                     [
-                    <fs ef'>16.
                     \revert Staff.Stem.stemlet-length
-                    c'32
+                    <d ds as c' gs' cs''' d'''>16
+                    ]
+                    a2.
+                    ~
+                    \override Staff.Stem.stemlet-length = 0.75
+                    a8
+                    [
+                    \revert Staff.Stem.stemlet-length
+                    <b, bs, fss a es' as''>8
                     ~
                     ]
-                    c'4
+                    \override Staff.Stem.stemlet-length = 0.75
+                    <b, bs, fss a es' as''>8
+                    [
+                    \revert Staff.Stem.stemlet-length
+                    <b, bs, fss a es' as'' b''>8
+                    ]
+                    <b, bs, fss a es' as''>4
+                    a2
+                    ~
+                    a8
+                    ~
+                    a4
+                    \clef "bass"
+                    <gs, f>2
+                    <g, gs, ds f cs' fs'' g''>8
+                    <e, es, bs, d as ds'' e''>4
+                    <e, es, bs, d as ds''>2
+                    d4
+                    ~
+                    d2.
+                    ~
+                    d2.
+                    <as,, g,>8.
+                    ~
+                    <as,, g,>16.
+                    ~
+                    <as,, g,>2
+                    ~
+                    \override Staff.Stem.stemlet-length = 0.75
+                    <as,, g,>8
+                    ~
+                    [
+                    <as,, g,>16.
+                    \revert Staff.Stem.stemlet-length
+                    df,32
+                    ~
+                    ]
+                    df,4
                     \!
                 }
             }
@@ -527,109 +534,110 @@
                     \revert Staff.Stem.stemlet-length
                     <f fs cs' ef' b' e''' f'''>32
                     ]
-                    <f fs cs' ef' b'>4
+                    <e es bs d' as'>4
                     ~
                     \override Staff.Stem.stemlet-length = 0.75
-                    <f fs cs' ef' b'>16
+                    <e es bs d' as'>16
                     [
-                    <f fs cs' ef' b' e'''>16
+                    <e es bs d' as' ds'''>16
                     ~
-                    <f fs cs' ef' b' e'''>16
+                    <e es bs d' as' ds'''>16
                     \revert Staff.Stem.stemlet-length
-                    <f fs cs' ef' b' e''' f'''>16
+                    <e es bs d' as' ds''' e'''>16
                     ]
                     \override Staff.Stem.stemlet-length = 0.75
-                    <f fs cs' ef' b' e'''>8
+                    <e es bs d' as' ds'''>8
                     [
                     \revert Staff.Stem.stemlet-length
-                    <f fs cs' ef' b'>8
-                    ~
-                    ]
-                    \override Staff.Stem.stemlet-length = 0.75
-                    <f fs cs' ef' b'>8.
-                    [
-                    \revert Staff.Stem.stemlet-length
-                    <f fs ef' b'>16
+                    <e es bs d' as'>8
                     ~
                     ]
                     \override Staff.Stem.stemlet-length = 0.75
-                    <f fs ef' b'>8
+                    <e es bs d' as'>8.
                     [
                     \revert Staff.Stem.stemlet-length
-                    <f fs ef'>8
-                    ~
-                    ]
-                    <f fs ef'>4
-                    <fs ef'>4
-                    ef'4
-                    ~
-                    \override Staff.Stem.stemlet-length = 0.75
-                    ef'8
-                    ~
-                    [
-                    ef'16
-                    <f fs cs' ef' b' e'''>16
-                    ~
-                    <f fs cs' ef' b' e'''>16
-                    <f fs cs' ef' b' e''' f'''>16
-                    \revert Staff.Stem.stemlet-length
-                    <f fs cs' ef' b' e'''>8
-                    ]
-                    \override Staff.Stem.stemlet-length = 0.75
-                    <f fs cs' ef' b' e''' f'''>8
-                    [
-                    \revert Staff.Stem.stemlet-length
-                    <f fs cs' ef' b' e'''>8
+                    <e es d' as'>16
                     ~
                     ]
                     \override Staff.Stem.stemlet-length = 0.75
-                    <f fs cs' ef' b' e'''>8
+                    <e es d' as'>8
                     [
                     \revert Staff.Stem.stemlet-length
-                    <f fs cs' ef' b'>8
+                    <e es d'>8
                     ~
                     ]
-                    <f fs cs' ef' b'>2
-                    <f fs ef' b'>4
+                    <e es d'>4
+                    <es d'>4
+                    d'4
                     ~
                     \override Staff.Stem.stemlet-length = 0.75
-                    <f fs ef' b'>8
+                    d'8
+                    ~
+                    [
+                    d'16
+                    <d ds as c' gs' cs'''>16
+                    ~
+                    <d ds as c' gs' cs'''>16
+                    <d ds as c' gs' cs''' d'''>16
+                    \revert Staff.Stem.stemlet-length
+                    <d ds as c' gs' cs'''>8
+                    ]
+                    \override Staff.Stem.stemlet-length = 0.75
+                    <b, bs, fss a es' as'' b''>8
                     [
                     \revert Staff.Stem.stemlet-length
-                    <f fs ef'>8
+                    <b, bs, fss a es' as''>8
                     ~
                     ]
-                    <f fs ef'>2
+                    \override Staff.Stem.stemlet-length = 0.75
+                    <b, bs, fss a es' as''>8
+                    [
+                    \clef "bass"
+                    \revert Staff.Stem.stemlet-length
+                    <b, bs, fss a es'>8
                     ~
-                    <f fs ef'>8
-                    <fs ef'>4
-                    ~
-                    <fs ef'>4
-                    <f fs ef' b'>4.
-                    <f fs cs' ef' b'>1
-                    ~
-                    <f fs cs' ef' b'>4
-                    <f fs ef' b'>2
-                    ~
-                    <f fs ef' b'>4
-                    <f fs ef'>2
-                    ~
-                    <f fs ef'>8.
-                    ~
-                    <f fs ef'>16.
-                    ~
-                    <f fs ef'>2
+                    ]
+                    <b, bs, fss a es'>2
+                    <b, bs, a es'>4
                     ~
                     \override Staff.Stem.stemlet-length = 0.75
-                    <f fs ef'>8
-                    ~
+                    <b, bs, a es'>8
                     [
-                    <f fs ef'>16.
                     \revert Staff.Stem.stemlet-length
-                    c'32
+                    <b, bs, a>8
                     ~
                     ]
-                    c'4
+                    <b, bs, a>2
+                    ~
+                    <b, bs, a>8
+                    <a, gf>4
+                    ~
+                    <a, gf>4
+                    <g, gs, f cs'>4.
+                    <e, es, bs, d as>1
+                    ~
+                    <e, es, bs, d as>4
+                    <df, d, cf g>2
+                    ~
+                    <df, d, cf g>4
+                    <c, cs, bf,>2
+                    ~
+                    <c, cs, bf,>8.
+                    ~
+                    <c, cs, bf,>16.
+                    ~
+                    <c, cs, bf,>2
+                    ~
+                    \override Staff.Stem.stemlet-length = 0.75
+                    <c, cs, bf,>8
+                    ~
+                    [
+                    <c, cs, bf,>16.
+                    \revert Staff.Stem.stemlet-length
+                    df,32
+                    ~
+                    ]
+                    df,4
                     \!
                 }
             }
