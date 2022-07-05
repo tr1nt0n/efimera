@@ -118,7 +118,7 @@
         fontSize = #-1
         \remove Time_signature_engraver
         \override InstrumentName.self-alignment-X = #CENTER
-        % \RemoveAllEmptyStaves
+        \RemoveAllEmptyStaves
     }
 
     \context {
