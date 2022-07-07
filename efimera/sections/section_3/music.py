@@ -56,12 +56,19 @@ abjad.detach(abjad.Dynamic, abjad.select.leaf(score["piano 3 voice"], -7))
 
 library.write_marginmarkups(score)
 
-trinton.attach(
-    voice=score["Global Context"],
+trinton.attach_multiple(
+    score=score,
+    voice="Global Context",
     leaves=[
         -1,
     ],
-    attachment=abjad.BarLine("||"),
+    attachments=[
+        abjad.BarLine("||"),
+        abjad.LilyPondLiteral(
+            r"\once \override Score.BarLine.transparent = ##f",
+            "absolute_after",
+        ),
+    ],
 )
 
 trinton.attach(voice=score["Global Context"], leaves=[0], attachment=library.tempo_1)

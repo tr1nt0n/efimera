@@ -18,6 +18,7 @@
             \time 5/4
             s1 * 5/4
             \bar "||"
+            \once \override Score.BarLine.transparent = ##f
         }
         \context GrandStaff = "Staff Group"
         <<
