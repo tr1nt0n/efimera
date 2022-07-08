@@ -149,6 +149,12 @@ trinton.beam_score_without_splitting(score)
 #     current_directory="/Users/trintonprater/scores/efimera/efimera/sections/section_1",
 # )
 
+trinton.make_sc_file(
+    score=score,
+    tempo=((1, 4), 27),
+    current_directory="/Users/trintonprater/scores/efimera/efimera/sections/section_1",
+)
+
 # trinton.fill_empty_staves_with_skips(score)
 
 # show file
