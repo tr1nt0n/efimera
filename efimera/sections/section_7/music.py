@@ -16,7 +16,9 @@ score = library.efimera_score(ts.final_ts[6])
 for voice_name in ["piano 2 voice", "piano 3 voice"]:
     library.plane(
         voice=score[voice_name],
-        measures=[1,],
+        measures=[
+            1,
+        ],
         talea_index=15,
         talea_division=8,
         rewrite_meter=-1,
@@ -24,7 +26,10 @@ for voice_name in ["piano 2 voice", "piano 3 voice"]:
 
     library.plane(
         voice=score[voice_name],
-        measures=[3, 4,],
+        measures=[
+            3,
+            4,
+        ],
         talea_index=3,
         talea_division=16,
         rewrite_meter=-1,
@@ -42,11 +47,7 @@ trinton.attach(
     attachment=abjad.BarLine("||"),
 )
 
-trinton.attach(
-    voice=score["Global Context"],
-    leaves=[0],
-    attachment=library.tempo_5
-)
+trinton.attach(voice=score["Global Context"], leaves=[0], attachment=library.tempo_5)
 
 trinton.beam_score_without_splitting(score)
 
@@ -54,7 +55,10 @@ trinton.beam_score_without_splitting(score)
 
 # attachments
 
-for voice_name in ["piano 2 voice", "piano 3 voice",]:
+for voice_name in [
+    "piano 2 voice",
+    "piano 3 voice",
+]:
     measures = abjad.select.group_by_measure(score[voice_name])
 
     for tie, transpose in zip(
@@ -74,15 +78,9 @@ for voice_name in ["piano 2 voice", "piano 3 voice",]:
     ):
         abjad.mutate.transpose(tie, transpose)
 
-    abjad.attach(
-        abjad.Dynamic("fp"),
-        abjad.select.leaf(score[voice_name], 0)
-    )
+    abjad.attach(abjad.Dynamic("fp"), abjad.select.leaf(score[voice_name], 0))
 
-    abjad.attach(
-        abjad.Dynamic("pp"),
-        measures[2][0]
-    )
+    abjad.attach(abjad.Dynamic("pp"), measures[2][0])
 
 # library.write_sc_file(
 #     score=score,
