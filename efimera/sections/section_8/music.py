@@ -24,71 +24,154 @@ for voice_name in ["piano 2 voice", "piano 3 voice", "piano 5 voice"]:
     )
 
 library.grid(
-    voices=[score["piano 1 voice"], score["piano 4 voice"],],
-    measures=[1,],
+    voices=[
+        score["piano 1 voice"],
+        score["piano 4 voice"],
+    ],
+    measures=[
+        1,
+    ],
     talea_index=2,
     rewrite_meter=-1,
-    preprocessor=trinton.fuse_quarters_preprocessor((3, 1,)),
+    preprocessor=trinton.fuse_quarters_preprocessor(
+        (
+            3,
+            1,
+        )
+    ),
 )
 
 library.grid(
-    voices=[score["piano 3 voice"], score["piano 4 voice"],],
-    measures=[2, 3, 4, 5,],
+    voices=[
+        score["piano 3 voice"],
+        score["piano 4 voice"],
+    ],
+    measures=[
+        2,
+        3,
+        4,
+        5,
+    ],
     talea_index=3,
     rewrite_meter=-1,
 )
 
 library.grid(
-    voices=[score["piano 3 voice"],],
-    measures=[6,],
+    voices=[
+        score["piano 3 voice"],
+    ],
+    measures=[
+        6,
+    ],
     talea_index=4,
     rewrite_meter=-2,
-    preprocessor=trinton.fuse_sixteenths_preprocessor((5, 2,))
+    preprocessor=trinton.fuse_sixteenths_preprocessor(
+        (
+            5,
+            2,
+        )
+    ),
 )
 
 library.grid(
-    voices=[score["piano 3 voice"],],
-    measures=[9, 10, 11,],
+    voices=[
+        score["piano 3 voice"],
+    ],
+    measures=[
+        9,
+        10,
+        11,
+    ],
     talea_index=5,
     rewrite_meter=-2,
-    preprocessor=trinton.fuse_quarters_preprocessor((1, 3, 2, 1, 2,))
+    preprocessor=trinton.fuse_quarters_preprocessor(
+        (
+            1,
+            3,
+            2,
+            1,
+            2,
+        )
+    ),
 )
 
 library.grid(
-    voices=[score["piano 4 voice"],],
-    measures=[8, 9, 10, 11,],
+    voices=[
+        score["piano 4 voice"],
+    ],
+    measures=[
+        8,
+        9,
+        10,
+        11,
+    ],
     rewrite_meter=-2,
 )
 
 library.win(
     voice=score["piano 1 voice"],
-    measures=[10, 11,],
+    measures=[
+        10,
+        11,
+    ],
     pitch_index=18,
-    fundamentals=[29,],
+    fundamentals=[
+        29,
+    ],
 )
 
 library.win(
     voice=score["piano 5 voice"],
-    measures=[11,],
+    measures=[
+        11,
+    ],
     pitch_index=18,
     dyn_list=["f"],
-    fundamentals=[28,],
+    fundamentals=[
+        28,
+    ],
 )
 
 library.slashes(
     voice=score["piano 2 voice"],
-    measures=[11, 12,],
+    measures=[
+        11,
+        12,
+    ],
     talea_index=0,
     density_stage=5,
     pitch_handler=library.slashes_pitching(fundamental=[-12], index=0),
     rewrite_meter=-2,
-    preprocessor=trinton.fuse_eighths_preprocessor((1, 2,)),
+    preprocessor=trinton.fuse_eighths_preprocessor(
+        (
+            1,
+            2,
+        )
+    ),
 )
 
-for voice_name, stage, eighths in zip(["piano 3 voice", "piano 5 voice"], [1, 3,], [(3, 2,), (5, 2,)]):
+for voice_name, stage, eighths in zip(
+    ["piano 3 voice", "piano 5 voice"],
+    [
+        1,
+        3,
+    ],
+    [
+        (
+            3,
+            2,
+        ),
+        (
+            5,
+            2,
+        ),
+    ],
+):
     library.slashes(
         voice=score[voice_name],
-        measures=[12,],
+        measures=[
+            12,
+        ],
         talea_index=4,
         density_stage=stage,
         pitch_handler=library.slashes_pitching(fundamental=[-12], index=0),
@@ -125,14 +208,13 @@ trinton.beam_score_without_splitting(score)
 
 # trinton.annotate_leaves(score)
 
-for n in [65, 77,]:
+for n in [
+    65,
+    77,
+]:
     abjad.detach(abjad.Dynamic, abjad.select.leaf(score["piano 3 voice"], n))
 
-for voice_name in [
-    "piano 2 voice",
-    "piano 3 voice",
-    "piano 5 voice"
-]:
+for voice_name in ["piano 2 voice", "piano 3 voice", "piano 5 voice"]:
     measures = abjad.select.group_by_measure(score[voice_name])
 
     for tie, transpose in zip(
