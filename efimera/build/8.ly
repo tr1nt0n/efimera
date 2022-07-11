@@ -44,6 +44,7 @@
                         \tweak Accidental.stencil #ly:text-interface::print
                         \tweak Accidental.text \markup { \abjad-natural  }
                         d'16
+                        \pp
                         ^ \markup \center-align { +4 }
                         \tweak Accidental.stencil #ly:text-interface::print
                         \tweak Accidental.text \markup { \flat-one-syntonic-comma-up  }
@@ -98,6 +99,7 @@
                     \times 8/11
                     {
                         r4
+                        \ottava 1
                         \tweak Accidental.stencil #ly:text-interface::print
                         \tweak Accidental.text \markup { \sharp-two-syntonic-comma-down  }
                         gs''4
@@ -157,6 +159,7 @@
                             \tweak Accidental.text \markup { \natural-one-syntonic-comma-down  }
                             b''''
                         >4
+                        \mf
                         - \tweak circled-tip ##t
                         \>
                         ~
@@ -266,6 +269,7 @@
                             \tweak Accidental.text \markup { \sharp-two-syntonic-comma-down  }
                             cs'''''
                         >64
+                        \mf
                         - \tweak circled-tip ##t
                         \>
                         ~
@@ -315,6 +319,7 @@
                         \tweak Accidental.stencil #ly:text-interface::print
                         \tweak Accidental.text \markup { \sharp-two-syntonic-comma-down  }
                         as''64
+                        \ottava 0
                     }
                     s1 * 9/8
                 }
@@ -325,6 +330,7 @@
                 {
                     \set Staff.shortInstrumentName =
                     \markup \bold { II }
+                    \ottava 1
                     fs'''4
                     d'''''4
                     ~
@@ -342,6 +348,7 @@
                     \revert Staff.Stem.stemlet-length
                     gs''8
                     ]
+                    \ottava 0
                     s1 * 3/4
                     s1 * 3/4
                     s1 * 5/4
@@ -353,12 +360,15 @@
                     s1 * 2
                     \times 2/3
                     {
+                        \clef "bass"
                         \override Staff.Stem.stemlet-length = 0.75
                         \tweak Accidental.stencil #ly:text-interface::print
                         \tweak Accidental.text \markup { \abjad-natural  }
                         c16
+                        \p
                         - \espressivo
                         ^ \markup \center-align { +0 }
+                        \<
                         [
                         f16
                         - \espressivo
@@ -386,8 +396,10 @@
                         \tweak Accidental.stencil #ly:text-interface::print
                         \tweak Accidental.text \markup \concat { \one-nineteen-limit-schisma-up \hspace #0.125 \abjad-flat  }
                         bf16
+                        \ff
                         - \espressivo
                         ^ \markup \center-align { -1 }
+                        \>
                         \tweak Accidental.stencil #ly:text-interface::print
                         \tweak Accidental.text \markup \concat { \one-twenty-three-limit-comma-up \hspace #0.125 \one-septimal-comma-down  }
                         e16
@@ -522,6 +534,7 @@
                 {
                     \set Staff.shortInstrumentName =
                     \markup \bold { III }
+                    \ottava 1
                     \override Staff.Stem.stemlet-length = 0.75
                     <c'' cs'' bf'' fs'''>8.
                     [
@@ -544,6 +557,7 @@
                     \revert Staff.Stem.stemlet-length
                     <a'' as'' g''' ds''''>8.
                     ]
+                    \ottava 0
                     \tweak text #tuplet-number::calc-fraction-text
                     \times 12/13
                     {
@@ -924,11 +938,15 @@
                     ^ \markup \center-align { -18 }
                     ]
                     r16.
+                    \clef "bass"
                     \tweak Accidental.stencil #ly:text-interface::print
                     \tweak Accidental.text \markup { \abjad-natural  }
                     c32.
+                    \ff
                     - \espressivo
                     ^ \markup \center-align { +0 }
+                    - \tweak circled-tip ##t
+                    \>
                     r8...
                     r4
                     r32.
@@ -945,6 +963,7 @@
                     ^ \markup \center-align { +5 }
                     r32.
                     r8
+                    \!
                 }
             }
             \context Staff = "piano 4 staff"
@@ -965,7 +984,21 @@
                         \tweak Accidental.text \markup { \flat-one-syntonic-comma-up  }
                         ef,
                     >4
-                    \fp
+                    \pp
+                    - \accent
+                    ^ \markup \center-align \center-column { +20 +4 +0  }
+                    \<
+                    <
+                        \tweak Accidental.stencil #ly:text-interface::print
+                        \tweak Accidental.text \markup { \abjad-flat  }
+                        bf,,
+                        \tweak Accidental.stencil #ly:text-interface::print
+                        \tweak Accidental.text \markup { \abjad-natural  }
+                        c,
+                        \tweak Accidental.stencil #ly:text-interface::print
+                        \tweak Accidental.text \markup { \flat-one-syntonic-comma-up  }
+                        ef,
+                    >4
                     - \accent
                     ^ \markup \center-align \center-column { +20 +4 +0  }
                     <
@@ -979,7 +1012,6 @@
                         \tweak Accidental.text \markup { \flat-one-syntonic-comma-up  }
                         ef,
                     >4
-                    \fp
                     - \accent
                     ^ \markup \center-align \center-column { +20 +4 +0  }
                     <
@@ -993,21 +1025,6 @@
                         \tweak Accidental.text \markup { \flat-one-syntonic-comma-up  }
                         ef,
                     >4
-                    \fp
-                    - \accent
-                    ^ \markup \center-align \center-column { +20 +4 +0  }
-                    <
-                        \tweak Accidental.stencil #ly:text-interface::print
-                        \tweak Accidental.text \markup { \abjad-flat  }
-                        bf,,
-                        \tweak Accidental.stencil #ly:text-interface::print
-                        \tweak Accidental.text \markup { \abjad-natural  }
-                        c,
-                        \tweak Accidental.stencil #ly:text-interface::print
-                        \tweak Accidental.text \markup { \flat-one-syntonic-comma-up  }
-                        ef,
-                    >4
-                    \fp
                     - \accent
                     ^ \markup \center-align \center-column { +20 +4 +0  }
                     \clef "bass"
@@ -1022,7 +1039,6 @@
                         \tweak Accidental.text \markup { \flat-one-syntonic-comma-up  }
                         ef,
                     >4
-                    \fp
                     - \accent
                     ^ \markup \center-align \center-column { +20 +4 +0  }
                     <
@@ -1036,7 +1052,6 @@
                         \tweak Accidental.text \markup { \flat-one-syntonic-comma-up  }
                         ef,
                     >4
-                    \fp
                     - \accent
                     ^ \markup \center-align \center-column { +20 +4 +0  }
                     <
@@ -1050,7 +1065,6 @@
                         \tweak Accidental.text \markup { \flat-one-syntonic-comma-up  }
                         ef,
                     >4
-                    \fp
                     - \accent
                     ^ \markup \center-align \center-column { +20 +4 +0  }
                     <
@@ -1064,7 +1078,6 @@
                         \tweak Accidental.text \markup { \flat-one-syntonic-comma-up  }
                         ef,
                     >4
-                    \fp
                     - \accent
                     ^ \markup \center-align \center-column { +20 +4 +0  }
                     <
@@ -1078,7 +1091,6 @@
                         \tweak Accidental.text \markup { \flat-one-syntonic-comma-up  }
                         ef,
                     >8
-                    \fp
                     - \accent
                     ^ \markup \center-align \center-column { +20 +4 +0  }
                     ~
@@ -1093,7 +1105,6 @@
                         \tweak Accidental.text \markup { \flat-one-syntonic-comma-up  }
                         ef,
                     >8
-                    \fp
                     - \accent
                     <
                         \tweak Accidental.stencil #ly:text-interface::print
@@ -1106,7 +1117,6 @@
                         \tweak Accidental.text \markup { \flat-one-syntonic-comma-up  }
                         ef,
                     >4
-                    \fp
                     - \accent
                     ^ \markup \center-align \center-column { +20 +4 +0  }
                     <
@@ -1120,7 +1130,22 @@
                         \tweak Accidental.text \markup { \flat-one-syntonic-comma-up  }
                         ef,
                     >4
-                    \fp
+                    \f
+                    - \accent
+                    ^ \markup \center-align \center-column { +20 +4 +0  }
+                    - \tweak circled-tip ##t
+                    \>
+                    <
+                        \tweak Accidental.stencil #ly:text-interface::print
+                        \tweak Accidental.text \markup { \abjad-flat  }
+                        bf,,
+                        \tweak Accidental.stencil #ly:text-interface::print
+                        \tweak Accidental.text \markup { \abjad-natural  }
+                        c,
+                        \tweak Accidental.stencil #ly:text-interface::print
+                        \tweak Accidental.text \markup { \flat-one-syntonic-comma-up  }
+                        ef,
+                    >4
                     - \accent
                     ^ \markup \center-align \center-column { +20 +4 +0  }
                     <
@@ -1134,7 +1159,6 @@
                         \tweak Accidental.text \markup { \flat-one-syntonic-comma-up  }
                         ef,
                     >4
-                    \fp
                     - \accent
                     ^ \markup \center-align \center-column { +20 +4 +0  }
                     <
@@ -1148,7 +1172,6 @@
                         \tweak Accidental.text \markup { \flat-one-syntonic-comma-up  }
                         ef,
                     >4
-                    \fp
                     - \accent
                     ^ \markup \center-align \center-column { +20 +4 +0  }
                     <
@@ -1162,7 +1185,6 @@
                         \tweak Accidental.text \markup { \flat-one-syntonic-comma-up  }
                         ef,
                     >4
-                    \fp
                     - \accent
                     ^ \markup \center-align \center-column { +20 +4 +0  }
                     <
@@ -1176,7 +1198,6 @@
                         \tweak Accidental.text \markup { \flat-one-syntonic-comma-up  }
                         ef,
                     >4
-                    \fp
                     - \accent
                     ^ \markup \center-align \center-column { +20 +4 +0  }
                     <
@@ -1190,24 +1211,10 @@
                         \tweak Accidental.text \markup { \flat-one-syntonic-comma-up  }
                         ef,
                     >4
-                    \fp
-                    - \accent
-                    ^ \markup \center-align \center-column { +20 +4 +0  }
-                    <
-                        \tweak Accidental.stencil #ly:text-interface::print
-                        \tweak Accidental.text \markup { \abjad-flat  }
-                        bf,,
-                        \tweak Accidental.stencil #ly:text-interface::print
-                        \tweak Accidental.text \markup { \abjad-natural  }
-                        c,
-                        \tweak Accidental.stencil #ly:text-interface::print
-                        \tweak Accidental.text \markup { \flat-one-syntonic-comma-up  }
-                        ef,
-                    >4
-                    \fp
                     - \accent
                     ^ \markup \center-align \center-column { +20 +4 +0  }
                     s1 * 7/16
+                    \!
                     s1 * 1/2
                     \clef "bass"
                     <
@@ -1221,9 +1228,11 @@
                         \tweak Accidental.text \markup { \flat-one-syntonic-comma-up  }
                         ef,
                     >4
-                    \fp
+                    \fff
                     - \accent
                     ^ \markup \center-align \center-column { +20 +4 +0  }
+                    - \tweak circled-tip ##t
+                    \>
                     <
                         \tweak Accidental.stencil #ly:text-interface::print
                         \tweak Accidental.text \markup { \abjad-flat  }
@@ -1235,7 +1244,6 @@
                         \tweak Accidental.text \markup { \flat-one-syntonic-comma-up  }
                         ef,
                     >8
-                    \fp
                     - \accent
                     ^ \markup \center-align \center-column { +20 +4 +0  }
                     ~
@@ -1250,7 +1258,6 @@
                         \tweak Accidental.text \markup { \flat-one-syntonic-comma-up  }
                         ef,
                     >8
-                    \fp
                     - \accent
                     <
                         \tweak Accidental.stencil #ly:text-interface::print
@@ -1263,7 +1270,6 @@
                         \tweak Accidental.text \markup { \flat-one-syntonic-comma-up  }
                         ef,
                     >4
-                    \fp
                     - \accent
                     ^ \markup \center-align \center-column { +20 +4 +0  }
                     <
@@ -1277,7 +1283,6 @@
                         \tweak Accidental.text \markup { \flat-one-syntonic-comma-up  }
                         ef,
                     >4
-                    \fp
                     - \accent
                     ^ \markup \center-align \center-column { +20 +4 +0  }
                     <
@@ -1291,7 +1296,6 @@
                         \tweak Accidental.text \markup { \flat-one-syntonic-comma-up  }
                         ef,
                     >8
-                    \fp
                     - \accent
                     ^ \markup \center-align \center-column { +20 +4 +0  }
                     ~
@@ -1306,7 +1310,6 @@
                         \tweak Accidental.text \markup { \flat-one-syntonic-comma-up  }
                         ef,
                     >8
-                    \fp
                     - \accent
                     <
                         \tweak Accidental.stencil #ly:text-interface::print
@@ -1319,7 +1322,6 @@
                         \tweak Accidental.text \markup { \flat-one-syntonic-comma-up  }
                         ef,
                     >4
-                    \fp
                     - \accent
                     ^ \markup \center-align \center-column { +20 +4 +0  }
                     <
@@ -1333,7 +1335,6 @@
                         \tweak Accidental.text \markup { \flat-one-syntonic-comma-up  }
                         ef,
                     >4
-                    \fp
                     - \accent
                     ^ \markup \center-align \center-column { +20 +4 +0  }
                     <
@@ -1347,7 +1348,6 @@
                         \tweak Accidental.text \markup { \flat-one-syntonic-comma-up  }
                         ef,
                     >4
-                    \fp
                     - \accent
                     ^ \markup \center-align \center-column { +20 +4 +0  }
                     <
@@ -1361,7 +1361,6 @@
                         \tweak Accidental.text \markup { \flat-one-syntonic-comma-up  }
                         ef,
                     >4
-                    \fp
                     - \accent
                     ^ \markup \center-align \center-column { +20 +4 +0  }
                     <
@@ -1375,7 +1374,6 @@
                         \tweak Accidental.text \markup { \flat-one-syntonic-comma-up  }
                         ef,
                     >4
-                    \fp
                     - \accent
                     ^ \markup \center-align \center-column { +20 +4 +0  }
                     <
@@ -1389,7 +1387,6 @@
                         \tweak Accidental.text \markup { \flat-one-syntonic-comma-up  }
                         ef,
                     >4
-                    \fp
                     - \accent
                     ^ \markup \center-align \center-column { +20 +4 +0  }
                     <
@@ -1403,7 +1400,6 @@
                         \tweak Accidental.text \markup { \flat-one-syntonic-comma-up  }
                         ef,
                     >4
-                    \fp
                     - \accent
                     ^ \markup \center-align \center-column { +20 +4 +0  }
                     <
@@ -1417,7 +1413,6 @@
                         \tweak Accidental.text \markup { \flat-one-syntonic-comma-up  }
                         ef,
                     >4
-                    \fp
                     - \accent
                     ^ \markup \center-align \center-column { +20 +4 +0  }
                     <
@@ -1431,10 +1426,10 @@
                         \tweak Accidental.text \markup { \flat-one-syntonic-comma-up  }
                         ef,
                     >8.
-                    \fp
                     - \accent
                     ^ \markup \center-align \center-column { +20 +4 +0  }
                     s1 * 9/8
+                    \!
                 }
             }
             \context Staff = "piano 5 staff"
@@ -1443,6 +1438,7 @@
                 {
                     \set Staff.shortInstrumentName =
                     \markup \bold{ V }
+                    \ottava 1
                     <cs'' bf''>4
                     c'''4
                     ~
@@ -1461,6 +1457,7 @@
                     <g'' gs'' ds''' f''' cs'''' fs'''''>8
                     ]
                     s1 * 3/4
+                    \ottava 0
                     s1 * 3/4
                     s1 * 5/4
                     s1 * 1/2
@@ -1473,6 +1470,7 @@
                     \times 12/11
                     {
                         r64
+                        \ottava 1
                         \override Staff.Stem.stemlet-length = 0.75
                         \tweak Accidental.stencil #ly:text-interface::print
                         \tweak Accidental.text \markup { \double-sharp-two-syntonic-comma-down  }
@@ -1579,17 +1577,22 @@
                         \tweak Accidental.text \markup { \double-sharp-two-syntonic-comma-down  }
                         fss''64
                         ]
+                        \ottava 0
                         r64
                         \!
                     }
                     \tweak text #tuplet-number::calc-fraction-text
                     \times 5/6
                     {
+                        \clef "bass"
                         \tweak Accidental.stencil #ly:text-interface::print
                         \tweak Accidental.text \markup { \abjad-natural  }
                         c16
+                        \ff
                         - \espressivo
                         ^ \markup \center-align { +0 }
+                        - \tweak circled-tip ##t
+                        \>
                         r16
                         f16
                         - \espressivo
@@ -1626,6 +1629,7 @@
                         - \espressivo
                         ^ \markup \center-align +12
                         r16
+                        \!
                     }
                 }
             }

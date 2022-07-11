@@ -206,6 +206,8 @@ trinton.beam_score_without_splitting(score)
 
 # attachments
 
+cache = trinton.cache_leaves(score)
+
 # trinton.annotate_leaves(score)
 
 for n in [
@@ -229,6 +231,148 @@ for voice_name in ["piano 2 voice", "piano 3 voice", "piano 5 voice"]:
         ],
     ):
         abjad.mutate.transpose(tie, transpose)
+
+trinton.attach(
+    voice=score["piano 1 voice"],
+    leaves=[
+        1,
+    ],
+    attachment=abjad.Dynamic("pp"),
+)
+
+trinton.attach(
+    voice=score["piano 1 voice"],
+    leaves=[
+        24,
+        34,
+    ],
+    attachment=abjad.Dynamic("mf"),
+)
+
+trinton.ottava(
+    score=score,
+    voice="piano 1 voice",
+    start_ottava=[
+        20,
+    ],
+    stop_ottava=[
+        40,
+    ],
+    octave=1,
+)
+
+trinton.ottava(
+    score=score,
+    voice="piano 5 voice",
+    start_ottava=[
+        17,
+    ],
+    stop_ottava=[
+        25,
+    ],
+    octave=1,
+)
+
+trinton.ottava(
+    score=score,
+    voice="piano 2 voice",
+    start_ottava=[
+        0,
+    ],
+    stop_ottava=[
+        6,
+    ],
+    octave=1,
+)
+
+for voice_name in ["piano 3 voice", "piano 5 voice"]:
+    trinton.ottava(
+        score=score,
+        voice=voice_name,
+        start_ottava=[0],
+        stop_ottava=[
+            7,
+        ],
+        octave=1,
+    )
+
+    trinton.attach(voice=score[voice_name], leaves=[-1], attachment=abjad.StopHairpin())
+
+for leaf in abjad.select.leaves(score["piano 4 voice"], pitched=True):
+    abjad.detach(abjad.Dynamic, leaf)
+
+trinton.attach_multiple(
+    score=score,
+    voice="piano 4 voice",
+    leaves=[
+        0,
+    ],
+    attachments=[abjad.Dynamic("pp"), abjad.StartHairpin("<")],
+)
+
+trinton.attach_multiple(
+    score=score,
+    voice="piano 4 voice",
+    leaves=[
+        11,
+    ],
+    attachments=[abjad.Dynamic("f"), abjad.StartHairpin(">o")],
+)
+
+abjad.attach(abjad.StopHairpin(), cache["piano 4 voice"][6][0])
+
+trinton.attach_multiple(
+    score=score,
+    voice="piano 4 voice",
+    leaves=[
+        20,
+    ],
+    attachments=[abjad.Dynamic("fff"), abjad.StartHairpin(">o")],
+)
+
+trinton.attach_multiple(
+    score=score,
+    voice="piano 2 voice",
+    leaves=[
+        16,
+    ],
+    attachments=[abjad.Dynamic("p"), abjad.StartHairpin("<")],
+)
+
+trinton.attach_multiple(
+    score=score,
+    voice="piano 2 voice",
+    leaves=[
+        21,
+    ],
+    attachments=[abjad.Dynamic("ff"), abjad.StartHairpin(">")],
+)
+
+trinton.attach_multiple(
+    score=score,
+    voice="piano 3 voice",
+    leaves=[
+        83,
+    ],
+    attachments=[abjad.Dynamic("ff"), abjad.StartHairpin(">o")],
+)
+
+trinton.attach_multiple(
+    score=score,
+    voice="piano 5 voice",
+    leaves=[
+        27,
+    ],
+    attachments=[abjad.Dynamic("ff"), abjad.StartHairpin(">o")],
+)
+
+abjad.attach(abjad.StopHairpin(), cache["piano 4 voice"][12][0])
+
+abjad.attach(abjad.Clef("bass"), cache["piano 2 voice"][11][0][0])
+
+abjad.attach(abjad.Clef("bass"), cache["piano 3 voice"][12][1])
+
+abjad.attach(abjad.Clef("bass"), cache["piano 5 voice"][12][0][0])
 
 # show file
 
