@@ -20,7 +20,7 @@
             \bar "||"
             \once \override Score.BarLine.transparent = ##f
         }
-        \context GrandStaff = "Staff Group"
+        \context StaffGroup = "Staff Group"
         <<
             \context Staff = "piano 1 staff"
             {

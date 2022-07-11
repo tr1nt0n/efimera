@@ -39,28 +39,6 @@ for voice_name in ["piano 1 voice", "piano 2 voice", "piano 4 voice"]:
         rewrite_meter=-1,
     )
 
-# synth I attachments
-
-library.write_space_spanners(
-    voice=score["piano 1 voice"],
-    spanner_ID="One",
-    start_pairs=[
-        (
-            0,
-            0,
-        ),
-    ],
-    stop_pairs=[
-        (
-            1,
-            0,
-        )
-    ],
-    left_text=r"0%",
-    right_text=r"10%",
-    padding=7,
-)
-
 # synth IV attachments
 
 abjad.attach(abjad.Clef("bass"), abjad.select.leaf(score["piano 4 voice"], 0))

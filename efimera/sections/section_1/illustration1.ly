@@ -35,7 +35,7 @@
             s1 * 1/2
             \bar "||"
         }
-        \context GrandStaff = "Staff Group"
+        \context StaffGroup = "Staff Group"
         <<
             \context Staff = "piano 1 staff"
             {

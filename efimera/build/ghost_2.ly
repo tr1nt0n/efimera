@@ -38,7 +38,7 @@
             s1 * 9/4
             \bar "||"
         }
-        \context GrandStaff = "Staff Group"
+        \context StaffGroup = "Staff Group"
         <<
             \context Staff = "piano 1 staff"
             {
@@ -50,10 +50,6 @@
                     a'8
                     ^ \markup \center-align -35
                     [
-                    \tweak padding 7
-                    - \abjad-dashed-line-with-arrow
-                    - \tweak bound-details.left.text \markup \concat { { \upright 0% } \hspace #0.5 }
-                    - \tweak bound-details.right.text \markup \concat { { \upright 10% } \hspace #0.5 }\startTextSpanOne
                     \revert Staff.Stem.stemlet-length
                     \tweak Accidental.stencil #ly:text-interface::print
                     \tweak Accidental.text \markup \concat { \one-undecimal-quarter-tone-up \hspace #0.125 \flat-one-syntonic-comma-up  }
@@ -108,7 +104,6 @@
                     ^ \markup \center-align -20
                     \once \override Rest.transparent = ##t
                     r1 * 1/2
-                    \stopTextSpanOne
                     \override Staff.Stem.stemlet-length = 0.75
                     \tweak Accidental.stencil #ly:text-interface::print
                     \tweak Accidental.text \markup { \abjad-natural  }
