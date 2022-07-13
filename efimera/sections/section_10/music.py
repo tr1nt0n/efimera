@@ -23,7 +23,15 @@ trinton.attach(
     ],
     attachment=abjad.BarLine("||"),
 )
-#
+
+# attachments
+
+trinton.attach(
+    voice=score["piano 1 voice"],
+    leaves=[0],
+    attachment=abjad.StopHairpin(),
+)
+
 # trinton.beam_score_without_splitting(score)
 #
 # trinton.fill_empty_staves_with_skips(score)

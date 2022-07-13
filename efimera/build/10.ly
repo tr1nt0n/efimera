@@ -18,7 +18,7 @@
             s1 * 1
             \bar "||"
         }
-        \context GrandStaff = "Staff Group"
+        \context StaffGroup = "Staff Group"
         <<
             \context Staff = "piano 1 staff"
             {
@@ -27,6 +27,7 @@
                     \set Staff.shortInstrumentName =
                     \markup \bold { I }
                     s1 * 7/4
+                    \!
                     s1 * 1
                     s1 * 9/8
                     s1 * 2

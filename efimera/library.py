@@ -30,7 +30,6 @@ def efimera_score(time_signatures):
             1,
         ],
         time_signatures=time_signatures,
-        # outer_staff="GrandStaff",
     )
 
     return score
