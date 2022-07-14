@@ -35,6 +35,33 @@ score = library.efimera_score(
     ]
 )
 
+# music commands
+
+for measures in [
+    [
+        1,
+        2,
+    ],
+    [4, 5],
+    [7, 8],
+    [
+        10,
+        11,
+        12,
+        13,
+        14,
+    ],
+    [
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+    ],
+]:
+
+    library.ghost(voice=score["piano 5 voice"], measures=measures, rewrite_meter=-2)
 
 # markups and beams
 
@@ -47,10 +74,31 @@ trinton.attach(
     ],
     attachment=abjad.BarLine("||"),
 )
-#
-# trinton.beam_score_without_splitting(score)
-#
+
+trinton.attach(voice=score["Global Context"], leaves=[0], attachment=library.tempo_2)
+
+# attachments
+
+trinton.attach(
+    voice=score["piano 1 voice"],
+    leaves=[0],
+    attachment=abjad.StopHairpin(),
+)
+
+trinton.attach(voice=score["piano 5 voice"], leaves=[0], attachment=abjad.Clef("bass"))
+
+trinton.beam_score_without_splitting(score)
+
 # trinton.fill_empty_staves_with_skips(score)
+
+# write sc file
+
+# library.write_sc_file(
+#     score=score,
+#     tempo=((1, 4), 41),
+#     section_number=10,
+#     current_directory="/Users/trintonprater/scores/efimera/efimera/sections/ghost_1",
+# )
 
 # show file
 

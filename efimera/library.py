@@ -321,6 +321,34 @@ def slashes_attachments(transposition):
 # pitchhandlers
 
 
+def ghost_pitching():
+    def handler(selections):
+        pitch_handler = evans.PitchHandler(
+            pitch_list=[
+                -27,
+                -24,
+                -27,
+                -24,
+                -26,
+                -24,
+                -26,
+                -24,
+                -26,
+                -24,
+                -26,
+                -27,
+                -26,
+                -27,
+                -23,
+            ],
+            forget=True,
+        )
+
+        pitch_handler(selections)
+
+    return handler
+
+
 def parting_glass_pitching(ratio_list):
     def handler(selections):
         pitch_handler = evans.PitchHandler(pitch_list=[5], forget=False)
@@ -1204,6 +1232,39 @@ def plane_pitching(voice_name, division):
 
 
 # music commands
+
+
+def ghost(
+    voice,
+    measures,
+    rewrite_meter=None,
+    preprocessor=None,
+):
+
+    trinton.music_command(
+        voice=voice,
+        measures=measures,
+        rmaker=rmakers.tuplet(
+            [
+                (
+                    1,
+                    1,
+                    1,
+                ),
+                (
+                    1,
+                    1,
+                ),
+            ]
+        ),
+        rmaker_commands=[
+            rmakers.beam(),
+        ],
+        rewrite_meter=rewrite_meter,
+        preprocessor=preprocessor,
+        pitch_handler=ghost_pitching(),
+        attachment_function=None,
+    )
 
 
 def grid(

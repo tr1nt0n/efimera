@@ -2,6 +2,7 @@
     <<
         \context TimeSignatureContext = "Global Context"
         {
+            \tempo 4=41
             \time 3/8
             s1 * 3/8
             #(ly:expect-warning "strange time signature found")
@@ -57,7 +58,7 @@
             s1 * 6/11
             \bar "||"
         }
-        \context GrandStaff = "Staff Group"
+        \context StaffGroup = "Staff Group"
         <<
             \context Staff = "piano 1 staff"
             {
@@ -66,6 +67,7 @@
                     \set Staff.shortInstrumentName =
                     \markup \bold { I }
                     s1 * 3/8
+                    \!
                     s1 * 1/3
                     s1 * 1/2
                     s1 * 3/8
@@ -181,27 +183,124 @@
                 {
                     \set Staff.shortInstrumentName =
                     \markup \bold{ V }
-                    s1 * 3/8
-                    s1 * 1/3
+                    \clef "bass"
+                    \override Staff.Stem.stemlet-length = 0.75
+                    a,,8
+                    [
+                    c,8
+                    \revert Staff.Stem.stemlet-length
+                    a,,8
+                    ]
+                    \tweak edge-height #'(0.7 . 0)
+                    \times 2/3
+                    {
+                        c,4
+                        bf,,4
+                    }
                     s1 * 1/2
-                    s1 * 3/8
-                    s1 * 1/3
+                    \override Staff.Stem.stemlet-length = 0.75
+                    a,,8
+                    [
+                    c,8
+                    \revert Staff.Stem.stemlet-length
+                    a,,8
+                    ]
+                    \tweak edge-height #'(0.7 . 0)
+                    \times 2/3
+                    {
+                        c,4
+                        bf,,4
+                    }
                     s1 * 1/2
-                    s1 * 3/8
-                    s1 * 1/3
+                    \override Staff.Stem.stemlet-length = 0.75
+                    a,,8
+                    [
+                    c,8
+                    \revert Staff.Stem.stemlet-length
+                    a,,8
+                    ]
+                    \tweak edge-height #'(0.7 . 0)
+                    \times 2/3
+                    {
+                        c,4
+                        bf,,4
+                    }
                     s1 * 1/2
-                    s1 * 3/8
-                    s1 * 1/3
-                    s1 * 3/4
-                    s1 * 3/8
-                    s1 * 1/3
+                    \override Staff.Stem.stemlet-length = 0.75
+                    a,,8
+                    [
+                    c,8
+                    \revert Staff.Stem.stemlet-length
+                    a,,8
+                    ]
+                    \tweak edge-height #'(0.7 . 0)
+                    \times 2/3
+                    {
+                        c,4
+                        bf,,4
+                    }
+                    c,4
+                    bf,,4
+                    c,4
+                    \override Staff.Stem.stemlet-length = 0.75
+                    bf,,8.
+                    [
+                    \revert Staff.Stem.stemlet-length
+                    c,8.
+                    ]
+                    \tweak edge-height #'(0.7 . 0)
+                    \times 8/9
+                    {
+                        \override Staff.Stem.stemlet-length = 0.75
+                        bf,,8
+                        [
+                        a,,8
+                        \revert Staff.Stem.stemlet-length
+                        bf,,8
+                        ]
+                    }
                     s1 * 1/2
-                    s1 * 12/17
-                    s1 * 2/3
-                    s1 * 12/19
-                    s1 * 3/5
-                    s1 * 4/7
-                    s1 * 6/11
+                    \tweak edge-height #'(0.7 . 0)
+                    \times 16/17
+                    {
+                        a,,4
+                        c,4
+                        a,,4
+                    }
+                    \tweak edge-height #'(0.7 . 0)
+                    \times 2/3
+                    {
+                        c,2
+                        bf,,2
+                    }
+                    \tweak edge-height #'(0.7 . 0)
+                    \times 16/19
+                    {
+                        c,4
+                        bf,,4
+                        c,4
+                    }
+                    \tweak text #tuplet-number::calc-fraction-text
+                    \tweak edge-height #'(0.7 . 0)
+                    \times 6/5
+                    {
+                        bf,,4
+                        c,4
+                    }
+                    \tweak edge-height #'(0.7 . 0)
+                    \times 16/21
+                    {
+                        bf,,4
+                        a,,4
+                        bf,,4
+                    }
+                    \tweak text #tuplet-number::calc-fraction-text
+                    \tweak edge-height #'(0.7 . 0)
+                    \times 12/11
+                    {
+                        a,,4
+                        cs,4
+                    }
                 }
             }
         >>

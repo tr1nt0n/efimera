@@ -26,15 +26,18 @@ trinton.attach(
 
 # attachments
 
-trinton.attach(
-    voice=score["piano 1 voice"],
-    leaves=[0],
-    attachment=abjad.StopHairpin(),
-)
+trinton.beam_score_without_splitting(score)
 
-# trinton.beam_score_without_splitting(score)
-#
 # trinton.fill_empty_staves_with_skips(score)
+
+# write sc file
+
+# library.write_sc_file(
+#     score=score,
+#     tempo=((1, 4), 85),
+#     section_number=10,
+#     current_directory="/Users/trintonprater/scores/efimera/efimera/sections/section_10",
+# )
 
 # show file
 

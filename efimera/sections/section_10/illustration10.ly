@@ -8,6 +8,7 @@
     <<
         \context TimeSignatureContext = "Global Context"
         {
+            \tempo 4=41
             \time 7/4
             s1 * 7/4
             \time 4/4
