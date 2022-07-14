@@ -74,17 +74,578 @@
                     \markup \bold { I }
                     s1 * 3/8
                     \!
-                    s1 * 1/3
+                    \tweak edge-height #'(0.7 . 0)
+                    \times 32/33
+                    {
+                        r32
+                        \clef "treble"
+                        \override Staff.Stem.stemlet-length = 0.75
+                        \tweak Accidental.stencil #ly:text-interface::print
+                        \tweak Accidental.text \markup { \sharp-two-syntonic-comma-down  }
+                        es'32
+                        - \tweak circled-tip ##t
+                        \<
+                        ~
+                        [
+                        <
+                            \tweak Accidental.stencil #ly:text-interface::print
+                            \tweak Accidental.text \markup { \sharp-two-syntonic-comma-down  }
+                            es'
+                            \tweak Accidental.stencil #ly:text-interface::print
+                            \tweak Accidental.text \markup { \abjad-sharp  }
+                            cs''
+                        >32
+                        ~
+                        <
+                            \tweak Accidental.stencil #ly:text-interface::print
+                            \tweak Accidental.text \markup { \sharp-two-syntonic-comma-down  }
+                            es'
+                            \tweak Accidental.stencil #ly:text-interface::print
+                            \tweak Accidental.text \markup { \abjad-sharp  }
+                            cs''
+                            \tweak Accidental.stencil #ly:text-interface::print
+                            \tweak Accidental.text \markup \concat { \one-septimal-comma-up \hspace #0.125 \double-sharp  }
+                            fss'''
+                        >32
+                        ~
+                        <
+                            \tweak Accidental.stencil #ly:text-interface::print
+                            \tweak Accidental.text \markup { \sharp-two-syntonic-comma-down  }
+                            es'
+                            \tweak Accidental.stencil #ly:text-interface::print
+                            \tweak Accidental.text \markup { \abjad-sharp  }
+                            cs''
+                            \tweak Accidental.stencil #ly:text-interface::print
+                            \tweak Accidental.text \markup \concat { \one-septimal-comma-up \hspace #0.125 \sharp-two-syntonic-comma-up  }
+                            fs'''
+                            \tweak Accidental.stencil #ly:text-interface::print
+                            \tweak Accidental.text \markup \concat { \one-septimal-comma-up \hspace #0.125 \double-sharp  }
+                            fss'''
+                        >32
+                        ~
+                        <
+                            \tweak Accidental.stencil #ly:text-interface::print
+                            \tweak Accidental.text \markup { \sharp-two-syntonic-comma-down  }
+                            es'
+                            \tweak Accidental.stencil #ly:text-interface::print
+                            \tweak Accidental.text \markup { \abjad-sharp  }
+                            cs''
+                            \tweak Accidental.stencil #ly:text-interface::print
+                            \tweak Accidental.text \markup \concat { \one-septimal-comma-up \hspace #0.125 \sharp-two-syntonic-comma-up  }
+                            fs'''
+                            \tweak Accidental.stencil #ly:text-interface::print
+                            \tweak Accidental.text \markup \concat { \one-septimal-comma-up \hspace #0.125 \double-sharp  }
+                            fss'''
+                            \tweak Accidental.stencil #ly:text-interface::print
+                            \tweak Accidental.text \markup { \sharp-one-syntonic-comma-down  }
+                            gs'''
+                        >32
+                        \mp
+                        - \tweak circled-tip ##t
+                        \>
+                        ~
+                        <
+                            \tweak Accidental.stencil #ly:text-interface::print
+                            \tweak Accidental.text \markup { \sharp-two-syntonic-comma-down  }
+                            es'
+                            \tweak Accidental.stencil #ly:text-interface::print
+                            \tweak Accidental.text \markup { \abjad-sharp  }
+                            cs''
+                            \tweak Accidental.stencil #ly:text-interface::print
+                            \tweak Accidental.text \markup \concat { \one-septimal-comma-up \hspace #0.125 \sharp-two-syntonic-comma-up  }
+                            fs'''
+                            \tweak Accidental.stencil #ly:text-interface::print
+                            \tweak Accidental.text \markup \concat { \one-septimal-comma-up \hspace #0.125 \double-sharp  }
+                            fss'''
+                        >32
+                        ~
+                        <
+                            \tweak Accidental.stencil #ly:text-interface::print
+                            \tweak Accidental.text \markup { \sharp-two-syntonic-comma-down  }
+                            es'
+                            \tweak Accidental.stencil #ly:text-interface::print
+                            \tweak Accidental.text \markup { \abjad-sharp  }
+                            cs''
+                            \tweak Accidental.stencil #ly:text-interface::print
+                            \tweak Accidental.text \markup \concat { \one-septimal-comma-up \hspace #0.125 \double-sharp  }
+                            fss'''
+                        >32
+                        ~
+                        <
+                            \tweak Accidental.stencil #ly:text-interface::print
+                            \tweak Accidental.text \markup { \sharp-two-syntonic-comma-down  }
+                            es'
+                            \tweak Accidental.stencil #ly:text-interface::print
+                            \tweak Accidental.text \markup { \abjad-sharp  }
+                            cs''
+                        >32
+                        ~
+                        \revert Staff.Stem.stemlet-length
+                        \tweak Accidental.stencil #ly:text-interface::print
+                        \tweak Accidental.text \markup { \sharp-two-syntonic-comma-down  }
+                        es'32
+                        ]
+                        r32
+                        \!
+                    }
                     s1 * 1/2
                     s1 * 3/8
-                    s1 * 1/3
+                    \tweak edge-height #'(0.7 . 0)
+                    \times 32/33
+                    {
+                        r32
+                        \override Staff.Stem.stemlet-length = 0.75
+                        \tweak Accidental.stencil #ly:text-interface::print
+                        \tweak Accidental.text \markup { \sharp-two-syntonic-comma-down  }
+                        es'32
+                        - \tweak circled-tip ##t
+                        \<
+                        ~
+                        [
+                        <
+                            \tweak Accidental.stencil #ly:text-interface::print
+                            \tweak Accidental.text \markup { \sharp-two-syntonic-comma-down  }
+                            es'
+                            \tweak Accidental.stencil #ly:text-interface::print
+                            \tweak Accidental.text \markup { \abjad-sharp  }
+                            cs''
+                        >32
+                        ~
+                        <
+                            \tweak Accidental.stencil #ly:text-interface::print
+                            \tweak Accidental.text \markup { \sharp-two-syntonic-comma-down  }
+                            es'
+                            \tweak Accidental.stencil #ly:text-interface::print
+                            \tweak Accidental.text \markup { \abjad-sharp  }
+                            cs''
+                            \tweak Accidental.stencil #ly:text-interface::print
+                            \tweak Accidental.text \markup \concat { \one-septimal-comma-up \hspace #0.125 \double-sharp  }
+                            fss'''
+                        >32
+                        ~
+                        <
+                            \tweak Accidental.stencil #ly:text-interface::print
+                            \tweak Accidental.text \markup { \sharp-two-syntonic-comma-down  }
+                            es'
+                            \tweak Accidental.stencil #ly:text-interface::print
+                            \tweak Accidental.text \markup { \abjad-sharp  }
+                            cs''
+                            \tweak Accidental.stencil #ly:text-interface::print
+                            \tweak Accidental.text \markup \concat { \one-septimal-comma-up \hspace #0.125 \sharp-two-syntonic-comma-up  }
+                            fs'''
+                            \tweak Accidental.stencil #ly:text-interface::print
+                            \tweak Accidental.text \markup \concat { \one-septimal-comma-up \hspace #0.125 \double-sharp  }
+                            fss'''
+                        >32
+                        ~
+                        <
+                            \tweak Accidental.stencil #ly:text-interface::print
+                            \tweak Accidental.text \markup { \sharp-two-syntonic-comma-down  }
+                            es'
+                            \tweak Accidental.stencil #ly:text-interface::print
+                            \tweak Accidental.text \markup { \abjad-sharp  }
+                            cs''
+                            \tweak Accidental.stencil #ly:text-interface::print
+                            \tweak Accidental.text \markup \concat { \one-septimal-comma-up \hspace #0.125 \sharp-two-syntonic-comma-up  }
+                            fs'''
+                            \tweak Accidental.stencil #ly:text-interface::print
+                            \tweak Accidental.text \markup \concat { \one-septimal-comma-up \hspace #0.125 \double-sharp  }
+                            fss'''
+                            \tweak Accidental.stencil #ly:text-interface::print
+                            \tweak Accidental.text \markup { \sharp-one-syntonic-comma-down  }
+                            gs'''
+                        >32
+                        \mp
+                        - \tweak circled-tip ##t
+                        \>
+                        ~
+                        <
+                            \tweak Accidental.stencil #ly:text-interface::print
+                            \tweak Accidental.text \markup { \sharp-two-syntonic-comma-down  }
+                            es'
+                            \tweak Accidental.stencil #ly:text-interface::print
+                            \tweak Accidental.text \markup { \abjad-sharp  }
+                            cs''
+                            \tweak Accidental.stencil #ly:text-interface::print
+                            \tweak Accidental.text \markup \concat { \one-septimal-comma-up \hspace #0.125 \sharp-two-syntonic-comma-up  }
+                            fs'''
+                            \tweak Accidental.stencil #ly:text-interface::print
+                            \tweak Accidental.text \markup \concat { \one-septimal-comma-up \hspace #0.125 \double-sharp  }
+                            fss'''
+                        >32
+                        ~
+                        <
+                            \tweak Accidental.stencil #ly:text-interface::print
+                            \tweak Accidental.text \markup { \sharp-two-syntonic-comma-down  }
+                            es'
+                            \tweak Accidental.stencil #ly:text-interface::print
+                            \tweak Accidental.text \markup { \abjad-sharp  }
+                            cs''
+                            \tweak Accidental.stencil #ly:text-interface::print
+                            \tweak Accidental.text \markup \concat { \one-septimal-comma-up \hspace #0.125 \double-sharp  }
+                            fss'''
+                        >32
+                        ~
+                        <
+                            \tweak Accidental.stencil #ly:text-interface::print
+                            \tweak Accidental.text \markup { \sharp-two-syntonic-comma-down  }
+                            es'
+                            \tweak Accidental.stencil #ly:text-interface::print
+                            \tweak Accidental.text \markup { \abjad-sharp  }
+                            cs''
+                        >32
+                        ~
+                        \revert Staff.Stem.stemlet-length
+                        \tweak Accidental.stencil #ly:text-interface::print
+                        \tweak Accidental.text \markup { \sharp-two-syntonic-comma-down  }
+                        es'32
+                        ]
+                        r32
+                        \!
+                    }
                     s1 * 1/2
                     s1 * 3/8
-                    s1 * 1/3
+                    \tweak edge-height #'(0.7 . 0)
+                    \times 32/33
+                    {
+                        r32
+                        \override Staff.Stem.stemlet-length = 0.75
+                        \tweak Accidental.stencil #ly:text-interface::print
+                        \tweak Accidental.text \markup { \sharp-two-syntonic-comma-down  }
+                        es'32
+                        - \tweak circled-tip ##t
+                        \<
+                        ~
+                        [
+                        <
+                            \tweak Accidental.stencil #ly:text-interface::print
+                            \tweak Accidental.text \markup { \sharp-two-syntonic-comma-down  }
+                            es'
+                            \tweak Accidental.stencil #ly:text-interface::print
+                            \tweak Accidental.text \markup { \abjad-sharp  }
+                            cs''
+                        >32
+                        ~
+                        <
+                            \tweak Accidental.stencil #ly:text-interface::print
+                            \tweak Accidental.text \markup { \sharp-two-syntonic-comma-down  }
+                            es'
+                            \tweak Accidental.stencil #ly:text-interface::print
+                            \tweak Accidental.text \markup { \abjad-sharp  }
+                            cs''
+                            \tweak Accidental.stencil #ly:text-interface::print
+                            \tweak Accidental.text \markup \concat { \one-septimal-comma-up \hspace #0.125 \double-sharp  }
+                            fss'''
+                        >32
+                        ~
+                        <
+                            \tweak Accidental.stencil #ly:text-interface::print
+                            \tweak Accidental.text \markup { \sharp-two-syntonic-comma-down  }
+                            es'
+                            \tweak Accidental.stencil #ly:text-interface::print
+                            \tweak Accidental.text \markup { \abjad-sharp  }
+                            cs''
+                            \tweak Accidental.stencil #ly:text-interface::print
+                            \tweak Accidental.text \markup \concat { \one-septimal-comma-up \hspace #0.125 \sharp-two-syntonic-comma-up  }
+                            fs'''
+                            \tweak Accidental.stencil #ly:text-interface::print
+                            \tweak Accidental.text \markup \concat { \one-septimal-comma-up \hspace #0.125 \double-sharp  }
+                            fss'''
+                        >32
+                        ~
+                        <
+                            \tweak Accidental.stencil #ly:text-interface::print
+                            \tweak Accidental.text \markup { \sharp-two-syntonic-comma-down  }
+                            es'
+                            \tweak Accidental.stencil #ly:text-interface::print
+                            \tweak Accidental.text \markup { \abjad-sharp  }
+                            cs''
+                            \tweak Accidental.stencil #ly:text-interface::print
+                            \tweak Accidental.text \markup \concat { \one-septimal-comma-up \hspace #0.125 \sharp-two-syntonic-comma-up  }
+                            fs'''
+                            \tweak Accidental.stencil #ly:text-interface::print
+                            \tweak Accidental.text \markup \concat { \one-septimal-comma-up \hspace #0.125 \double-sharp  }
+                            fss'''
+                            \tweak Accidental.stencil #ly:text-interface::print
+                            \tweak Accidental.text \markup { \sharp-one-syntonic-comma-down  }
+                            gs'''
+                        >32
+                        \mp
+                        - \tweak circled-tip ##t
+                        \>
+                        ~
+                        <
+                            \tweak Accidental.stencil #ly:text-interface::print
+                            \tweak Accidental.text \markup { \sharp-two-syntonic-comma-down  }
+                            es'
+                            \tweak Accidental.stencil #ly:text-interface::print
+                            \tweak Accidental.text \markup { \abjad-sharp  }
+                            cs''
+                            \tweak Accidental.stencil #ly:text-interface::print
+                            \tweak Accidental.text \markup \concat { \one-septimal-comma-up \hspace #0.125 \sharp-two-syntonic-comma-up  }
+                            fs'''
+                            \tweak Accidental.stencil #ly:text-interface::print
+                            \tweak Accidental.text \markup \concat { \one-septimal-comma-up \hspace #0.125 \double-sharp  }
+                            fss'''
+                        >32
+                        ~
+                        <
+                            \tweak Accidental.stencil #ly:text-interface::print
+                            \tweak Accidental.text \markup { \sharp-two-syntonic-comma-down  }
+                            es'
+                            \tweak Accidental.stencil #ly:text-interface::print
+                            \tweak Accidental.text \markup { \abjad-sharp  }
+                            cs''
+                            \tweak Accidental.stencil #ly:text-interface::print
+                            \tweak Accidental.text \markup \concat { \one-septimal-comma-up \hspace #0.125 \double-sharp  }
+                            fss'''
+                        >32
+                        ~
+                        <
+                            \tweak Accidental.stencil #ly:text-interface::print
+                            \tweak Accidental.text \markup { \sharp-two-syntonic-comma-down  }
+                            es'
+                            \tweak Accidental.stencil #ly:text-interface::print
+                            \tweak Accidental.text \markup { \abjad-sharp  }
+                            cs''
+                        >32
+                        ~
+                        \revert Staff.Stem.stemlet-length
+                        \tweak Accidental.stencil #ly:text-interface::print
+                        \tweak Accidental.text \markup { \sharp-two-syntonic-comma-down  }
+                        es'32
+                        ]
+                        r32
+                        \!
+                    }
                     s1 * 1/2
                     s1 * 3/8
-                    s1 * 1/3
-                    s1 * 3/4
+                    \tweak edge-height #'(0.7 . 0)
+                    \times 32/33
+                    {
+                        r32
+                        \override Staff.Stem.stemlet-length = 0.75
+                        \tweak Accidental.stencil #ly:text-interface::print
+                        \tweak Accidental.text \markup { \sharp-two-syntonic-comma-down  }
+                        es'32
+                        - \tweak circled-tip ##t
+                        \<
+                        ~
+                        [
+                        <
+                            \tweak Accidental.stencil #ly:text-interface::print
+                            \tweak Accidental.text \markup { \sharp-two-syntonic-comma-down  }
+                            es'
+                            \tweak Accidental.stencil #ly:text-interface::print
+                            \tweak Accidental.text \markup { \abjad-sharp  }
+                            cs''
+                        >32
+                        ~
+                        <
+                            \tweak Accidental.stencil #ly:text-interface::print
+                            \tweak Accidental.text \markup { \sharp-two-syntonic-comma-down  }
+                            es'
+                            \tweak Accidental.stencil #ly:text-interface::print
+                            \tweak Accidental.text \markup { \abjad-sharp  }
+                            cs''
+                            \tweak Accidental.stencil #ly:text-interface::print
+                            \tweak Accidental.text \markup \concat { \one-septimal-comma-up \hspace #0.125 \double-sharp  }
+                            fss'''
+                        >32
+                        ~
+                        <
+                            \tweak Accidental.stencil #ly:text-interface::print
+                            \tweak Accidental.text \markup { \sharp-two-syntonic-comma-down  }
+                            es'
+                            \tweak Accidental.stencil #ly:text-interface::print
+                            \tweak Accidental.text \markup { \abjad-sharp  }
+                            cs''
+                            \tweak Accidental.stencil #ly:text-interface::print
+                            \tweak Accidental.text \markup \concat { \one-septimal-comma-up \hspace #0.125 \sharp-two-syntonic-comma-up  }
+                            fs'''
+                            \tweak Accidental.stencil #ly:text-interface::print
+                            \tweak Accidental.text \markup \concat { \one-septimal-comma-up \hspace #0.125 \double-sharp  }
+                            fss'''
+                        >32
+                        ~
+                        <
+                            \tweak Accidental.stencil #ly:text-interface::print
+                            \tweak Accidental.text \markup { \sharp-two-syntonic-comma-down  }
+                            es'
+                            \tweak Accidental.stencil #ly:text-interface::print
+                            \tweak Accidental.text \markup { \abjad-sharp  }
+                            cs''
+                            \tweak Accidental.stencil #ly:text-interface::print
+                            \tweak Accidental.text \markup \concat { \one-septimal-comma-up \hspace #0.125 \sharp-two-syntonic-comma-up  }
+                            fs'''
+                            \tweak Accidental.stencil #ly:text-interface::print
+                            \tweak Accidental.text \markup \concat { \one-septimal-comma-up \hspace #0.125 \double-sharp  }
+                            fss'''
+                            \tweak Accidental.stencil #ly:text-interface::print
+                            \tweak Accidental.text \markup { \sharp-one-syntonic-comma-down  }
+                            gs'''
+                        >32
+                        - \tweak circled-tip ##t
+                        \>
+                        ~
+                        <
+                            \tweak Accidental.stencil #ly:text-interface::print
+                            \tweak Accidental.text \markup { \sharp-two-syntonic-comma-down  }
+                            es'
+                            \tweak Accidental.stencil #ly:text-interface::print
+                            \tweak Accidental.text \markup { \abjad-sharp  }
+                            cs''
+                            \tweak Accidental.stencil #ly:text-interface::print
+                            \tweak Accidental.text \markup \concat { \one-septimal-comma-up \hspace #0.125 \sharp-two-syntonic-comma-up  }
+                            fs'''
+                            \tweak Accidental.stencil #ly:text-interface::print
+                            \tweak Accidental.text \markup \concat { \one-septimal-comma-up \hspace #0.125 \double-sharp  }
+                            fss'''
+                        >32
+                        ~
+                        <
+                            \tweak Accidental.stencil #ly:text-interface::print
+                            \tweak Accidental.text \markup { \sharp-two-syntonic-comma-down  }
+                            es'
+                            \tweak Accidental.stencil #ly:text-interface::print
+                            \tweak Accidental.text \markup { \abjad-sharp  }
+                            cs''
+                            \tweak Accidental.stencil #ly:text-interface::print
+                            \tweak Accidental.text \markup \concat { \one-septimal-comma-up \hspace #0.125 \double-sharp  }
+                            fss'''
+                        >32
+                        ~
+                        <
+                            \tweak Accidental.stencil #ly:text-interface::print
+                            \tweak Accidental.text \markup { \sharp-two-syntonic-comma-down  }
+                            es'
+                            \tweak Accidental.stencil #ly:text-interface::print
+                            \tweak Accidental.text \markup { \abjad-sharp  }
+                            cs''
+                        >32
+                        ~
+                        \revert Staff.Stem.stemlet-length
+                        \tweak Accidental.stencil #ly:text-interface::print
+                        \tweak Accidental.text \markup { \sharp-two-syntonic-comma-down  }
+                        es'32
+                        ]
+                        r32
+                        \!
+                    }
+                    \tweak text #tuplet-number::calc-fraction-text
+                    \times 12/11
+                    {
+                        \override Staff.Stem.stemlet-length = 0.75
+                        \tweak Accidental.stencil #ly:text-interface::print
+                        \tweak Accidental.text \markup { \sharp-two-syntonic-comma-down  }
+                        ds'16
+                        - \tweak circled-tip ##t
+                        \<
+                        ~
+                        [
+                        <
+                            \tweak Accidental.stencil #ly:text-interface::print
+                            \tweak Accidental.text \markup { \sharp-two-syntonic-comma-down  }
+                            ds'
+                            \tweak Accidental.stencil #ly:text-interface::print
+                            \tweak Accidental.text \markup { \abjad-sharp  }
+                            cs''
+                        >16
+                        ~
+                        <
+                            \tweak Accidental.stencil #ly:text-interface::print
+                            \tweak Accidental.text \markup { \sharp-two-syntonic-comma-down  }
+                            ds'
+                            \tweak Accidental.stencil #ly:text-interface::print
+                            \tweak Accidental.text \markup { \abjad-sharp  }
+                            cs''
+                            \tweak Accidental.stencil #ly:text-interface::print
+                            \tweak Accidental.text \markup \concat { \one-septimal-comma-up \hspace #0.125 \double-sharp  }
+                            fss'''
+                        >16
+                        ~
+                        <
+                            \tweak Accidental.stencil #ly:text-interface::print
+                            \tweak Accidental.text \markup { \sharp-two-syntonic-comma-down  }
+                            ds'
+                            \tweak Accidental.stencil #ly:text-interface::print
+                            \tweak Accidental.text \markup { \abjad-sharp  }
+                            cs''
+                            \tweak Accidental.stencil #ly:text-interface::print
+                            \tweak Accidental.text \markup \concat { \one-septimal-comma-up \hspace #0.125 \double-sharp  }
+                            fss'''
+                            \tweak Accidental.stencil #ly:text-interface::print
+                            \tweak Accidental.text \markup \concat { \one-septimal-comma-up \hspace #0.125 \natural-two-syntonic-comma-up  }
+                            g'''
+                        >16
+                        ~
+                        <
+                            \tweak Accidental.stencil #ly:text-interface::print
+                            \tweak Accidental.text \markup { \sharp-two-syntonic-comma-down  }
+                            ds'
+                            \tweak Accidental.stencil #ly:text-interface::print
+                            \tweak Accidental.text \markup { \abjad-sharp  }
+                            cs''
+                            \tweak Accidental.stencil #ly:text-interface::print
+                            \tweak Accidental.text \markup \concat { \one-septimal-comma-up \hspace #0.125 \double-sharp  }
+                            fss'''
+                            \tweak Accidental.stencil #ly:text-interface::print
+                            \tweak Accidental.text \markup \concat { \one-septimal-comma-up \hspace #0.125 \natural-two-syntonic-comma-up  }
+                            g'''
+                            \tweak Accidental.stencil #ly:text-interface::print
+                            \tweak Accidental.text \markup { \sharp-two-syntonic-comma-down  }
+                            as'''
+                        >16
+                        - \tweak circled-tip ##t
+                        \>
+                        ~
+                        <
+                            \tweak Accidental.stencil #ly:text-interface::print
+                            \tweak Accidental.text \markup { \sharp-two-syntonic-comma-down  }
+                            ds'
+                            \tweak Accidental.stencil #ly:text-interface::print
+                            \tweak Accidental.text \markup { \abjad-sharp  }
+                            cs''
+                            \tweak Accidental.stencil #ly:text-interface::print
+                            \tweak Accidental.text \markup \concat { \one-septimal-comma-up \hspace #0.125 \double-sharp  }
+                            fss'''
+                            \tweak Accidental.stencil #ly:text-interface::print
+                            \tweak Accidental.text \markup \concat { \one-septimal-comma-up \hspace #0.125 \natural-two-syntonic-comma-up  }
+                            g'''
+                        >16
+                        ~
+                        <
+                            \tweak Accidental.stencil #ly:text-interface::print
+                            \tweak Accidental.text \markup { \sharp-two-syntonic-comma-down  }
+                            ds'
+                            \tweak Accidental.stencil #ly:text-interface::print
+                            \tweak Accidental.text \markup { \abjad-sharp  }
+                            cs''
+                            \tweak Accidental.stencil #ly:text-interface::print
+                            \tweak Accidental.text \markup \concat { \one-septimal-comma-up \hspace #0.125 \double-sharp  }
+                            fss'''
+                        >16
+                        ~
+                        <
+                            \tweak Accidental.stencil #ly:text-interface::print
+                            \tweak Accidental.text \markup { \sharp-two-syntonic-comma-down  }
+                            ds'
+                            \tweak Accidental.stencil #ly:text-interface::print
+                            \tweak Accidental.text \markup { \abjad-sharp  }
+                            cs''
+                        >16
+                        ~
+                        \revert Staff.Stem.stemlet-length
+                        \tweak Accidental.stencil #ly:text-interface::print
+                        \tweak Accidental.text \markup { \sharp-two-syntonic-comma-down  }
+                        ds'16
+                        ]
+                        r16
+                        \!
+                        \tweak Accidental.stencil #ly:text-interface::print
+                        \tweak Accidental.text \markup { \double-sharp-two-syntonic-comma-down  }
+                        fss'16
+                    }
                     s1 * 3/8
                     s1 * 1/3
                     s1 * 1/2
@@ -161,17 +722,33 @@
                     \set Staff.shortInstrumentName =
                     \markup \bold{ IV }
                     s1 * 3/8
-                    s1 * 1/3
+                    \tweak edge-height #'(0.7 . 0)
+                    \times 2/3
+                    {
+                        f,,2
+                    }
                     s1 * 1/2
                     s1 * 3/8
-                    s1 * 1/3
+                    \tweak edge-height #'(0.7 . 0)
+                    \times 2/3
+                    {
+                        f,,2
+                    }
                     s1 * 1/2
                     s1 * 3/8
-                    s1 * 1/3
+                    \tweak edge-height #'(0.7 . 0)
+                    \times 2/3
+                    {
+                        f,,2
+                    }
                     s1 * 1/2
                     s1 * 3/8
-                    s1 * 1/3
-                    s1 * 3/4
+                    \tweak edge-height #'(0.7 . 0)
+                    \times 2/3
+                    {
+                        f,,2
+                    }
+                    f,,2.
                     s1 * 3/8
                     s1 * 1/3
                     s1 * 1/2

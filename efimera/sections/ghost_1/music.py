@@ -63,6 +63,32 @@ for measures in [
 
     library.ghost(voice=score["piano 5 voice"], measures=measures, rewrite_meter=-2)
 
+for measures in [
+    [2],
+    [5],
+    [8],
+    [
+        11,
+        12,
+    ],
+]:
+    library.win(
+        voice=score["piano 1 voice"],
+        measures=measures,
+        pitch_handler=None,
+        fundamentals=[
+            14,
+        ],
+        pitch_index=18,
+        dyn_list=["mp"],
+    )
+
+    library.parting_glass(
+        voice=score["piano 4 voice"],
+        measures=measures,
+        rewrite_meter=-2,
+    )
+
 # markups and beams
 
 library.write_marginmarkups(score)
@@ -83,6 +109,10 @@ trinton.attach(
     voice=score["piano 1 voice"],
     leaves=[0],
     attachment=abjad.StopHairpin(),
+)
+
+abjad.attach(
+    abjad.Clef("treble"), abjad.select.leaves(score["piano 1 voice"], pitched=True)[0]
 )
 
 trinton.attach(voice=score["piano 5 voice"], leaves=[0], attachment=abjad.Clef("bass"))
