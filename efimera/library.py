@@ -1211,6 +1211,29 @@ def plane_pitching(voice_name, division):
                     3,
                 ],
             ],
+            "piano 4 voice": [
+                [
+                    3,
+                ],
+                [
+                    -6,
+                ],
+                [
+                    -7,
+                ],
+                [
+                    11,
+                ],
+                [
+                    1,
+                ],
+                [
+                    28,
+                ],
+                [
+                    29,
+                ],
+            ],
         }
 
         trinton.durational_pitch_association(
@@ -1275,6 +1298,8 @@ def grid(
     pitch_handler_2=grid2_pitching(),
     rewrite_meter=None,
     preprocessor=None,
+    npt=False,
+    attachment_function2=grid2_attachments(),
 ):
 
     talea = trinton.rotated_sequence(
@@ -1320,9 +1345,10 @@ def grid(
                     rmakers.beam(),
                 ],
                 rewrite_meter=rewrite_meter,
+                non_power_of_two=npt,
                 preprocessor=preprocessor,
                 pitch_handler=pitch_handler_2,
-                attachment_function=grid2_attachments(),
+                attachment_function=attachment_function2,
             )
 
         else:
@@ -1342,6 +1368,7 @@ def grid(
                     rmakers.force_rest(rest_selector),
                 ],
                 rewrite_meter=rewrite_meter,
+                non_power_of_two=npt,
                 preprocessor=preprocessor,
                 pitch_handler=pitch_handler_1,
                 attachment_function=grid1_attachments(),
@@ -1356,6 +1383,7 @@ def skyward(
     dyn_index=None,
     rewrite_meter=None,
     preprocessor=None,
+    npt=False,
 ):
     if pitch_handler is not None:
         for voice in voices:
@@ -1367,6 +1395,7 @@ def skyward(
                     rmakers.beam(),
                 ],
                 rewrite_meter=rewrite_meter,
+                non_power_of_two=npt,
                 preprocessor=preprocessor,
                 pitch_handler=pitch_handler,
                 attachment_function=skyward_attachments(index=dyn_index),
@@ -1383,6 +1412,7 @@ def skyward(
                     rmakers.beam(),
                 ],
                 rewrite_meter=rewrite_meter,
+                non_power_of_two=npt,
                 preprocessor=preprocessor,
                 pitch_handler=skyward_solo_pitching(
                     chord=chord,
@@ -1430,6 +1460,7 @@ def skyward(
                         rmakers.beam(),
                     ],
                     rewrite_meter=rewrite_meter,
+                    non_power_of_two=npt,
                     preprocessor=preprocessor,
                     pitch_handler=skyward_ensemble_pitching(
                         ratio_list=ratio_list, chord=chord
@@ -1446,6 +1477,7 @@ def win(
     pitch_index=0,
     dyn_list=None,
     rewrite_meter=None,
+    npt=False,
     preprocessor=None,
 ):
     rest_selector = trinton.patterned_tie_index_selector(
@@ -1482,6 +1514,7 @@ def win(
                 # rmakers.beam_groups(beam_rests=True),
             ],
             rewrite_meter=rewrite_meter,
+            non_power_of_two=npt,
             preprocessor=preprocessor,
             pitch_handler=pitch_handler,
             attachment_function=win_attachments(dyn_list=dyn_list),
@@ -1514,6 +1547,7 @@ def win(
                 # rmakers.beam_groups(beam_rests=True),
             ],
             rewrite_meter=rewrite_meter,
+            non_power_of_two=npt,
             preprocessor=preprocessor,
             pitch_handler=win_pitching(
                 fundamentals=fundamentals,
@@ -1529,6 +1563,7 @@ def parting_glass(
     index=0,
     preprocessor=None,
     rewrite_meter=None,
+    npt=False,
 ):
     _voice_name_to_ratios = {
         "piano 1 voice": [
@@ -1614,6 +1649,7 @@ def parting_glass(
                 rmakers.beam(),
             ],
             rewrite_meter=rewrite_meter,
+            non_power_of_two=npt,
             preprocessor=preprocessor,
             pitch_handler=evans.PitchHandler([-31]),
             attachment_function=None,
@@ -1709,6 +1745,7 @@ def parting_glass(
                 rmakers.beam(),
             ],
             rewrite_meter=rewrite_meter,
+            non_power_of_two=npt,
             preprocessor=preprocessor,
             pitch_handler=parting_glass_pitching(
                 ratio_list=trinton.rotated_sequence(
@@ -1728,6 +1765,7 @@ def slashes(
     transposition=0,
     pitch_index=0,
     rewrite_meter=None,
+    npt=False,
     preprocessor=None,
 ):
     _stage_to_rest_selector = {
@@ -1838,6 +1876,7 @@ def slashes(
             # rmakers.beam(),
         ],
         rewrite_meter=rewrite_meter,
+        non_power_of_two=npt,
         preprocessor=preprocessor,
         pitch_handler=pitch_handler,
         attachment_function=slashes_attachments(transposition=transposition),
@@ -1885,6 +1924,7 @@ def plane(
     talea_index=0,
     talea_division=16,
     rewrite_meter=None,
+    npt=False,
     preprocessor=None,
 ):
     _voice_to_talea = {
@@ -1960,6 +2000,24 @@ def plane(
             7,
             2,
         ],
+        "piano 4 voice": [
+            1,
+            2,
+            5,
+            3,
+            6,
+            4,
+            7,
+            2,
+            1,
+            2,
+            7,
+            4,
+            6,
+            3,
+            5,
+            2,
+        ],
     }
 
     trinton.music_command(
@@ -1973,6 +2031,7 @@ def plane(
             rmakers.beam(),
         ],
         rewrite_meter=rewrite_meter,
+        non_power_of_two=npt,
         preprocessor=preprocessor,
         pitch_handler=plane_pitching(voice.name, talea_division),
         attachment_function=None,

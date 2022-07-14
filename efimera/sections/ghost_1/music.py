@@ -89,6 +89,143 @@ for measures in [
         rewrite_meter=-2,
     )
 
+# synthesizer I music commands
+
+library.plane(
+    voice=score["piano 1 voice"],
+    measures=[13, 14,],
+    talea_division=16,
+    npt=True,
+)
+
+library.plane(
+    voice=score["piano 1 voice"],
+    measures=[16,],
+    talea_division=16,
+    npt=True,
+)
+
+for m in [17, 18]:
+    library.slashes(
+        voice=score["piano 1 voice"],
+        measures=[m,],
+        density_stage=5,
+        talea_index=8,
+        transposition=13,
+        pitch_index=0,
+        npt=True,
+    )
+
+for m in [19, 20]:
+    library.parting_glass(
+        voice=score["piano 1 voice"],
+        measures=[m,],
+        npt=True,
+    )
+
+library.win(
+    voice=score["piano 1 voice"],
+    measures=[21,],
+    fundamentals=[
+        24,
+    ],
+    pitch_index=0,
+)
+
+# synthesizer II music commands
+
+for measures in [[13, 14], [16,], [21,]]:
+
+    library.parting_glass(
+        voice=score["piano 2 voice"],
+        measures=measures,
+        npt=True,
+    )
+
+library.plane(
+    voice=score["piano 2 voice"],
+    measures=[17, 18,],
+    talea_division=16,
+    npt=True,
+)
+
+library.grid(
+    voices=[score["piano 2 voice"]],
+    talea_index=1,
+    measures=[19, 20,],
+    npt=True,
+)
+
+# synthesizer III music commands
+
+for measures in [[13, 14], [16,]]:
+    library.win(
+        voice=score["piano 3 voice"],
+        measures=measures,
+        fundamentals=[
+            24,
+        ],
+        pitch_index=0,
+    )
+
+library.grid(
+    voices=[score["piano 3 voice"]],
+    talea_index=1,
+    measures=[17, 18,],
+    npt=True,
+)
+
+for m in [19, 20,]:
+    library.slashes(
+        voice=score["piano 3 voice"],
+        measures=[m,],
+        density_stage=5,
+        talea_index=8,
+        pitch_handler=library.slashes_pitching(fundamental=[11,], index=0),
+        transposition=15,
+        pitch_index=0,
+        npt=True,
+    )
+
+library.plane(
+    voice=score["piano 3 voice"],
+    measures=[21,],
+    talea_division=16,
+    npt=True,
+)
+
+# synthesizer IV music commands
+
+for measures in [[13, 14,], [16,]]:
+    library.grid(
+        voices=[score["piano 4 voice"]],
+        measures=measures,
+        attachment_function2=None,
+        npt=True,
+    )
+
+library.win(
+    voice=score["piano 4 voice"],
+    measures=[17, 18,],
+    fundamentals=[
+        24,
+    ],
+    pitch_index=0,
+)
+
+library.plane(
+    voice=score["piano 4 voice"],
+    measures=[19, 20,],
+    talea_division=16,
+    npt=True,
+)
+
+library.parting_glass(
+    voice=score["piano 4 voice"],
+    measures=[21,],
+    npt=True,
+)
+
 # markups and beams
 
 library.write_marginmarkups(score)
@@ -103,7 +240,15 @@ trinton.attach(
 
 trinton.attach(voice=score["Global Context"], leaves=[0], attachment=library.tempo_2)
 
+
+trinton.beam_score_without_splitting(score)
+
+for voice_name in ["piano 1 voice", "piano 2 voice", "piano 3 voice", "piano 4 voice", "piano 5 voice"]:
+    trinton.reduce_tuplets(score=score, voice=voice_name, tuplets="all",)
+
 # attachments
+
+# trinton.annotate_leaves(score)
 
 trinton.attach(
     voice=score["piano 1 voice"],
@@ -117,9 +262,160 @@ abjad.attach(
 
 trinton.attach(voice=score["piano 5 voice"], leaves=[0], attachment=abjad.Clef("bass"))
 
-trinton.beam_score_without_splitting(score)
+abjad.mutate.transpose(abjad.select.logical_tie(score["piano 2 voice"], 24,), 11,)
 
-# trinton.fill_empty_staves_with_skips(score)
+abjad.mutate.transpose(abjad.select.logical_tie(score["piano 2 voice"], 25,), 28,)
+
+# synthesizer I attachments
+
+for n in [122, 126, 55,]:
+    abjad.detach(abjad.StartHairpin, abjad.select.leaf(score["piano 1 voice"], n))
+
+for n in [45, 131, 60,]:
+    abjad.detach(abjad.StopHairpin, abjad.select.leaf(score["piano 1 voice"], n))
+
+trinton.attach(
+    voice=score["piano 1 voice"],
+    leaves=[45,],
+    attachment=abjad.Dynamic("mp")
+)
+
+trinton.attach(
+    voice=score["piano 1 voice"],
+    leaves=[62],
+    attachment=abjad.Dynamic("mf")
+)
+
+trinton.attach(
+    voice=score["piano 1 voice"],
+    leaves=[69],
+    attachment=abjad.StartHairpin("<")
+)
+
+trinton.ottava(
+    score=score,
+    voice="piano 1 voice",
+    start_ottava=[122,],
+    stop_ottava=[130,],
+    octave=1,
+)
+
+# synthesizer II attachments
+
+for voice_name in ["piano 2 voice", "piano 3 voice"]:
+    for leaf in abjad.select.leaves(score[voice_name]):
+        abjad.detach(abjad.Dynamic, leaf)
+
+trinton.attach(
+    voice=score["piano 2 voice"],
+    leaves=[12],
+    attachment=abjad.Dynamic("mf")
+)
+
+trinton.attach(
+    voice=score["piano 1 voice"],
+    leaves=[18,],
+    attachment=abjad.StartHairpin("<")
+)
+
+# synthesizer III attachments
+
+trinton.attach(
+    voice=score["piano 3 voice"],
+    leaves=[17, 27,],
+    attachment=abjad.Dynamic("mf")
+)
+
+abjad.detach(abjad.StartHairpin, abjad.select.leaf(score["piano 3 voice"], 40))
+
+abjad.detach(abjad.StopHairpin, abjad.select.leaf(score["piano 3 voice"], 45))
+
+trinton.ottava(
+    score=score,
+    voice="piano 3 voice",
+    start_ottava=[13, 62,],
+    stop_ottava=[44, 97,],
+    octave=1,
+)
+
+# synthesizer 4 attachments
+
+trinton.attach(
+    voice=score["piano 4 voice"],
+    leaves=[1,],
+    attachment=abjad.Dynamic("ppp")
+)
+
+trinton.attach(
+    voice=score["piano 4 voice"],
+    leaves=[12,],
+    attachment=abjad.Dynamic("mf")
+)
+
+for n in [22, 26, 32, 36,]:
+    abjad.detach(abjad.StartHairpin, abjad.select.leaf(score["piano 4 voice"], n))
+
+for n in [31, 41,]:
+    abjad.detach(abjad.StopHairpin, abjad.select.leaf(score["piano 4 voice"], n))
+
+
+trinton.attach(
+    voice=score["piano 4 voice"],
+    leaves=[18,],
+    attachment=abjad.Dynamic("mf")
+)
+
+trinton.attach(
+    voice=score["piano 4 voice"],
+    leaves=[22,],
+    attachment=abjad.Clef("treble")
+)
+
+trinton.attach(
+    voice=score["piano 4 voice"],
+    leaves=[-1,],
+    attachment=abjad.Clef("bass")
+)
+
+trinton.ottava(
+    score=score,
+    voice="piano 4 voice",
+    start_ottava=[22,],
+    stop_ottava=[42,],
+    octave=1,
+)
+
+# synthesizer V attachments
+
+trinton.attach(
+    voice=score["piano 5 voice"],
+    leaves=[0],
+    attachment=abjad.Dynamic("mp")
+)
+
+trinton.attach(
+    voice=score["piano 5 voice"],
+    leaves=[23,],
+    attachment=abjad.StartHairpin("<")
+)
+
+trinton.attach(
+    voice=score["piano 5 voice"],
+    leaves=[26,],
+    attachment=abjad.Dynamic("ff")
+)
+
+trinton.attach(
+    voice=score["piano 5 voice"],
+    leaves=[40,],
+    attachment=abjad.StartHairpin(">o")
+)
+
+trinton.attach(
+    voice=score["piano 5 voice"],
+    leaves=[-1],
+    attachment=abjad.StopHairpin()
+)
 
 # write sc file
 
