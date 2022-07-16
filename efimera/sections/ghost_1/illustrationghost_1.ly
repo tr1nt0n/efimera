@@ -240,7 +240,6 @@
                             \tweak Accidental.text \markup \concat { \one-septimal-comma-up \hspace #0.125 \double-sharp  }
                             fss'''
                         >32
-                        \<
                         ~
                         <
                             \tweak Accidental.stencil #ly:text-interface::print
@@ -1143,6 +1142,7 @@
                         af'
                     >8
                     ^ \markup \center-align \center-column { A-41  }
+                    \<
                     [
                     <
                         \tweak Accidental.stencil #ly:text-interface::print
@@ -2144,8 +2144,8 @@
                         \tweak Accidental.text \markup { \flat-one-syntonic-comma-up  }
                         ef,
                     >4
-                    \mf
                     ^ \markup \center-align \center-column { +20 +4 +0  }
+                    \<
                     <
                         \tweak Accidental.stencil #ly:text-interface::print
                         \tweak Accidental.text \markup { \abjad-flat  }

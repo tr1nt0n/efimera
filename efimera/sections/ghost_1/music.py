@@ -404,7 +404,7 @@ trinton.attach(
 )
 
 trinton.attach(
-    voice=score["piano 1 voice"],
+    voice=score["piano 2 voice"],
     leaves=[
         18,
     ],
@@ -458,6 +458,14 @@ trinton.attach(
     attachment=abjad.Dynamic("mf"),
 )
 
+trinton.attach(
+    voice=score["piano 4 voice"],
+    leaves=[
+        18,
+    ],
+    attachment=abjad.StartHairpin("<"),
+)
+
 for n in [
     22,
     26,
@@ -471,15 +479,6 @@ for n in [
     41,
 ]:
     abjad.detach(abjad.StopHairpin, abjad.select.leaf(score["piano 4 voice"], n))
-
-
-trinton.attach(
-    voice=score["piano 4 voice"],
-    leaves=[
-        18,
-    ],
-    attachment=abjad.Dynamic("mf"),
-)
 
 trinton.attach(
     voice=score["piano 4 voice"],
