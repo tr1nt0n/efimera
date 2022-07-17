@@ -11,6 +11,50 @@ from efimera import ts
 
 score = library.efimera_score(ts.final_ts[12])
 
+# music commands
+
+library.win(
+    voice=score["piano 1 voice"],
+    measures=[
+        3,
+        4,
+    ],
+    pitch_handler=library.slashes_pitching(
+        fundamental=[
+            14,
+        ],
+        index=1,
+    ),
+    rewrite_meter=-1,
+    preprocessor=trinton.fuse_eighths_preprocessor((11,)),
+)
+
+# attachments
+
+for leaf in abjad.select.leaves(score["piano 1 voice"], pitched=True):
+    abjad.detach(abjad.Tie, leaf)
+
+abjad.attach(
+    abjad.StartPhrasingSlur(),
+    abjad.select.leaves(score["piano 1 voice"], pitched=True)[0],
+)
+
+abjad.attach(
+    abjad.Clef("treble"), abjad.select.leaves(score["piano 1 voice"], pitched=True)[0]
+)
+
+abjad.attach(
+    abjad.StopPhrasingSlur(),
+    abjad.select.leaves(score["piano 1 voice"], pitched=True)[-1],
+)
+
+trinton.attach(
+    voice=score["piano 1 voice"],
+    leaves=[
+        7,
+    ],
+    attachment=abjad.Dynamic("p"),
+)
 
 # markups and beams
 
@@ -28,10 +72,25 @@ trinton.attach_multiple(
         abjad.BarLine("|."),
     ],
 )
-#
-# trinton.beam_score_without_splitting(score)
-#
-# trinton.fill_empty_staves_with_skips(score)
+
+trinton.attach(
+    voice=score["Global Context"],
+    leaves=[
+        0,
+    ],
+    attachment=library.tempo_3,
+)
+
+trinton.beam_score_without_splitting(score)
+
+# write sc file
+
+# library.write_sc_file(
+#     score=score,
+#     tempo=((1, 4), 68),
+#     section_number=13,
+#     current_directory="/Users/trintonprater/scores/efimera/efimera/sections/section_13",
+# )
 
 # show file
 

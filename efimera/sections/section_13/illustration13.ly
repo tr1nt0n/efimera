@@ -8,6 +8,7 @@
     <<
         \context TimeSignatureContext = "Global Context"
         {
+            \tempo 4=68
             \time 6/4
             s1 * 3/2
             \time 8/4
@@ -19,7 +20,7 @@
             \bar "|."
             \once \override Score.BarLine.transparent = ##f
         }
-        \context GrandStaff = "Staff Group"
+        \context StaffGroup = "Staff Group"
         <<
             \context Staff = "piano 1 staff"
             {
@@ -29,8 +30,56 @@
                     \markup \bold { I }
                     s1 * 3/2
                     s1 * 2
-                    s1 * 3/8
-                    s1 * 1
+                    r8
+                    \clef "treble"
+                    \override Staff.Stem.stemlet-length = 0.75
+                    g''8
+                    - \tweak circled-tip ##t
+                    \<
+                    \(
+                    [
+                    \revert Staff.Stem.stemlet-length
+                    \tweak Accidental.stencil #ly:text-interface::print
+                    \tweak Accidental.text \markup \concat { \one-seventeen-limit-schisma-down \hspace #0.125 \abjad-sharp  }
+                    ds''8
+                    ]
+                    \override Staff.Stem.stemlet-length = 0.75
+                    \tweak Accidental.stencil #ly:text-interface::print
+                    \tweak Accidental.text \markup \concat { \one-twenty-three-limit-comma-up \hspace #0.125 \one-septimal-comma-down \hspace #0.125 \abjad-sharp  }
+                    fs''8
+                    [
+                    \revert Staff.Stem.stemlet-length
+                    e''8
+                    ]
+                    \override Staff.Stem.stemlet-length = 0.75
+                    \tweak Accidental.stencil #ly:text-interface::print
+                    \tweak Accidental.text \markup { \one-nineteen-limit-schisma-up  }
+                    c'''8
+                    \p
+                    - \tweak circled-tip ##t
+                    \>
+                    [
+                    \revert Staff.Stem.stemlet-length
+                    \tweak Accidental.stencil #ly:text-interface::print
+                    \tweak Accidental.text \markup \concat { \one-twenty-three-limit-comma-up \hspace #0.125 \one-septimal-comma-down \hspace #0.125 \abjad-sharp  }
+                    fs''8
+                    ]
+                    \override Staff.Stem.stemlet-length = 0.75
+                    \tweak Accidental.stencil #ly:text-interface::print
+                    \tweak Accidental.text \markup \concat { \one-seventeen-limit-schisma-down \hspace #0.125 \abjad-sharp  }
+                    as''8
+                    [
+                    \revert Staff.Stem.stemlet-length
+                    \tweak Accidental.stencil #ly:text-interface::print
+                    \tweak Accidental.text \markup { \abjad-natural  }
+                    a''8
+                    ]
+                    \tweak Accidental.stencil #ly:text-interface::print
+                    \tweak Accidental.text \markup { \abjad-natural  }
+                    d''8
+                    \)
+                    r8
+                    \!
                 }
             }
             \context Staff = "piano 2 staff"
