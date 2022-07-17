@@ -545,7 +545,7 @@ trinton.attach(
 # library.write_sc_file(
 #     score=score,
 #     tempo=((1, 4), 41),
-#     section_number=10,
+#     section_number=ghost_1,
 #     current_directory="/Users/trintonprater/scores/efimera/efimera/sections/ghost_1",
 # )
 
