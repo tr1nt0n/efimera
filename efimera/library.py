@@ -2059,21 +2059,21 @@ all_voice_names = eval(
 
 all_startmarkups = eval(
     """[
-    abjad.StartMarkup(markup=abjad.Markup(r"\markup \\bold { I }")),
-    abjad.StartMarkup(markup=abjad.Markup(r"\markup \\bold { II }")),
-    abjad.StartMarkup(markup=abjad.Markup(r"\markup \\bold { III }")),
-    abjad.StartMarkup(markup=abjad.Markup(r"\markup \\bold { IV }")),
-    abjad.StartMarkup(markup=abjad.Markup(r"\markup \\bold { V }")),
+    abjad.InstrumentName(markup=abjad.Markup(r"\markup \\bold { I }")),
+    abjad.InstrumentName(markup=abjad.Markup(r"\markup \\bold { II }")),
+    abjad.InstrumentName(markup=abjad.Markup(r"\markup \\bold { III }")),
+    abjad.InstrumentName(markup=abjad.Markup(r"\markup \\bold { IV }")),
+    abjad.InstrumentName(markup=abjad.Markup(r"\markup \\bold { V }")),
 ]"""
 )
 
 all_marginmarkups = eval(
     """[
-    abjad.MarginMarkup(markup=abjad.Markup(r"\markup \\bold { I }")),
-    abjad.MarginMarkup(markup=abjad.Markup(r"\markup \\bold { II }")),
-    abjad.MarginMarkup(markup=abjad.Markup(r"\markup \\bold { III }")),
-    abjad.MarginMarkup(markup=abjad.Markup(r"\markup \\bold{ IV }")),
-    abjad.MarginMarkup(markup=abjad.Markup(r"\markup \\bold{ V }")),
+    abjad.ShortInstrumentName(markup=abjad.Markup(r"\markup \\bold { I }")),
+    abjad.ShortInstrumentName(markup=abjad.Markup(r"\markup \\bold { II }")),
+    abjad.ShortInstrumentName(markup=abjad.Markup(r"\markup \\bold { III }")),
+    abjad.ShortInstrumentName(markup=abjad.Markup(r"\markup \\bold{ IV }")),
+    abjad.ShortInstrumentName(markup=abjad.Markup(r"\markup \\bold{ V }")),
 ]"""
 )
 
