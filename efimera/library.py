@@ -276,9 +276,9 @@ def win_attachments(dyn_list=None):
             if len(group) < 6:
                 pass
             else:
-                exclude_last = abjad.select.exclude(group, [-1])
-                for leaf in exclude_last:
-                    abjad.attach(abjad.Tie(), leaf)
+                # exclude_last = abjad.select.exclude(group, [-1])
+                # for leaf in exclude_last:
+                #     abjad.attach(abjad.Tie(), leaf)
                 abjad.attach(abjad.StartHairpin("o<"), group[0])
                 abjad.attach(
                     abjad.StartHairpin(">o"),
@@ -2143,6 +2143,7 @@ def write_sc_file(score, tempo, section_number, current_directory):
         lines += f'\t\t\t\\legato, 1,\n\t\t).record(\n\tpath: "{current_directory}/voice{i + 1}_section{section_number}_recording.wav", \n\tbus: 1, \n\tnumChannels: 1,\n);'
 
     lines += ")"
+    lines = lines.replace("'", "")
 
     with open(
         f'{current_directory}/voice_to_sc_{str(datetime.datetime.now()).replace(" ", "-").replace(":", "-").replace(".", "-")}.scd',

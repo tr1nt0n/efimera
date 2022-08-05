@@ -101,7 +101,6 @@
                         % SPANNER_STARTS:
                         - \tweak circled-tip ##t
                         \<
-                        ~
                         <
                             \tweak Accidental.stencil #ly:text-interface::print
                             \tweak Accidental.text \markup { \sharp-one-syntonic-comma-down  }
@@ -110,9 +109,6 @@
                             \tweak Accidental.text \markup { \abjad-sharp  }
                             gs
                         >64
-                        % AFTER:
-                        % SPANNER_STARTS:
-                        ~
                         <
                             \tweak Accidental.stencil #ly:text-interface::print
                             \tweak Accidental.text \markup { \sharp-one-syntonic-comma-down  }
@@ -124,9 +120,6 @@
                             \tweak Accidental.text \markup \concat { \one-septimal-comma-up \hspace #0.125 \abjad-sharp  }
                             bs'
                         >64
-                        % AFTER:
-                        % SPANNER_STARTS:
-                        ~
                         <
                             \tweak Accidental.stencil #ly:text-interface::print
                             \tweak Accidental.text \markup { \sharp-one-syntonic-comma-down  }
@@ -141,9 +134,6 @@
                             \tweak Accidental.text \markup \concat { \one-septimal-comma-up \hspace #0.125 \sharp-one-syntonic-comma-up  }
                             ds''
                         >64
-                        % AFTER:
-                        % SPANNER_STARTS:
-                        ~
                         <
                             \tweak Accidental.stencil #ly:text-interface::print
                             \tweak Accidental.text \markup { \sharp-one-syntonic-comma-down  }
@@ -167,7 +157,6 @@
                         % SPANNER_STARTS:
                         - \tweak circled-tip ##t
                         \>
-                        ~
                         <
                             \tweak Accidental.stencil #ly:text-interface::print
                             \tweak Accidental.text \markup { \sharp-one-syntonic-comma-down  }
@@ -182,9 +171,6 @@
                             \tweak Accidental.text \markup \concat { \one-septimal-comma-up \hspace #0.125 \sharp-one-syntonic-comma-up  }
                             ds''
                         >64
-                        % AFTER:
-                        % SPANNER_STARTS:
-                        ~
                         <
                             \tweak Accidental.stencil #ly:text-interface::print
                             \tweak Accidental.text \markup { \sharp-one-syntonic-comma-down  }
@@ -196,9 +182,6 @@
                             \tweak Accidental.text \markup \concat { \one-septimal-comma-up \hspace #0.125 \abjad-sharp  }
                             bs'
                         >64
-                        % AFTER:
-                        % SPANNER_STARTS:
-                        ~
                         <
                             \tweak Accidental.stencil #ly:text-interface::print
                             \tweak Accidental.text \markup { \sharp-one-syntonic-comma-down  }
@@ -207,9 +190,6 @@
                             \tweak Accidental.text \markup { \abjad-sharp  }
                             gs
                         >64
-                        % AFTER:
-                        % SPANNER_STARTS:
-                        ~
                         % OPENING:
                         % COMMANDS:
                         \revert Staff.Stem.stemlet-length
@@ -240,7 +220,6 @@
                         % SPANNER_STARTS:
                         - \tweak circled-tip ##t
                         \<
-                        ~
                         <
                             \tweak Accidental.stencil #ly:text-interface::print
                             \tweak Accidental.text \markup { \sharp-two-syntonic-comma-down  }
@@ -249,9 +228,6 @@
                             \tweak Accidental.text \markup { \natural-two-syntonic-comma-up  }
                             a
                         >32
-                        % AFTER:
-                        % SPANNER_STARTS:
-                        ~
                         <
                             \tweak Accidental.stencil #ly:text-interface::print
                             \tweak Accidental.text \markup { \sharp-two-syntonic-comma-down  }
@@ -263,9 +239,6 @@
                             \tweak Accidental.text \markup \concat { \one-septimal-comma-up \hspace #0.125 \abjad-sharp  }
                             bs'
                         >32
-                        % AFTER:
-                        % SPANNER_STARTS:
-                        ~
                         <
                             \tweak Accidental.stencil #ly:text-interface::print
                             \tweak Accidental.text \markup { \sharp-two-syntonic-comma-down  }
@@ -280,9 +253,6 @@
                             \tweak Accidental.text \markup \concat { \one-septimal-comma-up \hspace #0.125 \sharp-two-syntonic-comma-up  }
                             cs''
                         >32
-                        % AFTER:
-                        % SPANNER_STARTS:
-                        ~
                         <
                             \tweak Accidental.stencil #ly:text-interface::print
                             \tweak Accidental.text \markup { \sharp-two-syntonic-comma-down  }
@@ -306,7 +276,6 @@
                         % SPANNER_STARTS:
                         - \tweak circled-tip ##t
                         \>
-                        ~
                         <
                             \tweak Accidental.stencil #ly:text-interface::print
                             \tweak Accidental.text \markup { \sharp-two-syntonic-comma-down  }
@@ -321,9 +290,6 @@
                             \tweak Accidental.text \markup \concat { \one-septimal-comma-up \hspace #0.125 \sharp-two-syntonic-comma-up  }
                             cs''
                         >32
-                        % AFTER:
-                        % SPANNER_STARTS:
-                        ~
                         <
                             \tweak Accidental.stencil #ly:text-interface::print
                             \tweak Accidental.text \markup { \sharp-two-syntonic-comma-down  }
@@ -335,9 +301,6 @@
                             \tweak Accidental.text \markup \concat { \one-septimal-comma-up \hspace #0.125 \abjad-sharp  }
                             bs'
                         >32
-                        % AFTER:
-                        % SPANNER_STARTS:
-                        ~
                         <
                             \tweak Accidental.stencil #ly:text-interface::print
                             \tweak Accidental.text \markup { \sharp-two-syntonic-comma-down  }
@@ -346,9 +309,6 @@
                             \tweak Accidental.text \markup { \natural-two-syntonic-comma-up  }
                             a
                         >32
-                        % AFTER:
-                        % SPANNER_STARTS:
-                        ~
                         % OPENING:
                         % COMMANDS:
                         \revert Staff.Stem.stemlet-length
@@ -369,7 +329,6 @@
                         % SPANNER_STARTS:
                         - \tweak circled-tip ##t
                         \<
-                        ~
                     % CLOSE_BRACKETS:
                     }
                     % OPEN_BRACKETS:
@@ -389,8 +348,6 @@
                         % AFTER:
                         % START_BEAM:
                         [
-                        % SPANNER_STARTS:
-                        ~
                         <
                             \tweak Accidental.stencil #ly:text-interface::print
                             \tweak Accidental.text \markup { \sharp-two-syntonic-comma-down  }
@@ -402,9 +359,6 @@
                             \tweak Accidental.text \markup \concat { \one-septimal-comma-up \hspace #0.125 \double-sharp  }
                             css''
                         >64
-                        % AFTER:
-                        % SPANNER_STARTS:
-                        ~
                         <
                             \tweak Accidental.stencil #ly:text-interface::print
                             \tweak Accidental.text \markup { \sharp-two-syntonic-comma-down  }
@@ -419,9 +373,6 @@
                             \tweak Accidental.text \markup \concat { \one-septimal-comma-up \hspace #0.125 \double-sharp  }
                             css''
                         >64
-                        % AFTER:
-                        % SPANNER_STARTS:
-                        ~
                         <
                             \tweak Accidental.stencil #ly:text-interface::print
                             \tweak Accidental.text \markup { \sharp-two-syntonic-comma-down  }
@@ -445,7 +396,6 @@
                         % SPANNER_STARTS:
                         - \tweak circled-tip ##t
                         \>
-                        ~
                         <
                             \tweak Accidental.stencil #ly:text-interface::print
                             \tweak Accidental.text \markup { \sharp-two-syntonic-comma-down  }
@@ -460,9 +410,6 @@
                             \tweak Accidental.text \markup \concat { \one-septimal-comma-up \hspace #0.125 \double-sharp  }
                             css''
                         >64
-                        % AFTER:
-                        % SPANNER_STARTS:
-                        ~
                         <
                             \tweak Accidental.stencil #ly:text-interface::print
                             \tweak Accidental.text \markup { \sharp-two-syntonic-comma-down  }
@@ -474,9 +421,6 @@
                             \tweak Accidental.text \markup \concat { \one-septimal-comma-up \hspace #0.125 \double-sharp  }
                             css''
                         >64
-                        % AFTER:
-                        % SPANNER_STARTS:
-                        ~
                         <
                             \tweak Accidental.stencil #ly:text-interface::print
                             \tweak Accidental.text \markup { \sharp-two-syntonic-comma-down  }
@@ -485,9 +429,6 @@
                             \tweak Accidental.text \markup { \abjad-sharp  }
                             gs
                         >64
-                        % AFTER:
-                        % SPANNER_STARTS:
-                        ~
                         % OPENING:
                         % COMMANDS:
                         \revert Staff.Stem.stemlet-length

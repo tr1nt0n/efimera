@@ -102,7 +102,6 @@ SynthDef(
 			in: Logistic.ar(
 					chaosParam: 3.57,
 					freq: freq * 2,
-					init: dur / 10,
 			),
 			trig: freq,
 			maxdelaytime: dur.reciprocal,
@@ -111,13 +110,11 @@ SynthDef(
 				rate: Logistic.ar(
 					chaosParam: 3.59,
 					freq: freq * 2,
-					init: dur / 10,
 				),
 				depth: freq / (freq * 100),
 				delay: Logistic.ar(
 					chaosParam: 3.58,
 					freq: freq,
-					init: dur / 1000,
 				),
 				onset: freq / (freq * 1000),
 			).reciprocal,
@@ -138,11 +135,7 @@ SynthDef(
 			framesize: 1024,
 		);
 
-		var output = Limiter.ar(
-			in: conv,
-			level: 1,
-			dur: 0.01,
-		);
+		var output = conv * 8;
 
 		OffsetOut.ar(out, Pan2.ar(output, pan, env) );
 	}

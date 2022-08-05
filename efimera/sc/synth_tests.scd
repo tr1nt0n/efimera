@@ -1,61 +1,63 @@
-(
-// Synthesizer V
-SynthDef(
-	\synth_V, { | out, freq, dur, gate = 1 pan = 0 |
+n = ServerOptions.new;
 
+n.memSize = 16384;
+
+
+(
+// Synthesizer III
+SynthDef(
+	\synth_III, { | out, freq, dur, gate = 1 pan = 0 |
 		var env = Linen.kr(
 			gate,
-			attackTime: dur / 13,
+			attackTime: 0.01,
 			susLevel: 0.9,
 			releaseTime: dur,
 			doneAction: Done.freeSelf,
 		);
 
-		var saw = Saw.ar(freq: freq * 5);
-
-		var syncsaw = SyncSaw.ar(
-			syncFreq: Slope.ar(in: saw),
-			sawFreq: freq,
+		var pluck = Pluck.ar(
+			in: Logistic.ar(
+					chaosParam: 3.57,
+					freq: freq * 2,
+/*					init: dur / 10,*/
+				init: 0.5
+			),
+			trig: freq,
+			maxdelaytime: 0.5.reciprocal,
+			delaytime: Vibrato.ar(
+				freq: DC.ar(freq),
+				rate: Logistic.ar(
+					chaosParam: 3.59,
+					freq: freq * 2,
+					init: 0.5,
+				),
+				depth: freq / (freq * 100),
+				delay: Logistic.ar(
+					chaosParam: 3.58,
+					freq: freq,
+/*					init: dur / 1000,*/
+				),
+				onset: freq / (freq * 1000),
+			).reciprocal,
+/*			decaytime: dur * 2*/
 		);
 
-		var spring = Spring.ar(
-			in: syncsaw,
-			spring: dur,
-			damp: freq / 1000,
+		var sin = PMOsc.ar(
+			carfreq: freq * do({ [ 9, 13, 17, ].choose }),
+			modfreq: freq * do({ [ 3, 5, 7, ].choose }),
+			pmindex: 0.4,
+			modphase: 1,
+			mul: 1/150
 		);
 
-		var grain = GrainFM.ar(
-			trigger: Impulse.kr(freq / 1000),
-			dur: dur / 5,
-			carfreq: freq,
-			modfreq: freq * 13,
-		);
-
-		var conv1 = Convolution.ar(
-			in: spring,
-			kernel: grain,
-			framesize: 1024,
-		);
-
-		var rings = Ringz.ar(
-			in: conv1,
-			freq: freq * 13,
-			decaytime: dur,
-		);
-
-		var blip = Blip.ar(
-			freq: freq / 1.5,
-			numharm: dur * 5,
-		);
-
-		var conv2 = Convolution.ar(
-			in: rings,
-			kernel: blip,
+		var conv = Convolution.ar(
+			in: pluck,
+			kernel: sin,
 			framesize: 1024,
 		);
 
 		var output = Limiter.ar(
-			in: conv2,
+			in: conv,
 			level: 1,
 			dur: 0.01,
 		);
@@ -68,7 +70,7 @@ SynthDef(
 (
 	// voice 1
 		Pbind(
-			\instrument, \synth_V, \freq, Pseq(
+			\instrument, \synth_III, \freq, Pseq(
 				[
 					[
 						391.99543598174927 * 15/8,
@@ -109,7 +111,7 @@ SynthDef(
 		).play;
 	// voice 2
 		Pbind(
-			\instrument, \synth_V, \freq, Pseq(
+			\instrument, \synth_III, \freq, Pseq(
 				[
 					[
 						391.99543598174927 * 45/32,
@@ -146,7 +148,7 @@ SynthDef(
 		).play;
 	// voice 3
 		Pbind(
-			\instrument, \synth_V, \freq, Pseq(
+			\instrument, \synth_III, \freq, Pseq(
 				[
 					[
 						195.99771799087463 * 50/27,
@@ -179,7 +181,7 @@ SynthDef(
 		).play;
 	// voice 4
 		Pbind(
-			\instrument, \synth_V, \freq, Pseq(
+			\instrument, \synth_III, \freq, Pseq(
 				[
 					[
 						195.99771799087463 * 6/5,
@@ -218,7 +220,7 @@ SynthDef(
 (
 	// voice 1
 		Pbind(
-			\instrument, \synth_V, \freq, Pseq(
+			\instrument, \synth_III, \freq, Pseq(
 				[
 					[
 						Rest(),
@@ -367,7 +369,7 @@ SynthDef(
 		).play;
 	// voice 2
 		Pbind(
-			\instrument, \synth_V, \freq, Pseq(
+			\instrument, \synth_III, \freq, Pseq(
 				[
 					[
 						Rest(),
@@ -918,7 +920,7 @@ SynthDef(
 		).play;
 	// voice 3
 		Pbind(
-			\instrument, \synth_V, \freq, Pseq(
+			\instrument, \synth_III, \freq, Pseq(
 				[
 					[
 						Rest(),
