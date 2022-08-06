@@ -205,12 +205,12 @@ trinton.attach(
     attachment=abjad.Clef("bass"),
 )
 
-# library.write_sc_file(
-#     score=score,
-#     tempo=((1, 4), 170),
-#     section_number=2,
-#     current_directory="/Users/trintonprater/scores/efimera/efimera/sections/section_2",
-# )
+library.write_sc_file(
+    score=score,
+    tempo=((1, 4), 170),
+    section_number=2,
+    current_directory="/Users/trintonprater/scores/efimera/efimera/sections/section_2",
+)
 
 # trinton.make_sc_file(
 #     score=score,
@@ -229,6 +229,6 @@ trinton.render_file(
     segment_name="2",
     includes=[
         "/Users/trintonprater/scores/efimera/efimera/build/efimera-stylesheet.ily",
-        "/Users/trintonprater/abjad/abjad/_stylesheets/abjad.ily",
+        "/Users/trintonprater/abjad/abjad/scm/abjad.ily",
     ],
 )

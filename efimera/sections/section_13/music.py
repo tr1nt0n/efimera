@@ -85,12 +85,12 @@ trinton.beam_score_without_splitting(score)
 
 # write sc file
 
-# library.write_sc_file(
-#     score=score,
-#     tempo=((1, 4), 68),
-#     section_number=13,
-#     current_directory="/Users/trintonprater/scores/efimera/efimera/sections/section_13",
-# )
+library.write_sc_file(
+    score=score,
+    tempo=((1, 4), 68),
+    section_number=13,
+    current_directory="/Users/trintonprater/scores/efimera/efimera/sections/section_13",
+)
 
 # show file
 
@@ -101,6 +101,6 @@ trinton.render_file(
     segment_name="13",
     includes=[
         "/Users/trintonprater/scores/efimera/efimera/build/efimera-stylesheet.ily",
-        "/Users/trintonprater/abjad/abjad/_stylesheets/abjad.ily",
+        "/Users/trintonprater/abjad/abjad/scm/abjad.ily",
     ],
 )

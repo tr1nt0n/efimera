@@ -6,7 +6,7 @@
 
 \include "../library.ily"
 \include "/Users/trintonprater/evans/lilypond/evans-markups.ily"
-\include "/Users/trintonprater/abjad/abjad/_stylesheets/ekmelos-ji-accidental-markups.ily"
+\include "/Users/trintonprater/abjad/abjad/scm/ekmelos-ji-accidental-markups.ily"
 
 \header {
     dedication = \markup \override #'(font-name . "Bodoni72 Book Italic") \fontsize #3 \center-column {". . . donde quiera que podrían estar ellos siempre recuerdan que el pasado era una mentira, que la memoria no tiene retorno, que cada primavera pasada nunca se pudo recuperar, y que el amor más salvaje y más tenaz era una . . ." \fontsize #0.25 \with-color #white "."}

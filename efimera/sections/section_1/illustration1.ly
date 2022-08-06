@@ -1,7 +1,7 @@
 \version "2.20.0"
 \language "english"
 \include "/Users/trintonprater/scores/efimera/efimera/build/efimera-stylesheet.ily"
-\include "/Users/trintonprater/abjad/abjad/_stylesheets/abjad.ily"
+\include "/Users/trintonprater/abjad/abjad/scm/abjad.ily"
 \score
 {
     % OPEN_BRACKETS:

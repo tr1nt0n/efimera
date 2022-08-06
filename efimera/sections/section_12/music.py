@@ -189,12 +189,12 @@ abjad.override(
     abjad.select.tuplets(score["piano 3 voice"])[-1]
 ).TupletNumber.text = r"\markup \italic { 21:18 }"
 
-# library.write_sc_file(
-#     score=score,
-#     tempo=((1, 4), 41),
-#     section_number=12,
-#     current_directory="/Users/trintonprater/scores/efimera/efimera/sections/section_12",
-# )
+library.write_sc_file(
+    score=score,
+    tempo=((1, 4), 41),
+    section_number=12,
+    current_directory="/Users/trintonprater/scores/efimera/efimera/sections/section_12",
+)
 
 # show file
 
@@ -205,6 +205,6 @@ trinton.render_file(
     segment_name="12",
     includes=[
         "/Users/trintonprater/scores/efimera/efimera/build/efimera-stylesheet.ily",
-        "/Users/trintonprater/abjad/abjad/_stylesheets/abjad.ily",
+        "/Users/trintonprater/abjad/abjad/scm/abjad.ily",
     ],
 )

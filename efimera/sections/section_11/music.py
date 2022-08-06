@@ -170,12 +170,12 @@ trinton.attach(
 
 # write sc file
 
-# library.write_sc_file(
-#     score=score,
-#     tempo=((1, 4), 27),
-#     section_number=11,
-#     current_directory="/Users/trintonprater/scores/efimera/efimera/sections/section_11",
-# )
+library.write_sc_file(
+    score=score,
+    tempo=((1, 4), 27),
+    section_number=11,
+    current_directory="/Users/trintonprater/scores/efimera/efimera/sections/section_11",
+)
 
 # show file
 
@@ -186,6 +186,6 @@ trinton.render_file(
     segment_name="11",
     includes=[
         "/Users/trintonprater/scores/efimera/efimera/build/efimera-stylesheet.ily",
-        "/Users/trintonprater/abjad/abjad/_stylesheets/abjad.ily",
+        "/Users/trintonprater/abjad/abjad/scm/abjad.ily",
     ],
 )

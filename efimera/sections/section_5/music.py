@@ -285,12 +285,12 @@ for voice_name, leaf in zip(
         attachments=[abjad.Dynamic("ff"), abjad.StartHairpin(">o")],
     )
 
-# library.write_sc_file(
-#     score=score,
-#     tempo=((1, 4), 68),
-#     section_number=5,
-#     current_directory="/Users/trintonprater/scores/efimera/efimera/sections/section_5",
-# )
+library.write_sc_file(
+    score=score,
+    tempo=((1, 4), 68),
+    section_number=5,
+    current_directory="/Users/trintonprater/scores/efimera/efimera/sections/section_5",
+)
 
 # trinton.make_sc_file(
 #     score=score,
@@ -309,6 +309,6 @@ trinton.render_file(
     segment_name="5",
     includes=[
         "/Users/trintonprater/scores/efimera/efimera/build/efimera-stylesheet.ily",
-        "/Users/trintonprater/abjad/abjad/_stylesheets/abjad.ily",
+        "/Users/trintonprater/abjad/abjad/scm/abjad.ily",
     ],
 )

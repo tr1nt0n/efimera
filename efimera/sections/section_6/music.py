@@ -202,12 +202,12 @@ for group, dyn in zip(
 
 # write sc file
 
-# library.write_sc_file(
-#     score=score,
-#     tempo=((1, 4), 85),
-#     section_number=6,
-#     current_directory="/Users/trintonprater/scores/efimera/efimera/sections/section_6",
-# )
+library.write_sc_file(
+    score=score,
+    tempo=((1, 4), 85),
+    section_number=6,
+    current_directory="/Users/trintonprater/scores/efimera/efimera/sections/section_6",
+)
 
 
 # show file
@@ -219,6 +219,6 @@ trinton.render_file(
     segment_name="6",
     includes=[
         "/Users/trintonprater/scores/efimera/efimera/build/efimera-stylesheet.ily",
-        "/Users/trintonprater/abjad/abjad/_stylesheets/abjad.ily",
+        "/Users/trintonprater/abjad/abjad/scm/abjad.ily",
     ],
 )

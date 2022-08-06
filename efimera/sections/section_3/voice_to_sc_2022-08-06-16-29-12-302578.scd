@@ -256,3 +256,259 @@ SynthDef(
 	}
 ).add;
 )
+
+
+(
+	// voice 1
+		Pbind(
+			 \instrument, \synth_I, \freq, Pseq(
+				[
+					[
+						Rest(),
+					],
+					[
+						Rest(),
+					],
+					[
+						Rest(),
+					],
+					[
+						Rest(),
+					],
+				],
+			),
+			\dur, Pseq(
+				[
+					4 * 20/9,
+					3 * 20/9,
+					3 * 20/9,
+					5 * 20/9,
+				]
+			,1),
+			\amp, 0.2,
+			\legato, 1,
+		).record(
+	path: "/Users/trintonprater/scores/efimera/efimera/sections/section_3/voice1_section3_recording.wav", 
+	bus: 1, 
+	numChannels: 1,
+);
+	// voice 2
+		Pbind(
+			 \instrument, \synth_II, \freq, Pseq(
+				[
+					[
+						Rest(),
+					],
+					[
+						Rest(),
+					],
+					[
+						Rest(),
+					],
+					[
+						Rest(),
+					],
+				],
+			),
+			\dur, Pseq(
+				[
+					4 * 20/9,
+					3 * 20/9,
+					3 * 20/9,
+					5 * 20/9,
+				]
+			,1),
+			\amp, 0.2,
+			\legato, 1,
+		).record(
+	path: "/Users/trintonprater/scores/efimera/efimera/sections/section_3/voice2_section3_recording.wav", 
+	bus: 1, 
+	numChannels: 1,
+);
+	// voice 3
+		Pbind(
+			 \instrument, \synth_III, \freq, Pseq(
+				[
+					[
+						Rest(),
+					],
+					[
+						Rest(),
+					],
+					[
+						261.6255653005986 * 9/8,
+					],
+					[
+						261.6255653005986 * 10/9,
+					],
+					[
+						261.6255653005986 * 9/8,
+					],
+					[
+						Rest(),
+					],
+					[
+						261.6255653005986 * 10/9,
+					],
+					[
+						261.6255653005986 * 8/5,
+					],
+					[
+						261.6255653005986 * 9/8,
+					],
+					[
+						Rest(),
+					],
+					[
+						Rest(),
+					],
+					[
+						261.6255653005986 * 8/5,
+					],
+					[
+						261.6255653005986 * 9/8,
+					],
+					[
+						261.6255653005986 * 10/9,
+					],
+					[
+						Rest(),
+					],
+					[
+						261.6255653005986 * 9/8,
+					],
+					[
+						261.6255653005986 * 10/9,
+					],
+					[
+						261.6255653005986 * 9/5,
+					],
+					[
+						Rest(),
+					],
+					[
+						261.6255653005986 * 50/27,
+					],
+					[
+						261.6255653005986 * 9/8,
+					],
+					[
+						261.6255653005986 * 10/9,
+					],
+					[
+						Rest(),
+					],
+					[
+						261.6255653005986 * 8/5,
+					],
+					[
+						261.6255653005986 * 9/8,
+					],
+					[
+						261.6255653005986 * 50/27,
+					],
+				],
+			),
+			\dur, Pseq(
+				[
+					4 * 20/9,
+					2/5 * 20/9,
+					1/5 * 20/9,
+					1/5 * 20/9,
+					1/5 * 20/9,
+					3/4 * 20/9,
+					1/4 * 20/9,
+					3/4 * 20/9,
+					1/4 * 20/9,
+					3 * 20/9,
+					1/5 * 20/9,
+					2/5 * 20/9,
+					1/5 * 20/9,
+					1/5 * 20/9,
+					1/4 * 20/9,
+					1/4 * 20/9,
+					1/4 * 20/9,
+					1 * 20/9,
+					1/4 * 20/9,
+					6/11 * 20/9,
+					2/11 * 20/9,
+					2/11 * 20/9,
+					2/11 * 20/9,
+					4/11 * 20/9,
+					2/11 * 20/9,
+					4/11 * 20/9,
+				]
+			,1),
+			\amp, 0.2,
+			\legato, 1,
+		).record(
+	path: "/Users/trintonprater/scores/efimera/efimera/sections/section_3/voice3_section3_recording.wav", 
+	bus: 1, 
+	numChannels: 1,
+);
+	// voice 4
+		Pbind(
+			 \instrument, \synth_IV, \freq, Pseq(
+				[
+					[
+						Rest(),
+					],
+					[
+						Rest(),
+					],
+					[
+						Rest(),
+					],
+					[
+						Rest(),
+					],
+				],
+			),
+			\dur, Pseq(
+				[
+					4 * 20/9,
+					3 * 20/9,
+					3 * 20/9,
+					5 * 20/9,
+				]
+			,1),
+			\amp, 0.2,
+			\legato, 1,
+		).record(
+	path: "/Users/trintonprater/scores/efimera/efimera/sections/section_3/voice4_section3_recording.wav", 
+	bus: 1, 
+	numChannels: 1,
+);
+	// voice 5
+		Pbind(
+			 \instrument, \synth_V, \freq, Pseq(
+				[
+					[
+						Rest(),
+					],
+					[
+						Rest(),
+					],
+					[
+						Rest(),
+					],
+					[
+						Rest(),
+					],
+				],
+			),
+			\dur, Pseq(
+				[
+					4 * 20/9,
+					3 * 20/9,
+					3 * 20/9,
+					5 * 20/9,
+				]
+			,1),
+			\amp, 0.2,
+			\legato, 1,
+		).record(
+	path: "/Users/trintonprater/scores/efimera/efimera/sections/section_3/voice5_section3_recording.wav", 
+	bus: 1, 
+	numChannels: 1,
+);)

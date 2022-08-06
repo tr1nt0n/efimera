@@ -399,12 +399,12 @@ for voice_name in ["piano 1 voice", "piano 2 voice"]:
 
 # write sc file
 
-# library.write_sc_file(
-#     score=score,
-#     tempo=((1, 4), 77),
-#     section_number=ghost_2,
-#     current_directory="/Users/trintonprater/scores/efimera/efimera/sections/ghost_2",
-# )
+library.write_sc_file(
+    score=score,
+    tempo=((1, 4), 77),
+    section_number=420,
+    current_directory="/Users/trintonprater/scores/efimera/efimera/sections/ghost_2",
+)
 
 # show file
 
@@ -415,6 +415,6 @@ trinton.render_file(
     segment_name="ghost_2",
     includes=[
         "/Users/trintonprater/scores/efimera/efimera/build/efimera-stylesheet.ily",
-        "/Users/trintonprater/abjad/abjad/_stylesheets/abjad.ily",
+        "/Users/trintonprater/abjad/abjad/scm/abjad.ily",
     ],
 )
