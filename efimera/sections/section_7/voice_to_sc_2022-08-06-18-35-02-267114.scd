@@ -98,27 +98,16 @@ SynthDef(
 			doneAction: Done.freeSelf,
 		);
 
-		var pluck = Pluck.ar(
-			in: Logistic.ar(
-					chaosParam: 3.57,
-					freq: freq * 2,
+		var pluck = DynKlank.ar(
+			`[[freq], nil, [1]],
+			Impulse.ar(
+				freq: Logistic.ar(
+				chaosParam: 3.57,
+				freq: freq,
+				init: dur * 2
+				)
 			),
-			trig: freq,
-			maxdelaytime: dur.reciprocal,
-			delaytime: Vibrato.ar(
-				freq: DC.ar(freq),
-				rate: Logistic.ar(
-					chaosParam: 3.59,
-					freq: freq * 2,
-				),
-				depth: freq / (freq * 100),
-				delay: Logistic.ar(
-					chaosParam: 3.58,
-					freq: freq,
-				),
-				onset: freq / (freq * 1000),
-			).reciprocal,
-			decaytime: dur * 2
+			decayscale: dur
 		);
 
 		var sin = PMOsc.ar(
@@ -135,7 +124,11 @@ SynthDef(
 			framesize: 1024,
 		);
 
-		var output = conv * 16;
+		var output = Limiter.ar(
+			in: conv,
+			level: 1,
+			dur: 0.01,
+		);
 
 		OffsetOut.ar(out, Pan2.ar(output, pan, env) );
 	}
@@ -264,39 +257,31 @@ SynthDef(
 			 \instrument, \synth_I, \freq, Pseq(
 				[
 					[
-						69.29565774421802 * 10/9, 69.29565774421802 * 37/9, 69.29565774421802 * 5, 69.29565774421802 * 9, 69.29565774421802 * 13,
+						Rest(),
 					],
 					[
-						69.29565774421802 * 1, 69.29565774421802 * 3, 69.29565774421802 * 5, 69.29565774421802 * 7, 69.29565774421802 * 9,
+						Rest(),
 					],
 					[
-						69.29565774421802 * 32/27, 69.29565774421802 * 113/27, 69.29565774421802 * 221/27, 69.29565774421802 * 9, 69.29565774421802 * 320/27,
+						Rest(),
 					],
 					[
-						69.29565774421802 * 13/1,
-					],
-					[
-						69.29565774421802 * 9/1,
-					],
-					[
-						69.29565774421802 * 320/27,
+						Rest(),
 					],
 				],
 			),
 			\dur, Pseq(
 				[
-					9 * 20/9,
-					8 * 20/9,
-					17/2 * 20/9,
-					7 * 20/9,
-					8 * 20/9,
-					4 * 20/9,
+					4 * 6/17,
+					3 * 6/17,
+					3 * 6/17,
+					5 * 6/17,
 				]
 			,1),
 			\amp, 0.2,
 			\legato, 1,
 		).record(
-	path: "/Users/trintonprater/scores/efimera/efimera/sections/section_11/voice1_section11_recording.wav", 
+	path: "/Users/trintonprater/scores/efimera/efimera/sections/section_7/voice1_section7_recording.wav", 
 	bus: 1, 
 	numChannels: 1,
 );
@@ -305,43 +290,75 @@ SynthDef(
 			 \instrument, \synth_II, \freq, Pseq(
 				[
 					[
-						Rest(),
+						184.9972113558172,
+					],
+					[
+						311.1269837220809,
+					],
+					[
+						184.9972113558172,
+					],
+					[
+						174.61411571650194,
 					],
 					[
 						Rest(),
 					],
 					[
-						Rest(),
+						493.8833012561241,
 					],
 					[
-						Rest(),
+						1479.9776908465376,
 					],
 					[
-						69.29565774421802 * 5/1,
+						220.0,
 					],
 					[
-						69.29565774421802 * 5/1,
+						369.9944227116344,
 					],
 					[
-						69.29565774421802 * 113/27,
+						277.1826309768721,
+					],
+					[
+						523.2511306011972,
+					],
+					[
+						349.2282314330039,
+					],
+					[
+						587.3295358348151,
+					],
+					[
+						415.3046975799451,
+					],
+					[
+						830.6093951598903,
 					],
 				],
 			),
 			\dur, Pseq(
 				[
-					9 * 20/9,
-					8 * 20/9,
-					9/2 * 20/9,
-					4 * 20/9,
-					7 * 20/9,
-					8 * 20/9,
-					4 * 20/9,
+					1 * 6/17,
+					1/2 * 6/17,
+					1 * 6/17,
+					3/2 * 6/17,
+					3 * 6/17,
+					1 * 6/17,
+					3/2 * 6/17,
+					3/4 * 6/17,
+					5/4 * 6/17,
+					1/2 * 6/17,
+					1/4 * 6/17,
+					1/2 * 6/17,
+					5/4 * 6/17,
+					3/4 * 6/17,
+					1/4 * 6/17,
 				]
 			,1),
 			\amp, 0.2,
 			\legato, 1,
 		).record(
-	path: "/Users/trintonprater/scores/efimera/efimera/sections/section_11/voice2_section11_recording.wav", 
+	path: "/Users/trintonprater/scores/efimera/efimera/sections/section_7/voice2_section7_recording.wav", 
 	bus: 1, 
 	numChannels: 1,
 );
@@ -350,43 +367,108 @@ SynthDef(
 			 \instrument, \synth_III, \freq, Pseq(
 				[
 					[
-						Rest(),
+						277.1826309768721,
+						311.1269837220809,
+						493.8833012561241,
+						184.9972113558172,
+						1318.5102276514797,
+						174.61411571650194,
+					],
+					[
+						277.1826309768721,
+						311.1269837220809,
+						493.8833012561241,
+						184.9972113558172,
+						1318.5102276514797,
+						174.61411571650194,
+						1396.9129257320155,
+					],
+					[
+						277.1826309768721,
+						311.1269837220809,
+						493.8833012561241,
+						184.9972113558172,
+						1318.5102276514797,
+						174.61411571650194,
+					],
+					[
+						174.61411571650194,
+						493.8833012561241,
+						311.1269837220809,
+						184.9972113558172,
 					],
 					[
 						Rest(),
 					],
 					[
-						Rest(),
+						174.61411571650194,
+						493.8833012561241,
+						311.1269837220809,
+						184.9972113558172,
 					],
 					[
-						Rest(),
+						195.99771799087463,
+						349.2282314330039,
+						207.65234878997256,
 					],
 					[
-						69.29565774421802 * 9/1,
+						391.99543598174927,
+						233.08188075904496,
 					],
 					[
-						69.29565774421802 * 7/1,
+						415.3046975799451,
 					],
 					[
-						69.29565774421802 * 221/27,
+						1975.533205024496,
+						466.1637615180899,
+						277.1826309768721,
+						739.9888454232688,
+						415.3046975799451,
+						261.6255653005986,
+					],
+					[
+						466.1637615180899,
+						523.2511306011972,
+						830.6093951598903,
+						293.6647679174076,
+						311.1269837220809,
+						2217.4610478149766,
+						2349.31814333926,
+					],
+					[
+						2489.0158697766474,
+						523.2511306011972,
+						329.6275569128699,
+						349.2282314330039,
+						932.3275230361799,
+						587.3295358348151,
+					],
+					[
+						659.2551138257398,
 					],
 				],
 			),
 			\dur, Pseq(
 				[
-					9 * 20/9,
-					8 * 20/9,
-					9/2 * 20/9,
-					4 * 20/9,
-					7 * 20/9,
-					8 * 20/9,
-					4 * 20/9,
+					1 * 6/17,
+					1/2 * 6/17,
+					1 * 6/17,
+					3/2 * 6/17,
+					3 * 6/17,
+					3/4 * 6/17,
+					3/2 * 6/17,
+					1 * 6/17,
+					7/4 * 6/17,
+					1/2 * 6/17,
+					1/4 * 6/17,
+					1/2 * 6/17,
+					7/4 * 6/17,
 				]
 			,1),
 			\amp, 0.2,
 			\legato, 1,
 		).record(
-	path: "/Users/trintonprater/scores/efimera/efimera/sections/section_11/voice3_section11_recording.wav", 
+	path: "/Users/trintonprater/scores/efimera/efimera/sections/section_7/voice3_section7_recording.wav", 
 	bus: 1, 
 	numChannels: 1,
 );
@@ -406,32 +488,20 @@ SynthDef(
 					[
 						Rest(),
 					],
-					[
-						69.29565774421802 * 37/39,
-					],
-					[
-						69.29565774421802 * 3/1,
-					],
-					[
-						69.29565774421802 * 9/1,
-					],
 				],
 			),
 			\dur, Pseq(
 				[
-					9 * 20/9,
-					8 * 20/9,
-					9/2 * 20/9,
-					4 * 20/9,
-					7 * 20/9,
-					8 * 20/9,
-					4 * 20/9,
+					4 * 6/17,
+					3 * 6/17,
+					3 * 6/17,
+					5 * 6/17,
 				]
 			,1),
 			\amp, 0.2,
 			\legato, 1,
 		).record(
-	path: "/Users/trintonprater/scores/efimera/efimera/sections/section_11/voice4_section11_recording.wav", 
+	path: "/Users/trintonprater/scores/efimera/efimera/sections/section_7/voice4_section7_recording.wav", 
 	bus: 1, 
 	numChannels: 1,
 );
@@ -451,32 +521,20 @@ SynthDef(
 					[
 						Rest(),
 					],
-					[
-						69.29565774421802 * 10/9,
-					],
-					[
-						69.29565774421802 * 1/1,
-					],
-					[
-						69.29565774421802 * 32/27,
-					],
 				],
 			),
 			\dur, Pseq(
 				[
-					9 * 20/9,
-					8 * 20/9,
-					9/2 * 20/9,
-					4 * 20/9,
-					7 * 20/9,
-					8 * 20/9,
-					4 * 20/9,
+					4 * 6/17,
+					3 * 6/17,
+					3 * 6/17,
+					5 * 6/17,
 				]
 			,1),
 			\amp, 0.2,
 			\legato, 1,
 		).record(
-	path: "/Users/trintonprater/scores/efimera/efimera/sections/section_11/voice5_section11_recording.wav", 
+	path: "/Users/trintonprater/scores/efimera/efimera/sections/section_7/voice5_section7_recording.wav", 
 	bus: 1, 
 	numChannels: 1,
 );)

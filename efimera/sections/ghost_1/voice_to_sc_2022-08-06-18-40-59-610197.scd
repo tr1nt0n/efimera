@@ -98,27 +98,16 @@ SynthDef(
 			doneAction: Done.freeSelf,
 		);
 
-		var pluck = Pluck.ar(
-			in: Logistic.ar(
-					chaosParam: 3.57,
-					freq: freq * 2,
+		var pluck = DynKlank.ar(
+			`[[freq], nil, [1]],
+			Impulse.ar(
+				freq: Logistic.ar(
+				chaosParam: 3.57,
+				freq: freq,
+				init: dur * 2
+				)
 			),
-			trig: freq,
-			maxdelaytime: dur.reciprocal,
-			delaytime: Vibrato.ar(
-				freq: DC.ar(freq),
-				rate: Logistic.ar(
-					chaosParam: 3.59,
-					freq: freq * 2,
-				),
-				depth: freq / (freq * 100),
-				delay: Logistic.ar(
-					chaosParam: 3.58,
-					freq: freq,
-				),
-				onset: freq / (freq * 1000),
-			).reciprocal,
-			decaytime: dur * 2
+			decayscale: dur
 		);
 
 		var sin = PMOsc.ar(
@@ -135,7 +124,11 @@ SynthDef(
 			framesize: 1024,
 		);
 
-		var output = conv * 16;
+		var output = Limiter.ar(
+			in: conv,
+			level: 1,
+			dur: 0.01,
+		);
 
 		OffsetOut.ar(out, Pan2.ar(output, pan, env) );
 	}
@@ -1266,37 +1259,37 @@ SynthDef(
 						493.8833012561241 * 57/32,
 					],
 					[
-						311.1269837220809,
 						174.61411571650194,
 						184.9972113558172,
-						1318.5102276514797,
-						493.8833012561241,
 						1396.9129257320155,
-						277.1826309768721,
-					],
-					[
-						311.1269837220809,
-						174.61411571650194,
-						184.9972113558172,
+						493.8833012561241,
 						1318.5102276514797,
-						493.8833012561241,
 						277.1826309768721,
+						311.1269837220809,
 					],
 					[
-						311.1269837220809,
 						174.61411571650194,
 						184.9972113558172,
 						493.8833012561241,
-						277.1826309768721,
-					],
-					[
-						311.1269837220809,
-						174.61411571650194,
-						184.9972113558172,
 						1318.5102276514797,
+						277.1826309768721,
+						311.1269837220809,
+					],
+					[
+						174.61411571650194,
+						184.9972113558172,
 						493.8833012561241,
+						277.1826309768721,
+						311.1269837220809,
+					],
+					[
+						174.61411571650194,
+						184.9972113558172,
 						1396.9129257320155,
+						493.8833012561241,
+						1318.5102276514797,
 						277.1826309768721,
+						311.1269837220809,
 					],
 				],
 			),
