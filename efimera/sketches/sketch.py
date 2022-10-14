@@ -67,14 +67,26 @@ score = library.efimera_score(ts.final_ts[2])
 
 trinton.music_command(
     voice=score["piano 1 voice"],
-    measures=[1, 2, 3,],
+    measures=[
+        1,
+        2,
+        3,
+    ],
     rmaker=evans.talea([1, 2, 3], 8),
     # use evans.talea or something? evans.talea([1, 2, 3], 8, extra_counts=[0, 1]) for statal rmakers
     # for things like rmakers.note just pass it in *with no parenthesis* because it isn't called yet
-    rmaker_commands=[abjad.beam,],
+    rmaker_commands=[
+        abjad.beam,
+    ],
     rewrite_meter=-2,
     non_power_of_two=False,
-    preprocessor=trinton.fuse_eighths_preprocessor((2, 3, 1,)),
+    preprocessor=trinton.fuse_eighths_preprocessor(
+        (
+            2,
+            3,
+            1,
+        )
+    ),
     pitch_handler=None,
     attachment_function=None,
 )

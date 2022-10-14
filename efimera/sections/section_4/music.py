@@ -124,7 +124,7 @@ trinton.attach(
 trinton.beam_score_without_splitting(score)
 
 # trinton.fill_empty_staves_with_skips(score)
-# 
+#
 # library.write_sc_file(
 #     score=score,
 #     tempo=((1, 4), 41),
