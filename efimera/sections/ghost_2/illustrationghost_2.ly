@@ -481,7 +481,7 @@
                     bf'4
                     % AFTER:
                     % MARKUP:
-                    ^ \markup \center-align { NamedPitchCla\raise #0.75 { \hspace #-0.5 \teeny \smaller \sharp}\hspace #-0.5 \raise #0.75 { \hspace #-0.5 \teeny \smaller \sharp}\hspace #-0.5 ('a')+18 }
+                    ^ \markup \center-align { A+18 }
                     \tweak Accidental.stencil #ly:text-interface::print
                     \tweak Accidental.text \markup \concat { \one-undecimal-quarter-tone-down \hspace #0.125 \one-septimal-comma-up  }
                     d''4
@@ -504,7 +504,7 @@
                     bf'8
                     % AFTER:
                     % MARKUP:
-                    ^ \markup \center-align { NamedPitchCla\raise #0.75 { \hspace #-0.5 \teeny \smaller \sharp}\hspace #-0.5 \raise #0.75 { \hspace #-0.5 \teeny \smaller \sharp}\hspace #-0.5 ('a')+18 }
+                    ^ \markup \center-align { A+18 }
                     % START_BEAM:
                     [
                     % SPANNER_STARTS:
@@ -580,7 +580,7 @@
                     bf'8
                     % AFTER:
                     % MARKUP:
-                    ^ \markup \center-align { NamedPitchCla\raise #0.75 { \hspace #-0.5 \teeny \smaller \sharp}\hspace #-0.5 \raise #0.75 { \hspace #-0.5 \teeny \smaller \sharp}\hspace #-0.5 ('a')+18 }
+                    ^ \markup \center-align { A+18 }
                     % OPENING:
                     % COMMANDS:
                     \revert Staff.Stem.stemlet-length
@@ -634,7 +634,7 @@
                     bf'8
                     % AFTER:
                     % MARKUP:
-                    ^ \markup \center-align { NamedPitchCla\raise #0.75 { \hspace #-0.5 \teeny \smaller \sharp}\hspace #-0.5 \raise #0.75 { \hspace #-0.5 \teeny \smaller \sharp}\hspace #-0.5 ('a')+18 }
+                    ^ \markup \center-align { A+18 }
                     % OPENING:
                     % COMMANDS:
                     \revert Staff.Stem.stemlet-length
@@ -773,7 +773,7 @@
                     % ARTICULATIONS:
                     \p
                     % MARKUP:
-                    ^ \markup \center-align { NamedPitchCla\raise #0.75 { \hspace #-0.5 \teeny \smaller \sharp}\hspace #-0.5 \raise #0.75 { \hspace #-0.5 \teeny \smaller \sharp}\hspace #-0.5 ('a')+18 }
+                    ^ \markup \center-align { A+18 }
                     % START_BEAM:
                     [
                     % OPENING:
@@ -1021,7 +1021,7 @@
                     >8
                     % AFTER:
                     % MARKUP:
-                    ^ \markup \center-align \center-column { +49 -39  }
+                    ^ \markup \center-align \center-column { -39 +49  }
                     % STOP_BEAM:
                     ]
                     <
@@ -1034,7 +1034,7 @@
                     >4
                     % AFTER:
                     % MARKUP:
-                    ^ \markup \center-align \center-column { -16 +0  }
+                    ^ \markup \center-align \center-column { +0 -16  }
                     % SPANNER_STARTS:
                     ~
                     % OPENING:
@@ -1064,7 +1064,7 @@
                     >8
                     % AFTER:
                     % MARKUP:
-                    ^ \markup \center-align \center-column { B\raise #0.5 { \hspace #-0.5 \teeny \flat}\hspace #-0.5 -38 +0  }
+                    ^ \markup \center-align \center-column { +0 B\raise #0.5 { \hspace #-0.5 \teeny \flat}\hspace #-0.5 -38  }
                     % STOP_BEAM:
                     ]
                     % SPANNER_STARTS:
@@ -1096,7 +1096,7 @@
                     >8
                     % AFTER:
                     % MARKUP:
-                    ^ \markup \center-align \center-column { A\raise #0.5 { \hspace #-0.5 \teeny \flat}\hspace #-0.5 -16 +0  }
+                    ^ \markup \center-align \center-column { +0 A\raise #0.5 { \hspace #-0.5 \teeny \flat}\hspace #-0.5 -16  }
                     % STOP_BEAM:
                     ]
                     % SPANNER_STARTS:
@@ -1128,18 +1128,20 @@
                     >8
                     % AFTER:
                     % MARKUP:
-                    ^ \markup \center-align \center-column { -47 +0  }
+                    ^ \markup \center-align \center-column { +0 -47  }
                     % STOP_BEAM:
                     ]
                     <
                         \tweak Accidental.stencil #ly:text-interface::print
                         \tweak Accidental.text \markup { \abjad-natural  }
                         c'
+                        \tweak Accidental.stencil #ly:text-interface::print
+                        \tweak Accidental.text \markup { \one-forty-three-limit-comma-up  }
                         f'
                     >4
                     % AFTER:
                     % MARKUP:
-                    ^ \markup \center-align \center-column { +2  }
+                    ^ \markup \center-align \center-column { +13 +2  }
                     <c' e'>4
                     % AFTER:
                     % MARKUP:
@@ -1155,11 +1157,13 @@
                         \tweak Accidental.stencil #ly:text-interface::print
                         \tweak Accidental.text \markup { \abjad-natural  }
                         c'
+                        \tweak Accidental.stencil #ly:text-interface::print
+                        \tweak Accidental.text \markup { \one-forty-three-limit-comma-up  }
                         f'
                     >8
                     % AFTER:
                     % MARKUP:
-                    ^ \markup \center-align \center-column { +2  }
+                    ^ \markup \center-align \center-column { +13 +2  }
                     % START_BEAM:
                     [
                     % SPANNER_STARTS:
@@ -1177,7 +1181,7 @@
                     >8
                     % AFTER:
                     % MARKUP:
-                    ^ \markup \center-align \center-column { D-33 -39  }
+                    ^ \markup \center-align \center-column { -39 D-33  }
                     % STOP_BEAM:
                     ]
                     <
@@ -1210,13 +1214,15 @@
                         \tweak Accidental.stencil #ly:text-interface::print
                         \tweak Accidental.text \markup \concat { \one-undecimal-quarter-tone-up \hspace #0.125 \one-septimal-comma-down \hspace #0.125 \natural-one-syntonic-comma-down  }
                         c'
+                        \tweak Accidental.stencil #ly:text-interface::print
+                        \tweak Accidental.text \markup { \one-forty-three-limit-comma-up  }
                         f'
                     >8
                     % AFTER:
                     % ARTICULATIONS:
                     \mp
                     % MARKUP:
-                    ^ \markup \center-align \center-column { +6  }
+                    ^ \markup \center-align \center-column { +13 +6  }
                     % STOP_BEAM:
                     ]
                     % SPANNER_STARTS:
@@ -1228,6 +1234,8 @@
                         \tweak Accidental.stencil #ly:text-interface::print
                         \tweak Accidental.text \markup \concat { \one-undecimal-quarter-tone-up \hspace #0.125 \one-septimal-comma-down \hspace #0.125 \natural-one-syntonic-comma-down  }
                         c'
+                        \tweak Accidental.stencil #ly:text-interface::print
+                        \tweak Accidental.text \markup { \one-forty-three-limit-comma-up  }
                         f'
                     >8
                     % AFTER:
@@ -1246,7 +1254,7 @@
                     >8
                     % AFTER:
                     % MARKUP:
-                    ^ \markup \center-align \center-column { B\raise #0.5 { \hspace #-0.5 \teeny \flat}\hspace #-0.5 -41 B\raise #0.5 { \hspace #-0.5 \teeny \flat}\hspace #-0.5 -19  }
+                    ^ \markup \center-align \center-column { B\raise #0.5 { \hspace #-0.5 \teeny \flat}\hspace #-0.5 -19 B\raise #0.5 { \hspace #-0.5 \teeny \flat}\hspace #-0.5 -41  }
                     % STOP_BEAM:
                     ]
                     % OPENING:
@@ -1282,7 +1290,7 @@
                     >4
                     % AFTER:
                     % MARKUP:
-                    ^ \markup \center-align \center-column { +4 -33  }
+                    ^ \markup \center-align \center-column { -33 +4  }
                     % SPANNER_STARTS:
                     - \tweak circled-tip ##t
                     \>
@@ -1359,7 +1367,7 @@
                     >8
                     % AFTER:
                     % MARKUP:
-                    ^ \markup \center-align \center-column { +49 -39  }
+                    ^ \markup \center-align \center-column { -39 +49  }
                     % STOP_BEAM:
                     ]
                     <
@@ -1372,7 +1380,7 @@
                     >4
                     % AFTER:
                     % MARKUP:
-                    ^ \markup \center-align \center-column { -16 +0  }
+                    ^ \markup \center-align \center-column { +0 -16  }
                     % SPANNER_STARTS:
                     ~
                     % OPENING:
@@ -1402,7 +1410,7 @@
                     >8
                     % AFTER:
                     % MARKUP:
-                    ^ \markup \center-align \center-column { B\raise #0.5 { \hspace #-0.5 \teeny \flat}\hspace #-0.5 -38 -20  }
+                    ^ \markup \center-align \center-column { -20 B\raise #0.5 { \hspace #-0.5 \teeny \flat}\hspace #-0.5 -38  }
                     % STOP_BEAM:
                     ]
                     % SPANNER_STARTS:
@@ -1456,18 +1464,20 @@
                     >4
                     % AFTER:
                     % MARKUP:
-                    ^ \markup \center-align \center-column { -47 +0  }
+                    ^ \markup \center-align \center-column { +0 -47  }
                     % SPANNER_STARTS:
                     \<
                     <
                         \tweak Accidental.stencil #ly:text-interface::print
                         \tweak Accidental.text \markup { \abjad-natural  }
                         c'
+                        \tweak Accidental.stencil #ly:text-interface::print
+                        \tweak Accidental.text \markup { \one-forty-three-limit-comma-up  }
                         f'
                     >4
                     % AFTER:
                     % MARKUP:
-                    ^ \markup \center-align \center-column { +2  }
+                    ^ \markup \center-align \center-column { +13 +2  }
                     <c' e'>4
                     % AFTER:
                     % ARTICULATIONS:
@@ -1499,7 +1509,7 @@
                     % ARTICULATIONS:
                     \pp
                     % MARKUP:
-                    ^ \markup \center-align \center-column { +2 -20  }
+                    ^ \markup \center-align \center-column { -20 +2  }
                     % START_BEAM:
                     [
                     % SPANNER_STARTS:
@@ -1534,8 +1544,10 @@
                     % ARTICULATIONS:
                     \mp
                     % MARKUP:
-                    ^ \markup \center-align \center-column { +16 NamedPitchCla\raise #0.75 { \hspace #-0.5 \teeny \smaller \sharp}\hspace #-0.5 \raise #0.75 { \hspace #-0.5 \teeny \smaller \sharp}\hspace #-0.5 ('a')+45  }
+                    ^ \markup \center-align \center-column { A+45 +16  }
                     <
+                        \tweak Accidental.stencil #ly:text-interface::print
+                        \tweak Accidental.text \markup { \one-forty-three-limit-comma-up  }
                         f'
                         \tweak Accidental.stencil #ly:text-interface::print
                         \tweak Accidental.text \markup { \natural-one-syntonic-comma-down  }
@@ -1543,7 +1555,7 @@
                     >4
                     % AFTER:
                     % MARKUP:
-                    ^ \markup \center-align \center-column { -14  }
+                    ^ \markup \center-align \center-column { -14 +13  }
                     % OPENING:
                     % COMMANDS:
                     \override Staff.Stem.stemlet-length = 0.75
@@ -1557,7 +1569,7 @@
                     >8
                     % AFTER:
                     % MARKUP:
-                    ^ \markup \center-align \center-column { F-10 NamedPitchCla\raise #0.75 { \hspace #-0.5 \teeny \smaller \sharp}\hspace #-0.5 \raise #0.75 { \hspace #-0.5 \teeny \smaller \sharp}\hspace #-0.5 ('\raise #0.5 { \hspace #-0.5 \teeny \flat}\hspace #-0.5 \raise #0.75 { \hspace #-0.5 \teeny \smaller \sharp}\hspace #-0.5 ')+2  }
+                    ^ \markup \center-align \center-column { F\raise #0.75 { \hspace #-0.5 \teeny \smaller \sharp}\hspace #-0.5 +2 F-10  }
                     % START_BEAM:
                     [
                     % SPANNER_STARTS:
@@ -1576,18 +1588,20 @@
                     >8
                     % AFTER:
                     % MARKUP:
-                    ^ \markup \center-align \center-column { +45 +49  }
+                    ^ \markup \center-align \center-column { +49 +45  }
                     % STOP_BEAM:
                     ]
                     <
                         \tweak Accidental.stencil #ly:text-interface::print
                         \tweak Accidental.text \markup { \natural-one-syntonic-comma-down  }
                         d'
+                        \tweak Accidental.stencil #ly:text-interface::print
+                        \tweak Accidental.text \markup { \one-forty-three-limit-comma-up  }
                         f'
                     >4
                     % AFTER:
                     % MARKUP:
-                    ^ \markup \center-align \center-column { -16  }
+                    ^ \markup \center-align \center-column { +13 -16  }
                     % SPANNER_STARTS:
                     ~
                     % OPENING:
@@ -1597,6 +1611,8 @@
                         \tweak Accidental.stencil #ly:text-interface::print
                         \tweak Accidental.text \markup { \natural-one-syntonic-comma-down  }
                         d'
+                        \tweak Accidental.stencil #ly:text-interface::print
+                        \tweak Accidental.text \markup { \one-forty-three-limit-comma-up  }
                         f'
                     >8
                     % AFTER:
@@ -1615,7 +1631,7 @@
                     >8
                     % AFTER:
                     % MARKUP:
-                    ^ \markup \center-align \center-column { +0 NamedPitchCla\raise #0.75 { \hspace #-0.5 \teeny \smaller \sharp}\hspace #-0.5 \raise #0.75 { \hspace #-0.5 \teeny \smaller \sharp}\hspace #-0.5 ('a')+45  }
+                    ^ \markup \center-align \center-column { A+45 +0  }
                     % STOP_BEAM:
                     ]
                     % SPANNER_STARTS:
@@ -1639,6 +1655,8 @@
                     % COMMANDS:
                     \override Staff.Stem.stemlet-length = 0.75
                     <
+                        \tweak Accidental.stencil #ly:text-interface::print
+                        \tweak Accidental.text \markup { \one-forty-three-limit-comma-up  }
                         f'
                         \tweak Accidental.stencil #ly:text-interface::print
                         \tweak Accidental.text \markup { \abjad-natural  }
@@ -1646,7 +1664,7 @@
                     >8
                     % AFTER:
                     % MARKUP:
-                    ^ \markup \center-align \center-column { +2  }
+                    ^ \markup \center-align \center-column { +2 +13  }
                     % START_BEAM:
                     [
                     % SPANNER_STARTS:
@@ -1660,7 +1678,7 @@
                     >8
                     % AFTER:
                     % MARKUP:
-                    ^ \markup \center-align \center-column { NamedPitchCla\raise #0.75 { \hspace #-0.5 \teeny \smaller \sharp}\hspace #-0.5 \raise #0.75 { \hspace #-0.5 \teeny \smaller \sharp}\hspace #-0.5 ('\raise #0.5 { \hspace #-0.5 \teeny \flat}\hspace #-0.5 ')+33  }
+                    ^ \markup \center-align \center-column { F+33  }
                     % OPENING:
                     % COMMANDS:
                     \revert Staff.Stem.stemlet-length
@@ -1668,13 +1686,15 @@
                         \tweak Accidental.stencil #ly:text-interface::print
                         \tweak Accidental.text \markup { \abjad-natural  }
                         f'
+                        \tweak Accidental.stencil #ly:text-interface::print
+                        \tweak Accidental.text \markup \concat { \one-twenty-nine-limit-comma-up \hspace #0.125 \one-undecimal-quarter-tone-down \hspace #0.125 \abjad-flat  }
                         bf'
                     >8
                     % AFTER:
                     % ARTICULATIONS:
                     \p
                     % MARKUP:
-                    ^ \markup \center-align \center-column { +0  }
+                    ^ \markup \center-align \center-column { -22 +0  }
                     % STOP_BEAM:
                     ]
                     <
@@ -1729,7 +1749,7 @@
                     >8
                     % AFTER:
                     % MARKUP:
-                    ^ \markup \center-align \center-column { NamedPitchCla\raise #0.75 { \hspace #-0.5 \teeny \smaller \sharp}\hspace #-0.5 \raise #0.75 { \hspace #-0.5 \teeny \smaller \sharp}\hspace #-0.5 ('\raise #0.5 { \hspace #-0.5 \teeny \flat}\hspace #-0.5 ')+33  }
+                    ^ \markup \center-align \center-column { F+33  }
                     % OPENING:
                     % COMMANDS:
                     \revert Staff.Stem.stemlet-length
@@ -1737,13 +1757,15 @@
                         \tweak Accidental.stencil #ly:text-interface::print
                         \tweak Accidental.text \markup { \abjad-natural  }
                         f'
+                        \tweak Accidental.stencil #ly:text-interface::print
+                        \tweak Accidental.text \markup \concat { \one-twenty-nine-limit-comma-up \hspace #0.125 \one-undecimal-quarter-tone-down \hspace #0.125 \abjad-flat  }
                         bf'
                     >8
                     % AFTER:
                     % ARTICULATIONS:
                     \mp
                     % MARKUP:
-                    ^ \markup \center-align \center-column { +0  }
+                    ^ \markup \center-align \center-column { -22 +0  }
                     % STOP_BEAM:
                     ]
                     <
@@ -1786,7 +1808,7 @@
                     % ARTICULATIONS:
                     \pp
                     % MARKUP:
-                    ^ \markup \center-align \center-column { -22 +2  }
+                    ^ \markup \center-align \center-column { +2 -22  }
                     <
                         g'
                         \tweak Accidental.stencil #ly:text-interface::print
@@ -1825,7 +1847,7 @@
                     >8
                     % AFTER:
                     % MARKUP:
-                    ^ \markup \center-align \center-column { -12 +22  }
+                    ^ \markup \center-align \center-column { +22 -12  }
                     % STOP_BEAM:
                     ]
                     <
@@ -1850,7 +1872,7 @@
                     >8
                     % AFTER:
                     % MARKUP:
-                    ^ \markup \center-align \center-column { +6 -12  }
+                    ^ \markup \center-align \center-column { -12 +6  }
                     % OPENING:
                     % COMMANDS:
                     \override Staff.Stem.stemlet-length = 0.75
@@ -1864,7 +1886,7 @@
                     >8
                     % AFTER:
                     % MARKUP:
-                    ^ \markup \center-align \center-column { -16 -12  }
+                    ^ \markup \center-align \center-column { -12 -16  }
                     % START_BEAM:
                     [
                     % OPENING:
@@ -1903,7 +1925,7 @@
                     >4.
                     % AFTER:
                     % MARKUP:
-                    ^ \markup \center-align \center-column { -2 +10  }
+                    ^ \markup \center-align \center-column { +10 -2  }
                     % BEFORE:
                     % COMMANDS:
                     \once \override Rest.transparent = ##t
@@ -1940,7 +1962,7 @@
                     >8
                     % AFTER:
                     % MARKUP:
-                    ^ \markup \center-align \center-column { +49 -39  }
+                    ^ \markup \center-align \center-column { -39 +49  }
                     % STOP_BEAM:
                     ]
                     <
@@ -1953,7 +1975,7 @@
                     >4
                     % AFTER:
                     % MARKUP:
-                    ^ \markup \center-align \center-column { -16 +0  }
+                    ^ \markup \center-align \center-column { +0 -16  }
                     % SPANNER_STARTS:
                     ~
                     % OPENING:
@@ -1983,7 +2005,7 @@
                     >8
                     % AFTER:
                     % MARKUP:
-                    ^ \markup \center-align \center-column { B\raise #0.5 { \hspace #-0.5 \teeny \flat}\hspace #-0.5 -38 +0  }
+                    ^ \markup \center-align \center-column { +0 B\raise #0.5 { \hspace #-0.5 \teeny \flat}\hspace #-0.5 -38  }
                     % STOP_BEAM:
                     ]
                     % SPANNER_STARTS:
@@ -2009,7 +2031,7 @@
                     >8
                     % AFTER:
                     % MARKUP:
-                    ^ \markup \center-align \center-column { A\raise #0.5 { \hspace #-0.5 \teeny \flat}\hspace #-0.5 -16 +0  }
+                    ^ \markup \center-align \center-column { +0 A\raise #0.5 { \hspace #-0.5 \teeny \flat}\hspace #-0.5 -16  }
                     % START_BEAM:
                     [
                     % OPENING:
@@ -2025,24 +2047,31 @@
                     >8
                     % AFTER:
                     % MARKUP:
-                    ^ \markup \center-align \center-column { -47 +0  }
+                    ^ \markup \center-align \center-column { +0 -47  }
                     % STOP_BEAM:
                     ]
                     <
                         \tweak Accidental.stencil #ly:text-interface::print
                         \tweak Accidental.text \markup { \abjad-natural  }
                         c'
+                        \tweak Accidental.stencil #ly:text-interface::print
+                        \tweak Accidental.text \markup { \one-forty-three-limit-comma-up  }
                         f'
                     >4
                     % AFTER:
                     % MARKUP:
-                    ^ \markup \center-align \center-column { +2  }
+                    ^ \markup \center-align \center-column { +13 +2  }
                     % SPANNER_STARTS:
                     \<
-                    <c' f'>4
+                    <
+                        c'
+                        \tweak Accidental.stencil #ly:text-interface::print
+                        \tweak Accidental.text \markup { \one-forty-three-limit-comma-up  }
+                        f'
+                    >4
                     % AFTER:
                     % MARKUP:
-                    ^ \markup \center-align \center-column {  }
+                    ^ \markup \center-align \center-column { +13  }
                     <
                         \tweak Accidental.stencil #ly:text-interface::print
                         \tweak Accidental.text \markup { \abjad-natural  }
@@ -2107,6 +2136,8 @@
                     % MARKUP:
                     ^ \markup \center-align \center-column { +16  }
                     <
+                        \tweak Accidental.stencil #ly:text-interface::print
+                        \tweak Accidental.text \markup { \one-forty-three-limit-comma-up  }
                         f'
                         \tweak Accidental.stencil #ly:text-interface::print
                         \tweak Accidental.text \markup \concat { \one-undecimal-quarter-tone-down \hspace #0.125 \abjad-flat  }
@@ -2116,7 +2147,7 @@
                     % ARTICULATIONS:
                     \mp
                     % MARKUP:
-                    ^ \markup \center-align \center-column { NamedPitchCla\raise #0.75 { \hspace #-0.5 \teeny \smaller \sharp}\hspace #-0.5 \raise #0.75 { \hspace #-0.5 \teeny \smaller \sharp}\hspace #-0.5 ('a')+45  }
+                    ^ \markup \center-align \center-column { A+45 +13  }
                     <
                         \tweak Accidental.stencil #ly:text-interface::print
                         \tweak Accidental.text \markup \concat { \one-undecimal-quarter-tone-down \hspace #0.125 \one-septimal-comma-down \hspace #0.125 \natural-one-syntonic-comma-down  }
@@ -2127,7 +2158,7 @@
                     >4
                     % AFTER:
                     % MARKUP:
-                    ^ \markup \center-align \center-column { NamedPitchCla\raise #0.75 { \hspace #-0.5 \teeny \smaller \sharp}\hspace #-0.5 \raise #0.75 { \hspace #-0.5 \teeny \smaller \sharp}\hspace #-0.5 ('\raise #0.5 { \hspace #-0.5 \teeny \flat}\hspace #-0.5 \raise #0.75 { \hspace #-0.5 \teeny \smaller \sharp}\hspace #-0.5 ')+2 -14  }
+                    ^ \markup \center-align \center-column { -14 F\raise #0.75 { \hspace #-0.5 \teeny \smaller \sharp}\hspace #-0.5 +2  }
                     % OPENING:
                     % COMMANDS:
                     \override Staff.Stem.stemlet-length = 0.75
@@ -2141,7 +2172,7 @@
                     >8
                     % AFTER:
                     % MARKUP:
-                    ^ \markup \center-align \center-column { +49 F-10  }
+                    ^ \markup \center-align \center-column { F-10 +49  }
                     % START_BEAM:
                     [
                     % OPENING:
@@ -2157,18 +2188,20 @@
                     >8
                     % AFTER:
                     % MARKUP:
-                    ^ \markup \center-align \center-column { -16 +45  }
+                    ^ \markup \center-align \center-column { +45 -16  }
                     % STOP_BEAM:
                     ]
                     <
                         \tweak Accidental.stencil #ly:text-interface::print
                         \tweak Accidental.text \markup { \abjad-natural  }
                         f'
+                        \tweak Accidental.stencil #ly:text-interface::print
+                        \tweak Accidental.text \markup { \one-forty-three-limit-comma-up  }
                         f'
                     >4
                     % AFTER:
                     % MARKUP:
-                    ^ \markup \center-align \center-column { +0  }
+                    ^ \markup \center-align \center-column { +13 +0  }
                     % SPANNER_STARTS:
                     - \tweak circled-tip ##t
                     \>
@@ -2180,6 +2213,8 @@
                         \tweak Accidental.stencil #ly:text-interface::print
                         \tweak Accidental.text \markup { \abjad-natural  }
                         f'
+                        \tweak Accidental.stencil #ly:text-interface::print
+                        \tweak Accidental.text \markup { \one-forty-three-limit-comma-up  }
                         f'
                     >8
                     % AFTER:
@@ -2233,13 +2268,15 @@
                         % BEFORE:
                         % COMMANDS:
                         \ottava 1
+                        \tweak Accidental.stencil #ly:text-interface::print
+                        \tweak Accidental.text \markup \concat { \one-twenty-nine-limit-comma-up \hspace #0.125 \sharp-one-syntonic-comma-down  }
                         cs'''16
                         % AFTER:
                         % ARTICULATIONS:
                         - \espressivo
                         \pppp
                         % MARKUP:
-                        ^ \markup \center-align +16
+                        ^ \markup \center-align { +16 }
                         % SPANNER_STARTS:
                         \<
                         r8
@@ -2568,12 +2605,14 @@
                     \times 4/5
                     {
                         r16
+                        \tweak Accidental.stencil #ly:text-interface::print
+                        \tweak Accidental.text \markup \concat { \one-twenty-nine-limit-comma-up \hspace #0.125 \sharp-one-syntonic-comma-down  }
                         cs'''16
                         % AFTER:
                         % ARTICULATIONS:
                         - \espressivo
                         % MARKUP:
-                        ^ \markup \center-align +16
+                        ^ \markup \center-align { +16 }
                         r8.
                     % CLOSE_BRACKETS:
                     }
@@ -2633,12 +2672,14 @@
                     ^ \markup \center-align { +0 }
                     r32.
                     r4.
+                    \tweak Accidental.stencil #ly:text-interface::print
+                    \tweak Accidental.text \markup { \one-forty-three-limit-comma-up  }
                     e'''16
                     % AFTER:
                     % ARTICULATIONS:
                     - \espressivo
                     % MARKUP:
-                    ^ \markup \center-align +12
+                    ^ \markup \center-align { +12 }
                     r16
                     r8
                     % OPEN_BRACKETS:
@@ -2653,12 +2694,14 @@
                         % MARKUP:
                         ^ \markup \center-align { +5 }
                         r8
+                        \tweak Accidental.stencil #ly:text-interface::print
+                        \tweak Accidental.text \markup \concat { \one-twenty-nine-limit-comma-up \hspace #0.125 \sharp-one-syntonic-comma-down  }
                         cs'''8.
                         % AFTER:
                         % ARTICULATIONS:
                         - \espressivo
                         % MARKUP:
-                        ^ \markup \center-align +16
+                        ^ \markup \center-align { +16 }
                     % CLOSE_BRACKETS:
                     }
                     % OPEN_BRACKETS:
@@ -3218,12 +3261,14 @@
                     \times 10/11
                     {
                         r8
+                        \tweak Accidental.stencil #ly:text-interface::print
+                        \tweak Accidental.text \markup \concat { \one-forty-three-limit-comma-up \hspace #0.125 \abjad-sharp  }
                         fs'''16
                         % AFTER:
                         % ARTICULATIONS:
                         - \espressivo
                         % MARKUP:
-                        ^ \markup \center-align +12
+                        ^ \markup \center-align { +12 }
                         r8.
                         \tweak Accidental.stencil #ly:text-interface::print
                         \tweak Accidental.text \markup \concat { \one-seventeen-limit-schisma-down \hspace #0.125 \double-sharp  }
@@ -3234,12 +3279,14 @@
                         % MARKUP:
                         ^ \markup \center-align { +5 }
                         r8
-                        ef'''16
+                        \tweak Accidental.stencil #ly:text-interface::print
+                        \tweak Accidental.text \markup \concat { \one-twenty-nine-limit-comma-up \hspace #0.125 \sharp-one-syntonic-comma-down  }
+                        ds'''16
                         % AFTER:
                         % ARTICULATIONS:
                         - \espressivo
                         % MARKUP:
-                        ^ \markup \center-align +16
+                        ^ \markup \center-align { +16 }
                     % CLOSE_BRACKETS:
                     }
                     % OPEN_BRACKETS:
@@ -3318,12 +3365,14 @@
                     % MARKUP:
                     ^ \markup \center-align { -3 }
                     r32.
-                    ef'''32.
+                    \tweak Accidental.stencil #ly:text-interface::print
+                    \tweak Accidental.text \markup \concat { \one-twenty-nine-limit-comma-up \hspace #0.125 \sharp-one-syntonic-comma-down  }
+                    ds'''32.
                     % AFTER:
                     % ARTICULATIONS:
                     - \espressivo
                     % MARKUP:
-                    ^ \markup \center-align +16
+                    ^ \markup \center-align { +16 }
                     r8..
                     % OPEN_BRACKETS:
                     \tweak text #tuplet-number::calc-fraction-text
@@ -3587,12 +3636,14 @@
                     \times 10/11
                     {
                         r4..
+                        \tweak Accidental.stencil #ly:text-interface::print
+                        \tweak Accidental.text \markup \concat { \one-forty-three-limit-comma-up \hspace #0.125 \abjad-sharp  }
                         fs'''16
                         % AFTER:
                         % ARTICULATIONS:
                         - \espressivo
                         % MARKUP:
-                        ^ \markup \center-align +12
+                        ^ \markup \center-align { +12 }
                         % SPANNER_STARTS:
                         - \tweak circled-tip ##t
                         \>
@@ -3629,12 +3680,14 @@
                         ^ \markup \center-align { -3 }
                         r2
                         r16
-                        ef'''16
+                        \tweak Accidental.stencil #ly:text-interface::print
+                        \tweak Accidental.text \markup \concat { \one-twenty-nine-limit-comma-up \hspace #0.125 \sharp-one-syntonic-comma-down  }
+                        ds'''16
                         % AFTER:
                         % ARTICULATIONS:
                         - \espressivo
                         % MARKUP:
-                        ^ \markup \center-align +16
+                        ^ \markup \center-align { +16 }
                         r4.
                     % CLOSE_BRACKETS:
                     }

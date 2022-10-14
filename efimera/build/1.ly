@@ -501,12 +501,14 @@
                     % OPEN_BRACKETS:
                     \times 8/9
                     {
-                        ef''16
+                        \tweak Accidental.stencil #ly:text-interface::print
+                        \tweak Accidental.text \markup \concat { \one-twenty-nine-limit-comma-up \hspace #0.125 \sharp-one-syntonic-comma-down  }
+                        ds''16
                         % AFTER:
                         % ARTICULATIONS:
                         - \espressivo
                         % MARKUP:
-                        ^ \markup \center-align +16
+                        ^ \markup \center-align { +16 }
                         r16
                         \tweak Accidental.stencil #ly:text-interface::print
                         \tweak Accidental.text \markup { \one-nineteen-limit-schisma-up  }
@@ -701,7 +703,7 @@
                     - \accent
                     \fp
                     % MARKUP:
-                    ^ \markup \center-align \center-column { +0 +4 +20  }
+                    ^ \markup \center-align \center-column { +20 +4 +0  }
                     <
                         \tweak Accidental.stencil #ly:text-interface::print
                         \tweak Accidental.text \markup { \abjad-flat  }
@@ -718,7 +720,7 @@
                     - \accent
                     \fp
                     % MARKUP:
-                    ^ \markup \center-align \center-column { +0 +4 +20  }
+                    ^ \markup \center-align \center-column { +20 +4 +0  }
                     s1 * 2
                     s1 * 1/16
                     s1 * 1/2

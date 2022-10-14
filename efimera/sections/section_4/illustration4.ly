@@ -111,7 +111,7 @@
                     - \espressivo
                     \mp
                     % MARKUP:
-                    ^ \markup \center-align \center-column { +0 +2 -14 -31 +4  }
+                    ^ \markup \center-align \center-column { +4 -31 -14 +2 +0  }
                 % CLOSE_BRACKETS:
                 }
             % CLOSE_BRACKETS:
@@ -720,7 +720,7 @@
                     - \accent
                     \fp
                     % MARKUP:
-                    ^ \markup \center-align \center-column { +0 +4 +20  }
+                    ^ \markup \center-align \center-column { +20 +4 +0  }
                     <
                         \tweak Accidental.stencil #ly:text-interface::print
                         \tweak Accidental.text \markup { \abjad-flat  }
@@ -737,7 +737,7 @@
                     - \accent
                     \fp
                     % MARKUP:
-                    ^ \markup \center-align \center-column { +0 +4 +20  }
+                    ^ \markup \center-align \center-column { +20 +4 +0  }
                     s1 * 3/4
                     s1 * 1
                     s1 * 3/8
@@ -760,7 +760,7 @@
                     - \accent
                     \fp
                     % MARKUP:
-                    ^ \markup \center-align \center-column { +0 +4 +20  }
+                    ^ \markup \center-align \center-column { +20 +4 +0  }
                     <
                         \tweak Accidental.stencil #ly:text-interface::print
                         \tweak Accidental.text \markup { \abjad-flat  }
@@ -777,7 +777,7 @@
                     - \accent
                     \fp
                     % MARKUP:
-                    ^ \markup \center-align \center-column { +0 +4 +20  }
+                    ^ \markup \center-align \center-column { +20 +4 +0  }
                     <
                         \tweak Accidental.stencil #ly:text-interface::print
                         \tweak Accidental.text \markup { \abjad-flat  }
@@ -794,7 +794,7 @@
                     - \accent
                     \fp
                     % MARKUP:
-                    ^ \markup \center-align \center-column { +0 +4 +20  }
+                    ^ \markup \center-align \center-column { +20 +4 +0  }
                     <
                         \tweak Accidental.stencil #ly:text-interface::print
                         \tweak Accidental.text \markup { \abjad-flat  }
@@ -811,7 +811,7 @@
                     - \accent
                     \fp
                     % MARKUP:
-                    ^ \markup \center-align \center-column { +0 +4 +20  }
+                    ^ \markup \center-align \center-column { +20 +4 +0  }
                     <
                         \tweak Accidental.stencil #ly:text-interface::print
                         \tweak Accidental.text \markup { \abjad-flat  }
@@ -828,7 +828,7 @@
                     - \accent
                     \fp
                     % MARKUP:
-                    ^ \markup \center-align \center-column { +0 +4 +20  }
+                    ^ \markup \center-align \center-column { +20 +4 +0  }
                     s1 * 3/4
                 % CLOSE_BRACKETS:
                 }

@@ -376,12 +376,12 @@ abjad.attach(abjad.Clef("bass"), cache["piano 5 voice"][12][0][0])
 
 # write sc file
 
-library.write_sc_file(
-    score=score,
-    tempo=((1, 4), 41),
-    section_number=8,
-    current_directory="/Users/trintonprater/scores/efimera/efimera/sections/section_8",
-)
+# library.write_sc_file(
+#     score=score,
+#     tempo=((1, 4), 41),
+#     section_number=8,
+#     current_directory="/Users/trintonprater/scores/efimera/efimera/sections/section_8",
+# )
 
 # show file
 

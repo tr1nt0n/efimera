@@ -484,12 +484,14 @@
                         [
                         % SPANNER_STARTS:
                         \<
+                        \tweak Accidental.stencil #ly:text-interface::print
+                        \tweak Accidental.text \markup { \one-forty-three-limit-comma-up  }
                         f16
                         % AFTER:
                         % ARTICULATIONS:
                         - \espressivo
                         % MARKUP:
-                        ^ \markup \center-align +12
+                        ^ \markup \center-align { +12 }
                         % OPENING:
                         % COMMANDS:
                         \revert Staff.Stem.stemlet-length
@@ -521,12 +523,14 @@
                         ^ \markup \center-align { -3 }
                         % START_BEAM:
                         [
+                        \tweak Accidental.stencil #ly:text-interface::print
+                        \tweak Accidental.text \markup \concat { \one-twenty-nine-limit-comma-up \hspace #0.125 \natural-one-syntonic-comma-down  }
                         d16
                         % AFTER:
                         % ARTICULATIONS:
                         - \espressivo
                         % MARKUP:
-                        ^ \markup \center-align +16
+                        ^ \markup \center-align { +16 }
                         \tweak Accidental.stencil #ly:text-interface::print
                         \tweak Accidental.text \markup \concat { \one-nineteen-limit-schisma-up \hspace #0.125 \abjad-flat  }
                         bf16
@@ -624,12 +628,14 @@
                         - \espressivo
                         % MARKUP:
                         ^ \markup \center-align { +0 }
+                        \tweak Accidental.stencil #ly:text-interface::print
+                        \tweak Accidental.text \markup { \one-forty-three-limit-comma-up  }
                         f16
                         % AFTER:
                         % ARTICULATIONS:
                         - \espressivo
                         % MARKUP:
-                        ^ \markup \center-align +12
+                        ^ \markup \center-align { +12 }
                         \tweak Accidental.stencil #ly:text-interface::print
                         \tweak Accidental.text \markup \concat { \one-seventeen-limit-schisma-down \hspace #0.125 \abjad-sharp  }
                         cs16
@@ -656,12 +662,14 @@
                     % OPENING:
                     % COMMANDS:
                     \override Staff.Stem.stemlet-length = 0.75
+                    \tweak Accidental.stencil #ly:text-interface::print
+                    \tweak Accidental.text \markup \concat { \one-twenty-nine-limit-comma-up \hspace #0.125 \natural-one-syntonic-comma-down  }
                     d16
                     % AFTER:
                     % ARTICULATIONS:
                     - \espressivo
                     % MARKUP:
-                    ^ \markup \center-align +16
+                    ^ \markup \center-align { +16 }
                     % START_BEAM:
                     [
                     % OPENING:
@@ -758,12 +766,14 @@
                     ^ \markup \center-align { +0 }
                     % STOP_BEAM:
                     ]
+                    \tweak Accidental.stencil #ly:text-interface::print
+                    \tweak Accidental.text \markup { \one-forty-three-limit-comma-up  }
                     f16
                     % AFTER:
                     % ARTICULATIONS:
                     - \espressivo
                     % MARKUP:
-                    ^ \markup \center-align +12
+                    ^ \markup \center-align { +12 }
                 % CLOSE_BRACKETS:
                 }
             % CLOSE_BRACKETS:
@@ -1485,12 +1495,14 @@
                     r8...
                     r4
                     r32.
+                    \tweak Accidental.stencil #ly:text-interface::print
+                    \tweak Accidental.text \markup { \one-forty-three-limit-comma-up  }
                     f32.
                     % AFTER:
                     % ARTICULATIONS:
                     - \espressivo
                     % MARKUP:
-                    ^ \markup \center-align +12
+                    ^ \markup \center-align { +12 }
                     r32
                     r8
                     r32
@@ -1539,7 +1551,7 @@
                     - \accent
                     \pp
                     % MARKUP:
-                    ^ \markup \center-align \center-column { +0 +4 +20  }
+                    ^ \markup \center-align \center-column { +20 +4 +0  }
                     % SPANNER_STARTS:
                     \<
                     <
@@ -1557,7 +1569,7 @@
                     % ARTICULATIONS:
                     - \accent
                     % MARKUP:
-                    ^ \markup \center-align \center-column { +0 +4 +20  }
+                    ^ \markup \center-align \center-column { +20 +4 +0  }
                     <
                         \tweak Accidental.stencil #ly:text-interface::print
                         \tweak Accidental.text \markup { \abjad-flat  }
@@ -1573,7 +1585,7 @@
                     % ARTICULATIONS:
                     - \accent
                     % MARKUP:
-                    ^ \markup \center-align \center-column { +0 +4 +20  }
+                    ^ \markup \center-align \center-column { +20 +4 +0  }
                     <
                         \tweak Accidental.stencil #ly:text-interface::print
                         \tweak Accidental.text \markup { \abjad-flat  }
@@ -1589,7 +1601,7 @@
                     % ARTICULATIONS:
                     - \accent
                     % MARKUP:
-                    ^ \markup \center-align \center-column { +0 +4 +20  }
+                    ^ \markup \center-align \center-column { +20 +4 +0  }
                     % OPENING:
                     % COMMANDS:
                     \clef "bass"
@@ -1608,7 +1620,7 @@
                     % ARTICULATIONS:
                     - \accent
                     % MARKUP:
-                    ^ \markup \center-align \center-column { +0 +4 +20  }
+                    ^ \markup \center-align \center-column { +20 +4 +0  }
                     <
                         \tweak Accidental.stencil #ly:text-interface::print
                         \tweak Accidental.text \markup { \abjad-flat  }
@@ -1624,7 +1636,7 @@
                     % ARTICULATIONS:
                     - \accent
                     % MARKUP:
-                    ^ \markup \center-align \center-column { +0 +4 +20  }
+                    ^ \markup \center-align \center-column { +20 +4 +0  }
                     <
                         \tweak Accidental.stencil #ly:text-interface::print
                         \tweak Accidental.text \markup { \abjad-flat  }
@@ -1640,7 +1652,7 @@
                     % ARTICULATIONS:
                     - \accent
                     % MARKUP:
-                    ^ \markup \center-align \center-column { +0 +4 +20  }
+                    ^ \markup \center-align \center-column { +20 +4 +0  }
                     <
                         \tweak Accidental.stencil #ly:text-interface::print
                         \tweak Accidental.text \markup { \abjad-flat  }
@@ -1656,7 +1668,7 @@
                     % ARTICULATIONS:
                     - \accent
                     % MARKUP:
-                    ^ \markup \center-align \center-column { +0 +4 +20  }
+                    ^ \markup \center-align \center-column { +20 +4 +0  }
                     <
                         \tweak Accidental.stencil #ly:text-interface::print
                         \tweak Accidental.text \markup { \abjad-flat  }
@@ -1672,7 +1684,7 @@
                     % ARTICULATIONS:
                     - \accent
                     % MARKUP:
-                    ^ \markup \center-align \center-column { +0 +4 +20  }
+                    ^ \markup \center-align \center-column { +20 +4 +0  }
                     % SPANNER_STARTS:
                     ~
                     <
@@ -1704,7 +1716,7 @@
                     % ARTICULATIONS:
                     - \accent
                     % MARKUP:
-                    ^ \markup \center-align \center-column { +0 +4 +20  }
+                    ^ \markup \center-align \center-column { +20 +4 +0  }
                     <
                         \tweak Accidental.stencil #ly:text-interface::print
                         \tweak Accidental.text \markup { \abjad-flat  }
@@ -1721,7 +1733,7 @@
                     - \accent
                     \f
                     % MARKUP:
-                    ^ \markup \center-align \center-column { +0 +4 +20  }
+                    ^ \markup \center-align \center-column { +20 +4 +0  }
                     % SPANNER_STARTS:
                     - \tweak circled-tip ##t
                     \>
@@ -1740,7 +1752,7 @@
                     % ARTICULATIONS:
                     - \accent
                     % MARKUP:
-                    ^ \markup \center-align \center-column { +0 +4 +20  }
+                    ^ \markup \center-align \center-column { +20 +4 +0  }
                     <
                         \tweak Accidental.stencil #ly:text-interface::print
                         \tweak Accidental.text \markup { \abjad-flat  }
@@ -1756,7 +1768,7 @@
                     % ARTICULATIONS:
                     - \accent
                     % MARKUP:
-                    ^ \markup \center-align \center-column { +0 +4 +20  }
+                    ^ \markup \center-align \center-column { +20 +4 +0  }
                     <
                         \tweak Accidental.stencil #ly:text-interface::print
                         \tweak Accidental.text \markup { \abjad-flat  }
@@ -1772,7 +1784,7 @@
                     % ARTICULATIONS:
                     - \accent
                     % MARKUP:
-                    ^ \markup \center-align \center-column { +0 +4 +20  }
+                    ^ \markup \center-align \center-column { +20 +4 +0  }
                     <
                         \tweak Accidental.stencil #ly:text-interface::print
                         \tweak Accidental.text \markup { \abjad-flat  }
@@ -1788,7 +1800,7 @@
                     % ARTICULATIONS:
                     - \accent
                     % MARKUP:
-                    ^ \markup \center-align \center-column { +0 +4 +20  }
+                    ^ \markup \center-align \center-column { +20 +4 +0  }
                     <
                         \tweak Accidental.stencil #ly:text-interface::print
                         \tweak Accidental.text \markup { \abjad-flat  }
@@ -1804,7 +1816,7 @@
                     % ARTICULATIONS:
                     - \accent
                     % MARKUP:
-                    ^ \markup \center-align \center-column { +0 +4 +20  }
+                    ^ \markup \center-align \center-column { +20 +4 +0  }
                     <
                         \tweak Accidental.stencil #ly:text-interface::print
                         \tweak Accidental.text \markup { \abjad-flat  }
@@ -1820,7 +1832,7 @@
                     % ARTICULATIONS:
                     - \accent
                     % MARKUP:
-                    ^ \markup \center-align \center-column { +0 +4 +20  }
+                    ^ \markup \center-align \center-column { +20 +4 +0  }
                     s1 * 7/16
                     % AFTER:
                     % ARTICULATIONS:
@@ -1845,7 +1857,7 @@
                     - \accent
                     \fff
                     % MARKUP:
-                    ^ \markup \center-align \center-column { +0 +4 +20  }
+                    ^ \markup \center-align \center-column { +20 +4 +0  }
                     % SPANNER_STARTS:
                     - \tweak circled-tip ##t
                     \>
@@ -1864,7 +1876,7 @@
                     % ARTICULATIONS:
                     - \accent
                     % MARKUP:
-                    ^ \markup \center-align \center-column { +0 +4 +20  }
+                    ^ \markup \center-align \center-column { +20 +4 +0  }
                     % SPANNER_STARTS:
                     ~
                     <
@@ -1896,7 +1908,7 @@
                     % ARTICULATIONS:
                     - \accent
                     % MARKUP:
-                    ^ \markup \center-align \center-column { +0 +4 +20  }
+                    ^ \markup \center-align \center-column { +20 +4 +0  }
                     <
                         \tweak Accidental.stencil #ly:text-interface::print
                         \tweak Accidental.text \markup { \abjad-flat  }
@@ -1912,7 +1924,7 @@
                     % ARTICULATIONS:
                     - \accent
                     % MARKUP:
-                    ^ \markup \center-align \center-column { +0 +4 +20  }
+                    ^ \markup \center-align \center-column { +20 +4 +0  }
                     <
                         \tweak Accidental.stencil #ly:text-interface::print
                         \tweak Accidental.text \markup { \abjad-flat  }
@@ -1928,7 +1940,7 @@
                     % ARTICULATIONS:
                     - \accent
                     % MARKUP:
-                    ^ \markup \center-align \center-column { +0 +4 +20  }
+                    ^ \markup \center-align \center-column { +20 +4 +0  }
                     % SPANNER_STARTS:
                     ~
                     <
@@ -1960,7 +1972,7 @@
                     % ARTICULATIONS:
                     - \accent
                     % MARKUP:
-                    ^ \markup \center-align \center-column { +0 +4 +20  }
+                    ^ \markup \center-align \center-column { +20 +4 +0  }
                     <
                         \tweak Accidental.stencil #ly:text-interface::print
                         \tweak Accidental.text \markup { \abjad-flat  }
@@ -1976,7 +1988,7 @@
                     % ARTICULATIONS:
                     - \accent
                     % MARKUP:
-                    ^ \markup \center-align \center-column { +0 +4 +20  }
+                    ^ \markup \center-align \center-column { +20 +4 +0  }
                     <
                         \tweak Accidental.stencil #ly:text-interface::print
                         \tweak Accidental.text \markup { \abjad-flat  }
@@ -1992,7 +2004,7 @@
                     % ARTICULATIONS:
                     - \accent
                     % MARKUP:
-                    ^ \markup \center-align \center-column { +0 +4 +20  }
+                    ^ \markup \center-align \center-column { +20 +4 +0  }
                     <
                         \tweak Accidental.stencil #ly:text-interface::print
                         \tweak Accidental.text \markup { \abjad-flat  }
@@ -2008,7 +2020,7 @@
                     % ARTICULATIONS:
                     - \accent
                     % MARKUP:
-                    ^ \markup \center-align \center-column { +0 +4 +20  }
+                    ^ \markup \center-align \center-column { +20 +4 +0  }
                     <
                         \tweak Accidental.stencil #ly:text-interface::print
                         \tweak Accidental.text \markup { \abjad-flat  }
@@ -2024,7 +2036,7 @@
                     % ARTICULATIONS:
                     - \accent
                     % MARKUP:
-                    ^ \markup \center-align \center-column { +0 +4 +20  }
+                    ^ \markup \center-align \center-column { +20 +4 +0  }
                     <
                         \tweak Accidental.stencil #ly:text-interface::print
                         \tweak Accidental.text \markup { \abjad-flat  }
@@ -2040,7 +2052,7 @@
                     % ARTICULATIONS:
                     - \accent
                     % MARKUP:
-                    ^ \markup \center-align \center-column { +0 +4 +20  }
+                    ^ \markup \center-align \center-column { +20 +4 +0  }
                     <
                         \tweak Accidental.stencil #ly:text-interface::print
                         \tweak Accidental.text \markup { \abjad-flat  }
@@ -2056,7 +2068,7 @@
                     % ARTICULATIONS:
                     - \accent
                     % MARKUP:
-                    ^ \markup \center-align \center-column { +0 +4 +20  }
+                    ^ \markup \center-align \center-column { +20 +4 +0  }
                     <
                         \tweak Accidental.stencil #ly:text-interface::print
                         \tweak Accidental.text \markup { \abjad-flat  }
@@ -2072,7 +2084,7 @@
                     % ARTICULATIONS:
                     - \accent
                     % MARKUP:
-                    ^ \markup \center-align \center-column { +0 +4 +20  }
+                    ^ \markup \center-align \center-column { +20 +4 +0  }
                     <
                         \tweak Accidental.stencil #ly:text-interface::print
                         \tweak Accidental.text \markup { \abjad-flat  }
@@ -2088,7 +2100,7 @@
                     % ARTICULATIONS:
                     - \accent
                     % MARKUP:
-                    ^ \markup \center-align \center-column { +0 +4 +20  }
+                    ^ \markup \center-align \center-column { +20 +4 +0  }
                     s1 * 9/8
                     % AFTER:
                     % ARTICULATIONS:
@@ -2301,12 +2313,14 @@
                         - \tweak circled-tip ##t
                         \>
                         r16
+                        \tweak Accidental.stencil #ly:text-interface::print
+                        \tweak Accidental.text \markup { \one-forty-three-limit-comma-up  }
                         f16
                         % AFTER:
                         % ARTICULATIONS:
                         - \espressivo
                         % MARKUP:
-                        ^ \markup \center-align +12
+                        ^ \markup \center-align { +12 }
                         r8
                         \tweak Accidental.stencil #ly:text-interface::print
                         \tweak Accidental.text \markup \concat { \one-seventeen-limit-schisma-down \hspace #0.125 \abjad-sharp  }
@@ -2317,12 +2331,14 @@
                         % MARKUP:
                         ^ \markup \center-align { +5 }
                         r16
+                        \tweak Accidental.stencil #ly:text-interface::print
+                        \tweak Accidental.text \markup \concat { \one-twenty-nine-limit-comma-up \hspace #0.125 \natural-one-syntonic-comma-down  }
                         d4
                         % AFTER:
                         % ARTICULATIONS:
                         - \espressivo
                         % MARKUP:
-                        ^ \markup \center-align +16
+                        ^ \markup \center-align { +16 }
                     % CLOSE_BRACKETS:
                     }
                     % OPEN_BRACKETS:
@@ -2351,12 +2367,14 @@
                         % MARKUP:
                         ^ \markup \center-align { -26 }
                         r16
+                        \tweak Accidental.stencil #ly:text-interface::print
+                        \tweak Accidental.text \markup { \one-forty-three-limit-comma-up  }
                         f8
                         % AFTER:
                         % ARTICULATIONS:
                         - \espressivo
                         % MARKUP:
-                        ^ \markup \center-align +12
+                        ^ \markup \center-align { +12 }
                         r16
                         % AFTER:
                         % ARTICULATIONS:

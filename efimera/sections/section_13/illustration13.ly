@@ -56,6 +56,8 @@
                     % COMMANDS:
                     \clef "treble"
                     \override Staff.Stem.stemlet-length = 0.75
+                    \tweak Accidental.stencil #ly:text-interface::print
+                    \tweak Accidental.text \markup { \one-forty-three-limit-comma-up  }
                     g''8
                     % AFTER:
                     % START_BEAM:
@@ -85,6 +87,8 @@
                     % OPENING:
                     % COMMANDS:
                     \revert Staff.Stem.stemlet-length
+                    \tweak Accidental.stencil #ly:text-interface::print
+                    \tweak Accidental.text \markup \concat { \one-twenty-nine-limit-comma-up \hspace #0.125 \natural-one-syntonic-comma-down  }
                     e''8
                     % AFTER:
                     % STOP_BEAM:

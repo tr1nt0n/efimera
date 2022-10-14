@@ -6,7 +6,7 @@
 
 \include "../library.ily"
 \include "/Users/trintonprater/evans/lilypond/evans-markups.ily"
-\include "/Users/trintonprater/abjad/abjad/scm/ekmelos-ji-accidental-markups.ily"
+\include "/Users/trintonprater/abjad-ext-microtones/abjadext/microtones/lilypond/ekmelos-ji-accidental-markups.ily"
 
 \header {
     dedication = \markup \override #'(font-name . "Bodoni72 Book Italic") \fontsize #3 \center-column {". . . donde quiera que podrían estar ellos siempre recuerdan que el pasado era una mentira, que la memoria no tiene retorno, que cada primavera pasada nunca se pudo recuperar, y que el amor más salvaje y más tenaz era una . . ." \fontsize #0.25 \with-color #white "."}
@@ -16,7 +16,7 @@
 }
 
 \layout {
-    \accidentalStyle dodecaphonic
+    \accidentalStyle neo-modern
     ragged-bottom = ##t
     ragged-last = ##t
     ragged-right = ##t
@@ -68,6 +68,8 @@
         \override Beam.breakable = ##t
         \override Beam.damping = 99
         \override Beam.concaveness = #10000
+        \override Beam.beam-thickness = #0.75
+        \override Beam.length-fraction = 1.5
 
         \override Clef.whiteout-style = #'outline
         \override Clef.whiteout = 1
@@ -87,6 +89,9 @@
         \override Staff.thickness = #0.5
 
         \override Stem.stemlet-length = 0.75
+        \override Stem.thickness = #0.5
+        \override Stem.details.beamed-lengths = #'(6)
+        \override Stem.details.lengths = #'(6)
 
         \override StemTremolo.beam-width = 1.5
         \override StemTremolo.beam-width = 1.5

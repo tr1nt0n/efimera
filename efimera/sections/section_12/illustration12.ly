@@ -82,7 +82,7 @@
                     >2..
                     % AFTER:
                     % MARKUP:
-                    ^ \markup \center-align \center-column { +0 +2 -14 -31 +4  }
+                    ^ \markup \center-align \center-column { +4 -31 -14 +2 +0  }
                     % SPANNER_STARTS:
                     - \tweak circled-tip ##t
                     \<
@@ -105,11 +105,13 @@
                     % ARTICULATIONS:
                     \ffff
                     % MARKUP:
-                    ^ \markup \center-align \center-column { -6 NamedPitchCla\raise #0.75 { \hspace #-0.5 \teeny \smaller \sharp}\hspace #-0.5 \raise #0.75 { \hspace #-0.5 \teeny \smaller \sharp}\hspace #-0.5 ('c\raise #0.75 { \hspace #-0.5 \teeny \smaller \sharp}\hspace #-0.5 ')+40 +4 -20  }
+                    ^ \markup \center-align \center-column { -20 +4 C\raise #0.75 { \hspace #-0.5 \teeny \smaller \sharp}\hspace #-0.5 +40 -6  }
                     <
                         \tweak Accidental.stencil #ly:text-interface::print
                         \tweak Accidental.text \markup { \sharp-one-syntonic-comma-down  }
                         ds,
+                        \tweak Accidental.stencil #ly:text-interface::print
+                        \tweak Accidental.text \markup \concat { \one-thirty-seven-limit-quarter-tone-up \hspace #0.125 \abjad-sharp  }
                         cs'
                         \tweak Accidental.stencil #ly:text-interface::print
                         \tweak Accidental.text \markup { \sharp-one-syntonic-comma-down  }
@@ -123,13 +125,15 @@
                     >4.
                     % AFTER:
                     % MARKUP:
-                    ^ \markup \center-align \center-column { -18 -14 +4 NamedPitchCla\raise #0.75 { \hspace #-0.5 \teeny \smaller \sharp}\hspace #-0.5 \raise #0.75 { \hspace #-0.5 \teeny \smaller \sharp}\hspace #-0.5 ('a')+41  }
+                    ^ \markup \center-align \center-column { A+41 +4 -14 +47 -18  }
                     % SPANNER_STARTS:
                     ~
                     <
                         \tweak Accidental.stencil #ly:text-interface::print
                         \tweak Accidental.text \markup { \sharp-one-syntonic-comma-down  }
                         ds,
+                        \tweak Accidental.stencil #ly:text-interface::print
+                        \tweak Accidental.text \markup \concat { \one-thirty-seven-limit-quarter-tone-up \hspace #0.125 \abjad-sharp  }
                         cs'
                         \tweak Accidental.stencil #ly:text-interface::print
                         \tweak Accidental.text \markup { \sharp-one-syntonic-comma-down  }
@@ -160,7 +164,7 @@
                     >2
                     % AFTER:
                     % MARKUP:
-                    ^ \markup \center-align \center-column { +0 +2 -14 -31 +4  }
+                    ^ \markup \center-align \center-column { +4 -31 -14 +2 +0  }
                     <
                         \tweak Accidental.stencil #ly:text-interface::print
                         \tweak Accidental.text \markup { \abjad-natural  }
@@ -178,7 +182,7 @@
                     >2.
                     % AFTER:
                     % MARKUP:
-                    ^ \markup \center-align \center-column { -6 NamedPitchCla\raise #0.75 { \hspace #-0.5 \teeny \smaller \sharp}\hspace #-0.5 \raise #0.75 { \hspace #-0.5 \teeny \smaller \sharp}\hspace #-0.5 ('c\raise #0.75 { \hspace #-0.5 \teeny \smaller \sharp}\hspace #-0.5 ')+40 +4 -20  }
+                    ^ \markup \center-align \center-column { -20 +4 C\raise #0.75 { \hspace #-0.5 \teeny \smaller \sharp}\hspace #-0.5 +40 -6  }
                     % SPANNER_STARTS:
                     ~
                     <
@@ -292,12 +296,14 @@
                         - \espressivo
                         % MARKUP:
                         ^ \markup \center-align { +0 }
+                        \tweak Accidental.stencil #ly:text-interface::print
+                        \tweak Accidental.text \markup { \one-forty-three-limit-comma-up  }
                         e'''''16
                         % AFTER:
                         % ARTICULATIONS:
                         - \espressivo
                         % MARKUP:
-                        ^ \markup \center-align +12
+                        ^ \markup \center-align { +12 }
                         \tweak Accidental.stencil #ly:text-interface::print
                         \tweak Accidental.text \markup \concat { \one-seventeen-limit-schisma-down \hspace #0.125 \abjad-sharp  }
                         bs''''16
@@ -314,12 +320,14 @@
                         - \espressivo
                         % MARKUP:
                         ^ \markup \center-align { -3 }
+                        \tweak Accidental.stencil #ly:text-interface::print
+                        \tweak Accidental.text \markup \concat { \one-twenty-nine-limit-comma-up \hspace #0.125 \sharp-one-syntonic-comma-down  }
                         cs'''''16
                         % AFTER:
                         % ARTICULATIONS:
                         - \espressivo
                         % MARKUP:
-                        ^ \markup \center-align +16
+                        ^ \markup \center-align { +16 }
                         \tweak Accidental.stencil #ly:text-interface::print
                         \tweak Accidental.text \markup { \one-nineteen-limit-schisma-up  }
                         a'''''16
@@ -384,12 +392,14 @@
                         - \espressivo
                         % MARKUP:
                         ^ \markup \center-align { +0 }
+                        \tweak Accidental.stencil #ly:text-interface::print
+                        \tweak Accidental.text \markup { \one-forty-three-limit-comma-up  }
                         e'''''16
                         % AFTER:
                         % ARTICULATIONS:
                         - \espressivo
                         % MARKUP:
-                        ^ \markup \center-align +12
+                        ^ \markup \center-align { +12 }
                         \tweak Accidental.stencil #ly:text-interface::print
                         \tweak Accidental.text \markup \concat { \one-seventeen-limit-schisma-down \hspace #0.125 \abjad-sharp  }
                         bs''''16
@@ -406,12 +416,14 @@
                         - \espressivo
                         % MARKUP:
                         ^ \markup \center-align { -3 }
+                        \tweak Accidental.stencil #ly:text-interface::print
+                        \tweak Accidental.text \markup \concat { \one-twenty-nine-limit-comma-up \hspace #0.125 \sharp-one-syntonic-comma-down  }
                         cs'''''16
                         % AFTER:
                         % ARTICULATIONS:
                         - \espressivo
                         % MARKUP:
-                        ^ \markup \center-align +16
+                        ^ \markup \center-align { +16 }
                         \tweak Accidental.stencil #ly:text-interface::print
                         \tweak Accidental.text \markup { \one-nineteen-limit-schisma-up  }
                         a'''''16

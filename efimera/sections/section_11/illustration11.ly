@@ -85,6 +85,8 @@
                         \tweak Accidental.stencil #ly:text-interface::print
                         \tweak Accidental.text \markup { \sharp-one-syntonic-comma-down  }
                         ds,
+                        \tweak Accidental.stencil #ly:text-interface::print
+                        \tweak Accidental.text \markup \concat { \one-thirty-seven-limit-quarter-tone-up \hspace #0.125 \abjad-sharp  }
                         cs'
                         \tweak Accidental.stencil #ly:text-interface::print
                         \tweak Accidental.text \markup { \sharp-one-syntonic-comma-down  }
@@ -98,7 +100,7 @@
                     >1.
                     % AFTER:
                     % MARKUP:
-                    ^ \markup \center-align \center-column { -18 -14 +4 NamedPitchCla\raise #0.75 { \hspace #-0.5 \teeny \smaller \sharp}\hspace #-0.5 \raise #0.75 { \hspace #-0.5 \teeny \smaller \sharp}\hspace #-0.5 ('a')+41  }
+                    ^ \markup \center-align \center-column { A+41 +4 -14 +47 -18  }
                     % SPANNER_STARTS:
                     - \tweak circled-tip ##t
                     \<
@@ -108,6 +110,8 @@
                         \tweak Accidental.stencil #ly:text-interface::print
                         \tweak Accidental.text \markup { \sharp-one-syntonic-comma-down  }
                         ds,
+                        \tweak Accidental.stencil #ly:text-interface::print
+                        \tweak Accidental.text \markup \concat { \one-thirty-seven-limit-quarter-tone-up \hspace #0.125 \abjad-sharp  }
                         cs'
                         \tweak Accidental.stencil #ly:text-interface::print
                         \tweak Accidental.text \markup { \sharp-one-syntonic-comma-down  }
@@ -140,7 +144,7 @@
                     % ARTICULATIONS:
                     \fffff
                     % MARKUP:
-                    ^ \markup \center-align \center-column { +0 +2 -14 -31 +4  }
+                    ^ \markup \center-align \center-column { +4 -31 -14 +2 +0  }
                     <
                         \tweak Accidental.stencil #ly:text-interface::print
                         \tweak Accidental.text \markup { \abjad-natural  }
@@ -158,7 +162,7 @@
                     >2.
                     % AFTER:
                     % MARKUP:
-                    ^ \markup \center-align \center-column { -6 NamedPitchCla\raise #0.75 { \hspace #-0.5 \teeny \smaller \sharp}\hspace #-0.5 \raise #0.75 { \hspace #-0.5 \teeny \smaller \sharp}\hspace #-0.5 ('c\raise #0.75 { \hspace #-0.5 \teeny \smaller \sharp}\hspace #-0.5 ')+40 +4 -20  }
+                    ^ \markup \center-align \center-column { -20 +4 C\raise #0.75 { \hspace #-0.5 \teeny \smaller \sharp}\hspace #-0.5 +40 -6  }
                     % SPANNER_STARTS:
                     - \tweak circled-tip ##t
                     \>
@@ -207,7 +211,7 @@
                     as''2
                     % AFTER:
                     % MARKUP:
-                    ^ \markup \center-align { NamedPitchCla\raise #0.75 { \hspace #-0.5 \teeny \smaller \sharp}\hspace #-0.5 \raise #0.75 { \hspace #-0.5 \teeny \smaller \sharp}\hspace #-0.5 ('a')+41 }
+                    ^ \markup \center-align { A+41 }
                     % SPANNER_STARTS:
                     - \tweak circled-tip ##t
                     \<
@@ -410,7 +414,7 @@
                     css''4
                     % AFTER:
                     % MARKUP:
-                    ^ \markup \center-align { NamedPitchCla\raise #0.75 { \hspace #-0.5 \teeny \smaller \sharp}\hspace #-0.5 \raise #0.75 { \hspace #-0.5 \teeny \smaller \sharp}\hspace #-0.5 ('c\raise #0.75 { \hspace #-0.5 \teeny \smaller \sharp}\hspace #-0.5 ')+40 }
+                    ^ \markup \center-align { C\raise #0.75 { \hspace #-0.5 \teeny \smaller \sharp}\hspace #-0.5 +40 }
                     % SPANNER_STARTS:
                     ~
                     \tweak Accidental.stencil #ly:text-interface::print
@@ -441,20 +445,26 @@
                     % OPENING:
                     % COMMANDS:
                     \clef "bass"
-                    c,2
+                    \tweak Accidental.stencil #ly:text-interface::print
+                    \tweak Accidental.text \markup \concat { \one-thirty-seven-limit-quarter-tone-up \hspace #0.125 \one-tridecimal-third-tone-up  }
+                    b,,2
                     % AFTER:
                     % MARKUP:
-                    ^ \markup \center-align +9
+                    ^ \markup \center-align { C+9 }
                     % SPANNER_STARTS:
                     - \tweak circled-tip ##t
                     \<
                     \(
                     ~
-                    c,4
+                    \tweak Accidental.stencil #ly:text-interface::print
+                    \tweak Accidental.text \markup \concat { \one-thirty-seven-limit-quarter-tone-up \hspace #0.125 \one-tridecimal-third-tone-up  }
+                    b,,4
                     % AFTER:
                     % SPANNER_STARTS:
                     ~
-                    c,1
+                    \tweak Accidental.stencil #ly:text-interface::print
+                    \tweak Accidental.text \markup \concat { \one-thirty-seven-limit-quarter-tone-up \hspace #0.125 \one-tridecimal-third-tone-up  }
+                    b,,1
                     \tweak Accidental.stencil #ly:text-interface::print
                     \tweak Accidental.text \markup { \abjad-sharp  }
                     gs4

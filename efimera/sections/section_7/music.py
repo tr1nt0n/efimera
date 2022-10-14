@@ -81,13 +81,13 @@ for voice_name in [
     abjad.attach(abjad.Dynamic("fp"), abjad.select.leaf(score[voice_name], 0))
 
     abjad.attach(abjad.Dynamic("pp"), measures[2][0])
-
-library.write_sc_file(
-    score=score,
-    tempo=((1, 4), 170),
-    section_number=7,
-    current_directory="/Users/trintonprater/scores/efimera/efimera/sections/section_7",
-)
+# 
+# library.write_sc_file(
+#     score=score,
+#     tempo=((1, 4), 170),
+#     section_number=7,
+#     current_directory="/Users/trintonprater/scores/efimera/efimera/sections/section_7",
+# )
 
 # trinton.make_sc_file(
 #     score=score,

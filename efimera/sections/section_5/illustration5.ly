@@ -1300,12 +1300,14 @@
                     \times 10/11
                     {
                         r4..
+                        \tweak Accidental.stencil #ly:text-interface::print
+                        \tweak Accidental.text \markup \concat { \one-forty-three-limit-comma-up \hspace #0.125 \abjad-flat  }
                         bff'''16
                         % AFTER:
                         % ARTICULATIONS:
                         - \espressivo
                         % MARKUP:
-                        ^ \markup \center-align +12
+                        ^ \markup \center-align { +12 }
                         r8.
                     % CLOSE_BRACKETS:
                     }
@@ -1367,12 +1369,14 @@
                         % OPENING:
                         % COMMANDS:
                         \clef "treble"
+                        \tweak Accidental.stencil #ly:text-interface::print
+                        \tweak Accidental.text \markup \concat { \one-twenty-nine-limit-comma-up \hspace #0.125 \sharp-one-syntonic-comma-down  }
                         d'''16
                         % AFTER:
                         % ARTICULATIONS:
                         - \espressivo
                         % MARKUP:
-                        ^ \markup \center-align +16
+                        ^ \markup \center-align { +16 }
                         % OPENING:
                         % COMMANDS:
                         \clef "bass"
@@ -1748,12 +1752,14 @@
                         % OPENING:
                         % COMMANDS:
                         \clef "bass"
+                        \tweak Accidental.stencil #ly:text-interface::print
+                        \tweak Accidental.text \markup { \one-forty-three-limit-comma-up  }
                         e16
                         % AFTER:
                         % ARTICULATIONS:
                         - \espressivo
                         % MARKUP:
-                        ^ \markup \center-align +12
+                        ^ \markup \center-align { +12 }
                         % OPENING:
                         % COMMANDS:
                         \clef "treble"
@@ -1835,12 +1841,14 @@
                         \>
                         r2
                         r8.
+                        \tweak Accidental.stencil #ly:text-interface::print
+                        \tweak Accidental.text \markup \concat { \one-twenty-nine-limit-comma-up \hspace #0.125 \natural-one-syntonic-comma-down  }
                         fs'''16
                         % AFTER:
                         % ARTICULATIONS:
                         - \espressivo
                         % MARKUP:
-                        ^ \markup \center-align +16
+                        ^ \markup \center-align { +16 }
                         r4
                     % CLOSE_BRACKETS:
                     }
@@ -1969,12 +1977,14 @@
                         % COMMANDS:
                         \clef "bass"
                         \revert Staff.Stem.stemlet-length
+                        \tweak Accidental.stencil #ly:text-interface::print
+                        \tweak Accidental.text \markup { \one-forty-three-limit-comma-up  }
                         e16
                         % AFTER:
                         % ARTICULATIONS:
                         - \espressivo
                         % MARKUP:
-                        ^ \markup \center-align +12
+                        ^ \markup \center-align { +12 }
                         % STOP_BEAM:
                         ]
                     % CLOSE_BRACKETS:

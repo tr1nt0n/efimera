@@ -124,13 +124,13 @@ trinton.attach(
 trinton.beam_score_without_splitting(score)
 
 # trinton.fill_empty_staves_with_skips(score)
-
-library.write_sc_file(
-    score=score,
-    tempo=((1, 4), 41),
-    section_number=4,
-    current_directory="/Users/trintonprater/scores/efimera/efimera/sections/section_4",
-)
+# 
+# library.write_sc_file(
+#     score=score,
+#     tempo=((1, 4), 41),
+#     section_number=4,
+#     current_directory="/Users/trintonprater/scores/efimera/efimera/sections/section_4",
+# )
 
 # trinton.make_sc_file(
 #     score=score,

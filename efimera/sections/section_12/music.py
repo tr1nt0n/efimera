@@ -189,12 +189,12 @@ abjad.override(
     abjad.select.tuplets(score["piano 3 voice"])[-1]
 ).TupletNumber.text = r"\markup \italic { 21:18 }"
 
-library.write_sc_file(
-    score=score,
-    tempo=((1, 4), 41),
-    section_number=12,
-    current_directory="/Users/trintonprater/scores/efimera/efimera/sections/section_12",
-)
+# library.write_sc_file(
+#     score=score,
+#     tempo=((1, 4), 41),
+#     section_number=12,
+#     current_directory="/Users/trintonprater/scores/efimera/efimera/sections/section_12",
+# )
 
 # show file
 

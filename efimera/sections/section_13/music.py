@@ -85,12 +85,12 @@ trinton.beam_score_without_splitting(score)
 
 # write sc file
 
-library.write_sc_file(
-    score=score,
-    tempo=((1, 4), 68),
-    section_number=13,
-    current_directory="/Users/trintonprater/scores/efimera/efimera/sections/section_13",
-)
+# library.write_sc_file(
+#     score=score,
+#     tempo=((1, 4), 68),
+#     section_number=13,
+#     current_directory="/Users/trintonprater/scores/efimera/efimera/sections/section_13",
+# )
 
 # show file
 

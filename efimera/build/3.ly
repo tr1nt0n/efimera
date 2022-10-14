@@ -26,9 +26,6 @@
             % AFTER:
             % COMMANDS:
             \bar "||"
-            % ABSOLUTE_AFTER:
-            % COMMANDS:
-            \once \override Score.BarLine.transparent = ##f
         % CLOSE_BRACKETS:
         }
         % OPEN_BRACKETS:

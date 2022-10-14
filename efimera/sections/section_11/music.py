@@ -170,12 +170,12 @@ trinton.attach(
 
 # write sc file
 
-library.write_sc_file(
-    score=score,
-    tempo=((1, 4), 27),
-    section_number=11,
-    current_directory="/Users/trintonprater/scores/efimera/efimera/sections/section_11",
-)
+# library.write_sc_file(
+#     score=score,
+#     tempo=((1, 4), 27),
+#     section_number=11,
+#     current_directory="/Users/trintonprater/scores/efimera/efimera/sections/section_11",
+# )
 
 # show file
 

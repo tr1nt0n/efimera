@@ -64,10 +64,10 @@ trinton.attach_multiple(
     ],
     attachments=[
         abjad.BarLine("||"),
-        abjad.LilyPondLiteral(
-            r"\once \override Score.BarLine.transparent = ##f",
-            "absolute_after",
-        ),
+        # abjad.LilyPondLiteral(
+        #     r"\once \override Score.BarLine.transparent = ##f",
+        #     "absolute_after",
+        # ),
     ],
 )
 
@@ -77,12 +77,12 @@ trinton.beam_score_without_splitting(score)
 
 # trinton.fill_empty_staves_with_skips(score)
 
-library.write_sc_file(
-    score=score,
-    tempo=((1, 4), 27),
-    section_number=3,
-    current_directory="/Users/trintonprater/scores/efimera/efimera/sections/section_3",
-)
+# library.write_sc_file(
+#     score=score,
+#     tempo=((1, 4), 27),
+#     section_number=3,
+#     current_directory="/Users/trintonprater/scores/efimera/efimera/sections/section_3",
+# )
 
 # trinton.make_sc_file(
 #     score=score,

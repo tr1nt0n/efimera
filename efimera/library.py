@@ -1267,7 +1267,7 @@ def ghost(
     trinton.music_command(
         voice=voice,
         measures=measures,
-        rmaker=rmakers.tuplet(
+        rmaker=evans.tuplet(
             [
                 (
                     1,
@@ -1281,7 +1281,7 @@ def ghost(
             ]
         ),
         rmaker_commands=[
-            rmakers.beam(),
+            rmakers.beam,
         ],
         rewrite_meter=rewrite_meter,
         preprocessor=preprocessor,
@@ -1332,7 +1332,7 @@ def grid(
             trinton.music_command(
                 voice=voice,
                 measures=measures,
-                rmaker=rmakers.talea(
+                rmaker=evans.talea(
                     [
                         1,
                         1,
@@ -1342,7 +1342,7 @@ def grid(
                     4,
                 ),
                 rmaker_commands=[
-                    rmakers.beam(),
+                    rmakers.beam,
                 ],
                 rewrite_meter=rewrite_meter,
                 non_power_of_two=npt,
@@ -1355,7 +1355,7 @@ def grid(
             trinton.music_command(
                 voice=voice,
                 measures=measures,
-                rmaker=rmakers.talea(
+                rmaker=evans.talea(
                     talea,
                     16,
                     extra_counts=[
@@ -1365,7 +1365,7 @@ def grid(
                     ],
                 ),
                 rmaker_commands=[
-                    rmakers.force_rest(rest_selector),
+                    trinton.force_rest(rest_selector),
                 ],
                 rewrite_meter=rewrite_meter,
                 non_power_of_two=npt,
@@ -1390,9 +1390,9 @@ def skyward(
             trinton.music_command(
                 voice=voice,
                 measures=measures,
-                rmaker=rmakers.note(),
+                rmaker=rmakers.note,
                 rmaker_commands=[
-                    rmakers.beam(),
+                    rmakers.beam,
                 ],
                 rewrite_meter=rewrite_meter,
                 non_power_of_two=npt,
@@ -1407,9 +1407,9 @@ def skyward(
             trinton.music_command(
                 voice=voices[0],
                 measures=measures,
-                rmaker=rmakers.note(),
+                rmaker=rmakers.note,
                 rmaker_commands=[
-                    rmakers.beam(),
+                    rmakers.beam,
                 ],
                 rewrite_meter=rewrite_meter,
                 non_power_of_two=npt,
@@ -1455,9 +1455,9 @@ def skyward(
                 trinton.music_command(
                     voice=voice,
                     measures=measures,
-                    rmaker=rmakers.note(),
+                    rmaker=rmakers.note,
                     rmaker_commands=[
-                        rmakers.beam(),
+                        rmakers.beam,
                     ],
                     rewrite_meter=rewrite_meter,
                     non_power_of_two=npt,
@@ -1492,7 +1492,7 @@ def win(
         trinton.music_command(
             voice=voice,
             measures=measures,
-            rmaker=rmakers.tuplet(
+            rmaker=evans.tuplet(
                 [
                     (
                         1,
@@ -1510,7 +1510,7 @@ def win(
                 ]
             ),
             rmaker_commands=[
-                rmakers.force_rest(rest_selector),
+                trinton.force_rest(rest_selector),
                 # rmakers.beam_groups(beam_rests=True),
             ],
             rewrite_meter=rewrite_meter,
@@ -1525,7 +1525,7 @@ def win(
         trinton.music_command(
             voice=voice,
             measures=measures,
-            rmaker=rmakers.tuplet(
+            rmaker=evans.tuplet(
                 [
                     (
                         1,
@@ -1543,7 +1543,7 @@ def win(
                 ]
             ),
             rmaker_commands=[
-                rmakers.force_rest(rest_selector),
+                trinton.force_rest(rest_selector),
                 # rmakers.beam_groups(beam_rests=True),
             ],
             rewrite_meter=rewrite_meter,
@@ -1644,9 +1644,9 @@ def parting_glass(
         trinton.music_command(
             voice=voice,
             measures=measures,
-            rmaker=rmakers.note(),
+            rmaker=rmakers.note,
             rmaker_commands=[
-                rmakers.beam(),
+                rmakers.beam,
             ],
             rewrite_meter=rewrite_meter,
             non_power_of_two=npt,
@@ -1658,7 +1658,7 @@ def parting_glass(
         trinton.music_command(
             voice=voice,
             measures=measures,
-            rmaker=rmakers.talea(
+            rmaker=evans.talea(
                 [
                     1,
                     1,
@@ -1742,7 +1742,7 @@ def parting_glass(
                 8,
             ),
             rmaker_commands=[
-                rmakers.beam(),
+                rmakers.beam,
             ],
             rewrite_meter=rewrite_meter,
             non_power_of_two=npt,
@@ -1850,7 +1850,7 @@ def slashes(
     trinton.music_command(
         voice=voice,
         measures=measures,
-        rmaker=rmakers.talea(
+        rmaker=evans.talea(
             [
                 1,
                 1,
@@ -1862,18 +1862,8 @@ def slashes(
             extra_counts=trinton.rotated_sequence(logistic_map, talea_index),
         ),
         rmaker_commands=[
-            rmakers.force_rest(
-                trinton.patterned_tie_index_selector(
-                    [
-                        0,
-                        1,
-                        2,
-                    ],
-                    2,
-                )
-            ),
-            rmakers.force_note(_stage_to_rest_selector[density_stage]),
-            # rmakers.beam(),
+            trinton.force_rest(trinton.patterned_tie_index_selector([0, 1, 2], 3)),
+            trinton.force_note(_stage_to_rest_selector[density_stage]),
         ],
         rewrite_meter=rewrite_meter,
         non_power_of_two=npt,
@@ -2023,12 +2013,12 @@ def plane(
     trinton.music_command(
         voice=voice,
         measures=measures,
-        rmaker=rmakers.talea(
+        rmaker=evans.talea(
             trinton.rotated_sequence(_voice_to_talea[voice.name], talea_index),
             talea_division,
         ),
         rmaker_commands=[
-            rmakers.beam(),
+            rmakers.beam,
         ],
         rewrite_meter=rewrite_meter,
         non_power_of_two=npt,
