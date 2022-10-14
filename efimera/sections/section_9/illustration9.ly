@@ -532,7 +532,7 @@
                     % ARTICULATIONS:
                     \f
                     % MARKUP:
-                    ^ \markup \center-align \center-column { +4 -31 -14 +2 +0  }
+                    ^ \markup \center-align \center-column { \line { +0  }\line { +2  }\line { -14  }\line { -31  }\line { +4  } }
                     % SPANNER_STARTS:
                     - \tweak circled-tip ##t
                     - \tweak stencil #abjad-flared-hairpin

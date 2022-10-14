@@ -1551,7 +1551,7 @@
                     - \accent
                     \pp
                     % MARKUP:
-                    ^ \markup \center-align \center-column { +20 +4 +0  }
+                    ^ \markup \center-align \center-column { \line { +0  }\line { +4  }\line { +20  } }
                     % SPANNER_STARTS:
                     \<
                     <
@@ -1569,7 +1569,7 @@
                     % ARTICULATIONS:
                     - \accent
                     % MARKUP:
-                    ^ \markup \center-align \center-column { +20 +4 +0  }
+                    ^ \markup \center-align \center-column { \line { +0  }\line { +4  }\line { +20  } }
                     <
                         \tweak Accidental.stencil #ly:text-interface::print
                         \tweak Accidental.text \markup { \abjad-flat  }
@@ -1585,7 +1585,7 @@
                     % ARTICULATIONS:
                     - \accent
                     % MARKUP:
-                    ^ \markup \center-align \center-column { +20 +4 +0  }
+                    ^ \markup \center-align \center-column { \line { +0  }\line { +4  }\line { +20  } }
                     <
                         \tweak Accidental.stencil #ly:text-interface::print
                         \tweak Accidental.text \markup { \abjad-flat  }
@@ -1601,7 +1601,7 @@
                     % ARTICULATIONS:
                     - \accent
                     % MARKUP:
-                    ^ \markup \center-align \center-column { +20 +4 +0  }
+                    ^ \markup \center-align \center-column { \line { +0  }\line { +4  }\line { +20  } }
                     % OPENING:
                     % COMMANDS:
                     \clef "bass"
@@ -1620,7 +1620,7 @@
                     % ARTICULATIONS:
                     - \accent
                     % MARKUP:
-                    ^ \markup \center-align \center-column { +20 +4 +0  }
+                    ^ \markup \center-align \center-column { \line { +0  }\line { +4  }\line { +20  } }
                     <
                         \tweak Accidental.stencil #ly:text-interface::print
                         \tweak Accidental.text \markup { \abjad-flat  }
@@ -1636,7 +1636,7 @@
                     % ARTICULATIONS:
                     - \accent
                     % MARKUP:
-                    ^ \markup \center-align \center-column { +20 +4 +0  }
+                    ^ \markup \center-align \center-column { \line { +0  }\line { +4  }\line { +20  } }
                     <
                         \tweak Accidental.stencil #ly:text-interface::print
                         \tweak Accidental.text \markup { \abjad-flat  }
@@ -1652,7 +1652,7 @@
                     % ARTICULATIONS:
                     - \accent
                     % MARKUP:
-                    ^ \markup \center-align \center-column { +20 +4 +0  }
+                    ^ \markup \center-align \center-column { \line { +0  }\line { +4  }\line { +20  } }
                     <
                         \tweak Accidental.stencil #ly:text-interface::print
                         \tweak Accidental.text \markup { \abjad-flat  }
@@ -1668,7 +1668,7 @@
                     % ARTICULATIONS:
                     - \accent
                     % MARKUP:
-                    ^ \markup \center-align \center-column { +20 +4 +0  }
+                    ^ \markup \center-align \center-column { \line { +0  }\line { +4  }\line { +20  } }
                     <
                         \tweak Accidental.stencil #ly:text-interface::print
                         \tweak Accidental.text \markup { \abjad-flat  }
@@ -1684,7 +1684,7 @@
                     % ARTICULATIONS:
                     - \accent
                     % MARKUP:
-                    ^ \markup \center-align \center-column { +20 +4 +0  }
+                    ^ \markup \center-align \center-column { \line { +0  }\line { +4  }\line { +20  } }
                     % SPANNER_STARTS:
                     ~
                     <
@@ -1716,7 +1716,7 @@
                     % ARTICULATIONS:
                     - \accent
                     % MARKUP:
-                    ^ \markup \center-align \center-column { +20 +4 +0  }
+                    ^ \markup \center-align \center-column { \line { +0  }\line { +4  }\line { +20  } }
                     <
                         \tweak Accidental.stencil #ly:text-interface::print
                         \tweak Accidental.text \markup { \abjad-flat  }
@@ -1733,7 +1733,7 @@
                     - \accent
                     \f
                     % MARKUP:
-                    ^ \markup \center-align \center-column { +20 +4 +0  }
+                    ^ \markup \center-align \center-column { \line { +0  }\line { +4  }\line { +20  } }
                     % SPANNER_STARTS:
                     - \tweak circled-tip ##t
                     \>
@@ -1752,7 +1752,7 @@
                     % ARTICULATIONS:
                     - \accent
                     % MARKUP:
-                    ^ \markup \center-align \center-column { +20 +4 +0  }
+                    ^ \markup \center-align \center-column { \line { +0  }\line { +4  }\line { +20  } }
                     <
                         \tweak Accidental.stencil #ly:text-interface::print
                         \tweak Accidental.text \markup { \abjad-flat  }
@@ -1768,7 +1768,7 @@
                     % ARTICULATIONS:
                     - \accent
                     % MARKUP:
-                    ^ \markup \center-align \center-column { +20 +4 +0  }
+                    ^ \markup \center-align \center-column { \line { +0  }\line { +4  }\line { +20  } }
                     <
                         \tweak Accidental.stencil #ly:text-interface::print
                         \tweak Accidental.text \markup { \abjad-flat  }
@@ -1784,7 +1784,7 @@
                     % ARTICULATIONS:
                     - \accent
                     % MARKUP:
-                    ^ \markup \center-align \center-column { +20 +4 +0  }
+                    ^ \markup \center-align \center-column { \line { +0  }\line { +4  }\line { +20  } }
                     <
                         \tweak Accidental.stencil #ly:text-interface::print
                         \tweak Accidental.text \markup { \abjad-flat  }
@@ -1800,7 +1800,7 @@
                     % ARTICULATIONS:
                     - \accent
                     % MARKUP:
-                    ^ \markup \center-align \center-column { +20 +4 +0  }
+                    ^ \markup \center-align \center-column { \line { +0  }\line { +4  }\line { +20  } }
                     <
                         \tweak Accidental.stencil #ly:text-interface::print
                         \tweak Accidental.text \markup { \abjad-flat  }
@@ -1816,7 +1816,7 @@
                     % ARTICULATIONS:
                     - \accent
                     % MARKUP:
-                    ^ \markup \center-align \center-column { +20 +4 +0  }
+                    ^ \markup \center-align \center-column { \line { +0  }\line { +4  }\line { +20  } }
                     <
                         \tweak Accidental.stencil #ly:text-interface::print
                         \tweak Accidental.text \markup { \abjad-flat  }
@@ -1832,7 +1832,7 @@
                     % ARTICULATIONS:
                     - \accent
                     % MARKUP:
-                    ^ \markup \center-align \center-column { +20 +4 +0  }
+                    ^ \markup \center-align \center-column { \line { +0  }\line { +4  }\line { +20  } }
                     s1 * 7/16
                     % AFTER:
                     % ARTICULATIONS:
@@ -1857,7 +1857,7 @@
                     - \accent
                     \fff
                     % MARKUP:
-                    ^ \markup \center-align \center-column { +20 +4 +0  }
+                    ^ \markup \center-align \center-column { \line { +0  }\line { +4  }\line { +20  } }
                     % SPANNER_STARTS:
                     - \tweak circled-tip ##t
                     \>
@@ -1876,7 +1876,7 @@
                     % ARTICULATIONS:
                     - \accent
                     % MARKUP:
-                    ^ \markup \center-align \center-column { +20 +4 +0  }
+                    ^ \markup \center-align \center-column { \line { +0  }\line { +4  }\line { +20  } }
                     % SPANNER_STARTS:
                     ~
                     <
@@ -1908,7 +1908,7 @@
                     % ARTICULATIONS:
                     - \accent
                     % MARKUP:
-                    ^ \markup \center-align \center-column { +20 +4 +0  }
+                    ^ \markup \center-align \center-column { \line { +0  }\line { +4  }\line { +20  } }
                     <
                         \tweak Accidental.stencil #ly:text-interface::print
                         \tweak Accidental.text \markup { \abjad-flat  }
@@ -1924,7 +1924,7 @@
                     % ARTICULATIONS:
                     - \accent
                     % MARKUP:
-                    ^ \markup \center-align \center-column { +20 +4 +0  }
+                    ^ \markup \center-align \center-column { \line { +0  }\line { +4  }\line { +20  } }
                     <
                         \tweak Accidental.stencil #ly:text-interface::print
                         \tweak Accidental.text \markup { \abjad-flat  }
@@ -1940,7 +1940,7 @@
                     % ARTICULATIONS:
                     - \accent
                     % MARKUP:
-                    ^ \markup \center-align \center-column { +20 +4 +0  }
+                    ^ \markup \center-align \center-column { \line { +0  }\line { +4  }\line { +20  } }
                     % SPANNER_STARTS:
                     ~
                     <
@@ -1972,7 +1972,7 @@
                     % ARTICULATIONS:
                     - \accent
                     % MARKUP:
-                    ^ \markup \center-align \center-column { +20 +4 +0  }
+                    ^ \markup \center-align \center-column { \line { +0  }\line { +4  }\line { +20  } }
                     <
                         \tweak Accidental.stencil #ly:text-interface::print
                         \tweak Accidental.text \markup { \abjad-flat  }
@@ -1988,7 +1988,7 @@
                     % ARTICULATIONS:
                     - \accent
                     % MARKUP:
-                    ^ \markup \center-align \center-column { +20 +4 +0  }
+                    ^ \markup \center-align \center-column { \line { +0  }\line { +4  }\line { +20  } }
                     <
                         \tweak Accidental.stencil #ly:text-interface::print
                         \tweak Accidental.text \markup { \abjad-flat  }
@@ -2004,7 +2004,7 @@
                     % ARTICULATIONS:
                     - \accent
                     % MARKUP:
-                    ^ \markup \center-align \center-column { +20 +4 +0  }
+                    ^ \markup \center-align \center-column { \line { +0  }\line { +4  }\line { +20  } }
                     <
                         \tweak Accidental.stencil #ly:text-interface::print
                         \tweak Accidental.text \markup { \abjad-flat  }
@@ -2020,7 +2020,7 @@
                     % ARTICULATIONS:
                     - \accent
                     % MARKUP:
-                    ^ \markup \center-align \center-column { +20 +4 +0  }
+                    ^ \markup \center-align \center-column { \line { +0  }\line { +4  }\line { +20  } }
                     <
                         \tweak Accidental.stencil #ly:text-interface::print
                         \tweak Accidental.text \markup { \abjad-flat  }
@@ -2036,7 +2036,7 @@
                     % ARTICULATIONS:
                     - \accent
                     % MARKUP:
-                    ^ \markup \center-align \center-column { +20 +4 +0  }
+                    ^ \markup \center-align \center-column { \line { +0  }\line { +4  }\line { +20  } }
                     <
                         \tweak Accidental.stencil #ly:text-interface::print
                         \tweak Accidental.text \markup { \abjad-flat  }
@@ -2052,7 +2052,7 @@
                     % ARTICULATIONS:
                     - \accent
                     % MARKUP:
-                    ^ \markup \center-align \center-column { +20 +4 +0  }
+                    ^ \markup \center-align \center-column { \line { +0  }\line { +4  }\line { +20  } }
                     <
                         \tweak Accidental.stencil #ly:text-interface::print
                         \tweak Accidental.text \markup { \abjad-flat  }
@@ -2068,7 +2068,7 @@
                     % ARTICULATIONS:
                     - \accent
                     % MARKUP:
-                    ^ \markup \center-align \center-column { +20 +4 +0  }
+                    ^ \markup \center-align \center-column { \line { +0  }\line { +4  }\line { +20  } }
                     <
                         \tweak Accidental.stencil #ly:text-interface::print
                         \tweak Accidental.text \markup { \abjad-flat  }
@@ -2084,7 +2084,7 @@
                     % ARTICULATIONS:
                     - \accent
                     % MARKUP:
-                    ^ \markup \center-align \center-column { +20 +4 +0  }
+                    ^ \markup \center-align \center-column { \line { +0  }\line { +4  }\line { +20  } }
                     <
                         \tweak Accidental.stencil #ly:text-interface::print
                         \tweak Accidental.text \markup { \abjad-flat  }
@@ -2100,7 +2100,7 @@
                     % ARTICULATIONS:
                     - \accent
                     % MARKUP:
-                    ^ \markup \center-align \center-column { +20 +4 +0  }
+                    ^ \markup \center-align \center-column { \line { +0  }\line { +4  }\line { +20  } }
                     s1 * 9/8
                     % AFTER:
                     % ARTICULATIONS:

@@ -703,7 +703,7 @@
                     - \accent
                     \fp
                     % MARKUP:
-                    ^ \markup \center-align \center-column { +20 +4 +0  }
+                    ^ \markup \center-align \center-column { \line { +0  }\line { +4  }\line { +20  } }
                     <
                         \tweak Accidental.stencil #ly:text-interface::print
                         \tweak Accidental.text \markup { \abjad-flat  }
@@ -720,7 +720,7 @@
                     - \accent
                     \fp
                     % MARKUP:
-                    ^ \markup \center-align \center-column { +20 +4 +0  }
+                    ^ \markup \center-align \center-column { \line { +0  }\line { +4  }\line { +20  } }
                     s1 * 2
                     s1 * 1/16
                     s1 * 1/2

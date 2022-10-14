@@ -1465,7 +1465,7 @@
                     % ARTICULATIONS:
                     \mf
                     % MARKUP:
-                    ^ \markup \center-align \center-column { A-41  }
+                    ^ \markup \center-align \center-column { \line {  }\line { A-41  } }
                     % START_BEAM:
                     [
                     <
@@ -1478,7 +1478,7 @@
                     >8
                     % AFTER:
                     % MARKUP:
-                    ^ \markup \center-align \center-column { -39 +49  }
+                    ^ \markup \center-align \center-column { \line { +49  }\line { -39  } }
                     % OPENING:
                     % COMMANDS:
                     \revert Staff.Stem.stemlet-length
@@ -1492,7 +1492,7 @@
                     >8
                     % AFTER:
                     % MARKUP:
-                    ^ \markup \center-align \center-column { +0 -16  }
+                    ^ \markup \center-align \center-column { \line { -16  }\line { +0  } }
                     % STOP_BEAM:
                     ]
                     % SPANNER_STARTS:
@@ -1522,7 +1522,7 @@
                         >8
                         % AFTER:
                         % MARKUP:
-                        ^ \markup \center-align \center-column { +0 B\raise #0.5 { \hspace #-0.5 \teeny \flat}\hspace #-0.5 -38  }
+                        ^ \markup \center-align \center-column { \line { B\raise #0.5 { \hspace #-0.5 \teeny \flat}\hspace #-0.5 -38  }\line { +0  } }
                     % CLOSE_BRACKETS:
                     }
                     % AFTER:
@@ -1537,7 +1537,7 @@
                     >8
                     % AFTER:
                     % MARKUP:
-                    ^ \markup \center-align \center-column { A-41  }
+                    ^ \markup \center-align \center-column { \line {  }\line { A-41  } }
                     % START_BEAM:
                     [
                     % SPANNER_STARTS:
@@ -1552,7 +1552,7 @@
                     >8
                     % AFTER:
                     % MARKUP:
-                    ^ \markup \center-align \center-column { -39 +49  }
+                    ^ \markup \center-align \center-column { \line { +49  }\line { -39  } }
                     % STOP_BEAM:
                     ]
                     <
@@ -1565,7 +1565,7 @@
                     >4.
                     % AFTER:
                     % MARKUP:
-                    ^ \markup \center-align \center-column { +0 -16  }
+                    ^ \markup \center-align \center-column { \line { -16  }\line { +0  } }
                     % BEFORE:
                     % GROB_OVERRIDES:
                     \override TupletNumber.text = \markup \italic 17:16
@@ -1586,7 +1586,7 @@
                         >16
                         % AFTER:
                         % MARKUP:
-                        ^ \markup \center-align \center-column { +0 B\raise #0.5 { \hspace #-0.5 \teeny \flat}\hspace #-0.5 -38  }
+                        ^ \markup \center-align \center-column { \line { B\raise #0.5 { \hspace #-0.5 \teeny \flat}\hspace #-0.5 -38  }\line { +0  } }
                         % START_BEAM:
                         [
                         % SPANNER_STARTS:
@@ -1838,7 +1838,7 @@
                     >8
                     % AFTER:
                     % MARKUP:
-                    ^ \markup \center-align \center-column { A-41  }
+                    ^ \markup \center-align \center-column { \line {  }\line { A-41  } }
                     % START_BEAM:
                     [
                     % OPENING:
@@ -1854,7 +1854,7 @@
                     >8
                     % AFTER:
                     % MARKUP:
-                    ^ \markup \center-align \center-column { -39 +49  }
+                    ^ \markup \center-align \center-column { \line { +49  }\line { -39  } }
                     % STOP_BEAM:
                     ]
                     % BEFORE:
@@ -1874,7 +1874,7 @@
                         >4.
                         % AFTER:
                         % MARKUP:
-                        ^ \markup \center-align \center-column { +0 -16  }
+                        ^ \markup \center-align \center-column { \line { -16  }\line { +0  } }
                         % SPANNER_STARTS:
                         ~
                         <
@@ -2933,7 +2933,7 @@
                     % ARTICULATIONS:
                     \mf
                     % MARKUP:
-                    ^ \markup \center-align \center-column { +20 +4 +0  }
+                    ^ \markup \center-align \center-column { \line { +0  }\line { +4  }\line { +20  } }
                     <
                         \tweak Accidental.stencil #ly:text-interface::print
                         \tweak Accidental.text \markup { \abjad-flat  }
@@ -2947,7 +2947,7 @@
                     >8
                     % AFTER:
                     % MARKUP:
-                    ^ \markup \center-align \center-column { +20 +4 +0  }
+                    ^ \markup \center-align \center-column { \line { +0  }\line { +4  }\line { +20  } }
                     % SPANNER_STARTS:
                     ~
                     <
@@ -2981,7 +2981,7 @@
                         >4
                         % AFTER:
                         % MARKUP:
-                        ^ \markup \center-align \center-column { +20 +4 +0  }
+                        ^ \markup \center-align \center-column { \line { +0  }\line { +4  }\line { +20  } }
                         % SPANNER_STARTS:
                         ~
                         <
@@ -3014,7 +3014,7 @@
                     >4
                     % AFTER:
                     % MARKUP:
-                    ^ \markup \center-align \center-column { +20 +4 +0  }
+                    ^ \markup \center-align \center-column { \line { +0  }\line { +4  }\line { +20  } }
                     % SPANNER_STARTS:
                     \<
                     <
@@ -3030,7 +3030,7 @@
                     >4
                     % AFTER:
                     % MARKUP:
-                    ^ \markup \center-align \center-column { +20 +4 +0  }
+                    ^ \markup \center-align \center-column { \line { +0  }\line { +4  }\line { +20  } }
                     % BEFORE:
                     % GROB_OVERRIDES:
                     \override TupletNumber.text = \markup \italic 17:28
@@ -3051,7 +3051,7 @@
                         >8
                         % AFTER:
                         % MARKUP:
-                        ^ \markup \center-align \center-column { +20 +4 +0  }
+                        ^ \markup \center-align \center-column { \line { +0  }\line { +4  }\line { +20  } }
                     % CLOSE_BRACKETS:
                     }
                     % AFTER:

@@ -100,7 +100,7 @@
                     >1.
                     % AFTER:
                     % MARKUP:
-                    ^ \markup \center-align \center-column { A+41 +4 -14 +47 -18  }
+                    ^ \markup \center-align \center-column { \line { -18  }\line { +47  }\line { -14  }\line { +4  }\line { A+41  } }
                     % SPANNER_STARTS:
                     - \tweak circled-tip ##t
                     \<
@@ -144,7 +144,7 @@
                     % ARTICULATIONS:
                     \fffff
                     % MARKUP:
-                    ^ \markup \center-align \center-column { +4 -31 -14 +2 +0  }
+                    ^ \markup \center-align \center-column { \line { +0  }\line { +2  }\line { -14  }\line { -31  }\line { +4  } }
                     <
                         \tweak Accidental.stencil #ly:text-interface::print
                         \tweak Accidental.text \markup { \abjad-natural  }
@@ -162,7 +162,7 @@
                     >2.
                     % AFTER:
                     % MARKUP:
-                    ^ \markup \center-align \center-column { -20 +4 C\raise #0.75 { \hspace #-0.5 \teeny \smaller \sharp}\hspace #-0.5 +40 -6  }
+                    ^ \markup \center-align \center-column { \line { -6  }\line {  }\line { C\raise #0.75 { \hspace #-0.5 \teeny \smaller \sharp}\hspace #-0.5 +40  }\line { +4  }\line { -20  } }
                     % SPANNER_STARTS:
                     - \tweak circled-tip ##t
                     \>

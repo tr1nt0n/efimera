@@ -1005,7 +1005,7 @@
                     % ARTICULATIONS:
                     \p
                     % MARKUP:
-                    ^ \markup \center-align \center-column { A-41  }
+                    ^ \markup \center-align \center-column { \line {  }\line { A-41  } }
                     % START_BEAM:
                     [
                     % OPENING:
@@ -1021,7 +1021,7 @@
                     >8
                     % AFTER:
                     % MARKUP:
-                    ^ \markup \center-align \center-column { -39 +49  }
+                    ^ \markup \center-align \center-column { \line { +49  }\line { -39  } }
                     % STOP_BEAM:
                     ]
                     <
@@ -1034,7 +1034,7 @@
                     >4
                     % AFTER:
                     % MARKUP:
-                    ^ \markup \center-align \center-column { +0 -16  }
+                    ^ \markup \center-align \center-column { \line { -16  }\line { +0  } }
                     % SPANNER_STARTS:
                     ~
                     % OPENING:
@@ -1064,7 +1064,7 @@
                     >8
                     % AFTER:
                     % MARKUP:
-                    ^ \markup \center-align \center-column { +0 B\raise #0.5 { \hspace #-0.5 \teeny \flat}\hspace #-0.5 -38  }
+                    ^ \markup \center-align \center-column { \line { B\raise #0.5 { \hspace #-0.5 \teeny \flat}\hspace #-0.5 -38  }\line { +0  } }
                     % STOP_BEAM:
                     ]
                     % SPANNER_STARTS:
@@ -1096,7 +1096,7 @@
                     >8
                     % AFTER:
                     % MARKUP:
-                    ^ \markup \center-align \center-column { +0 A\raise #0.5 { \hspace #-0.5 \teeny \flat}\hspace #-0.5 -16  }
+                    ^ \markup \center-align \center-column { \line { A\raise #0.5 { \hspace #-0.5 \teeny \flat}\hspace #-0.5 -16  }\line { +0  } }
                     % STOP_BEAM:
                     ]
                     % SPANNER_STARTS:
@@ -1128,7 +1128,7 @@
                     >8
                     % AFTER:
                     % MARKUP:
-                    ^ \markup \center-align \center-column { +0 -47  }
+                    ^ \markup \center-align \center-column { \line { -47  }\line { +0  } }
                     % STOP_BEAM:
                     ]
                     <
@@ -1141,11 +1141,11 @@
                     >4
                     % AFTER:
                     % MARKUP:
-                    ^ \markup \center-align \center-column { +13 +2  }
+                    ^ \markup \center-align \center-column { \line { +2  }\line { +13  } }
                     <c' e'>4
                     % AFTER:
                     % MARKUP:
-                    ^ \markup \center-align \center-column {  }
+                    ^ \markup \center-align \center-column { \line {  }\line {  } }
                     % BEFORE:
                     % COMMANDS:
                     \once \override Rest.transparent = ##t
@@ -1163,7 +1163,7 @@
                     >8
                     % AFTER:
                     % MARKUP:
-                    ^ \markup \center-align \center-column { +13 +2  }
+                    ^ \markup \center-align \center-column { \line { +2  }\line { +13  } }
                     % START_BEAM:
                     [
                     % SPANNER_STARTS:
@@ -1181,7 +1181,7 @@
                     >8
                     % AFTER:
                     % MARKUP:
-                    ^ \markup \center-align \center-column { -39 D-33  }
+                    ^ \markup \center-align \center-column { \line { D-33  }\line { -39  } }
                     % STOP_BEAM:
                     ]
                     <
@@ -1192,7 +1192,7 @@
                     >4
                     % AFTER:
                     % MARKUP:
-                    ^ \markup \center-align \center-column { +0  }
+                    ^ \markup \center-align \center-column { \line {  }\line { +0  } }
                     % SPANNER_STARTS:
                     ~
                     % OPENING:
@@ -1222,7 +1222,7 @@
                     % ARTICULATIONS:
                     \mp
                     % MARKUP:
-                    ^ \markup \center-align \center-column { +13 +6  }
+                    ^ \markup \center-align \center-column { \line { +6  }\line { +13  } }
                     % STOP_BEAM:
                     ]
                     % SPANNER_STARTS:
@@ -1254,7 +1254,7 @@
                     >8
                     % AFTER:
                     % MARKUP:
-                    ^ \markup \center-align \center-column { B\raise #0.5 { \hspace #-0.5 \teeny \flat}\hspace #-0.5 -19 B\raise #0.5 { \hspace #-0.5 \teeny \flat}\hspace #-0.5 -41  }
+                    ^ \markup \center-align \center-column { \line { B\raise #0.5 { \hspace #-0.5 \teeny \flat}\hspace #-0.5 -41  }\line { B\raise #0.5 { \hspace #-0.5 \teeny \flat}\hspace #-0.5 -19  } }
                     % STOP_BEAM:
                     ]
                     % OPENING:
@@ -1268,7 +1268,7 @@
                     >8
                     % AFTER:
                     % MARKUP:
-                    ^ \markup \center-align \center-column { +16  }
+                    ^ \markup \center-align \center-column { \line { +16  }\line {  } }
                     % START_BEAM:
                     [
                     % OPENING:
@@ -1277,7 +1277,7 @@
                     <bf bf>8
                     % AFTER:
                     % MARKUP:
-                    ^ \markup \center-align \center-column {  }
+                    ^ \markup \center-align \center-column { \line {  }\line {  } }
                     % STOP_BEAM:
                     ]
                     <
@@ -1290,7 +1290,7 @@
                     >4
                     % AFTER:
                     % MARKUP:
-                    ^ \markup \center-align \center-column { -33 +4  }
+                    ^ \markup \center-align \center-column { \line { +4  }\line { -33  } }
                     % SPANNER_STARTS:
                     - \tweak circled-tip ##t
                     \>
@@ -1320,7 +1320,7 @@
                     >8
                     % AFTER:
                     % MARKUP:
-                    ^ \markup \center-align \center-column { -12  }
+                    ^ \markup \center-align \center-column { \line {  }\line { -12  } }
                     % STOP_BEAM:
                     ]
                     % SPANNER_STARTS:
@@ -1351,7 +1351,7 @@
                     % ARTICULATIONS:
                     \p
                     % MARKUP:
-                    ^ \markup \center-align \center-column { A-41  }
+                    ^ \markup \center-align \center-column { \line {  }\line { A-41  } }
                     % START_BEAM:
                     [
                     % OPENING:
@@ -1367,7 +1367,7 @@
                     >8
                     % AFTER:
                     % MARKUP:
-                    ^ \markup \center-align \center-column { -39 +49  }
+                    ^ \markup \center-align \center-column { \line { +49  }\line { -39  } }
                     % STOP_BEAM:
                     ]
                     <
@@ -1380,7 +1380,7 @@
                     >4
                     % AFTER:
                     % MARKUP:
-                    ^ \markup \center-align \center-column { +0 -16  }
+                    ^ \markup \center-align \center-column { \line { -16  }\line { +0  } }
                     % SPANNER_STARTS:
                     ~
                     % OPENING:
@@ -1410,7 +1410,7 @@
                     >8
                     % AFTER:
                     % MARKUP:
-                    ^ \markup \center-align \center-column { -20 B\raise #0.5 { \hspace #-0.5 \teeny \flat}\hspace #-0.5 -38  }
+                    ^ \markup \center-align \center-column { \line { B\raise #0.5 { \hspace #-0.5 \teeny \flat}\hspace #-0.5 -38  }\line { -20  } }
                     % STOP_BEAM:
                     ]
                     % SPANNER_STARTS:
@@ -1451,7 +1451,7 @@
                     >8
                     % AFTER:
                     % MARKUP:
-                    ^ \markup \center-align \center-column { A\raise #0.5 { \hspace #-0.5 \teeny \flat}\hspace #-0.5 -16  }
+                    ^ \markup \center-align \center-column { \line { A\raise #0.5 { \hspace #-0.5 \teeny \flat}\hspace #-0.5 -16  }\line {  } }
                     % STOP_BEAM:
                     ]
                     <
@@ -1464,7 +1464,7 @@
                     >4
                     % AFTER:
                     % MARKUP:
-                    ^ \markup \center-align \center-column { +0 -47  }
+                    ^ \markup \center-align \center-column { \line { -47  }\line { +0  } }
                     % SPANNER_STARTS:
                     \<
                     <
@@ -1477,13 +1477,13 @@
                     >4
                     % AFTER:
                     % MARKUP:
-                    ^ \markup \center-align \center-column { +13 +2  }
+                    ^ \markup \center-align \center-column { \line { +2  }\line { +13  } }
                     <c' e'>4
                     % AFTER:
                     % ARTICULATIONS:
                     \mp
                     % MARKUP:
-                    ^ \markup \center-align \center-column {  }
+                    ^ \markup \center-align \center-column { \line {  }\line {  } }
                     % SPANNER_STARTS:
                     - \tweak circled-tip ##t
                     \>
@@ -1509,7 +1509,7 @@
                     % ARTICULATIONS:
                     \pp
                     % MARKUP:
-                    ^ \markup \center-align \center-column { -20 +2  }
+                    ^ \markup \center-align \center-column { \line { +2  }\line { -20  } }
                     % START_BEAM:
                     [
                     % SPANNER_STARTS:
@@ -1520,7 +1520,7 @@
                     <c' e'>8
                     % AFTER:
                     % MARKUP:
-                    ^ \markup \center-align \center-column {  }
+                    ^ \markup \center-align \center-column { \line {  }\line {  } }
                     % STOP_BEAM:
                     ]
                     <
@@ -1531,7 +1531,7 @@
                     >4
                     % AFTER:
                     % MARKUP:
-                    ^ \markup \center-align \center-column { -45  }
+                    ^ \markup \center-align \center-column { \line { -45  }\line {  } }
                     <
                         \tweak Accidental.stencil #ly:text-interface::print
                         \tweak Accidental.text \markup \concat { \one-seventeen-limit-schisma-down \hspace #0.125 \one-undecimal-quarter-tone-down \hspace #0.125 \two-septimal-comma-up \hspace #0.125 \abjad-sharp  }
@@ -1544,7 +1544,7 @@
                     % ARTICULATIONS:
                     \mp
                     % MARKUP:
-                    ^ \markup \center-align \center-column { A+45 +16  }
+                    ^ \markup \center-align \center-column { \line { +16  }\line { A+45  } }
                     <
                         \tweak Accidental.stencil #ly:text-interface::print
                         \tweak Accidental.text \markup { \one-forty-three-limit-comma-up  }
@@ -1555,7 +1555,7 @@
                     >4
                     % AFTER:
                     % MARKUP:
-                    ^ \markup \center-align \center-column { -14 +13  }
+                    ^ \markup \center-align \center-column { \line { +13  }\line { -14  } }
                     % OPENING:
                     % COMMANDS:
                     \override Staff.Stem.stemlet-length = 0.75
@@ -1569,7 +1569,7 @@
                     >8
                     % AFTER:
                     % MARKUP:
-                    ^ \markup \center-align \center-column { F\raise #0.75 { \hspace #-0.5 \teeny \smaller \sharp}\hspace #-0.5 +2 F-10  }
+                    ^ \markup \center-align \center-column { \line { F-10  }\line { F\raise #0.75 { \hspace #-0.5 \teeny \smaller \sharp}\hspace #-0.5 +2  } }
                     % START_BEAM:
                     [
                     % SPANNER_STARTS:
@@ -1588,7 +1588,7 @@
                     >8
                     % AFTER:
                     % MARKUP:
-                    ^ \markup \center-align \center-column { +49 +45  }
+                    ^ \markup \center-align \center-column { \line { +45  }\line { +49  } }
                     % STOP_BEAM:
                     ]
                     <
@@ -1601,7 +1601,7 @@
                     >4
                     % AFTER:
                     % MARKUP:
-                    ^ \markup \center-align \center-column { +13 -16  }
+                    ^ \markup \center-align \center-column { \line { -16  }\line { +13  } }
                     % SPANNER_STARTS:
                     ~
                     % OPENING:
@@ -1631,7 +1631,7 @@
                     >8
                     % AFTER:
                     % MARKUP:
-                    ^ \markup \center-align \center-column { A+45 +0  }
+                    ^ \markup \center-align \center-column { \line { +0  }\line { A+45  } }
                     % STOP_BEAM:
                     ]
                     % SPANNER_STARTS:
@@ -1664,7 +1664,7 @@
                     >8
                     % AFTER:
                     % MARKUP:
-                    ^ \markup \center-align \center-column { +2 +13  }
+                    ^ \markup \center-align \center-column { \line { +13  }\line { +2  } }
                     % START_BEAM:
                     [
                     % SPANNER_STARTS:
@@ -1678,7 +1678,7 @@
                     >8
                     % AFTER:
                     % MARKUP:
-                    ^ \markup \center-align \center-column { F+33  }
+                    ^ \markup \center-align \center-column { \line { F+33  }\line {  } }
                     % OPENING:
                     % COMMANDS:
                     \revert Staff.Stem.stemlet-length
@@ -1694,7 +1694,7 @@
                     % ARTICULATIONS:
                     \p
                     % MARKUP:
-                    ^ \markup \center-align \center-column { -22 +0  }
+                    ^ \markup \center-align \center-column { \line { +0  }\line { -22  } }
                     % STOP_BEAM:
                     ]
                     <
@@ -1705,7 +1705,7 @@
                     >8
                     % AFTER:
                     % MARKUP:
-                    ^ \markup \center-align \center-column { +3  }
+                    ^ \markup \center-align \center-column { \line { +3  }\line {  } }
                     % SPANNER_STARTS:
                     - \tweak circled-tip ##t
                     \>
@@ -1717,7 +1717,7 @@
                     >4.
                     % AFTER:
                     % MARKUP:
-                    ^ \markup \center-align \center-column { +23  }
+                    ^ \markup \center-align \center-column { \line { +23  }\line {  } }
                     % BEFORE:
                     % COMMANDS:
                     \once \override Rest.transparent = ##t
@@ -1736,7 +1736,7 @@
                     >8
                     % AFTER:
                     % MARKUP:
-                    ^ \markup \center-align \center-column { +23  }
+                    ^ \markup \center-align \center-column { \line { +23  }\line {  } }
                     % START_BEAM:
                     [
                     % SPANNER_STARTS:
@@ -1749,7 +1749,7 @@
                     >8
                     % AFTER:
                     % MARKUP:
-                    ^ \markup \center-align \center-column { F+33  }
+                    ^ \markup \center-align \center-column { \line { F+33  }\line {  } }
                     % OPENING:
                     % COMMANDS:
                     \revert Staff.Stem.stemlet-length
@@ -1765,7 +1765,7 @@
                     % ARTICULATIONS:
                     \mp
                     % MARKUP:
-                    ^ \markup \center-align \center-column { -22 +0  }
+                    ^ \markup \center-align \center-column { \line { +0  }\line { -22  } }
                     % STOP_BEAM:
                     ]
                     <
@@ -1776,7 +1776,7 @@
                     >8
                     % AFTER:
                     % MARKUP:
-                    ^ \markup \center-align \center-column { +23  }
+                    ^ \markup \center-align \center-column { \line { +23  }\line {  } }
                     % SPANNER_STARTS:
                     - \tweak circled-tip ##t
                     \>
@@ -1788,7 +1788,7 @@
                     >4.
                     % AFTER:
                     % MARKUP:
-                    ^ \markup \center-align \center-column { +3  }
+                    ^ \markup \center-align \center-column { \line { +3  }\line {  } }
                     % BEFORE:
                     % COMMANDS:
                     \once \override Rest.transparent = ##t
@@ -1808,7 +1808,7 @@
                     % ARTICULATIONS:
                     \pp
                     % MARKUP:
-                    ^ \markup \center-align \center-column { +2 -22  }
+                    ^ \markup \center-align \center-column { \line { -22  }\line { +2  } }
                     <
                         g'
                         \tweak Accidental.stencil #ly:text-interface::print
@@ -1819,7 +1819,7 @@
                     % ARTICULATIONS:
                     \mf
                     % MARKUP:
-                    ^ \markup \center-align \center-column { +4  }
+                    ^ \markup \center-align \center-column { \line {  }\line { +4  } }
                     % SPANNER_STARTS:
                     ~
                     % OPENING:
@@ -1847,7 +1847,7 @@
                     >8
                     % AFTER:
                     % MARKUP:
-                    ^ \markup \center-align \center-column { +22 -12  }
+                    ^ \markup \center-align \center-column { \line { -12  }\line { +22  } }
                     % STOP_BEAM:
                     ]
                     <
@@ -1858,7 +1858,7 @@
                     >4
                     % AFTER:
                     % MARKUP:
-                    ^ \markup \center-align \center-column { -14  }
+                    ^ \markup \center-align \center-column { \line { -14  }\line {  } }
                     % SPANNER_STARTS:
                     - \tweak circled-tip ##t
                     \>
@@ -1872,7 +1872,7 @@
                     >8
                     % AFTER:
                     % MARKUP:
-                    ^ \markup \center-align \center-column { -12 +6  }
+                    ^ \markup \center-align \center-column { \line { +6  }\line { -12  } }
                     % OPENING:
                     % COMMANDS:
                     \override Staff.Stem.stemlet-length = 0.75
@@ -1886,7 +1886,7 @@
                     >8
                     % AFTER:
                     % MARKUP:
-                    ^ \markup \center-align \center-column { -12 -16  }
+                    ^ \markup \center-align \center-column { \line { -16  }\line { -12  } }
                     % START_BEAM:
                     [
                     % OPENING:
@@ -1902,7 +1902,7 @@
                     >8
                     % AFTER:
                     % MARKUP:
-                    ^ \markup \center-align \center-column { +0 +0  }
+                    ^ \markup \center-align \center-column { \line { +0  }\line { +0  } }
                     % STOP_BEAM:
                     ]
                     % SPANNER_STARTS:
@@ -1925,7 +1925,7 @@
                     >4.
                     % AFTER:
                     % MARKUP:
-                    ^ \markup \center-align \center-column { +10 -2  }
+                    ^ \markup \center-align \center-column { \line { -2  }\line { +10  } }
                     % BEFORE:
                     % COMMANDS:
                     \once \override Rest.transparent = ##t
@@ -1946,7 +1946,7 @@
                     % ARTICULATIONS:
                     \pp
                     % MARKUP:
-                    ^ \markup \center-align \center-column { A-41  }
+                    ^ \markup \center-align \center-column { \line {  }\line { A-41  } }
                     % START_BEAM:
                     [
                     % OPENING:
@@ -1962,7 +1962,7 @@
                     >8
                     % AFTER:
                     % MARKUP:
-                    ^ \markup \center-align \center-column { -39 +49  }
+                    ^ \markup \center-align \center-column { \line { +49  }\line { -39  } }
                     % STOP_BEAM:
                     ]
                     <
@@ -1975,7 +1975,7 @@
                     >4
                     % AFTER:
                     % MARKUP:
-                    ^ \markup \center-align \center-column { +0 -16  }
+                    ^ \markup \center-align \center-column { \line { -16  }\line { +0  } }
                     % SPANNER_STARTS:
                     ~
                     % OPENING:
@@ -2005,7 +2005,7 @@
                     >8
                     % AFTER:
                     % MARKUP:
-                    ^ \markup \center-align \center-column { +0 B\raise #0.5 { \hspace #-0.5 \teeny \flat}\hspace #-0.5 -38  }
+                    ^ \markup \center-align \center-column { \line { B\raise #0.5 { \hspace #-0.5 \teeny \flat}\hspace #-0.5 -38  }\line { +0  } }
                     % STOP_BEAM:
                     ]
                     % SPANNER_STARTS:
@@ -2031,7 +2031,7 @@
                     >8
                     % AFTER:
                     % MARKUP:
-                    ^ \markup \center-align \center-column { +0 A\raise #0.5 { \hspace #-0.5 \teeny \flat}\hspace #-0.5 -16  }
+                    ^ \markup \center-align \center-column { \line { A\raise #0.5 { \hspace #-0.5 \teeny \flat}\hspace #-0.5 -16  }\line { +0  } }
                     % START_BEAM:
                     [
                     % OPENING:
@@ -2047,7 +2047,7 @@
                     >8
                     % AFTER:
                     % MARKUP:
-                    ^ \markup \center-align \center-column { +0 -47  }
+                    ^ \markup \center-align \center-column { \line { -47  }\line { +0  } }
                     % STOP_BEAM:
                     ]
                     <
@@ -2060,7 +2060,7 @@
                     >4
                     % AFTER:
                     % MARKUP:
-                    ^ \markup \center-align \center-column { +13 +2  }
+                    ^ \markup \center-align \center-column { \line { +2  }\line { +13  } }
                     % SPANNER_STARTS:
                     \<
                     <
@@ -2071,7 +2071,7 @@
                     >4
                     % AFTER:
                     % MARKUP:
-                    ^ \markup \center-align \center-column { +13  }
+                    ^ \markup \center-align \center-column { \line {  }\line { +13  } }
                     <
                         \tweak Accidental.stencil #ly:text-interface::print
                         \tweak Accidental.text \markup { \abjad-natural  }
@@ -2082,7 +2082,7 @@
                     % ARTICULATIONS:
                     \p
                     % MARKUP:
-                    ^ \markup \center-align \center-column { +2  }
+                    ^ \markup \center-align \center-column { \line { +2  }\line {  } }
                     % SPANNER_STARTS:
                     - \tweak circled-tip ##t
                     \>
@@ -2104,7 +2104,7 @@
                     >8
                     % AFTER:
                     % MARKUP:
-                    ^ \markup \center-align \center-column { -20  }
+                    ^ \markup \center-align \center-column { \line {  }\line { -20  } }
                     % START_BEAM:
                     [
                     % SPANNER_STARTS:
@@ -2121,7 +2121,7 @@
                     >8
                     % AFTER:
                     % MARKUP:
-                    ^ \markup \center-align \center-column { -45  }
+                    ^ \markup \center-align \center-column { \line { -45  }\line {  } }
                     % STOP_BEAM:
                     ]
                     <
@@ -2134,7 +2134,7 @@
                     % ARTICULATIONS:
                     \pp
                     % MARKUP:
-                    ^ \markup \center-align \center-column { +16  }
+                    ^ \markup \center-align \center-column { \line {  }\line { +16  } }
                     <
                         \tweak Accidental.stencil #ly:text-interface::print
                         \tweak Accidental.text \markup { \one-forty-three-limit-comma-up  }
@@ -2147,7 +2147,7 @@
                     % ARTICULATIONS:
                     \mp
                     % MARKUP:
-                    ^ \markup \center-align \center-column { A+45 +13  }
+                    ^ \markup \center-align \center-column { \line { +13  }\line { A+45  } }
                     <
                         \tweak Accidental.stencil #ly:text-interface::print
                         \tweak Accidental.text \markup \concat { \one-undecimal-quarter-tone-down \hspace #0.125 \one-septimal-comma-down \hspace #0.125 \natural-one-syntonic-comma-down  }
@@ -2158,7 +2158,7 @@
                     >4
                     % AFTER:
                     % MARKUP:
-                    ^ \markup \center-align \center-column { -14 F\raise #0.75 { \hspace #-0.5 \teeny \smaller \sharp}\hspace #-0.5 +2  }
+                    ^ \markup \center-align \center-column { \line { F\raise #0.75 { \hspace #-0.5 \teeny \smaller \sharp}\hspace #-0.5 +2  }\line { -14  } }
                     % OPENING:
                     % COMMANDS:
                     \override Staff.Stem.stemlet-length = 0.75
@@ -2172,7 +2172,7 @@
                     >8
                     % AFTER:
                     % MARKUP:
-                    ^ \markup \center-align \center-column { F-10 +49  }
+                    ^ \markup \center-align \center-column { \line { +49  }\line { F-10  } }
                     % START_BEAM:
                     [
                     % OPENING:
@@ -2188,7 +2188,7 @@
                     >8
                     % AFTER:
                     % MARKUP:
-                    ^ \markup \center-align \center-column { +45 -16  }
+                    ^ \markup \center-align \center-column { \line { -16  }\line { +45  } }
                     % STOP_BEAM:
                     ]
                     <
@@ -2201,7 +2201,7 @@
                     >4
                     % AFTER:
                     % MARKUP:
-                    ^ \markup \center-align \center-column { +13 +0  }
+                    ^ \markup \center-align \center-column { \line { +0  }\line { +13  } }
                     % SPANNER_STARTS:
                     - \tweak circled-tip ##t
                     \>
@@ -2231,7 +2231,7 @@
                     >8
                     % AFTER:
                     % MARKUP:
-                    ^ \markup \center-align \center-column { A-41  }
+                    ^ \markup \center-align \center-column { \line {  }\line { A-41  } }
                     % STOP_BEAM:
                     ]
                     % SPANNER_STARTS:

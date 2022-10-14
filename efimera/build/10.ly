@@ -1392,7 +1392,7 @@
                     % ARTICULATIONS:
                     \fff
                     % MARKUP:
-                    ^ \markup \center-align \center-column { A-41  }
+                    ^ \markup \center-align \center-column { \line {  }\line { A-41  } }
                     % START_BEAM:
                     [
                     % OPENING:
@@ -1408,7 +1408,7 @@
                     >8
                     % AFTER:
                     % MARKUP:
-                    ^ \markup \center-align \center-column { -39 +49  }
+                    ^ \markup \center-align \center-column { \line { +49  }\line { -39  } }
                     % STOP_BEAM:
                     ]
                     <
@@ -1421,7 +1421,7 @@
                     >4
                     % AFTER:
                     % MARKUP:
-                    ^ \markup \center-align \center-column { +0 -16  }
+                    ^ \markup \center-align \center-column { \line { -16  }\line { +0  } }
                     % SPANNER_STARTS:
                     ~
                     % OPENING:
@@ -1451,7 +1451,7 @@
                     >8
                     % AFTER:
                     % MARKUP:
-                    ^ \markup \center-align \center-column { +0 B\raise #0.5 { \hspace #-0.5 \teeny \flat}\hspace #-0.5 -38  }
+                    ^ \markup \center-align \center-column { \line { B\raise #0.5 { \hspace #-0.5 \teeny \flat}\hspace #-0.5 -38  }\line { +0  } }
                     % STOP_BEAM:
                     ]
                     % SPANNER_STARTS:
@@ -1483,7 +1483,7 @@
                     >8
                     % AFTER:
                     % MARKUP:
-                    ^ \markup \center-align \center-column { +0 A\raise #0.5 { \hspace #-0.5 \teeny \flat}\hspace #-0.5 -16  }
+                    ^ \markup \center-align \center-column { \line { A\raise #0.5 { \hspace #-0.5 \teeny \flat}\hspace #-0.5 -16  }\line { +0  } }
                     % STOP_BEAM:
                     ]
                     % SPANNER_STARTS:
@@ -1515,7 +1515,7 @@
                     >8
                     % AFTER:
                     % MARKUP:
-                    ^ \markup \center-align \center-column { +0 -47  }
+                    ^ \markup \center-align \center-column { \line { -47  }\line { +0  } }
                     % STOP_BEAM:
                     ]
                     <
@@ -1528,11 +1528,11 @@
                     >4
                     % AFTER:
                     % MARKUP:
-                    ^ \markup \center-align \center-column { +13 +2  }
+                    ^ \markup \center-align \center-column { \line { +2  }\line { +13  } }
                     <c' e'>4
                     % AFTER:
                     % MARKUP:
-                    ^ \markup \center-align \center-column {  }
+                    ^ \markup \center-align \center-column { \line {  }\line {  } }
                     % OPEN_BRACKETS:
                     \times 2/3
                     {
