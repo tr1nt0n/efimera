@@ -94,7 +94,7 @@
                     >1.
                     % AFTER:
                     % MARKUP:
-                    ^ \markup \center-align \center-column { \line { -18  }\line { +47  }\line { -14  }\line { +4  }\line { A+41  } }
+                    ^ \markup \center-align { \center-column { \line { \concat { A+41 }  }\line { \concat { +4 }  }\line { \concat { -14 }  }\line { \concat { +47 }  }\line { \concat { -18 }  } } }
                     % SPANNER_STARTS:
                     - \tweak circled-tip ##t
                     \<
@@ -138,7 +138,7 @@
                     % ARTICULATIONS:
                     \fffff
                     % MARKUP:
-                    ^ \markup \center-align \center-column { \line { +0  }\line { +2  }\line { -14  }\line { -31  }\line { +4  } }
+                    ^ \markup \center-align { \center-column { \line { \concat { +4 }  }\line { \concat { -31 }  }\line { \concat { -14 }  }\line { \concat { +2 }  }\line { \concat { +0 }  } } }
                     <
                         \tweak Accidental.stencil #ly:text-interface::print
                         \tweak Accidental.text \markup { \abjad-natural  }
@@ -156,7 +156,7 @@
                     >2.
                     % AFTER:
                     % MARKUP:
-                    ^ \markup \center-align \center-column { \line { -6  }\line {  }\line { C\raise #0.75 { \hspace #-0.5 \teeny \smaller \sharp}\hspace #-0.5 +40  }\line { +4  }\line { -20  } }
+                    ^ \markup \center-align { \center-column { \line { \concat { -20 }  }\line { \concat { +4 }  }\line { \concat { C\raise #0.75 { \teeny \smaller \sharp } +40 }  }\line {  }\line { \concat { -6 }  } } }
                     % SPANNER_STARTS:
                     - \tweak circled-tip ##t
                     \>
@@ -205,7 +205,7 @@
                     as''2
                     % AFTER:
                     % MARKUP:
-                    ^ \markup \center-align { A+41 }
+                    ^ \markup \center-align { \concat { A+41 } }
                     % SPANNER_STARTS:
                     - \tweak circled-tip ##t
                     \<
@@ -227,7 +227,7 @@
                     % ARTICULATIONS:
                     \fffff
                     % MARKUP:
-                    ^ \markup \center-align { +4 }
+                    ^ \markup \center-align { \concat { +4 } }
                     % SPANNER_STARTS:
                     - \tweak circled-tip ##t
                     \>
@@ -252,7 +252,7 @@
                     gs''4
                     % AFTER:
                     % MARKUP:
-                    ^ \markup \center-align { -20 }
+                    ^ \markup \center-align { \concat { -20 } }
                     % SPANNER_STARTS:
                     ~
                     \tweak Accidental.stencil #ly:text-interface::print
@@ -285,7 +285,7 @@
                     es'2
                     % AFTER:
                     % MARKUP:
-                    ^ \markup \center-align { -14 }
+                    ^ \markup \center-align { \concat { -14 } }
                     % SPANNER_STARTS:
                     - \tweak circled-tip ##t
                     \<
@@ -307,7 +307,7 @@
                     % ARTICULATIONS:
                     \fffff
                     % MARKUP:
-                    ^ \markup \center-align { -14 }
+                    ^ \markup \center-align { \concat { -14 } }
                     % SPANNER_STARTS:
                     - \tweak circled-tip ##t
                     \>
@@ -361,7 +361,7 @@
                     ds''2
                     % AFTER:
                     % MARKUP:
-                    ^ \markup \center-align { +4 }
+                    ^ \markup \center-align { \concat { +4 } }
                     % SPANNER_STARTS:
                     - \tweak circled-tip ##t
                     \<
@@ -383,7 +383,7 @@
                     % ARTICULATIONS:
                     \fffff
                     % MARKUP:
-                    ^ \markup \center-align { -31 }
+                    ^ \markup \center-align { \concat { -31 } }
                     % SPANNER_STARTS:
                     - \tweak circled-tip ##t
                     \>
@@ -408,7 +408,7 @@
                     css''4
                     % AFTER:
                     % MARKUP:
-                    ^ \markup \center-align { C\raise #0.75 { \hspace #-0.5 \teeny \smaller \sharp}\hspace #-0.5 +40 }
+                    ^ \markup \center-align { \concat { C\raise #0.75 { \teeny \smaller \sharp } +40 } }
                     % SPANNER_STARTS:
                     ~
                     \tweak Accidental.stencil #ly:text-interface::print
@@ -444,7 +444,7 @@
                     b,,2
                     % AFTER:
                     % MARKUP:
-                    ^ \markup \center-align { C+9 }
+                    ^ \markup \center-align { \concat { C+9 } }
                     % SPANNER_STARTS:
                     - \tweak circled-tip ##t
                     \<
@@ -466,7 +466,7 @@
                     % ARTICULATIONS:
                     \fffff
                     % MARKUP:
-                    ^ \markup \center-align { +2 }
+                    ^ \markup \center-align { \concat { +2 } }
                     % SPANNER_STARTS:
                     - \tweak circled-tip ##t
                     \>
@@ -494,7 +494,7 @@
                     ds''4
                     % AFTER:
                     % MARKUP:
-                    ^ \markup \center-align { +4 }
+                    ^ \markup \center-align { \concat { +4 } }
                     % SPANNER_STARTS:
                     ~
                     \tweak Accidental.stencil #ly:text-interface::print
@@ -530,7 +530,7 @@
                     ds,2
                     % AFTER:
                     % MARKUP:
-                    ^ \markup \center-align { -18 }
+                    ^ \markup \center-align { \concat { -18 } }
                     % SPANNER_STARTS:
                     - \tweak circled-tip ##t
                     \<
@@ -552,7 +552,7 @@
                     % ARTICULATIONS:
                     \fffff
                     % MARKUP:
-                    ^ \markup \center-align { +0 }
+                    ^ \markup \center-align { \concat { +0 } }
                     % SPANNER_STARTS:
                     - \tweak circled-tip ##t
                     \>
@@ -577,7 +577,7 @@
                     e,4
                     % AFTER:
                     % MARKUP:
-                    ^ \markup \center-align { -6 }
+                    ^ \markup \center-align { \concat { -6 } }
                     % SPANNER_STARTS:
                     ~
                     \tweak Accidental.stencil #ly:text-interface::print

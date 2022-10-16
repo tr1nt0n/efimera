@@ -81,7 +81,7 @@
                     - \espressivo
                     \ppppp
                     % MARKUP:
-                    ^ \markup \center-align { +4 }
+                    ^ \markup \center-align { \concat { +4 } }
                     s1 * 7/4
                     s1 * 1/2
                     s1 * 9/4
@@ -496,7 +496,7 @@
                     - \espressivo
                     \ppppp
                     % MARKUP:
-                    ^ \markup \center-align { -14 }
+                    ^ \markup \center-align { \concat { -14 } }
                     s1 * 7/4
                     % OPEN_BRACKETS:
                     \times 8/9
@@ -508,7 +508,7 @@
                         % ARTICULATIONS:
                         - \espressivo
                         % MARKUP:
-                        ^ \markup \center-align { +16 }
+                        ^ \markup \center-align { \concat { +16 } }
                         r16
                         \tweak Accidental.stencil #ly:text-interface::print
                         \tweak Accidental.text \markup { \one-nineteen-limit-schisma-up  }
@@ -517,7 +517,7 @@
                         % ARTICULATIONS:
                         - \espressivo
                         % MARKUP:
-                        ^ \markup \center-align { -1 }
+                        ^ \markup \center-align { \concat { -1 } }
                         r8
                         \tweak Accidental.stencil #ly:text-interface::print
                         \tweak Accidental.text \markup \concat { \one-twenty-three-limit-comma-up \hspace #0.125 \one-septimal-comma-down \hspace #0.125 \abjad-sharp  }
@@ -526,7 +526,7 @@
                         % ARTICULATIONS:
                         - \espressivo
                         % MARKUP:
-                        ^ \markup \center-align { -3 }
+                        ^ \markup \center-align { \concat { -3 } }
                         r16
                         \tweak Accidental.stencil #ly:text-interface::print
                         \tweak Accidental.text \markup { \abjad-sharp  }
@@ -535,7 +535,7 @@
                         % ARTICULATIONS:
                         - \espressivo
                         % MARKUP:
-                        ^ \markup \center-align { +2 }
+                        ^ \markup \center-align { \concat { +2 } }
                     % CLOSE_BRACKETS:
                     }
                     s1 * 9/4
@@ -552,7 +552,7 @@
                     % ARTICULATIONS:
                     - \espressivo
                     % MARKUP:
-                    ^ \markup \center-align { -3 }
+                    ^ \markup \center-align { \concat { -3 } }
                     s1 * 1/2
                 % CLOSE_BRACKETS:
                 }
@@ -576,7 +576,7 @@
                     - \espressivo
                     \ppppp
                     % MARKUP:
-                    ^ \markup \center-align { -31 }
+                    ^ \markup \center-align { \concat { -31 } }
                     s1 * 7/4
                     s1 * 1/2
                     s1 * 9/4
@@ -594,7 +594,7 @@
                         - \accent
                         \ff
                         % MARKUP:
-                        ^ \markup \center-align { +14 }
+                        ^ \markup \center-align { \concat { +14 } }
                     % CLOSE_BRACKETS:
                     }
                     % OPENING:
@@ -607,7 +607,7 @@
                     % ARTICULATIONS:
                     \pp
                     % MARKUP:
-                    ^ \markup \center-align { +4 }
+                    ^ \markup \center-align { \concat { +4 } }
                     % START_BEAM:
                     [
                     % OPENING:
@@ -618,7 +618,7 @@
                     d'16
                     % AFTER:
                     % MARKUP:
-                    ^ \markup \center-align { -18 }
+                    ^ \markup \center-align { \concat { -18 } }
                     % STOP_BEAM:
                     ]
                     r8
@@ -633,7 +633,7 @@
                         bf'8
                         % AFTER:
                         % MARKUP:
-                        ^ \markup \center-align { +18 }
+                        ^ \markup \center-align { \concat { +18 } }
                         % START_BEAM:
                         [
                         % OPENING:
@@ -644,7 +644,7 @@
                         d'16
                         % AFTER:
                         % MARKUP:
-                        ^ \markup \center-align { +4 }
+                        ^ \markup \center-align { \concat { +4 } }
                         % STOP_BEAM:
                         ]
                     % CLOSE_BRACKETS:
@@ -676,7 +676,7 @@
                     - \espressivo
                     \ppppp
                     % MARKUP:
-                    ^ \markup \center-align { +2 }
+                    ^ \markup \center-align { \concat { +2 } }
                     s1 * 7/4
                     s1 * 1/2
                     s1 * 9/4
@@ -703,7 +703,7 @@
                     - \accent
                     \fp
                     % MARKUP:
-                    ^ \markup \center-align \center-column { \line { +0  }\line { +4  }\line { +20  } }
+                    ^ \markup \center-align { \center-column { \line { \concat { +20 }  }\line { \concat { +4 }  }\line { \concat { +0 }  } } }
                     <
                         \tweak Accidental.stencil #ly:text-interface::print
                         \tweak Accidental.text \markup { \abjad-flat  }
@@ -720,7 +720,7 @@
                     - \accent
                     \fp
                     % MARKUP:
-                    ^ \markup \center-align \center-column { \line { +0  }\line { +4  }\line { +20  } }
+                    ^ \markup \center-align { \center-column { \line { \concat { +20 }  }\line { \concat { +4 }  }\line { \concat { +0 }  } } }
                     s1 * 2
                     s1 * 1/16
                     s1 * 1/2
@@ -749,7 +749,7 @@
                     - \espressivo
                     \ppppp
                     % MARKUP:
-                    ^ \markup \center-align { +0 }
+                    ^ \markup \center-align { \concat { +0 } }
                     s1 * 7/4
                     s1 * 1/2
                     s1 * 9/4
@@ -769,7 +769,7 @@
                     % ARTICULATIONS:
                     - \espressivo
                     % MARKUP:
-                    ^ \markup \center-align { +7 }
+                    ^ \markup \center-align { \concat { +7 } }
                     s1 * 1/2
                 % CLOSE_BRACKETS:
                 }

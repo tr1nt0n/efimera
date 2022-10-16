@@ -682,7 +682,7 @@
                         % ARTICULATIONS:
                         - \accent
                         % MARKUP:
-                        ^ \markup \center-align { +14 }
+                        ^ \markup \center-align { \concat { +14 } }
                         % START_BEAM:
                         [
                         \tweak Accidental.stencil #ly:text-interface::print
@@ -690,7 +690,7 @@
                         d'16
                         % AFTER:
                         % MARKUP:
-                        ^ \markup \center-align { +4 }
+                        ^ \markup \center-align { \concat { +4 } }
                         % OPENING:
                         % COMMANDS:
                         \revert Staff.Stem.stemlet-length
@@ -699,7 +699,7 @@
                         d'16
                         % AFTER:
                         % MARKUP:
-                        ^ \markup \center-align { -18 }
+                        ^ \markup \center-align { \concat { -18 } }
                         % STOP_BEAM:
                         ]
                         r4
@@ -711,7 +711,7 @@
                         d'16
                         % AFTER:
                         % MARKUP:
-                        ^ \markup \center-align { +4 }
+                        ^ \markup \center-align { \concat { +4 } }
                         % START_BEAM:
                         [
                         % OPENING:
@@ -724,7 +724,7 @@
                         % ARTICULATIONS:
                         - \accent
                         % MARKUP:
-                        ^ \markup \center-align { +18 }
+                        ^ \markup \center-align { \concat { +18 } }
                         % STOP_BEAM:
                         ]
                         % SPANNER_STARTS:
@@ -743,7 +743,7 @@
                     d'16
                     % AFTER:
                     % MARKUP:
-                    ^ \markup \center-align { -18 }
+                    ^ \markup \center-align { \concat { -18 } }
                     % START_BEAM:
                     [
                     \tweak Accidental.stencil #ly:text-interface::print
@@ -751,13 +751,13 @@
                     d'16
                     % AFTER:
                     % MARKUP:
-                    ^ \markup \center-align { +4 }
+                    ^ \markup \center-align { \concat { +4 } }
                     \tweak Accidental.stencil #ly:text-interface::print
                     \tweak Accidental.text \markup { \natural-two-syntonic-comma-down  }
                     b'16
                     % AFTER:
                     % MARKUP:
-                    ^ \markup \center-align { -33 }
+                    ^ \markup \center-align { \concat { -33 } }
                     % SPANNER_STARTS:
                     ~
                     % OPENING:
@@ -786,7 +786,7 @@
                         % ARTICULATIONS:
                         - \espressivo
                         % MARKUP:
-                        ^ \markup \center-align { +0 }
+                        ^ \markup \center-align { \concat { +0 } }
                         % START_BEAM:
                         [
                         \tweak Accidental.stencil #ly:text-interface::print
@@ -796,7 +796,7 @@
                         % ARTICULATIONS:
                         - \espressivo
                         % MARKUP:
-                        ^ \markup \center-align { +12 }
+                        ^ \markup \center-align { \concat { +12 } }
                         \tweak Accidental.stencil #ly:text-interface::print
                         \tweak Accidental.text \markup \concat { \one-seventeen-limit-schisma-down \hspace #0.125 \abjad-sharp  }
                         ds'''16
@@ -804,7 +804,7 @@
                         % ARTICULATIONS:
                         - \espressivo
                         % MARKUP:
-                        ^ \markup \center-align { +5 }
+                        ^ \markup \center-align { \concat { +5 } }
                         \tweak Accidental.stencil #ly:text-interface::print
                         \tweak Accidental.text \markup \concat { \one-twenty-three-limit-comma-up \hspace #0.125 \one-septimal-comma-down  }
                         e'''16
@@ -812,7 +812,7 @@
                         % ARTICULATIONS:
                         - \espressivo
                         % MARKUP:
-                        ^ \markup \center-align { -3 }
+                        ^ \markup \center-align { \concat { -3 } }
                         % OPENING:
                         % COMMANDS:
                         \revert Staff.Stem.stemlet-length
@@ -823,7 +823,7 @@
                         % ARTICULATIONS:
                         - \espressivo
                         % MARKUP:
-                        ^ \markup \center-align { +16 }
+                        ^ \markup \center-align { \concat { +16 } }
                         % STOP_BEAM:
                         ]
                     % CLOSE_BRACKETS:
@@ -842,7 +842,7 @@
                         % ARTICULATIONS:
                         - \espressivo
                         % MARKUP:
-                        ^ \markup \center-align { -1 }
+                        ^ \markup \center-align { \concat { -1 } }
                         % START_BEAM:
                         [
                         \tweak Accidental.stencil #ly:text-interface::print
@@ -852,7 +852,7 @@
                         % ARTICULATIONS:
                         - \espressivo
                         % MARKUP:
-                        ^ \markup \center-align { -3 }
+                        ^ \markup \center-align { \concat { -3 } }
                         \tweak Accidental.stencil #ly:text-interface::print
                         \tweak Accidental.text \markup \concat { \one-seventeen-limit-schisma-down \hspace #0.125 \abjad-sharp  }
                         d''''16
@@ -860,7 +860,7 @@
                         % ARTICULATIONS:
                         - \espressivo
                         % MARKUP:
-                        ^ \markup \center-align { +7 }
+                        ^ \markup \center-align { \concat { +7 } }
                         \tweak Accidental.stencil #ly:text-interface::print
                         \tweak Accidental.text \markup { \abjad-flat  }
                         bf''16
@@ -868,7 +868,7 @@
                         % ARTICULATIONS:
                         - \espressivo
                         % MARKUP:
-                        ^ \markup \center-align { +2 }
+                        ^ \markup \center-align { \concat { +2 } }
                         \tweak Accidental.stencil #ly:text-interface::print
                         \tweak Accidental.text \markup { \abjad-sharp  }
                         d'''16
@@ -876,7 +876,7 @@
                         % ARTICULATIONS:
                         - \espressivo
                         % MARKUP:
-                        ^ \markup \center-align { +0 }
+                        ^ \markup \center-align { \concat { +0 } }
                         % OPENING:
                         % COMMANDS:
                         \revert Staff.Stem.stemlet-length
@@ -887,7 +887,7 @@
                         % ARTICULATIONS:
                         - \espressivo
                         % MARKUP:
-                        ^ \markup \center-align { +7 }
+                        ^ \markup \center-align { \concat { +7 } }
                         % STOP_BEAM:
                         ]
                         r8
@@ -907,7 +907,7 @@
                         % ARTICULATIONS:
                         - \espressivo
                         % MARKUP:
-                        ^ \markup \center-align { -26 }
+                        ^ \markup \center-align { \concat { -26 } }
                         % START_BEAM:
                         [
                         % COMMANDS:
@@ -922,7 +922,7 @@
                         % ARTICULATIONS:
                         - \espressivo
                         % MARKUP:
-                        ^ \markup \center-align { +0 }
+                        ^ \markup \center-align { \concat { +0 } }
                         % STOP_BEAM:
                         ]
                         r4
@@ -941,7 +941,7 @@
                         % ARTICULATIONS:
                         - \espressivo
                         % MARKUP:
-                        ^ \markup \center-align { +12 }
+                        ^ \markup \center-align { \concat { +12 } }
                         % START_BEAM:
                         [
                         \tweak Accidental.stencil #ly:text-interface::print
@@ -951,7 +951,7 @@
                         % ARTICULATIONS:
                         - \espressivo
                         % MARKUP:
-                        ^ \markup \center-align { +5 }
+                        ^ \markup \center-align { \concat { +5 } }
                         \tweak Accidental.stencil #ly:text-interface::print
                         \tweak Accidental.text \markup \concat { \one-twenty-three-limit-comma-up \hspace #0.125 \one-septimal-comma-down \hspace #0.125 \abjad-sharp  }
                         g''16
@@ -959,7 +959,7 @@
                         % ARTICULATIONS:
                         - \espressivo
                         % MARKUP:
-                        ^ \markup \center-align { -3 }
+                        ^ \markup \center-align { \concat { -3 } }
                         \tweak Accidental.stencil #ly:text-interface::print
                         \tweak Accidental.text \markup \concat { \one-twenty-nine-limit-comma-up \hspace #0.125 \natural-one-syntonic-comma-down  }
                         d'16
@@ -967,7 +967,7 @@
                         % ARTICULATIONS:
                         - \espressivo
                         % MARKUP:
-                        ^ \markup \center-align { +16 }
+                        ^ \markup \center-align { \concat { +16 } }
                         % OPENING:
                         % COMMANDS:
                         \revert Staff.Stem.stemlet-length
@@ -978,7 +978,7 @@
                         % ARTICULATIONS:
                         - \espressivo
                         % MARKUP:
-                        ^ \markup \center-align { -1 }
+                        ^ \markup \center-align { \concat { -1 } }
                         % STOP_BEAM:
                         ]
                     % CLOSE_BRACKETS:
@@ -996,7 +996,7 @@
                         % ARTICULATIONS:
                         - \espressivo
                         % MARKUP:
-                        ^ \markup \center-align { -3 }
+                        ^ \markup \center-align { \concat { -3 } }
                         % START_BEAM:
                         [
                         \tweak Accidental.stencil #ly:text-interface::print
@@ -1006,7 +1006,7 @@
                         % ARTICULATIONS:
                         - \espressivo
                         % MARKUP:
-                        ^ \markup \center-align { +7 }
+                        ^ \markup \center-align { \concat { +7 } }
                         \tweak Accidental.stencil #ly:text-interface::print
                         \tweak Accidental.text \markup { \abjad-natural  }
                         c'16
@@ -1014,7 +1014,7 @@
                         % ARTICULATIONS:
                         - \espressivo
                         % MARKUP:
-                        ^ \markup \center-align { +2 }
+                        ^ \markup \center-align { \concat { +2 } }
                         \tweak Accidental.stencil #ly:text-interface::print
                         \tweak Accidental.text \markup { \abjad-flat  }
                         ff'16
@@ -1022,7 +1022,7 @@
                         % ARTICULATIONS:
                         - \espressivo
                         % MARKUP:
-                        ^ \markup \center-align { +0 }
+                        ^ \markup \center-align { \concat { +0 } }
                         % OPENING:
                         % COMMANDS:
                         \clef "bass"
@@ -1033,7 +1033,7 @@
                         % ARTICULATIONS:
                         - \espressivo
                         % MARKUP:
-                        ^ \markup \center-align { +7 }
+                        ^ \markup \center-align { \concat { +7 } }
                         \tweak Accidental.stencil #ly:text-interface::print
                         \tweak Accidental.text \markup \concat { \one-seventeen-limit-schisma-down \hspace #0.125 \one-septimal-comma-down  }
                         b16
@@ -1041,7 +1041,7 @@
                         % ARTICULATIONS:
                         - \espressivo
                         % MARKUP:
-                        ^ \markup \center-align { -26 }
+                        ^ \markup \center-align { \concat { -26 } }
                         \tweak Accidental.stencil #ly:text-interface::print
                         \tweak Accidental.text \markup { \abjad-flat  }
                         bf,16
@@ -1049,7 +1049,7 @@
                         % ARTICULATIONS:
                         - \espressivo
                         % MARKUP:
-                        ^ \markup \center-align { +0 }
+                        ^ \markup \center-align { \concat { +0 } }
                         \tweak Accidental.stencil #ly:text-interface::print
                         \tweak Accidental.text \markup \concat { \one-forty-three-limit-comma-up \hspace #0.125 \abjad-flat  }
                         eff'16
@@ -1057,7 +1057,7 @@
                         % ARTICULATIONS:
                         - \espressivo
                         % MARKUP:
-                        ^ \markup \center-align { +12 }
+                        ^ \markup \center-align { \concat { +12 } }
                         % OPENING:
                         % COMMANDS:
                         \revert Staff.Stem.stemlet-length
@@ -1068,7 +1068,7 @@
                         % ARTICULATIONS:
                         - \espressivo
                         % MARKUP:
-                        ^ \markup \center-align { +5 }
+                        ^ \markup \center-align { \concat { +5 } }
                         % STOP_BEAM:
                         ]
                         r16
@@ -1087,7 +1087,7 @@
                         % ARTICULATIONS:
                         - \espressivo
                         % MARKUP:
-                        ^ \markup \center-align { -3 }
+                        ^ \markup \center-align { \concat { -3 } }
                         % START_BEAM:
                         [
                         \tweak Accidental.stencil #ly:text-interface::print
@@ -1097,7 +1097,7 @@
                         % ARTICULATIONS:
                         - \espressivo
                         % MARKUP:
-                        ^ \markup \center-align { +16 }
+                        ^ \markup \center-align { \concat { +16 } }
                         \tweak Accidental.stencil #ly:text-interface::print
                         \tweak Accidental.text \markup { \one-nineteen-limit-schisma-up  }
                         c'16
@@ -1105,7 +1105,7 @@
                         % ARTICULATIONS:
                         - \espressivo
                         % MARKUP:
-                        ^ \markup \center-align { -1 }
+                        ^ \markup \center-align { \concat { -1 } }
                         \tweak Accidental.stencil #ly:text-interface::print
                         \tweak Accidental.text \markup \concat { \one-twenty-three-limit-comma-up \hspace #0.125 \one-septimal-comma-down \hspace #0.125 \abjad-sharp  }
                         ds,16
@@ -1113,7 +1113,7 @@
                         % ARTICULATIONS:
                         - \espressivo
                         % MARKUP:
-                        ^ \markup \center-align { -3 }
+                        ^ \markup \center-align { \concat { -3 } }
                         % OPENING:
                         % COMMANDS:
                         \revert Staff.Stem.stemlet-length
@@ -1124,7 +1124,7 @@
                         % ARTICULATIONS:
                         - \espressivo
                         % MARKUP:
-                        ^ \markup \center-align { +7 }
+                        ^ \markup \center-align { \concat { +7 } }
                         % STOP_BEAM:
                         ]
                     % CLOSE_BRACKETS:
@@ -1294,7 +1294,7 @@
                         d'16
                         % AFTER:
                         % MARKUP:
-                        ^ \markup \center-align { +4 }
+                        ^ \markup \center-align { \concat { +4 } }
                         % START_BEAM:
                         [
                         \tweak Accidental.stencil #ly:text-interface::print
@@ -1304,7 +1304,7 @@
                         % ARTICULATIONS:
                         - \accent
                         % MARKUP:
-                        ^ \markup \center-align { +14 }
+                        ^ \markup \center-align { \concat { +14 } }
                         % OPENING:
                         % COMMANDS:
                         \revert Staff.Stem.stemlet-length
@@ -1313,7 +1313,7 @@
                         d'16
                         % AFTER:
                         % MARKUP:
-                        ^ \markup \center-align { -18 }
+                        ^ \markup \center-align { \concat { -18 } }
                         % STOP_BEAM:
                         ]
                         r8
@@ -1325,7 +1325,7 @@
                         d'16
                         % AFTER:
                         % MARKUP:
-                        ^ \markup \center-align { +4 }
+                        ^ \markup \center-align { \concat { +4 } }
                         % START_BEAM:
                         [
                         \tweak Accidental.stencil #ly:text-interface::print
@@ -1333,7 +1333,7 @@
                         d'16
                         % AFTER:
                         % MARKUP:
-                        ^ \markup \center-align { -18 }
+                        ^ \markup \center-align { \concat { -18 } }
                         % OPENING:
                         % COMMANDS:
                         \revert Staff.Stem.stemlet-length
@@ -1344,7 +1344,7 @@
                         % ARTICULATIONS:
                         - \accent
                         % MARKUP:
-                        ^ \markup \center-align { +18 }
+                        ^ \markup \center-align { \concat { +18 } }
                         % STOP_BEAM:
                         ]
                     % CLOSE_BRACKETS:
@@ -1358,7 +1358,7 @@
                     d'16
                     % AFTER:
                     % MARKUP:
-                    ^ \markup \center-align { +4 }
+                    ^ \markup \center-align { \concat { +4 } }
                     % START_BEAM:
                     [
                     % OPENING:
@@ -1369,7 +1369,7 @@
                     b'8.
                     % AFTER:
                     % MARKUP:
-                    ^ \markup \center-align { -33 }
+                    ^ \markup \center-align { \concat { -33 } }
                     % STOP_BEAM:
                     ]
                 % CLOSE_BRACKETS:
@@ -1398,7 +1398,7 @@
                     % ARTICULATIONS:
                     \fff
                     % MARKUP:
-                    ^ \markup \center-align \center-column { \line {  }\line { A-41  } }
+                    ^ \markup \center-align { \center-column { \line { \concat { A-41 }  }\line {  } } }
                     % START_BEAM:
                     [
                     % OPENING:
@@ -1414,7 +1414,7 @@
                     >8
                     % AFTER:
                     % MARKUP:
-                    ^ \markup \center-align \center-column { \line { +49  }\line { -39  } }
+                    ^ \markup \center-align { \center-column { \line { \concat { -39 }  }\line { \concat { +49 }  } } }
                     % STOP_BEAM:
                     ]
                     <
@@ -1427,7 +1427,7 @@
                     >4
                     % AFTER:
                     % MARKUP:
-                    ^ \markup \center-align \center-column { \line { -16  }\line { +0  } }
+                    ^ \markup \center-align { \center-column { \line { \concat { +0 }  }\line { \concat { -16 }  } } }
                     % SPANNER_STARTS:
                     ~
                     % OPENING:
@@ -1457,7 +1457,7 @@
                     >8
                     % AFTER:
                     % MARKUP:
-                    ^ \markup \center-align \center-column { \line { B\raise #0.5 { \hspace #-0.5 \teeny \flat}\hspace #-0.5 -38  }\line { +0  } }
+                    ^ \markup \center-align { \center-column { \line { \concat { +0 }  }\line { \concat { B\raise #0.5 { \teeny \flat } -38 }  } } }
                     % STOP_BEAM:
                     ]
                     % SPANNER_STARTS:
@@ -1489,7 +1489,7 @@
                     >8
                     % AFTER:
                     % MARKUP:
-                    ^ \markup \center-align \center-column { \line { A\raise #0.5 { \hspace #-0.5 \teeny \flat}\hspace #-0.5 -16  }\line { +0  } }
+                    ^ \markup \center-align { \center-column { \line { \concat { +0 }  }\line { \concat { A\raise #0.5 { \teeny \flat } -16 }  } } }
                     % STOP_BEAM:
                     ]
                     % SPANNER_STARTS:
@@ -1521,7 +1521,7 @@
                     >8
                     % AFTER:
                     % MARKUP:
-                    ^ \markup \center-align \center-column { \line { -47  }\line { +0  } }
+                    ^ \markup \center-align { \center-column { \line { \concat { +0 }  }\line { \concat { -47 }  } } }
                     % STOP_BEAM:
                     ]
                     <
@@ -1534,11 +1534,11 @@
                     >4
                     % AFTER:
                     % MARKUP:
-                    ^ \markup \center-align \center-column { \line { +2  }\line { +13  } }
+                    ^ \markup \center-align { \center-column { \line { \concat { +13 }  }\line { \concat { +2 }  } } }
                     <c' e'>4
                     % AFTER:
                     % MARKUP:
-                    ^ \markup \center-align \center-column { \line {  }\line {  } }
+                    ^ \markup \center-align { \center-column { \line {  }\line {  } } }
                     % OPEN_BRACKETS:
                     \times 2/3
                     {
@@ -1555,7 +1555,7 @@
                         % ARTICULATIONS:
                         - \espressivo
                         % MARKUP:
-                        ^ \markup \center-align { +0 }
+                        ^ \markup \center-align { \concat { +0 } }
                         % START_BEAM:
                         [
                         \tweak Accidental.stencil #ly:text-interface::print
@@ -1565,7 +1565,7 @@
                         % ARTICULATIONS:
                         - \espressivo
                         % MARKUP:
-                        ^ \markup \center-align { +12 }
+                        ^ \markup \center-align { \concat { +12 } }
                         \tweak Accidental.stencil #ly:text-interface::print
                         \tweak Accidental.text \markup \concat { \one-seventeen-limit-schisma-down \hspace #0.125 \abjad-sharp  }
                         ds'''16
@@ -1573,7 +1573,7 @@
                         % ARTICULATIONS:
                         - \espressivo
                         % MARKUP:
-                        ^ \markup \center-align { +5 }
+                        ^ \markup \center-align { \concat { +5 } }
                         \tweak Accidental.stencil #ly:text-interface::print
                         \tweak Accidental.text \markup \concat { \one-twenty-three-limit-comma-up \hspace #0.125 \one-septimal-comma-down  }
                         e'''16
@@ -1581,7 +1581,7 @@
                         % ARTICULATIONS:
                         - \espressivo
                         % MARKUP:
-                        ^ \markup \center-align { -3 }
+                        ^ \markup \center-align { \concat { -3 } }
                         % OPENING:
                         % COMMANDS:
                         \revert Staff.Stem.stemlet-length
@@ -1592,7 +1592,7 @@
                         % ARTICULATIONS:
                         - \espressivo
                         % MARKUP:
-                        ^ \markup \center-align { +16 }
+                        ^ \markup \center-align { \concat { +16 } }
                         % STOP_BEAM:
                         ]
                         r16
@@ -1612,7 +1612,7 @@
                         % ARTICULATIONS:
                         - \espressivo
                         % MARKUP:
-                        ^ \markup \center-align { -1 }
+                        ^ \markup \center-align { \concat { -1 } }
                         % START_BEAM:
                         [
                         \tweak Accidental.stencil #ly:text-interface::print
@@ -1622,7 +1622,7 @@
                         % ARTICULATIONS:
                         - \espressivo
                         % MARKUP:
-                        ^ \markup \center-align { -3 }
+                        ^ \markup \center-align { \concat { -3 } }
                         \tweak Accidental.stencil #ly:text-interface::print
                         \tweak Accidental.text \markup \concat { \one-seventeen-limit-schisma-down \hspace #0.125 \abjad-sharp  }
                         ds''''16
@@ -1630,7 +1630,7 @@
                         % ARTICULATIONS:
                         - \espressivo
                         % MARKUP:
-                        ^ \markup \center-align { +7 }
+                        ^ \markup \center-align { \concat { +7 } }
                         \tweak Accidental.stencil #ly:text-interface::print
                         \tweak Accidental.text \markup { \abjad-flat  }
                         bf''16
@@ -1638,7 +1638,7 @@
                         % ARTICULATIONS:
                         - \espressivo
                         % MARKUP:
-                        ^ \markup \center-align { +2 }
+                        ^ \markup \center-align { \concat { +2 } }
                         \tweak Accidental.stencil #ly:text-interface::print
                         \tweak Accidental.text \markup { \abjad-sharp  }
                         ds'''16
@@ -1646,7 +1646,7 @@
                         % ARTICULATIONS:
                         - \espressivo
                         % MARKUP:
-                        ^ \markup \center-align { +0 }
+                        ^ \markup \center-align { \concat { +0 } }
                         % OPENING:
                         % COMMANDS:
                         \revert Staff.Stem.stemlet-length
@@ -1657,7 +1657,7 @@
                         % ARTICULATIONS:
                         - \espressivo
                         % MARKUP:
-                        ^ \markup \center-align { +7 }
+                        ^ \markup \center-align { \concat { +7 } }
                         % STOP_BEAM:
                         ]
                         r8.
@@ -1671,7 +1671,7 @@
                         % ARTICULATIONS:
                         - \espressivo
                         % MARKUP:
-                        ^ \markup \center-align { -26 }
+                        ^ \markup \center-align { \concat { -26 } }
                         % START_BEAM:
                         [
                         % COMMANDS:
@@ -1686,7 +1686,7 @@
                         % ARTICULATIONS:
                         - \espressivo
                         % MARKUP:
-                        ^ \markup \center-align { +0 }
+                        ^ \markup \center-align { \concat { +0 } }
                         % STOP_BEAM:
                         ]
                     % CLOSE_BRACKETS:
@@ -1766,7 +1766,7 @@
                         % ARTICULATIONS:
                         - \accent
                         % MARKUP:
-                        ^ \markup \center-align { +14 }
+                        ^ \markup \center-align { \concat { +14 } }
                         % OPENING:
                         % COMMANDS:
                         \override Staff.Stem.stemlet-length = 0.75
@@ -1775,7 +1775,7 @@
                         d'16
                         % AFTER:
                         % MARKUP:
-                        ^ \markup \center-align { +4 }
+                        ^ \markup \center-align { \concat { +4 } }
                         % START_BEAM:
                         [
                         % OPENING:
@@ -1788,7 +1788,7 @@
                         % ARTICULATIONS:
                         - \accent
                         % MARKUP:
-                        ^ \markup \center-align { +18 }
+                        ^ \markup \center-align { \concat { +18 } }
                         % STOP_BEAM:
                         ]
                     % CLOSE_BRACKETS:
@@ -1802,7 +1802,7 @@
                     d'16
                     % AFTER:
                     % MARKUP:
-                    ^ \markup \center-align { -18 }
+                    ^ \markup \center-align { \concat { -18 } }
                     % START_BEAM:
                     [
                     \tweak Accidental.stencil #ly:text-interface::print
@@ -1810,7 +1810,7 @@
                     d'16
                     % AFTER:
                     % MARKUP:
-                    ^ \markup \center-align { +4 }
+                    ^ \markup \center-align { \concat { +4 } }
                     % OPENING:
                     % COMMANDS:
                     \revert Staff.Stem.stemlet-length
@@ -1819,7 +1819,7 @@
                     d'16
                     % AFTER:
                     % MARKUP:
-                    ^ \markup \center-align { -18 }
+                    ^ \markup \center-align { \concat { -18 } }
                     % STOP_BEAM:
                     ]
                     % OPEN_BRACKETS:
@@ -1834,7 +1834,7 @@
                         d'16
                         % AFTER:
                         % MARKUP:
-                        ^ \markup \center-align { +4 }
+                        ^ \markup \center-align { \concat { +4 } }
                         % START_BEAM:
                         [
                         \tweak Accidental.stencil #ly:text-interface::print
@@ -1844,7 +1844,7 @@
                         % ARTICULATIONS:
                         - \accent
                         % MARKUP:
-                        ^ \markup \center-align { -33 }
+                        ^ \markup \center-align { \concat { -33 } }
                         % OPENING:
                         % COMMANDS:
                         \revert Staff.Stem.stemlet-length
@@ -1853,7 +1853,7 @@
                         d'16
                         % AFTER:
                         % MARKUP:
-                        ^ \markup \center-align { -18 }
+                        ^ \markup \center-align { \concat { -18 } }
                         % STOP_BEAM:
                         ]
                         r16
@@ -1864,13 +1864,13 @@
                         % ARTICULATIONS:
                         - \accent
                         % MARKUP:
-                        ^ \markup \center-align { +14 }
+                        ^ \markup \center-align { \concat { +14 } }
                         \tweak Accidental.stencil #ly:text-interface::print
                         \tweak Accidental.text \markup { \abjad-natural  }
                         d'16
                         % AFTER:
                         % MARKUP:
-                        ^ \markup \center-align { +4 }
+                        ^ \markup \center-align { \concat { +4 } }
                     % CLOSE_BRACKETS:
                     }
                     % OPEN_BRACKETS:
@@ -1884,7 +1884,7 @@
                         % ARTICULATIONS:
                         - \accent
                         % MARKUP:
-                        ^ \markup \center-align { -33 }
+                        ^ \markup \center-align { \concat { -33 } }
                         r16
                         % OPENING:
                         % COMMANDS:
@@ -1894,7 +1894,7 @@
                         d'16
                         % AFTER:
                         % MARKUP:
-                        ^ \markup \center-align { -18 }
+                        ^ \markup \center-align { \concat { -18 } }
                         % START_BEAM:
                         [
                         \tweak Accidental.stencil #ly:text-interface::print
@@ -1902,7 +1902,7 @@
                         d'16
                         % AFTER:
                         % MARKUP:
-                        ^ \markup \center-align { +4 }
+                        ^ \markup \center-align { \concat { +4 } }
                         % OPENING:
                         % COMMANDS:
                         \revert Staff.Stem.stemlet-length
@@ -1911,7 +1911,7 @@
                         af'8
                         % AFTER:
                         % MARKUP:
-                        ^ \markup \center-align { +14 }
+                        ^ \markup \center-align { \concat { +14 } }
                         % STOP_BEAM:
                         ]
                         r16
@@ -1925,7 +1925,7 @@
                         % ARTICULATIONS:
                         - \accent
                         % MARKUP:
-                        ^ \markup \center-align { +18 }
+                        ^ \markup \center-align { \concat { +18 } }
                         % START_BEAM:
                         [
                         \tweak Accidental.stencil #ly:text-interface::print
@@ -1933,7 +1933,7 @@
                         d'16
                         % AFTER:
                         % MARKUP:
-                        ^ \markup \center-align { -18 }
+                        ^ \markup \center-align { \concat { -18 } }
                         % OPENING:
                         % COMMANDS:
                         \revert Staff.Stem.stemlet-length
@@ -1942,7 +1942,7 @@
                         d'16
                         % AFTER:
                         % MARKUP:
-                        ^ \markup \center-align { +4 }
+                        ^ \markup \center-align { \concat { +4 } }
                         % STOP_BEAM:
                         ]
                     % CLOSE_BRACKETS:
@@ -1963,7 +1963,7 @@
                         % ARTICULATIONS:
                         - \espressivo
                         % MARKUP:
-                        ^ \markup \center-align { +16 }
+                        ^ \markup \center-align { \concat { +16 } }
                         % START_BEAM:
                         [
                         \tweak Accidental.stencil #ly:text-interface::print
@@ -1973,7 +1973,7 @@
                         % ARTICULATIONS:
                         - \espressivo
                         % MARKUP:
-                        ^ \markup \center-align { -1 }
+                        ^ \markup \center-align { \concat { -1 } }
                         \tweak Accidental.stencil #ly:text-interface::print
                         \tweak Accidental.text \markup \concat { \one-twenty-three-limit-comma-up \hspace #0.125 \one-septimal-comma-down \hspace #0.125 \abjad-sharp  }
                         fs'''16
@@ -1981,7 +1981,7 @@
                         % ARTICULATIONS:
                         - \espressivo
                         % MARKUP:
-                        ^ \markup \center-align { -3 }
+                        ^ \markup \center-align { \concat { -3 } }
                         \tweak Accidental.stencil #ly:text-interface::print
                         \tweak Accidental.text \markup \concat { \one-seventeen-limit-schisma-down \hspace #0.125 \abjad-sharp  }
                         gs'''16
@@ -1989,7 +1989,7 @@
                         % ARTICULATIONS:
                         - \espressivo
                         % MARKUP:
-                        ^ \markup \center-align { +7 }
+                        ^ \markup \center-align { \concat { +7 } }
                         % OPENING:
                         % COMMANDS:
                         \revert Staff.Stem.stemlet-length
@@ -2000,7 +2000,7 @@
                         % ARTICULATIONS:
                         - \espressivo
                         % MARKUP:
-                        ^ \markup \center-align { +2 }
+                        ^ \markup \center-align { \concat { +2 } }
                         % STOP_BEAM:
                         ]
                         r16
@@ -2020,7 +2020,7 @@
                         % ARTICULATIONS:
                         - \espressivo
                         % MARKUP:
-                        ^ \markup \center-align { +0 }
+                        ^ \markup \center-align { \concat { +0 } }
                         % START_BEAM:
                         [
                         \tweak Accidental.stencil #ly:text-interface::print
@@ -2030,7 +2030,7 @@
                         % ARTICULATIONS:
                         - \espressivo
                         % MARKUP:
-                        ^ \markup \center-align { +7 }
+                        ^ \markup \center-align { \concat { +7 } }
                         \tweak Accidental.stencil #ly:text-interface::print
                         \tweak Accidental.text \markup \concat { \one-seventeen-limit-schisma-down \hspace #0.125 \one-septimal-comma-down  }
                         fs''''16
@@ -2038,7 +2038,7 @@
                         % ARTICULATIONS:
                         - \espressivo
                         % MARKUP:
-                        ^ \markup \center-align { -26 }
+                        ^ \markup \center-align { \concat { -26 } }
                         \tweak Accidental.stencil #ly:text-interface::print
                         \tweak Accidental.text \markup { \abjad-flat  }
                         ef''16
@@ -2046,7 +2046,7 @@
                         % ARTICULATIONS:
                         - \espressivo
                         % MARKUP:
-                        ^ \markup \center-align { +0 }
+                        ^ \markup \center-align { \concat { +0 } }
                         \tweak Accidental.stencil #ly:text-interface::print
                         \tweak Accidental.text \markup \concat { \one-forty-three-limit-comma-up \hspace #0.125 \abjad-sharp  }
                         gs'''16
@@ -2054,7 +2054,7 @@
                         % ARTICULATIONS:
                         - \espressivo
                         % MARKUP:
-                        ^ \markup \center-align { +12 }
+                        ^ \markup \center-align { \concat { +12 } }
                         % OPENING:
                         % COMMANDS:
                         \revert Staff.Stem.stemlet-length
@@ -2065,7 +2065,7 @@
                         % ARTICULATIONS:
                         - \espressivo
                         % MARKUP:
-                        ^ \markup \center-align { +5 }
+                        ^ \markup \center-align { \concat { +5 } }
                         % STOP_BEAM:
                         ]
                     % CLOSE_BRACKETS:
@@ -2425,7 +2425,7 @@
                         - \accent
                         \mf
                         % MARKUP:
-                        ^ \markup \center-align { +14 }
+                        ^ \markup \center-align { \concat { +14 } }
                         % START_BEAM:
                         [
                         \tweak Accidental.stencil #ly:text-interface::print
@@ -2433,7 +2433,7 @@
                         d'16
                         % AFTER:
                         % MARKUP:
-                        ^ \markup \center-align { +4 }
+                        ^ \markup \center-align { \concat { +4 } }
                         % OPENING:
                         % COMMANDS:
                         \revert Staff.Stem.stemlet-length
@@ -2442,7 +2442,7 @@
                         d'16
                         % AFTER:
                         % MARKUP:
-                        ^ \markup \center-align { -18 }
+                        ^ \markup \center-align { \concat { -18 } }
                         % STOP_BEAM:
                         ]
                         r16
@@ -2455,7 +2455,7 @@
                     % ARTICULATIONS:
                     - \accent
                     % MARKUP:
-                    ^ \markup \center-align { +18 }
+                    ^ \markup \center-align { \concat { +18 } }
                     % OPENING:
                     % COMMANDS:
                     \override Staff.Stem.stemlet-length = 0.75
@@ -2464,7 +2464,7 @@
                     d'16
                     % AFTER:
                     % MARKUP:
-                    ^ \markup \center-align { +4 }
+                    ^ \markup \center-align { \concat { +4 } }
                     % START_BEAM:
                     [
                     \tweak Accidental.stencil #ly:text-interface::print
@@ -2474,7 +2474,7 @@
                     % ARTICULATIONS:
                     - \accent
                     % MARKUP:
-                    ^ \markup \center-align { -33 }
+                    ^ \markup \center-align { \concat { -33 } }
                     % SPANNER_STARTS:
                     ~
                     % OPENING:
@@ -2495,7 +2495,7 @@
                     d'16
                     % AFTER:
                     % MARKUP:
-                    ^ \markup \center-align { -18 }
+                    ^ \markup \center-align { \concat { -18 } }
                     % START_BEAM:
                     [
                     % OPENING:
@@ -2506,7 +2506,7 @@
                     af'8.
                     % AFTER:
                     % MARKUP:
-                    ^ \markup \center-align { +14 }
+                    ^ \markup \center-align { \concat { +14 } }
                     % STOP_BEAM:
                     ]
                     % OPEN_BRACKETS:
@@ -2797,7 +2797,7 @@
                         % ARTICULATIONS:
                         - \accent
                         % MARKUP:
-                        ^ \markup \center-align { +14 }
+                        ^ \markup \center-align { \concat { +14 } }
                         % START_BEAM:
                         [
                         \tweak Accidental.stencil #ly:text-interface::print
@@ -2805,7 +2805,7 @@
                         d'16
                         % AFTER:
                         % MARKUP:
-                        ^ \markup \center-align { +4 }
+                        ^ \markup \center-align { \concat { +4 } }
                         % OPENING:
                         % COMMANDS:
                         \revert Staff.Stem.stemlet-length
@@ -2816,7 +2816,7 @@
                         % ARTICULATIONS:
                         - \accent
                         % MARKUP:
-                        ^ \markup \center-align { +18 }
+                        ^ \markup \center-align { \concat { +18 } }
                         % STOP_BEAM:
                         ]
                         r16
@@ -2830,7 +2830,7 @@
                     d'16
                     % AFTER:
                     % MARKUP:
-                    ^ \markup \center-align { -18 }
+                    ^ \markup \center-align { \concat { -18 } }
                     % START_BEAM:
                     [
                     % OPENING:
@@ -2841,7 +2841,7 @@
                     b'8
                     % AFTER:
                     % MARKUP:
-                    ^ \markup \center-align { -33 }
+                    ^ \markup \center-align { \concat { -33 } }
                     % STOP_BEAM:
                     ]
                     % BEFORE:
@@ -2857,7 +2857,7 @@
                     % ARTICULATIONS:
                     - \espressivo
                     % MARKUP:
-                    ^ \markup \center-align { -1 }
+                    ^ \markup \center-align { \concat { -1 } }
                     % START_BEAM:
                     [
                     \tweak Accidental.stencil #ly:text-interface::print
@@ -2867,7 +2867,7 @@
                     % ARTICULATIONS:
                     - \espressivo
                     % MARKUP:
-                    ^ \markup \center-align { -3 }
+                    ^ \markup \center-align { \concat { -3 } }
                     \tweak Accidental.stencil #ly:text-interface::print
                     \tweak Accidental.text \markup \concat { \one-seventeen-limit-schisma-down \hspace #0.125 \abjad-sharp  }
                     gs''16
@@ -2875,7 +2875,7 @@
                     % ARTICULATIONS:
                     - \espressivo
                     % MARKUP:
-                    ^ \markup \center-align { +7 }
+                    ^ \markup \center-align { \concat { +7 } }
                     % OPENING:
                     % COMMANDS:
                     \revert Staff.Stem.stemlet-length
@@ -2886,7 +2886,7 @@
                     % ARTICULATIONS:
                     - \espressivo
                     % MARKUP:
-                    ^ \markup \center-align { +2 }
+                    ^ \markup \center-align { \concat { +2 } }
                     % STOP_BEAM:
                     ]
                     % OPEN_BRACKETS:
@@ -3193,7 +3193,7 @@
                         - \espressivo
                         \mf
                         % MARKUP:
-                        ^ \markup \center-align { +0 }
+                        ^ \markup \center-align { \concat { +0 } }
                         % START_BEAM:
                         [
                         % BEFORE:
@@ -3209,7 +3209,7 @@
                         % ARTICULATIONS:
                         - \espressivo
                         % MARKUP:
-                        ^ \markup \center-align { +12 }
+                        ^ \markup \center-align { \concat { +12 } }
                         % COMMANDS:
                         \ottava 0
                         % OPENING:
@@ -3222,7 +3222,7 @@
                         % ARTICULATIONS:
                         - \espressivo
                         % MARKUP:
-                        ^ \markup \center-align { +5 }
+                        ^ \markup \center-align { \concat { +5 } }
                         \tweak Accidental.stencil #ly:text-interface::print
                         \tweak Accidental.text \markup \concat { \one-twenty-three-limit-comma-up \hspace #0.125 \one-septimal-comma-down \hspace #0.125 \abjad-sharp  }
                         as16
@@ -3230,7 +3230,7 @@
                         % ARTICULATIONS:
                         - \espressivo
                         % MARKUP:
-                        ^ \markup \center-align { -3 }
+                        ^ \markup \center-align { \concat { -3 } }
                         % OPENING:
                         % COMMANDS:
                         \revert Staff.Stem.stemlet-length
@@ -3241,7 +3241,7 @@
                         % ARTICULATIONS:
                         - \espressivo
                         % MARKUP:
-                        ^ \markup \center-align { +16 }
+                        ^ \markup \center-align { \concat { +16 } }
                         % STOP_BEAM:
                         ]
                         r16
@@ -3259,7 +3259,7 @@
                         % ARTICULATIONS:
                         - \espressivo
                         % MARKUP:
-                        ^ \markup \center-align { -1 }
+                        ^ \markup \center-align { \concat { -1 } }
                         % START_BEAM:
                         [
                         % COMMANDS:
@@ -3274,7 +3274,7 @@
                         % ARTICULATIONS:
                         - \espressivo
                         % MARKUP:
-                        ^ \markup \center-align { -3 }
+                        ^ \markup \center-align { \concat { -3 } }
                         % BEFORE:
                         % COMMANDS:
                         \ottava 1
@@ -3289,7 +3289,7 @@
                         % ARTICULATIONS:
                         - \espressivo
                         % MARKUP:
-                        ^ \markup \center-align { +7 }
+                        ^ \markup \center-align { \concat { +7 } }
                         % STOP_BEAM:
                         ]
                         % COMMANDS:
@@ -3307,7 +3307,7 @@
                     % ARTICULATIONS:
                     - \espressivo
                     % MARKUP:
-                    ^ \markup \center-align { +2 }
+                    ^ \markup \center-align { \concat { +2 } }
                     % START_BEAM:
                     [
                     % BEFORE:
@@ -3323,7 +3323,7 @@
                     % ARTICULATIONS:
                     - \espressivo
                     % MARKUP:
-                    ^ \markup \center-align { +0 }
+                    ^ \markup \center-align { \concat { +0 } }
                     % COMMANDS:
                     \ottava 0
                     % OPENING:
@@ -3336,7 +3336,7 @@
                     % ARTICULATIONS:
                     - \espressivo
                     % MARKUP:
-                    ^ \markup \center-align { +7 }
+                    ^ \markup \center-align { \concat { +7 } }
                     % SPANNER_STARTS:
                     ~
                     % OPENING:
@@ -3366,7 +3366,7 @@
                     % ARTICULATIONS:
                     - \espressivo
                     % MARKUP:
-                    ^ \markup \center-align { -26 }
+                    ^ \markup \center-align { \concat { -26 } }
                     % START_BEAM:
                     [
                     % COMMANDS:
@@ -3382,7 +3382,7 @@
                     % ARTICULATIONS:
                     - \espressivo
                     % MARKUP:
-                    ^ \markup \center-align { +0 }
+                    ^ \markup \center-align { \concat { +0 } }
                     % STOP_BEAM:
                     ]
                     r8.
@@ -3396,7 +3396,7 @@
                     % ARTICULATIONS:
                     - \espressivo
                     % MARKUP:
-                    ^ \markup \center-align { +12 }
+                    ^ \markup \center-align { \concat { +12 } }
                     % START_BEAM:
                     [
                     \tweak Accidental.stencil #ly:text-interface::print
@@ -3406,7 +3406,7 @@
                     % ARTICULATIONS:
                     - \espressivo
                     % MARKUP:
-                    ^ \markup \center-align { +5 }
+                    ^ \markup \center-align { \concat { +5 } }
                     % SPANNER_STARTS:
                     ~
                     \tweak Accidental.stencil #ly:text-interface::print
@@ -3425,7 +3425,7 @@
                     % ARTICULATIONS:
                     - \espressivo
                     % MARKUP:
-                    ^ \markup \center-align { -3 }
+                    ^ \markup \center-align { \concat { -3 } }
                     % COMMANDS:
                     \ottava 0
                     % OPENING:
@@ -3439,7 +3439,7 @@
                     % ARTICULATIONS:
                     - \espressivo
                     % MARKUP:
-                    ^ \markup \center-align { +16 }
+                    ^ \markup \center-align { \concat { +16 } }
                     % STOP_BEAM:
                     ]
                     % OPEN_BRACKETS:
@@ -3617,7 +3617,7 @@
                         d'16
                         % AFTER:
                         % MARKUP:
-                        ^ \markup \center-align { +4 }
+                        ^ \markup \center-align { \concat { +4 } }
                         % START_BEAM:
                         [
                         \tweak Accidental.stencil #ly:text-interface::print
@@ -3625,7 +3625,7 @@
                         d'16
                         % AFTER:
                         % MARKUP:
-                        ^ \markup \center-align { -18 }
+                        ^ \markup \center-align { \concat { -18 } }
                         % OPENING:
                         % COMMANDS:
                         \revert Staff.Stem.stemlet-length
@@ -3634,7 +3634,7 @@
                         d'16
                         % AFTER:
                         % MARKUP:
-                        ^ \markup \center-align { +4 }
+                        ^ \markup \center-align { \concat { +4 } }
                         % STOP_BEAM:
                         ]
                     % CLOSE_BRACKETS:
@@ -3652,7 +3652,7 @@
                         % ARTICULATIONS:
                         - \espressivo
                         % MARKUP:
-                        ^ \markup \center-align { -1 }
+                        ^ \markup \center-align { \concat { -1 } }
                         % START_BEAM:
                         [
                         % BEFORE:
@@ -3665,7 +3665,7 @@
                         % ARTICULATIONS:
                         - \espressivo
                         % MARKUP:
-                        ^ \markup \center-align { -3 }
+                        ^ \markup \center-align { \concat { -3 } }
                         % COMMANDS:
                         \ottava 0
                         \tweak Accidental.stencil #ly:text-interface::print
@@ -3675,7 +3675,7 @@
                         % ARTICULATIONS:
                         - \espressivo
                         % MARKUP:
-                        ^ \markup \center-align { +7 }
+                        ^ \markup \center-align { \concat { +7 } }
                         \tweak Accidental.stencil #ly:text-interface::print
                         \tweak Accidental.text \markup { \abjad-sharp  }
                         cs'16
@@ -3683,7 +3683,7 @@
                         % ARTICULATIONS:
                         - \espressivo
                         % MARKUP:
-                        ^ \markup \center-align { +2 }
+                        ^ \markup \center-align { \concat { +2 } }
                         % OPENING:
                         % COMMANDS:
                         \revert Staff.Stem.stemlet-length
@@ -3694,7 +3694,7 @@
                         % ARTICULATIONS:
                         - \espressivo
                         % MARKUP:
-                        ^ \markup \center-align { +0 }
+                        ^ \markup \center-align { \concat { +0 } }
                         % STOP_BEAM:
                         ]
                         r16
@@ -3711,7 +3711,7 @@
                         % ARTICULATIONS:
                         - \espressivo
                         % MARKUP:
-                        ^ \markup \center-align { +7 }
+                        ^ \markup \center-align { \concat { +7 } }
                         % START_BEAM:
                         [
                         % COMMANDS:
@@ -3723,7 +3723,7 @@
                         % ARTICULATIONS:
                         - \espressivo
                         % MARKUP:
-                        ^ \markup \center-align { -26 }
+                        ^ \markup \center-align { \concat { -26 } }
                         % BEFORE:
                         % COMMANDS:
                         \ottava 1
@@ -3737,7 +3737,7 @@
                         % ARTICULATIONS:
                         - \espressivo
                         % MARKUP:
-                        ^ \markup \center-align { +0 }
+                        ^ \markup \center-align { \concat { +0 } }
                         % STOP_BEAM:
                         ]
                         % COMMANDS:
@@ -3754,7 +3754,7 @@
                     % ARTICULATIONS:
                     - \espressivo
                     % MARKUP:
-                    ^ \markup \center-align { +12 }
+                    ^ \markup \center-align { \concat { +12 } }
                     % START_BEAM:
                     [
                     % BEFORE:
@@ -3767,7 +3767,7 @@
                     % ARTICULATIONS:
                     - \espressivo
                     % MARKUP:
-                    ^ \markup \center-align { +5 }
+                    ^ \markup \center-align { \concat { +5 } }
                     % COMMANDS:
                     \ottava 0
                     % OPENING:
@@ -3780,7 +3780,7 @@
                     % ARTICULATIONS:
                     - \espressivo
                     % MARKUP:
-                    ^ \markup \center-align { -3 }
+                    ^ \markup \center-align { \concat { -3 } }
                     % STOP_BEAM:
                     ]
                     % SPANNER_STARTS:
@@ -3803,7 +3803,7 @@
                     % ARTICULATIONS:
                     - \espressivo
                     % MARKUP:
-                    ^ \markup \center-align { +16 }
+                    ^ \markup \center-align { \concat { +16 } }
                     % START_BEAM:
                     [
                     % COMMANDS:
@@ -3818,7 +3818,7 @@
                     % ARTICULATIONS:
                     - \espressivo
                     % MARKUP:
-                    ^ \markup \center-align { -1 }
+                    ^ \markup \center-align { \concat { -1 } }
                     % STOP_BEAM:
                     ]
                     r4

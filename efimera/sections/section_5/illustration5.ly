@@ -91,7 +91,7 @@
                     % ARTICULATIONS:
                     \fp
                     % MARKUP:
-                    ^ \markup \center-align { +4 }
+                    ^ \markup \center-align { \concat { +4 } }
                     % SPANNER_STARTS:
                     - \tweak stencil #abjad-flared-hairpin
                     \<
@@ -1288,7 +1288,7 @@
                         - \espressivo
                         \mp
                         % MARKUP:
-                        ^ \markup \center-align { +0 }
+                        ^ \markup \center-align { \concat { +0 } }
                         % SPANNER_STARTS:
                         - \tweak circled-tip ##t
                         \>
@@ -1307,7 +1307,7 @@
                         % ARTICULATIONS:
                         - \espressivo
                         % MARKUP:
-                        ^ \markup \center-align { +12 }
+                        ^ \markup \center-align { \concat { +12 } }
                         r8.
                     % CLOSE_BRACKETS:
                     }
@@ -1322,7 +1322,7 @@
                         % ARTICULATIONS:
                         - \espressivo
                         % MARKUP:
-                        ^ \markup \center-align { +5 }
+                        ^ \markup \center-align { \concat { +5 } }
                         r4
                         r16
                     % CLOSE_BRACKETS:
@@ -1338,7 +1338,7 @@
                         % ARTICULATIONS:
                         - \espressivo
                         % MARKUP:
-                        ^ \markup \center-align { -3 }
+                        ^ \markup \center-align { \concat { -3 } }
                     % CLOSE_BRACKETS:
                     }
                     s1 * 2
@@ -1360,7 +1360,7 @@
                         - \espressivo
                         \ff
                         % MARKUP:
-                        ^ \markup \center-align { -3 }
+                        ^ \markup \center-align { \concat { -3 } }
                         % START_BEAM:
                         [
                         % SPANNER_STARTS:
@@ -1376,7 +1376,7 @@
                         % ARTICULATIONS:
                         - \espressivo
                         % MARKUP:
-                        ^ \markup \center-align { +16 }
+                        ^ \markup \center-align { \concat { +16 } }
                         % OPENING:
                         % COMMANDS:
                         \clef "bass"
@@ -1387,7 +1387,7 @@
                         % ARTICULATIONS:
                         - \espressivo
                         % MARKUP:
-                        ^ \markup \center-align { -1 }
+                        ^ \markup \center-align { \concat { -1 } }
                         \tweak Accidental.stencil #ly:text-interface::print
                         \tweak Accidental.text \markup \concat { \one-twenty-three-limit-comma-up \hspace #0.125 \one-septimal-comma-down \hspace #0.125 \abjad-sharp  }
                         ds16
@@ -1395,7 +1395,7 @@
                         % ARTICULATIONS:
                         - \espressivo
                         % MARKUP:
-                        ^ \markup \center-align { -3 }
+                        ^ \markup \center-align { \concat { -3 } }
                         \tweak Accidental.stencil #ly:text-interface::print
                         \tweak Accidental.text \markup \concat { \one-seventeen-limit-schisma-down \hspace #0.125 \double-sharp  }
                         fss16
@@ -1403,7 +1403,7 @@
                         % ARTICULATIONS:
                         - \espressivo
                         % MARKUP:
-                        ^ \markup \center-align { +7 }
+                        ^ \markup \center-align { \concat { +7 } }
                         % OPENING:
                         % COMMANDS:
                         \clef "treble"
@@ -1414,7 +1414,7 @@
                         % ARTICULATIONS:
                         - \espressivo
                         % MARKUP:
-                        ^ \markup \center-align { +2 }
+                        ^ \markup \center-align { \concat { +2 } }
                         % OPENING:
                         % COMMANDS:
                         \clef "bass"
@@ -1425,7 +1425,7 @@
                         % ARTICULATIONS:
                         - \espressivo
                         % MARKUP:
-                        ^ \markup \center-align { +0 }
+                        ^ \markup \center-align { \concat { +0 } }
                         % OPENING:
                         % COMMANDS:
                         \clef "treble"
@@ -1436,7 +1436,7 @@
                         % ARTICULATIONS:
                         - \espressivo
                         % MARKUP:
-                        ^ \markup \center-align { +7 }
+                        ^ \markup \center-align { \concat { +7 } }
                         % OPENING:
                         % COMMANDS:
                         \clef "bass"
@@ -1448,7 +1448,7 @@
                         % ARTICULATIONS:
                         - \espressivo
                         % MARKUP:
-                        ^ \markup \center-align { -26 }
+                        ^ \markup \center-align { \concat { -26 } }
                         % STOP_BEAM:
                         ]
                     % CLOSE_BRACKETS:
@@ -1463,7 +1463,7 @@
                     % ARTICULATIONS:
                     \fp
                     % MARKUP:
-                    ^ \markup \center-align { -14 }
+                    ^ \markup \center-align { \concat { -14 } }
                     % SPANNER_STARTS:
                     - \tweak stencil #abjad-flared-hairpin
                     \<
@@ -1501,7 +1501,7 @@
                     % ARTICULATIONS:
                     \fp
                     % MARKUP:
-                    ^ \markup \center-align { -31 }
+                    ^ \markup \center-align { \concat { -31 } }
                     % SPANNER_STARTS:
                     - \tweak stencil #abjad-flared-hairpin
                     \<
@@ -1672,7 +1672,7 @@
                         - \espressivo
                         \ff
                         % MARKUP:
-                        ^ \markup \center-align { -1 }
+                        ^ \markup \center-align { \concat { -1 } }
                         % START_BEAM:
                         [
                         % SPANNER_STARTS:
@@ -1688,7 +1688,7 @@
                         % ARTICULATIONS:
                         - \espressivo
                         % MARKUP:
-                        ^ \markup \center-align { -3 }
+                        ^ \markup \center-align { \concat { -3 } }
                         % OPENING:
                         % COMMANDS:
                         \clef "bass"
@@ -1699,7 +1699,7 @@
                         % ARTICULATIONS:
                         - \espressivo
                         % MARKUP:
-                        ^ \markup \center-align { +7 }
+                        ^ \markup \center-align { \concat { +7 } }
                         \tweak Accidental.stencil #ly:text-interface::print
                         \tweak Accidental.text \markup { \abjad-sharp  }
                         fs16
@@ -1707,7 +1707,7 @@
                         % ARTICULATIONS:
                         - \espressivo
                         % MARKUP:
-                        ^ \markup \center-align { +2 }
+                        ^ \markup \center-align { \concat { +2 } }
                         \tweak Accidental.stencil #ly:text-interface::print
                         \tweak Accidental.text \markup { \abjad-natural  }
                         b,16
@@ -1715,7 +1715,7 @@
                         % ARTICULATIONS:
                         - \espressivo
                         % MARKUP:
-                        ^ \markup \center-align { +0 }
+                        ^ \markup \center-align { \concat { +0 } }
                         % OPENING:
                         % COMMANDS:
                         \clef "treble"
@@ -1726,7 +1726,7 @@
                         % ARTICULATIONS:
                         - \espressivo
                         % MARKUP:
-                        ^ \markup \center-align { +7 }
+                        ^ \markup \center-align { \concat { +7 } }
                         % OPENING:
                         % COMMANDS:
                         \clef "bass"
@@ -1737,7 +1737,7 @@
                         % ARTICULATIONS:
                         - \espressivo
                         % MARKUP:
-                        ^ \markup \center-align { -26 }
+                        ^ \markup \center-align { \concat { -26 } }
                         % OPENING:
                         % COMMANDS:
                         \clef "treble"
@@ -1748,7 +1748,7 @@
                         % ARTICULATIONS:
                         - \espressivo
                         % MARKUP:
-                        ^ \markup \center-align { +0 }
+                        ^ \markup \center-align { \concat { +0 } }
                         % OPENING:
                         % COMMANDS:
                         \clef "bass"
@@ -1759,7 +1759,7 @@
                         % ARTICULATIONS:
                         - \espressivo
                         % MARKUP:
-                        ^ \markup \center-align { +12 }
+                        ^ \markup \center-align { \concat { +12 } }
                         % OPENING:
                         % COMMANDS:
                         \clef "treble"
@@ -1770,7 +1770,7 @@
                         % ARTICULATIONS:
                         - \espressivo
                         % MARKUP:
-                        ^ \markup \center-align { +5 }
+                        ^ \markup \center-align { \concat { +5 } }
                         % OPENING:
                         % COMMANDS:
                         \clef "bass"
@@ -1782,7 +1782,7 @@
                         % ARTICULATIONS:
                         - \espressivo
                         % MARKUP:
-                        ^ \markup \center-align { -3 }
+                        ^ \markup \center-align { \concat { -3 } }
                         % STOP_BEAM:
                         ]
                     % CLOSE_BRACKETS:
@@ -1794,7 +1794,7 @@
                     % ARTICULATIONS:
                     \fp
                     % MARKUP:
-                    ^ \markup \center-align { +2 }
+                    ^ \markup \center-align { \concat { +2 } }
                     % SPANNER_STARTS:
                     - \tweak stencil #abjad-flared-hairpin
                     \<
@@ -1835,7 +1835,7 @@
                         - \espressivo
                         \mp
                         % MARKUP:
-                        ^ \markup \center-align { -3 }
+                        ^ \markup \center-align { \concat { -3 } }
                         % SPANNER_STARTS:
                         - \tweak circled-tip ##t
                         \>
@@ -1848,7 +1848,7 @@
                         % ARTICULATIONS:
                         - \espressivo
                         % MARKUP:
-                        ^ \markup \center-align { +16 }
+                        ^ \markup \center-align { \concat { +16 } }
                         r4
                     % CLOSE_BRACKETS:
                     }
@@ -1862,7 +1862,7 @@
                         % ARTICULATIONS:
                         - \espressivo
                         % MARKUP:
-                        ^ \markup \center-align { -1 }
+                        ^ \markup \center-align { \concat { -1 } }
                         r4
                         r16
                     % CLOSE_BRACKETS:
@@ -1879,7 +1879,7 @@
                         % ARTICULATIONS:
                         - \espressivo
                         % MARKUP:
-                        ^ \markup \center-align { -3 }
+                        ^ \markup \center-align { \concat { -3 } }
                         r4.
                     % CLOSE_BRACKETS:
                     }
@@ -1894,7 +1894,7 @@
                         % ARTICULATIONS:
                         - \espressivo
                         % MARKUP:
-                        ^ \markup \center-align { +7 }
+                        ^ \markup \center-align { \concat { +7 } }
                         r8
                     % CLOSE_BRACKETS:
                     }
@@ -1918,7 +1918,7 @@
                         - \espressivo
                         \ff
                         % MARKUP:
-                        ^ \markup \center-align { +7 }
+                        ^ \markup \center-align { \concat { +7 } }
                         % START_BEAM:
                         [
                         % SPANNER_STARTS:
@@ -1934,7 +1934,7 @@
                         % ARTICULATIONS:
                         - \espressivo
                         % MARKUP:
-                        ^ \markup \center-align { +2 }
+                        ^ \markup \center-align { \concat { +2 } }
                         % OPENING:
                         % COMMANDS:
                         \clef "bass"
@@ -1945,7 +1945,7 @@
                         % ARTICULATIONS:
                         - \espressivo
                         % MARKUP:
-                        ^ \markup \center-align { +0 }
+                        ^ \markup \center-align { \concat { +0 } }
                         \tweak Accidental.stencil #ly:text-interface::print
                         \tweak Accidental.text \markup \concat { \one-seventeen-limit-schisma-down \hspace #0.125 \double-sharp  }
                         fss16
@@ -1953,7 +1953,7 @@
                         % ARTICULATIONS:
                         - \espressivo
                         % MARKUP:
-                        ^ \markup \center-align { +7 }
+                        ^ \markup \center-align { \concat { +7 } }
                         \tweak Accidental.stencil #ly:text-interface::print
                         \tweak Accidental.text \markup \concat { \one-seventeen-limit-schisma-down \hspace #0.125 \one-septimal-comma-down \hspace #0.125 \abjad-sharp  }
                         as16
@@ -1961,7 +1961,7 @@
                         % ARTICULATIONS:
                         - \espressivo
                         % MARKUP:
-                        ^ \markup \center-align { -26 }
+                        ^ \markup \center-align { \concat { -26 } }
                         % OPENING:
                         % COMMANDS:
                         \clef "treble"
@@ -1972,7 +1972,7 @@
                         % ARTICULATIONS:
                         - \espressivo
                         % MARKUP:
-                        ^ \markup \center-align { +0 }
+                        ^ \markup \center-align { \concat { +0 } }
                         % OPENING:
                         % COMMANDS:
                         \clef "bass"
@@ -1984,7 +1984,7 @@
                         % ARTICULATIONS:
                         - \espressivo
                         % MARKUP:
-                        ^ \markup \center-align { +12 }
+                        ^ \markup \center-align { \concat { +12 } }
                         % STOP_BEAM:
                         ]
                     % CLOSE_BRACKETS:
@@ -1996,7 +1996,7 @@
                     % ARTICULATIONS:
                     \fp
                     % MARKUP:
-                    ^ \markup \center-align { +0 }
+                    ^ \markup \center-align { \concat { +0 } }
                     % SPANNER_STARTS:
                     - \tweak stencil #abjad-flared-hairpin
                     \<
