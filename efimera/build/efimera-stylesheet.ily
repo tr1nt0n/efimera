@@ -33,12 +33,15 @@
         \override MetronomeMark.stencil = ##f
 		\override TimeSignature.X-extent = #'(0 . -25)
         \override TimeSignature.Y-extent = #'(25 . 0)
-        \override VerticalAxisGroup.default-staff-staff-spacing = #'((basic-distance . 12) (minimum-distance . 12) (padding . 10) (stretchability . 0))
+        \override VerticalAxisGroup.staff-staff-spacing = #'((basic-distance . 0) (minimum-distance . 7) (padding . 2) (stretchability . 0))
         \override TimeSignature.break-visibility = #end-of-line-invisible
         \override TimeSignature.font-size = 7
 		\override TimeSignature.font-name = "Bodoni72"
         \override TimeSignature.X-offset = -1.5
         \override TimeSignature.Y-offset = 3
+        \override TimeSignature.whiteout-style = #'outline
+        \override TimeSignature.whiteout = 1
+        \override TimeSignature.layer = 5
     }
 
     \context {
@@ -46,7 +49,8 @@
         \numericTimeSignature
         \accepts TimeSignatureContext
         proportionalNotationDuration = #(ly:make-moment 1 20)
-        \override StaffGrouper.staff-staff-spacing = #'((basic-distance . 12) (minimum distance . 12) (padding . 6))
+        \override StaffGrouper.staff-staff-spacing = #'((basic-distance . 0) (minimum distance . 7) (padding . 7) (stretchability . 28))
+        \override StaffGrouper.staffgroup-staff-spacing = #'((basic-distance . 0) (minimum distance . 7) (padding . 7) (stretchability . 28))
 
         \override AccidentalSuggestion.avoid-slur = #'ignore
 
@@ -59,7 +63,7 @@
         \override BarNumber.stencil = #(make-stencil-circler 0.1 0.75 ly:text-interface::print)
         \override BarNumber.Y-extent = ##f
 		\override BarNumber.Y-offset = 0
-		\override BarNumber.extra-offset = #'(-4 . -4)
+		\override BarNumber.extra-offset = #'(-2 . 4)
         \override BarNumber.font-size = 2
         \override BarNumber.font-name = "Bodoni72"
 		\override BarNumber.padding = 1
@@ -71,10 +75,14 @@
         \override Beam.beam-thickness = #0.75
         \override Beam.length-fraction = 1.5
 
+        \override Clef.layer = 2
         \override Clef.whiteout-style = #'outline
         \override Clef.whiteout = 1
 
         \override DynamicText.font-size = #-2
+        \override DynamicText.layer = 2
+        \override DynamicText.whiteout-style = #'outline
+        \override DynamicText.whiteout = 1
         \override DynamicLineSpanner.staff-padding = 4
 
         \override Glissando.thickness = #2
@@ -85,6 +93,9 @@
         \override MetronomeMark.padding = 2.5
         \override MetronomeMark.font-size = 4
         \override MetronomeMark.extra-offset = #'(4.5 . 0)
+        \override MetronomeMark.layer = 4
+        \override MetronomeMark.whiteout-style = #'outline
+        \override MetronomeMark.whiteout = 1
 
         \override Staff.thickness = #0.5
 
@@ -106,6 +117,13 @@
         \override TupletBracket.full-length-to-extent = ##f
         \override TupletNumber.font-size = 1.5
         \override TupletBracket.bracket-visibility = ##t
+        \override TupletBracket.layer = 2
+        \override TupletBracket.whiteout-style = #'outline
+        \override TupletBracket.whiteout = 1
+        \override TupletNumber.font-size = 1.5
+        \override TupletNumber.layer = 3
+        \override TupletNumber.whiteout-style = #'outline
+        \override TupletNumber.whiteout = 1
         \override TupletNumber.text = #tuplet-number::calc-fraction-text
         \override TupletBracket #'stencil =
             #(lambda (grob)

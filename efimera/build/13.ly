@@ -38,7 +38,7 @@
             \context Staff = "piano 1 staff"
             {
                 % OPEN_BRACKETS:
-                \context Voice = "piano 1 voice"
+                \context Staff = "piano 1 voice"
                 {
                     % BEFORE:
                     % COMMANDS:
@@ -52,7 +52,7 @@
                     \override Staff.Stem.stemlet-length = 0.75
                     \tweak Accidental.stencil #ly:text-interface::print
                     \tweak Accidental.text \markup { \one-forty-three-limit-comma-up  }
-                    g''8
+                    g''!8
                     % AFTER:
                     % START_BEAM:
                     [
@@ -65,7 +65,7 @@
                     \revert Staff.Stem.stemlet-length
                     \tweak Accidental.stencil #ly:text-interface::print
                     \tweak Accidental.text \markup \concat { \one-seventeen-limit-schisma-down \hspace #0.125 \abjad-sharp  }
-                    ds''8
+                    ds''!8
                     % AFTER:
                     % STOP_BEAM:
                     ]
@@ -74,7 +74,7 @@
                     \override Staff.Stem.stemlet-length = 0.75
                     \tweak Accidental.stencil #ly:text-interface::print
                     \tweak Accidental.text \markup \concat { \one-twenty-three-limit-comma-up \hspace #0.125 \one-septimal-comma-down \hspace #0.125 \abjad-sharp  }
-                    fs''8
+                    fs''!8
                     % AFTER:
                     % START_BEAM:
                     [
@@ -83,7 +83,7 @@
                     \revert Staff.Stem.stemlet-length
                     \tweak Accidental.stencil #ly:text-interface::print
                     \tweak Accidental.text \markup \concat { \one-twenty-nine-limit-comma-up \hspace #0.125 \natural-one-syntonic-comma-down  }
-                    e''8
+                    e''!8
                     % AFTER:
                     % STOP_BEAM:
                     ]
@@ -92,7 +92,7 @@
                     \override Staff.Stem.stemlet-length = 0.75
                     \tweak Accidental.stencil #ly:text-interface::print
                     \tweak Accidental.text \markup { \one-nineteen-limit-schisma-up  }
-                    c'''8
+                    c'''!8
                     % AFTER:
                     % ARTICULATIONS:
                     \p
@@ -106,7 +106,7 @@
                     \revert Staff.Stem.stemlet-length
                     \tweak Accidental.stencil #ly:text-interface::print
                     \tweak Accidental.text \markup \concat { \one-twenty-three-limit-comma-up \hspace #0.125 \one-septimal-comma-down \hspace #0.125 \abjad-sharp  }
-                    fs''8
+                    fs''!8
                     % AFTER:
                     % STOP_BEAM:
                     ]
@@ -115,7 +115,7 @@
                     \override Staff.Stem.stemlet-length = 0.75
                     \tweak Accidental.stencil #ly:text-interface::print
                     \tweak Accidental.text \markup \concat { \one-seventeen-limit-schisma-down \hspace #0.125 \abjad-sharp  }
-                    as''8
+                    as''!8
                     % AFTER:
                     % START_BEAM:
                     [
@@ -124,13 +124,13 @@
                     \revert Staff.Stem.stemlet-length
                     \tweak Accidental.stencil #ly:text-interface::print
                     \tweak Accidental.text \markup { \abjad-natural  }
-                    a''8
+                    a''!8
                     % AFTER:
                     % STOP_BEAM:
                     ]
                     \tweak Accidental.stencil #ly:text-interface::print
                     \tweak Accidental.text \markup { \abjad-natural  }
-                    d''8
+                    d''!8
                     % AFTER:
                     % SPANNER_STOPS:
                     \)
@@ -146,7 +146,7 @@
             \context Staff = "piano 2 staff"
             {
                 % OPEN_BRACKETS:
-                \context Voice = "piano 2 voice"
+                \context Staff = "piano 2 voice"
                 {
                     % BEFORE:
                     % COMMANDS:
@@ -163,7 +163,7 @@
             \context Staff = "piano 3 staff"
             {
                 % OPEN_BRACKETS:
-                \context Voice = "piano 3 voice"
+                \context Staff = "piano 3 voice"
                 {
                     % BEFORE:
                     % COMMANDS:
@@ -180,7 +180,7 @@
             \context Staff = "piano 4 staff"
             {
                 % OPEN_BRACKETS:
-                \context Voice = "piano 4 voice"
+                \context Staff = "piano 4 voice"
                 {
                     % BEFORE:
                     % COMMANDS:
@@ -197,7 +197,7 @@
             \context Staff = "piano 5 staff"
             {
                 % OPEN_BRACKETS:
-                \context Voice = "piano 5 voice"
+                \context Staff = "piano 5 voice"
                 {
                     % BEFORE:
                     % COMMANDS:

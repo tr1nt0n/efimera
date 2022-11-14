@@ -1,4 +1,4 @@
-\version "2.20.0"
+\version "2.23.14"
 \language "english"
 \include "/Users/trintonprater/scores/efimera/efimera/build/efimera-stylesheet.ily"
 \include "/Users/trintonprater/abjad/abjad/scm/abjad.ily"
@@ -64,6 +64,9 @@
             % AFTER:
             % COMMANDS:
             \bar "||"
+            % ABSOLUTE_AFTER:
+            % COMMANDS:
+            \once \override Score.BarLine.transparent = ##f
         % CLOSE_BRACKETS:
         }
         % OPEN_BRACKETS:
@@ -73,7 +76,7 @@
             \context Staff = "piano 1 staff"
             {
                 % OPEN_BRACKETS:
-                \context Voice = "piano 1 voice"
+                \context Staff = "piano 1 voice"
                 {
                     % BEFORE:
                     % COMMANDS:
@@ -81,7 +84,7 @@
                     \set Staff.shortInstrumentName = \markup \bold { I }
                     \tweak Accidental.stencil #ly:text-interface::print
                     \tweak Accidental.text \markup { \abjad-sharp  }
-                    ds''\breve
+                    ds''!\breve
                     % AFTER:
                     % ARTICULATIONS:
                     - \espressivo
@@ -100,7 +103,7 @@
                         \override Staff.Stem.stemlet-length = 0.75
                         \tweak Accidental.stencil #ly:text-interface::print
                         \tweak Accidental.text \markup { \sharp-one-syntonic-comma-down  }
-                        cs64
+                        cs!64
                         % AFTER:
                         % START_BEAM:
                         [
@@ -110,52 +113,52 @@
                         <
                             \tweak Accidental.stencil #ly:text-interface::print
                             \tweak Accidental.text \markup { \sharp-one-syntonic-comma-down  }
-                            cs
+                            cs!
                             \tweak Accidental.stencil #ly:text-interface::print
                             \tweak Accidental.text \markup { \abjad-sharp  }
-                            gs
+                            gs!
                         >64
                         <
                             \tweak Accidental.stencil #ly:text-interface::print
                             \tweak Accidental.text \markup { \sharp-one-syntonic-comma-down  }
-                            cs
+                            cs!
                             \tweak Accidental.stencil #ly:text-interface::print
                             \tweak Accidental.text \markup { \abjad-sharp  }
-                            gs
+                            gs!
                             \tweak Accidental.stencil #ly:text-interface::print
                             \tweak Accidental.text \markup \concat { \one-septimal-comma-up \hspace #0.125 \abjad-sharp  }
-                            bs'
+                            bs'!
                         >64
                         <
                             \tweak Accidental.stencil #ly:text-interface::print
                             \tweak Accidental.text \markup { \sharp-one-syntonic-comma-down  }
-                            cs
+                            cs!
                             \tweak Accidental.stencil #ly:text-interface::print
                             \tweak Accidental.text \markup { \abjad-sharp  }
-                            gs
+                            gs!
                             \tweak Accidental.stencil #ly:text-interface::print
                             \tweak Accidental.text \markup \concat { \one-septimal-comma-up \hspace #0.125 \abjad-sharp  }
-                            bs'
+                            bs'!
                             \tweak Accidental.stencil #ly:text-interface::print
                             \tweak Accidental.text \markup \concat { \one-septimal-comma-up \hspace #0.125 \sharp-one-syntonic-comma-up  }
-                            ds''
+                            ds''!
                         >64
                         <
                             \tweak Accidental.stencil #ly:text-interface::print
                             \tweak Accidental.text \markup { \sharp-one-syntonic-comma-down  }
-                            cs
+                            cs!
                             \tweak Accidental.stencil #ly:text-interface::print
                             \tweak Accidental.text \markup { \abjad-sharp  }
-                            gs
+                            gs!
                             \tweak Accidental.stencil #ly:text-interface::print
                             \tweak Accidental.text \markup \concat { \one-septimal-comma-up \hspace #0.125 \abjad-sharp  }
-                            bs'
+                            bs'!
                             \tweak Accidental.stencil #ly:text-interface::print
                             \tweak Accidental.text \markup \concat { \one-septimal-comma-up \hspace #0.125 \sharp-one-syntonic-comma-up  }
-                            ds''
+                            ds''!
                             \tweak Accidental.stencil #ly:text-interface::print
                             \tweak Accidental.text \markup { \sharp-one-syntonic-comma-down  }
-                            es''
+                            es''!
                         >64
                         % AFTER:
                         % ARTICULATIONS:
@@ -166,42 +169,42 @@
                         <
                             \tweak Accidental.stencil #ly:text-interface::print
                             \tweak Accidental.text \markup { \sharp-one-syntonic-comma-down  }
-                            cs
+                            cs!
                             \tweak Accidental.stencil #ly:text-interface::print
                             \tweak Accidental.text \markup { \abjad-sharp  }
-                            gs
+                            gs!
                             \tweak Accidental.stencil #ly:text-interface::print
                             \tweak Accidental.text \markup \concat { \one-septimal-comma-up \hspace #0.125 \abjad-sharp  }
-                            bs'
+                            bs'!
                             \tweak Accidental.stencil #ly:text-interface::print
                             \tweak Accidental.text \markup \concat { \one-septimal-comma-up \hspace #0.125 \sharp-one-syntonic-comma-up  }
-                            ds''
+                            ds''!
                         >64
                         <
                             \tweak Accidental.stencil #ly:text-interface::print
                             \tweak Accidental.text \markup { \sharp-one-syntonic-comma-down  }
-                            cs
+                            cs!
                             \tweak Accidental.stencil #ly:text-interface::print
                             \tweak Accidental.text \markup { \abjad-sharp  }
-                            gs
+                            gs!
                             \tweak Accidental.stencil #ly:text-interface::print
                             \tweak Accidental.text \markup \concat { \one-septimal-comma-up \hspace #0.125 \abjad-sharp  }
-                            bs'
+                            bs'!
                         >64
                         <
                             \tweak Accidental.stencil #ly:text-interface::print
                             \tweak Accidental.text \markup { \sharp-one-syntonic-comma-down  }
-                            cs
+                            cs!
                             \tweak Accidental.stencil #ly:text-interface::print
                             \tweak Accidental.text \markup { \abjad-sharp  }
-                            gs
+                            gs!
                         >64
                         % OPENING:
                         % COMMANDS:
                         \revert Staff.Stem.stemlet-length
                         \tweak Accidental.stencil #ly:text-interface::print
                         \tweak Accidental.text \markup { \sharp-one-syntonic-comma-down  }
-                        cs64
+                        cs!64
                         % AFTER:
                         % STOP_BEAM:
                         ]
@@ -219,7 +222,7 @@
                         \override Staff.Stem.stemlet-length = 0.75
                         \tweak Accidental.stencil #ly:text-interface::print
                         \tweak Accidental.text \markup { \sharp-two-syntonic-comma-down  }
-                        bs,32
+                        bs,!32
                         % AFTER:
                         % START_BEAM:
                         [
@@ -229,52 +232,52 @@
                         <
                             \tweak Accidental.stencil #ly:text-interface::print
                             \tweak Accidental.text \markup { \sharp-two-syntonic-comma-down  }
-                            bs,
+                            bs,!
                             \tweak Accidental.stencil #ly:text-interface::print
                             \tweak Accidental.text \markup { \natural-two-syntonic-comma-up  }
-                            a
+                            a!
                         >32
                         <
                             \tweak Accidental.stencil #ly:text-interface::print
                             \tweak Accidental.text \markup { \sharp-two-syntonic-comma-down  }
-                            bs,
+                            bs,!
                             \tweak Accidental.stencil #ly:text-interface::print
                             \tweak Accidental.text \markup { \natural-two-syntonic-comma-up  }
-                            a
+                            a!
                             \tweak Accidental.stencil #ly:text-interface::print
                             \tweak Accidental.text \markup \concat { \one-septimal-comma-up \hspace #0.125 \abjad-sharp  }
-                            bs'
+                            bs'!
                         >32
                         <
                             \tweak Accidental.stencil #ly:text-interface::print
                             \tweak Accidental.text \markup { \sharp-two-syntonic-comma-down  }
-                            bs,
+                            bs,!
                             \tweak Accidental.stencil #ly:text-interface::print
                             \tweak Accidental.text \markup { \natural-two-syntonic-comma-up  }
-                            a
+                            a!
                             \tweak Accidental.stencil #ly:text-interface::print
                             \tweak Accidental.text \markup \concat { \one-septimal-comma-up \hspace #0.125 \abjad-sharp  }
-                            bs'
+                            bs'!
                             \tweak Accidental.stencil #ly:text-interface::print
                             \tweak Accidental.text \markup \concat { \one-septimal-comma-up \hspace #0.125 \sharp-two-syntonic-comma-up  }
-                            cs''
+                            cs''!
                         >32
                         <
                             \tweak Accidental.stencil #ly:text-interface::print
                             \tweak Accidental.text \markup { \sharp-two-syntonic-comma-down  }
-                            bs,
+                            bs,!
                             \tweak Accidental.stencil #ly:text-interface::print
                             \tweak Accidental.text \markup { \natural-two-syntonic-comma-up  }
-                            a
+                            a!
                             \tweak Accidental.stencil #ly:text-interface::print
                             \tweak Accidental.text \markup \concat { \one-septimal-comma-up \hspace #0.125 \abjad-sharp  }
-                            bs'
+                            bs'!
                             \tweak Accidental.stencil #ly:text-interface::print
                             \tweak Accidental.text \markup \concat { \one-septimal-comma-up \hspace #0.125 \sharp-two-syntonic-comma-up  }
-                            cs''
+                            cs''!
                             \tweak Accidental.stencil #ly:text-interface::print
                             \tweak Accidental.text \markup { \sharp-one-syntonic-comma-down  }
-                            es''
+                            es''!
                         >32
                         % AFTER:
                         % ARTICULATIONS:
@@ -285,42 +288,42 @@
                         <
                             \tweak Accidental.stencil #ly:text-interface::print
                             \tweak Accidental.text \markup { \sharp-two-syntonic-comma-down  }
-                            bs,
+                            bs,!
                             \tweak Accidental.stencil #ly:text-interface::print
                             \tweak Accidental.text \markup { \natural-two-syntonic-comma-up  }
-                            a
+                            a!
                             \tweak Accidental.stencil #ly:text-interface::print
                             \tweak Accidental.text \markup \concat { \one-septimal-comma-up \hspace #0.125 \abjad-sharp  }
-                            bs'
+                            bs'!
                             \tweak Accidental.stencil #ly:text-interface::print
                             \tweak Accidental.text \markup \concat { \one-septimal-comma-up \hspace #0.125 \sharp-two-syntonic-comma-up  }
-                            cs''
+                            cs''!
                         >32
                         <
                             \tweak Accidental.stencil #ly:text-interface::print
                             \tweak Accidental.text \markup { \sharp-two-syntonic-comma-down  }
-                            bs,
+                            bs,!
                             \tweak Accidental.stencil #ly:text-interface::print
                             \tweak Accidental.text \markup { \natural-two-syntonic-comma-up  }
-                            a
+                            a!
                             \tweak Accidental.stencil #ly:text-interface::print
                             \tweak Accidental.text \markup \concat { \one-septimal-comma-up \hspace #0.125 \abjad-sharp  }
-                            bs'
+                            bs'!
                         >32
                         <
                             \tweak Accidental.stencil #ly:text-interface::print
                             \tweak Accidental.text \markup { \sharp-two-syntonic-comma-down  }
-                            bs,
+                            bs,!
                             \tweak Accidental.stencil #ly:text-interface::print
                             \tweak Accidental.text \markup { \natural-two-syntonic-comma-up  }
-                            a
+                            a!
                         >32
                         % OPENING:
                         % COMMANDS:
                         \revert Staff.Stem.stemlet-length
                         \tweak Accidental.stencil #ly:text-interface::print
                         \tweak Accidental.text \markup { \sharp-two-syntonic-comma-down  }
-                        bs,32
+                        bs,!32
                         % AFTER:
                         % STOP_BEAM:
                         ]
@@ -330,7 +333,7 @@
                         \!
                         \tweak Accidental.stencil #ly:text-interface::print
                         \tweak Accidental.text \markup { \sharp-two-syntonic-comma-down  }
-                        bs,32
+                        bs,!32
                         % AFTER:
                         % SPANNER_STARTS:
                         - \tweak circled-tip ##t
@@ -346,10 +349,10 @@
                         <
                             \tweak Accidental.stencil #ly:text-interface::print
                             \tweak Accidental.text \markup { \sharp-two-syntonic-comma-down  }
-                            bs,
+                            bs,!
                             \tweak Accidental.stencil #ly:text-interface::print
                             \tweak Accidental.text \markup { \abjad-sharp  }
-                            gs
+                            gs!
                         >64
                         % AFTER:
                         % START_BEAM:
@@ -357,44 +360,44 @@
                         <
                             \tweak Accidental.stencil #ly:text-interface::print
                             \tweak Accidental.text \markup { \sharp-two-syntonic-comma-down  }
-                            bs,
+                            bs,!
                             \tweak Accidental.stencil #ly:text-interface::print
                             \tweak Accidental.text \markup { \abjad-sharp  }
-                            gs
+                            gs!
                             \tweak Accidental.stencil #ly:text-interface::print
                             \tweak Accidental.text \markup \concat { \one-septimal-comma-up \hspace #0.125 \double-sharp  }
-                            css''
+                            css''!
                         >64
                         <
                             \tweak Accidental.stencil #ly:text-interface::print
                             \tweak Accidental.text \markup { \sharp-two-syntonic-comma-down  }
-                            bs,
+                            bs,!
                             \tweak Accidental.stencil #ly:text-interface::print
                             \tweak Accidental.text \markup { \abjad-sharp  }
-                            gs
+                            gs!
                             \tweak Accidental.stencil #ly:text-interface::print
                             \tweak Accidental.text \markup \concat { \one-septimal-comma-up \hspace #0.125 \sharp-two-syntonic-comma-up  }
-                            cs''
+                            cs''!
                             \tweak Accidental.stencil #ly:text-interface::print
                             \tweak Accidental.text \markup \concat { \one-septimal-comma-up \hspace #0.125 \double-sharp  }
-                            css''
+                            css''!
                         >64
                         <
                             \tweak Accidental.stencil #ly:text-interface::print
                             \tweak Accidental.text \markup { \sharp-two-syntonic-comma-down  }
-                            bs,
+                            bs,!
                             \tweak Accidental.stencil #ly:text-interface::print
                             \tweak Accidental.text \markup { \abjad-sharp  }
-                            gs
+                            gs!
                             \tweak Accidental.stencil #ly:text-interface::print
                             \tweak Accidental.text \markup \concat { \one-septimal-comma-up \hspace #0.125 \sharp-two-syntonic-comma-up  }
-                            cs''
+                            cs''!
                             \tweak Accidental.stencil #ly:text-interface::print
                             \tweak Accidental.text \markup \concat { \one-septimal-comma-up \hspace #0.125 \double-sharp  }
-                            css''
+                            css''!
                             \tweak Accidental.stencil #ly:text-interface::print
                             \tweak Accidental.text \markup { \sharp-one-syntonic-comma-down  }
-                            ds''
+                            ds''!
                         >64
                         % AFTER:
                         % ARTICULATIONS:
@@ -405,42 +408,42 @@
                         <
                             \tweak Accidental.stencil #ly:text-interface::print
                             \tweak Accidental.text \markup { \sharp-two-syntonic-comma-down  }
-                            bs,
+                            bs,!
                             \tweak Accidental.stencil #ly:text-interface::print
                             \tweak Accidental.text \markup { \abjad-sharp  }
-                            gs
+                            gs!
                             \tweak Accidental.stencil #ly:text-interface::print
                             \tweak Accidental.text \markup \concat { \one-septimal-comma-up \hspace #0.125 \sharp-two-syntonic-comma-up  }
-                            cs''
+                            cs''!
                             \tweak Accidental.stencil #ly:text-interface::print
                             \tweak Accidental.text \markup \concat { \one-septimal-comma-up \hspace #0.125 \double-sharp  }
-                            css''
+                            css''!
                         >64
                         <
                             \tweak Accidental.stencil #ly:text-interface::print
                             \tweak Accidental.text \markup { \sharp-two-syntonic-comma-down  }
-                            bs,
+                            bs,!
                             \tweak Accidental.stencil #ly:text-interface::print
                             \tweak Accidental.text \markup { \abjad-sharp  }
-                            gs
+                            gs!
                             \tweak Accidental.stencil #ly:text-interface::print
                             \tweak Accidental.text \markup \concat { \one-septimal-comma-up \hspace #0.125 \double-sharp  }
-                            css''
+                            css''!
                         >64
                         <
                             \tweak Accidental.stencil #ly:text-interface::print
                             \tweak Accidental.text \markup { \sharp-two-syntonic-comma-down  }
-                            bs,
+                            bs,!
                             \tweak Accidental.stencil #ly:text-interface::print
                             \tweak Accidental.text \markup { \abjad-sharp  }
-                            gs
+                            gs!
                         >64
                         % OPENING:
                         % COMMANDS:
                         \revert Staff.Stem.stemlet-length
                         \tweak Accidental.stencil #ly:text-interface::print
                         \tweak Accidental.text \markup { \sharp-two-syntonic-comma-down  }
-                        bs,64
+                        bs,!64
                         % AFTER:
                         % STOP_BEAM:
                         ]
@@ -453,7 +456,7 @@
                         \override Staff.Stem.stemlet-length = 0.75
                         \tweak Accidental.stencil #ly:text-interface::print
                         \tweak Accidental.text \markup { \sharp-two-syntonic-comma-down  }
-                        as,64
+                        as,!64
                         % AFTER:
                         % START_BEAM:
                         [
@@ -463,10 +466,10 @@
                         <
                             \tweak Accidental.stencil #ly:text-interface::print
                             \tweak Accidental.text \markup { \sharp-two-syntonic-comma-down  }
-                            as,
+                            as,!
                             \tweak Accidental.stencil #ly:text-interface::print
                             \tweak Accidental.text \markup { \abjad-sharp  }
-                            gs
+                            gs!
                         >64
                         % AFTER:
                         % STOP_BEAM:
@@ -488,7 +491,7 @@
             \context Staff = "piano 2 staff"
             {
                 % OPEN_BRACKETS:
-                \context Voice = "piano 2 voice"
+                \context Staff = "piano 2 voice"
                 {
                     % BEFORE:
                     % COMMANDS:
@@ -496,7 +499,7 @@
                     \set Staff.shortInstrumentName = \markup \bold { II }
                     \tweak Accidental.stencil #ly:text-interface::print
                     \tweak Accidental.text \markup { \sharp-one-syntonic-comma-down  }
-                    es'\breve
+                    es'!\breve
                     % AFTER:
                     % ARTICULATIONS:
                     - \espressivo
@@ -509,7 +512,7 @@
                     {
                         \tweak Accidental.stencil #ly:text-interface::print
                         \tweak Accidental.text \markup \concat { \one-twenty-nine-limit-comma-up \hspace #0.125 \sharp-one-syntonic-comma-down  }
-                        ds''16
+                        ds''!16
                         % AFTER:
                         % ARTICULATIONS:
                         - \espressivo
@@ -518,7 +521,7 @@
                         r16
                         \tweak Accidental.stencil #ly:text-interface::print
                         \tweak Accidental.text \markup { \one-nineteen-limit-schisma-up  }
-                        c''''16
+                        c''''!16
                         % AFTER:
                         % ARTICULATIONS:
                         - \espressivo
@@ -527,7 +530,7 @@
                         r8
                         \tweak Accidental.stencil #ly:text-interface::print
                         \tweak Accidental.text \markup \concat { \one-twenty-three-limit-comma-up \hspace #0.125 \one-septimal-comma-down \hspace #0.125 \abjad-sharp  }
-                        es''8
+                        es''!8
                         % AFTER:
                         % ARTICULATIONS:
                         - \espressivo
@@ -536,7 +539,7 @@
                         r16
                         \tweak Accidental.stencil #ly:text-interface::print
                         \tweak Accidental.text \markup { \abjad-sharp  }
-                        gs''16
+                        gs''!16
                         % AFTER:
                         % ARTICULATIONS:
                         - \espressivo
@@ -553,7 +556,7 @@
                     s1 * 2
                     \tweak Accidental.stencil #ly:text-interface::print
                     \tweak Accidental.text \markup \concat { \one-twenty-three-limit-comma-up \hspace #0.125 \one-septimal-comma-down  }
-                    e'''16
+                    e'''!16
                     % AFTER:
                     % ARTICULATIONS:
                     - \espressivo
@@ -568,7 +571,7 @@
             \context Staff = "piano 3 staff"
             {
                 % OPEN_BRACKETS:
-                \context Voice = "piano 3 voice"
+                \context Staff = "piano 3 voice"
                 {
                     % BEFORE:
                     % COMMANDS:
@@ -576,7 +579,7 @@
                     \set Staff.shortInstrumentName = \markup \bold { III }
                     \tweak Accidental.stencil #ly:text-interface::print
                     \tweak Accidental.text \markup { \one-septimal-comma-down  }
-                    b'\breve
+                    b'!\breve
                     % AFTER:
                     % ARTICULATIONS:
                     - \espressivo
@@ -594,7 +597,7 @@
                         r16
                         \tweak Accidental.stencil #ly:text-interface::print
                         \tweak Accidental.text \markup { \flat-one-syntonic-comma-up  }
-                        af'8
+                        af'!8
                         % AFTER:
                         % ARTICULATIONS:
                         - \accent
@@ -608,7 +611,7 @@
                     \override Staff.Stem.stemlet-length = 0.75
                     \tweak Accidental.stencil #ly:text-interface::print
                     \tweak Accidental.text \markup { \abjad-natural  }
-                    d'16
+                    d'!16
                     % AFTER:
                     % ARTICULATIONS:
                     \pp
@@ -621,7 +624,7 @@
                     \revert Staff.Stem.stemlet-length
                     \tweak Accidental.stencil #ly:text-interface::print
                     \tweak Accidental.text \markup { \natural-one-syntonic-comma-down  }
-                    d'16
+                    d'!16
                     % AFTER:
                     % MARKUP:
                     ^ \markup \center-align { \concat { -18 } }
@@ -636,7 +639,7 @@
                         \override Staff.Stem.stemlet-length = 0.75
                         \tweak Accidental.stencil #ly:text-interface::print
                         \tweak Accidental.text \markup { \flat-one-syntonic-comma-up  }
-                        bf'8
+                        bf'!8
                         % AFTER:
                         % MARKUP:
                         ^ \markup \center-align { \concat { +18 } }
@@ -647,7 +650,7 @@
                         \revert Staff.Stem.stemlet-length
                         \tweak Accidental.stencil #ly:text-interface::print
                         \tweak Accidental.text \markup { \abjad-natural  }
-                        d'16
+                        d'!16
                         % AFTER:
                         % MARKUP:
                         ^ \markup \center-align { \concat { +4 } }
@@ -668,7 +671,7 @@
             \context Staff = "piano 4 staff"
             {
                 % OPEN_BRACKETS:
-                \context Voice = "piano 4 voice"
+                \context Staff = "piano 4 voice"
                 {
                     % BEFORE:
                     % COMMANDS:
@@ -676,7 +679,7 @@
                     \set Staff.shortInstrumentName = \markup \bold{ IV }
                     \tweak Accidental.stencil #ly:text-interface::print
                     \tweak Accidental.text \markup { \abjad-sharp  }
-                    gs\breve
+                    gs!\breve
                     % AFTER:
                     % ARTICULATIONS:
                     - \espressivo
@@ -696,13 +699,13 @@
                     <
                         \tweak Accidental.stencil #ly:text-interface::print
                         \tweak Accidental.text \markup { \abjad-flat  }
-                        bf,,
+                        bf,,!
                         \tweak Accidental.stencil #ly:text-interface::print
                         \tweak Accidental.text \markup { \abjad-natural  }
-                        c,
+                        c,!
                         \tweak Accidental.stencil #ly:text-interface::print
                         \tweak Accidental.text \markup { \flat-one-syntonic-comma-up  }
-                        ef,
+                        ef,!
                     >4
                     % AFTER:
                     % ARTICULATIONS:
@@ -713,13 +716,13 @@
                     <
                         \tweak Accidental.stencil #ly:text-interface::print
                         \tweak Accidental.text \markup { \abjad-flat  }
-                        bf,,
+                        bf,,!
                         \tweak Accidental.stencil #ly:text-interface::print
                         \tweak Accidental.text \markup { \abjad-natural  }
-                        c,
+                        c,!
                         \tweak Accidental.stencil #ly:text-interface::print
                         \tweak Accidental.text \markup { \flat-one-syntonic-comma-up  }
-                        ef,
+                        ef,!
                     >4
                     % AFTER:
                     % ARTICULATIONS:
@@ -738,7 +741,7 @@
             \context Staff = "piano 5 staff"
             {
                 % OPEN_BRACKETS:
-                \context Voice = "piano 5 voice"
+                \context Staff = "piano 5 voice"
                 {
                     % BEFORE:
                     % COMMANDS:
@@ -749,7 +752,7 @@
                     \clef "bass"
                     \tweak Accidental.stencil #ly:text-interface::print
                     \tweak Accidental.text \markup { \abjad-sharp  }
-                    cs,\breve
+                    cs,!\breve
                     % AFTER:
                     % ARTICULATIONS:
                     - \espressivo
@@ -770,7 +773,7 @@
                     \clef "treble"
                     \tweak Accidental.stencil #ly:text-interface::print
                     \tweak Accidental.text \markup \concat { \one-seventeen-limit-schisma-down \hspace #0.125 \abjad-sharp  }
-                    gs'''16
+                    gs'''!16
                     % AFTER:
                     % ARTICULATIONS:
                     - \espressivo

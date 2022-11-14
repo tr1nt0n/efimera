@@ -64,10 +64,10 @@ trinton.attach_multiple(
     ],
     attachments=[
         abjad.BarLine("||"),
-        # abjad.LilyPondLiteral(
-        #     r"\once \override Score.BarLine.transparent = ##f",
-        #     "absolute_after",
-        # ),
+        abjad.LilyPondLiteral(
+            r"\once \override Score.BarLine.transparent = ##f",
+            "absolute_after",
+        ),
     ],
 )
 

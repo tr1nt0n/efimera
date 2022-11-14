@@ -26,6 +26,9 @@
             % AFTER:
             % COMMANDS:
             \bar "||"
+            % ABSOLUTE_AFTER:
+            % COMMANDS:
+            \once \override Score.BarLine.transparent = ##f
         % CLOSE_BRACKETS:
         }
         % OPEN_BRACKETS:
@@ -35,7 +38,7 @@
             \context Staff = "piano 1 staff"
             {
                 % OPEN_BRACKETS:
-                \context Voice = "piano 1 voice"
+                \context Staff = "piano 1 voice"
                 {
                     % BEFORE:
                     % COMMANDS:
@@ -52,7 +55,7 @@
             \context Staff = "piano 2 staff"
             {
                 % OPEN_BRACKETS:
-                \context Voice = "piano 2 voice"
+                \context Staff = "piano 2 voice"
                 {
                     % BEFORE:
                     % COMMANDS:
@@ -69,7 +72,7 @@
             \context Staff = "piano 3 staff"
             {
                 % OPEN_BRACKETS:
-                \context Voice = "piano 3 voice"
+                \context Staff = "piano 3 voice"
                 {
                     % BEFORE:
                     % COMMANDS:
@@ -85,7 +88,7 @@
                         \override Staff.Stem.stemlet-length = 0.75
                         \tweak Accidental.stencil #ly:text-interface::print
                         \tweak Accidental.text \markup { \abjad-natural  }
-                        d'16
+                        d'!16
                         % AFTER:
                         % ARTICULATIONS:
                         \ppp
@@ -95,7 +98,7 @@
                         [
                         \tweak Accidental.stencil #ly:text-interface::print
                         \tweak Accidental.text \markup { \natural-one-syntonic-comma-down  }
-                        d'16
+                        d'!16
                         % AFTER:
                         % MARKUP:
                         ^ \markup \center-align { \concat { -18 } }
@@ -104,7 +107,7 @@
                         \revert Staff.Stem.stemlet-length
                         \tweak Accidental.stencil #ly:text-interface::print
                         \tweak Accidental.text \markup { \abjad-natural  }
-                        d'16
+                        d'!16
                         % AFTER:
                         % MARKUP:
                         ^ \markup \center-align { \concat { +4 } }
@@ -115,7 +118,7 @@
                     r8.
                     \tweak Accidental.stencil #ly:text-interface::print
                     \tweak Accidental.text \markup { \natural-one-syntonic-comma-down  }
-                    d'16
+                    d'!16
                     % AFTER:
                     % MARKUP:
                     ^ \markup \center-align { \concat { -18 } }
@@ -124,7 +127,7 @@
                     \override Staff.Stem.stemlet-length = 0.75
                     \tweak Accidental.stencil #ly:text-interface::print
                     \tweak Accidental.text \markup { \flat-one-syntonic-comma-up  }
-                    af'8.
+                    af'!8.
                     % AFTER:
                     % MARKUP:
                     ^ \markup \center-align { \concat { +14 } }
@@ -135,7 +138,7 @@
                     \revert Staff.Stem.stemlet-length
                     \tweak Accidental.stencil #ly:text-interface::print
                     \tweak Accidental.text \markup { \abjad-natural  }
-                    d'16
+                    d'!16
                     % AFTER:
                     % MARKUP:
                     ^ \markup \center-align { \concat { +4 } }
@@ -151,7 +154,7 @@
                         \override Staff.Stem.stemlet-length = 0.75
                         \tweak Accidental.stencil #ly:text-interface::print
                         \tweak Accidental.text \markup { \flat-one-syntonic-comma-up  }
-                        af'8
+                        af'!8
                         % AFTER:
                         % ARTICULATIONS:
                         - \accent
@@ -162,7 +165,7 @@
                         [
                         \tweak Accidental.stencil #ly:text-interface::print
                         \tweak Accidental.text \markup { \abjad-natural  }
-                        d'16
+                        d'!16
                         % AFTER:
                         % ARTICULATIONS:
                         \pp
@@ -173,7 +176,7 @@
                         \revert Staff.Stem.stemlet-length
                         \tweak Accidental.stencil #ly:text-interface::print
                         \tweak Accidental.text \markup { \natural-one-syntonic-comma-down  }
-                        d'16
+                        d'!16
                         % AFTER:
                         % MARKUP:
                         ^ \markup \center-align { \concat { -18 } }
@@ -187,7 +190,7 @@
                     \override Staff.Stem.stemlet-length = 0.75
                     \tweak Accidental.stencil #ly:text-interface::print
                     \tweak Accidental.text \markup { \abjad-natural  }
-                    d'16
+                    d'!16
                     % AFTER:
                     % MARKUP:
                     ^ \markup \center-align { \concat { +4 } }
@@ -195,7 +198,7 @@
                     [
                     \tweak Accidental.stencil #ly:text-interface::print
                     \tweak Accidental.text \markup { \natural-one-syntonic-comma-down  }
-                    d'16
+                    d'!16
                     % AFTER:
                     % MARKUP:
                     ^ \markup \center-align { \concat { -18 } }
@@ -204,7 +207,7 @@
                     \revert Staff.Stem.stemlet-length
                     \tweak Accidental.stencil #ly:text-interface::print
                     \tweak Accidental.text \markup { \flat-one-syntonic-comma-up  }
-                    bf'16
+                    bf'!16
                     % AFTER:
                     % ARTICULATIONS:
                     - \accent
@@ -217,7 +220,7 @@
                     ~
                     \tweak Accidental.stencil #ly:text-interface::print
                     \tweak Accidental.text \markup { \flat-one-syntonic-comma-up  }
-                    bf'8.
+                    bf'!8.
                     r16
                     % OPEN_BRACKETS:
                     \times 8/11
@@ -227,7 +230,7 @@
                         \override Staff.Stem.stemlet-length = 0.75
                         \tweak Accidental.stencil #ly:text-interface::print
                         \tweak Accidental.text \markup { \natural-two-syntonic-comma-down  }
-                        b'8.
+                        b'!8.
                         % AFTER:
                         % ARTICULATIONS:
                         - \accent
@@ -237,7 +240,7 @@
                         [
                         \tweak Accidental.stencil #ly:text-interface::print
                         \tweak Accidental.text \markup { \abjad-natural  }
-                        d'16
+                        d'!16
                         % AFTER:
                         % ARTICULATIONS:
                         \pp
@@ -248,7 +251,7 @@
                         \revert Staff.Stem.stemlet-length
                         \tweak Accidental.stencil #ly:text-interface::print
                         \tweak Accidental.text \markup { \natural-one-syntonic-comma-down  }
-                        d'16
+                        d'!16
                         % AFTER:
                         % MARKUP:
                         ^ \markup \center-align { \concat { -18 } }
@@ -260,7 +263,7 @@
                         \override Staff.Stem.stemlet-length = 0.75
                         \tweak Accidental.stencil #ly:text-interface::print
                         \tweak Accidental.text \markup { \flat-one-syntonic-comma-up  }
-                        af'8
+                        af'!8
                         % AFTER:
                         % ARTICULATIONS:
                         - \accent
@@ -271,7 +274,7 @@
                         [
                         \tweak Accidental.stencil #ly:text-interface::print
                         \tweak Accidental.text \markup { \abjad-natural  }
-                        d'16
+                        d'!16
                         % AFTER:
                         % ARTICULATIONS:
                         \pp
@@ -282,7 +285,7 @@
                         \revert Staff.Stem.stemlet-length
                         \tweak Accidental.stencil #ly:text-interface::print
                         \tweak Accidental.text \markup { \natural-two-syntonic-comma-down  }
-                        b'8
+                        b'!8
                         % AFTER:
                         % MARKUP:
                         ^ \markup \center-align { \concat { -33 } }
@@ -298,7 +301,7 @@
             \context Staff = "piano 4 staff"
             {
                 % OPEN_BRACKETS:
-                \context Voice = "piano 4 voice"
+                \context Staff = "piano 4 voice"
                 {
                     % BEFORE:
                     % COMMANDS:
@@ -315,7 +318,7 @@
             \context Staff = "piano 5 staff"
             {
                 % OPEN_BRACKETS:
-                \context Voice = "piano 5 voice"
+                \context Staff = "piano 5 voice"
                 {
                     % BEFORE:
                     % COMMANDS:

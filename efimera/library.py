@@ -363,6 +363,13 @@ def parting_glass_pitching(ratio_list):
 
         ratio_handler(selections)
 
+        for leaf in abjad.select.leaves(selections, pitched=True):
+            if isinstance(leaf, abjad.Chord):
+                for head in leaf.note_heads:
+                    head.is_forced = True
+            else:
+                leaf.note_head.is_forced = True
+
     return handler
 
 
@@ -416,6 +423,13 @@ def grid1_pitching(index=0):
 
         ratio_handler2(sel2)
 
+        for leaf in abjad.select.leaves(selections, pitched=True):
+            if isinstance(leaf, abjad.Chord):
+                for head in leaf.note_heads:
+                    head.is_forced = True
+            else:
+                leaf.note_head.is_forced = True
+
     return handler
 
 
@@ -451,6 +465,10 @@ def grid2_pitching():
         )
 
         ratio_handler(selections)
+
+        for leaf in abjad.select.leaves(selections, pitched=True):
+            for head in leaf.note_heads:
+                head.is_forced = True
 
     return handler
 
@@ -512,6 +530,10 @@ def skyward_solo_pitching(chord=2):
 
         ratio_handler(selections)
 
+        for leaf in abjad.select.leaves(selections, pitched=True):
+            for head in leaf.note_heads:
+                head.is_forced = True
+
     return handler
 
 
@@ -543,6 +565,9 @@ def skyward_ensemble_pitching(
         )
 
         ratio_handler(selections)
+
+        for leaf in abjad.select.leaves(selections, pitched=True):
+            leaf.note_head.is_forced = True
 
     return handler
 
@@ -992,6 +1017,13 @@ def win_pitching(index, fundamentals):
 
         ratio_handler(selections)
 
+        for leaf in abjad.select.leaves(selections, pitched=True):
+            if isinstance(leaf, abjad.Chord):
+                for head in leaf.note_heads:
+                    head.is_forced = True
+            else:
+                leaf.note_head.is_forced = True
+
     return handler
 
 
@@ -1046,6 +1078,9 @@ def slashes_pitching(fundamental, index=0):
         pitch_handler(selections)
 
         ratio_handler(selections)
+
+        for leaf in abjad.select.leaves(selections, pitched=True):
+            leaf.note_head.is_forced = True
 
     return handler
 

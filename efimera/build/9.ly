@@ -58,6 +58,9 @@
             % AFTER:
             % COMMANDS:
             \bar "||"
+            % ABSOLUTE_AFTER:
+            % COMMANDS:
+            \once \override Score.BarLine.transparent = ##f
         % CLOSE_BRACKETS:
         }
         % OPEN_BRACKETS:
@@ -67,7 +70,7 @@
             \context Staff = "piano 1 staff"
             {
                 % OPEN_BRACKETS:
-                \context Voice = "piano 1 voice"
+                \context Staff = "piano 1 voice"
                 {
                     % BEFORE:
                     % COMMANDS:
@@ -75,7 +78,7 @@
                     % OPENING:
                     % COMMANDS:
                     \override Staff.Stem.stemlet-length = 0.75
-                    a'8
+                    a'!8
                     % AFTER:
                     % ARTICULATIONS:
                     \p
@@ -91,7 +94,7 @@
                     \revert Staff.Stem.stemlet-length
                     \tweak Accidental.stencil #ly:text-interface::print
                     \tweak Accidental.text \markup \concat { \one-undecimal-quarter-tone-up \hspace #0.125 \flat-one-syntonic-comma-up  }
-                    gf'8
+                    gf'!8
                     % AFTER:
                     % MARKUP:
                     ^ \markup \center-align { \concat { G-35 } }
@@ -99,7 +102,7 @@
                     ]
                     \tweak Accidental.stencil #ly:text-interface::print
                     \tweak Accidental.text \markup { \abjad-natural  }
-                    f'4
+                    f'!4
                     % AFTER:
                     % MARKUP:
                     ^ \markup \center-align { \concat { +0 } }
@@ -110,7 +113,7 @@
                     \override Staff.Stem.stemlet-length = 0.75
                     \tweak Accidental.stencil #ly:text-interface::print
                     \tweak Accidental.text \markup { \abjad-natural  }
-                    f'8
+                    f'!8
                     % AFTER:
                     % START_BEAM:
                     [
@@ -119,7 +122,7 @@
                     \revert Staff.Stem.stemlet-length
                     \tweak Accidental.stencil #ly:text-interface::print
                     \tweak Accidental.text \markup \concat { \one-undecimal-quarter-tone-down \hspace #0.125 \one-septimal-comma-up  }
-                    d'8
+                    d'!8
                     % AFTER:
                     % ARTICULATIONS:
                     \!
@@ -147,7 +150,7 @@
                         \override Staff.Stem.stemlet-length = 0.75
                         \tweak Accidental.stencil #ly:text-interface::print
                         \tweak Accidental.text \markup { \abjad-natural  }
-                        f''16
+                        f''!16
                         % AFTER:
                         % ARTICULATIONS:
                         - \espressivo
@@ -160,7 +163,7 @@
                         \<
                         \tweak Accidental.stencil #ly:text-interface::print
                         \tweak Accidental.text \markup \concat { \one-forty-three-limit-comma-up \hspace #0.125 \abjad-flat  }
-                        cf''''16
+                        cf''''!16
                         % AFTER:
                         % ARTICULATIONS:
                         - \espressivo
@@ -168,7 +171,7 @@
                         ^ \markup \center-align { \concat { +12 } }
                         \tweak Accidental.stencil #ly:text-interface::print
                         \tweak Accidental.text \markup \concat { \one-seventeen-limit-schisma-down \hspace #0.125 \abjad-sharp  }
-                        fs''16
+                        fs''!16
                         % AFTER:
                         % ARTICULATIONS:
                         - \espressivo
@@ -176,7 +179,7 @@
                         ^ \markup \center-align { \concat { +5 } }
                         \tweak Accidental.stencil #ly:text-interface::print
                         \tweak Accidental.text \markup \concat { \one-twenty-three-limit-comma-up \hspace #0.125 \one-septimal-comma-down  }
-                        a''16
+                        a''!16
                         % AFTER:
                         % ARTICULATIONS:
                         - \espressivo
@@ -187,7 +190,7 @@
                         \revert Staff.Stem.stemlet-length
                         \tweak Accidental.stencil #ly:text-interface::print
                         \tweak Accidental.text \markup \concat { \one-twenty-nine-limit-comma-up \hspace #0.125 \natural-one-syntonic-comma-down  }
-                        g''16
+                        g''!16
                         % AFTER:
                         % ARTICULATIONS:
                         - \espressivo
@@ -201,7 +204,7 @@
                         \override Staff.Stem.stemlet-length = 0.75
                         \tweak Accidental.stencil #ly:text-interface::print
                         \tweak Accidental.text \markup \concat { \one-nineteen-limit-schisma-up \hspace #0.125 \abjad-flat  }
-                        ff''''16
+                        ff''''!16
                         % AFTER:
                         % ARTICULATIONS:
                         - \espressivo
@@ -211,7 +214,7 @@
                         [
                         \tweak Accidental.stencil #ly:text-interface::print
                         \tweak Accidental.text \markup \concat { \one-twenty-three-limit-comma-up \hspace #0.125 \one-septimal-comma-down  }
-                        a''16
+                        a''!16
                         % AFTER:
                         % ARTICULATIONS:
                         - \espressivo
@@ -219,7 +222,7 @@
                         ^ \markup \center-align { \concat { -3 } }
                         \tweak Accidental.stencil #ly:text-interface::print
                         \tweak Accidental.text \markup \concat { \one-seventeen-limit-schisma-down \hspace #0.125 \abjad-sharp  }
-                        d''''16
+                        d''''!16
                         % AFTER:
                         % ARTICULATIONS:
                         - \espressivo
@@ -227,7 +230,7 @@
                         ^ \markup \center-align { \concat { +7 } }
                         \tweak Accidental.stencil #ly:text-interface::print
                         \tweak Accidental.text \markup { \abjad-natural  }
-                        c'''16
+                        c'''!16
                         % AFTER:
                         % ARTICULATIONS:
                         - \espressivo
@@ -235,7 +238,7 @@
                         ^ \markup \center-align { \concat { +2 } }
                         \tweak Accidental.stencil #ly:text-interface::print
                         \tweak Accidental.text \markup { \abjad-natural  }
-                        gf'''16
+                        gf'''!16
                         % AFTER:
                         % ARTICULATIONS:
                         - \espressivo
@@ -246,7 +249,7 @@
                         \revert Staff.Stem.stemlet-length
                         \tweak Accidental.stencil #ly:text-interface::print
                         \tweak Accidental.text \markup \concat { \one-seventeen-limit-schisma-down \hspace #0.125 \abjad-sharp  }
-                        cs'''16
+                        cs'''!16
                         % AFTER:
                         % ARTICULATIONS:
                         - \espressivo
@@ -266,7 +269,7 @@
                         \override Staff.Stem.stemlet-length = 0.75
                         \tweak Accidental.stencil #ly:text-interface::print
                         \tweak Accidental.text \markup \concat { \one-seventeen-limit-schisma-down \hspace #0.125 \one-septimal-comma-down  }
-                        f''''16
+                        f''''!16
                         % AFTER:
                         % ARTICULATIONS:
                         - \espressivo
@@ -279,7 +282,7 @@
                         \revert Staff.Stem.stemlet-length
                         \tweak Accidental.stencil #ly:text-interface::print
                         \tweak Accidental.text \markup { \abjad-natural  }
-                        f''16
+                        f''!16
                         % AFTER:
                         % ARTICULATIONS:
                         - \espressivo
@@ -300,7 +303,7 @@
                         \override Staff.Stem.stemlet-length = 0.75
                         \tweak Accidental.stencil #ly:text-interface::print
                         \tweak Accidental.text \markup \concat { \one-forty-three-limit-comma-up \hspace #0.125 \abjad-flat  }
-                        bf''16
+                        bf''!16
                         % AFTER:
                         % ARTICULATIONS:
                         - \espressivo
@@ -310,7 +313,7 @@
                         [
                         \tweak Accidental.stencil #ly:text-interface::print
                         \tweak Accidental.text \markup \concat { \one-seventeen-limit-schisma-down \hspace #0.125 \abjad-sharp  }
-                        fs''16
+                        fs''!16
                         % AFTER:
                         % ARTICULATIONS:
                         - \espressivo
@@ -318,7 +321,7 @@
                         ^ \markup \center-align { \concat { +5 } }
                         \tweak Accidental.stencil #ly:text-interface::print
                         \tweak Accidental.text \markup \concat { \one-twenty-three-limit-comma-up \hspace #0.125 \one-septimal-comma-down  }
-                        bf'''16
+                        bf'''!16
                         % AFTER:
                         % ARTICULATIONS:
                         - \espressivo
@@ -326,7 +329,7 @@
                         ^ \markup \center-align { \concat { -3 } }
                         \tweak Accidental.stencil #ly:text-interface::print
                         \tweak Accidental.text \markup \concat { \one-twenty-nine-limit-comma-up \hspace #0.125 \natural-one-syntonic-comma-down  }
-                        g''16
+                        g''!16
                         % AFTER:
                         % ARTICULATIONS:
                         - \espressivo
@@ -334,7 +337,7 @@
                         ^ \markup \center-align { \concat { +16 } }
                         \tweak Accidental.stencil #ly:text-interface::print
                         \tweak Accidental.text \markup \concat { \one-nineteen-limit-schisma-up \hspace #0.125 \abjad-flat  }
-                        ff''''16
+                        ff''''!16
                         % AFTER:
                         % ARTICULATIONS:
                         - \espressivo
@@ -342,7 +345,7 @@
                         ^ \markup \center-align { \concat { -1 } }
                         \tweak Accidental.stencil #ly:text-interface::print
                         \tweak Accidental.text \markup \concat { \one-twenty-three-limit-comma-up \hspace #0.125 \one-septimal-comma-down  }
-                        a''16
+                        a''!16
                         % AFTER:
                         % ARTICULATIONS:
                         - \espressivo
@@ -350,7 +353,7 @@
                         ^ \markup \center-align { \concat { -3 } }
                         \tweak Accidental.stencil #ly:text-interface::print
                         \tweak Accidental.text \markup \concat { \one-seventeen-limit-schisma-down \hspace #0.125 \abjad-sharp  }
-                        d''''16
+                        d''''!16
                         % AFTER:
                         % ARTICULATIONS:
                         - \espressivo
@@ -358,7 +361,7 @@
                         ^ \markup \center-align { \concat { +7 } }
                         \tweak Accidental.stencil #ly:text-interface::print
                         \tweak Accidental.text \markup { \abjad-natural  }
-                        c'''16
+                        c'''!16
                         % AFTER:
                         % ARTICULATIONS:
                         - \espressivo
@@ -366,7 +369,7 @@
                         ^ \markup \center-align { \concat { +2 } }
                         \tweak Accidental.stencil #ly:text-interface::print
                         \tweak Accidental.text \markup { \abjad-natural  }
-                        gf'''16
+                        gf'''!16
                         % AFTER:
                         % ARTICULATIONS:
                         - \espressivo
@@ -377,7 +380,7 @@
                         \revert Staff.Stem.stemlet-length
                         \tweak Accidental.stencil #ly:text-interface::print
                         \tweak Accidental.text \markup \concat { \one-seventeen-limit-schisma-down \hspace #0.125 \abjad-sharp  }
-                        cs'''16
+                        cs'''!16
                         % AFTER:
                         % ARTICULATIONS:
                         - \espressivo
@@ -395,7 +398,7 @@
                         \override Staff.Stem.stemlet-length = 0.75
                         \tweak Accidental.stencil #ly:text-interface::print
                         \tweak Accidental.text \markup \concat { \one-seventeen-limit-schisma-down \hspace #0.125 \one-septimal-comma-down  }
-                        e'''16
+                        e'''!16
                         % AFTER:
                         % ARTICULATIONS:
                         - \espressivo
@@ -405,7 +408,7 @@
                         [
                         \tweak Accidental.stencil #ly:text-interface::print
                         \tweak Accidental.text \markup { \abjad-natural  }
-                        f''16
+                        f''!16
                         % AFTER:
                         % ARTICULATIONS:
                         - \espressivo
@@ -416,7 +419,7 @@
                         \revert Staff.Stem.stemlet-length
                         \tweak Accidental.stencil #ly:text-interface::print
                         \tweak Accidental.text \markup \concat { \one-forty-three-limit-comma-up \hspace #0.125 \abjad-flat  }
-                        cf''''16
+                        cf''''!16
                         % AFTER:
                         % ARTICULATIONS:
                         - \espressivo
@@ -432,7 +435,7 @@
                     {
                         \tweak Accidental.stencil #ly:text-interface::print
                         \tweak Accidental.text \markup \concat { \one-seventeen-limit-schisma-down \hspace #0.125 \abjad-sharp  }
-                        fs''16
+                        fs''!16
                         % AFTER:
                         % ARTICULATIONS:
                         - \espressivo
@@ -444,7 +447,7 @@
                         \override Staff.Stem.stemlet-length = 0.75
                         \tweak Accidental.stencil #ly:text-interface::print
                         \tweak Accidental.text \markup \concat { \one-twenty-three-limit-comma-up \hspace #0.125 \one-septimal-comma-down  }
-                        bf'''16
+                        bf'''!16
                         % AFTER:
                         % ARTICULATIONS:
                         - \espressivo
@@ -454,7 +457,7 @@
                         [
                         \tweak Accidental.stencil #ly:text-interface::print
                         \tweak Accidental.text \markup \concat { \one-twenty-nine-limit-comma-up \hspace #0.125 \natural-one-syntonic-comma-down  }
-                        g''16
+                        g''!16
                         % AFTER:
                         % ARTICULATIONS:
                         - \espressivo
@@ -462,7 +465,7 @@
                         ^ \markup \center-align { \concat { +16 } }
                         \tweak Accidental.stencil #ly:text-interface::print
                         \tweak Accidental.text \markup \concat { \one-nineteen-limit-schisma-up \hspace #0.125 \abjad-flat  }
-                        ff''''16
+                        ff''''!16
                         % AFTER:
                         % ARTICULATIONS:
                         - \espressivo
@@ -470,7 +473,7 @@
                         ^ \markup \center-align { \concat { -1 } }
                         \tweak Accidental.stencil #ly:text-interface::print
                         \tweak Accidental.text \markup \concat { \one-twenty-three-limit-comma-up \hspace #0.125 \one-septimal-comma-down  }
-                        a''16
+                        a''!16
                         % AFTER:
                         % ARTICULATIONS:
                         - \espressivo
@@ -478,7 +481,7 @@
                         ^ \markup \center-align { \concat { -3 } }
                         \tweak Accidental.stencil #ly:text-interface::print
                         \tweak Accidental.text \markup \concat { \one-seventeen-limit-schisma-down \hspace #0.125 \abjad-sharp  }
-                        d''''16
+                        d''''!16
                         % AFTER:
                         % ARTICULATIONS:
                         - \espressivo
@@ -489,7 +492,7 @@
                         \revert Staff.Stem.stemlet-length
                         \tweak Accidental.stencil #ly:text-interface::print
                         \tweak Accidental.text \markup { \abjad-natural  }
-                        c'''16
+                        c'''!16
                         % AFTER:
                         % ARTICULATIONS:
                         - \espressivo
@@ -508,19 +511,19 @@
                     <
                         \tweak Accidental.stencil #ly:text-interface::print
                         \tweak Accidental.text \markup { \abjad-sharp  }
-                        cs,
+                        cs,!
                         \tweak Accidental.stencil #ly:text-interface::print
                         \tweak Accidental.text \markup { \abjad-sharp  }
-                        gs
+                        gs!
                         \tweak Accidental.stencil #ly:text-interface::print
                         \tweak Accidental.text \markup { \sharp-one-syntonic-comma-down  }
-                        es'
+                        es'!
                         \tweak Accidental.stencil #ly:text-interface::print
                         \tweak Accidental.text \markup { \one-septimal-comma-down  }
-                        b'
+                        b'!
                         \tweak Accidental.stencil #ly:text-interface::print
                         \tweak Accidental.text \markup { \abjad-sharp  }
-                        ds''
+                        ds''!
                     >2
                     % AFTER:
                     % ARTICULATIONS:
@@ -539,7 +542,7 @@
             \context Staff = "piano 2 staff"
             {
                 % OPEN_BRACKETS:
-                \context Voice = "piano 2 voice"
+                \context Staff = "piano 2 voice"
                 {
                     % OPEN_BRACKETS:
                     \times 4/7
@@ -550,7 +553,7 @@
                         r8
                         \tweak Accidental.stencil #ly:text-interface::print
                         \tweak Accidental.text \markup { \abjad-natural  }
-                        d16
+                        d!16
                         % AFTER:
                         % ARTICULATIONS:
                         - \espressivo
@@ -561,7 +564,7 @@
                         r8.
                         \tweak Accidental.stencil #ly:text-interface::print
                         \tweak Accidental.text \markup { \one-forty-three-limit-comma-up  }
-                        g16
+                        g!16
                         % AFTER:
                         % ARTICULATIONS:
                         - \espressivo
@@ -570,7 +573,7 @@
                         r4
                         \tweak Accidental.stencil #ly:text-interface::print
                         \tweak Accidental.text \markup \concat { \one-seventeen-limit-schisma-down \hspace #0.125 \abjad-sharp  }
-                        ds16
+                        ds!16
                         % AFTER:
                         % ARTICULATIONS:
                         - \espressivo
@@ -585,7 +588,7 @@
                         r8
                         \tweak Accidental.stencil #ly:text-interface::print
                         \tweak Accidental.text \markup { \abjad-natural  }
-                        g16
+                        g!16
                         % AFTER:
                         % ARTICULATIONS:
                         - \espressivo
@@ -604,7 +607,7 @@
                         \clef "treble"
                         \tweak Accidental.stencil #ly:text-interface::print
                         \tweak Accidental.text \markup { \one-forty-three-limit-comma-up  }
-                        d''16
+                        d''!16
                         % AFTER:
                         % ARTICULATIONS:
                         - \espressivo
@@ -613,7 +616,7 @@
                         r4
                         \tweak Accidental.stencil #ly:text-interface::print
                         \tweak Accidental.text \markup \concat { \one-seventeen-limit-schisma-down \hspace #0.125 \abjad-sharp  }
-                        gs16
+                        gs!16
                         % AFTER:
                         % ARTICULATIONS:
                         - \espressivo
@@ -629,7 +632,7 @@
                         r4.
                         \tweak Accidental.stencil #ly:text-interface::print
                         \tweak Accidental.text \markup \concat { \one-twenty-three-limit-comma-up \hspace #0.125 \one-septimal-comma-down  }
-                        b16
+                        b!16
                         % AFTER:
                         % ARTICULATIONS:
                         - \espressivo
@@ -639,7 +642,7 @@
                         r16
                         \tweak Accidental.stencil #ly:text-interface::print
                         \tweak Accidental.text \markup \concat { \one-twenty-nine-limit-comma-up \hspace #0.125 \natural-one-syntonic-comma-down  }
-                        a16
+                        a!16
                         % AFTER:
                         % ARTICULATIONS:
                         - \espressivo
@@ -655,7 +658,7 @@
                         r16
                         \tweak Accidental.stencil #ly:text-interface::print
                         \tweak Accidental.text \markup \concat { \one-nineteen-limit-schisma-up \hspace #0.125 \abjad-flat  }
-                        bf'16
+                        bf'!16
                         % AFTER:
                         % ARTICULATIONS:
                         - \espressivo
@@ -666,7 +669,7 @@
                         r4..
                         \tweak Accidental.stencil #ly:text-interface::print
                         \tweak Accidental.text \markup \concat { \one-twenty-three-limit-comma-up \hspace #0.125 \one-septimal-comma-down  }
-                        e'16
+                        e'!16
                         % AFTER:
                         % ARTICULATIONS:
                         - \espressivo
@@ -678,7 +681,7 @@
                     r16.
                     \tweak Accidental.stencil #ly:text-interface::print
                     \tweak Accidental.text \markup \concat { \one-seventeen-limit-schisma-down \hspace #0.125 \abjad-sharp  }
-                    gs'16.
+                    gs'!16.
                     % AFTER:
                     % ARTICULATIONS:
                     - \espressivo
@@ -688,7 +691,7 @@
                     r32
                     \tweak Accidental.stencil #ly:text-interface::print
                     \tweak Accidental.text \markup { \abjad-natural  }
-                    c'16.
+                    c'!16.
                     % AFTER:
                     % ARTICULATIONS:
                     - \espressivo
@@ -701,7 +704,7 @@
                         r16
                         \tweak Accidental.stencil #ly:text-interface::print
                         \tweak Accidental.text \markup { \abjad-flat  }
-                        ef'16
+                        ef'!16
                         % AFTER:
                         % ARTICULATIONS:
                         - \espressivo
@@ -710,7 +713,7 @@
                         r4..
                         \tweak Accidental.stencil #ly:text-interface::print
                         \tweak Accidental.text \markup { \one-seventeen-limit-schisma-down  }
-                        b'16
+                        b'!16
                         % AFTER:
                         % ARTICULATIONS:
                         - \espressivo
@@ -724,7 +727,7 @@
                     {
                         \tweak Accidental.stencil #ly:text-interface::print
                         \tweak Accidental.text \markup \concat { \one-seventeen-limit-schisma-down \hspace #0.125 \one-septimal-comma-down  }
-                        d''8
+                        d''!8
                         % AFTER:
                         % ARTICULATIONS:
                         - \espressivo
@@ -733,7 +736,7 @@
                         r8
                         \tweak Accidental.stencil #ly:text-interface::print
                         \tweak Accidental.text \markup \concat { \one-forty-three-limit-comma-up \hspace #0.125 \abjad-flat  }
-                        af'8.
+                        af'!8.
                         % AFTER:
                         % ARTICULATIONS:
                         - \espressivo
@@ -745,7 +748,7 @@
                     r32.
                     \tweak Accidental.stencil #ly:text-interface::print
                     \tweak Accidental.text \markup \concat { \one-twenty-nine-limit-comma-up \hspace #0.125 \natural-one-syntonic-comma-down  }
-                    f'32.
+                    f'!32.
                     % AFTER:
                     % ARTICULATIONS:
                     - \espressivo
@@ -755,7 +758,7 @@
                     r64
                     \tweak Accidental.stencil #ly:text-interface::print
                     \tweak Accidental.text \markup \concat { \one-nineteen-limit-schisma-up \hspace #0.125 \abjad-flat  }
-                    df''32.
+                    df''!32.
                     % AFTER:
                     % ARTICULATIONS:
                     - \espressivo
@@ -764,7 +767,7 @@
                     r8.
                     \tweak Accidental.stencil #ly:text-interface::print
                     \tweak Accidental.text \markup \concat { \one-twenty-nine-limit-comma-up \hspace #0.125 \natural-one-syntonic-comma-down  }
-                    g'16
+                    g'!16
                     % AFTER:
                     % ARTICULATIONS:
                     - \espressivo
@@ -774,7 +777,7 @@
                     r16
                     \tweak Accidental.stencil #ly:text-interface::print
                     \tweak Accidental.text \markup \concat { \one-nineteen-limit-schisma-up \hspace #0.125 \abjad-flat  }
-                    ef''16
+                    ef''!16
                     % AFTER:
                     % ARTICULATIONS:
                     - \espressivo
@@ -786,7 +789,7 @@
                         r8
                         \tweak Accidental.stencil #ly:text-interface::print
                         \tweak Accidental.text \markup \concat { \one-twenty-three-limit-comma-up \hspace #0.125 \one-septimal-comma-down  }
-                        a'16
+                        a'!16
                         % AFTER:
                         % ARTICULATIONS:
                         - \espressivo
@@ -799,7 +802,7 @@
                     {
                         \tweak Accidental.stencil #ly:text-interface::print
                         \tweak Accidental.text \markup \concat { \one-seventeen-limit-schisma-down \hspace #0.125 \abjad-sharp  }
-                        cs''16
+                        cs''!16
                         % AFTER:
                         % ARTICULATIONS:
                         - \espressivo
@@ -808,7 +811,7 @@
                         r16
                         \tweak Accidental.stencil #ly:text-interface::print
                         \tweak Accidental.text \markup { \abjad-natural  }
-                        c''8.
+                        c''!8.
                         % AFTER:
                         % ARTICULATIONS:
                         - \espressivo
@@ -821,7 +824,7 @@
                     {
                         \tweak Accidental.stencil #ly:text-interface::print
                         \tweak Accidental.text \markup { \abjad-flat  }
-                        af'16
+                        af'!16
                         % AFTER:
                         % ARTICULATIONS:
                         - \espressivo
@@ -832,7 +835,7 @@
                         r16
                         \tweak Accidental.stencil #ly:text-interface::print
                         \tweak Accidental.text \markup { \one-seventeen-limit-schisma-down  }
-                        e''16
+                        e''!16
                         % AFTER:
                         % ARTICULATIONS:
                         - \espressivo
@@ -841,7 +844,7 @@
                         r8
                         \tweak Accidental.stencil #ly:text-interface::print
                         \tweak Accidental.text \markup \concat { \one-seventeen-limit-schisma-down \hspace #0.125 \one-septimal-comma-down  }
-                        g''8
+                        g''!8
                         % AFTER:
                         % ARTICULATIONS:
                         - \espressivo
@@ -850,7 +853,7 @@
                         r16
                         \tweak Accidental.stencil #ly:text-interface::print
                         \tweak Accidental.text \markup \concat { \one-forty-three-limit-comma-up \hspace #0.125 \abjad-sharp  }
-                        fs''16
+                        fs''!16
                         % AFTER:
                         % ARTICULATIONS:
                         - \espressivo
@@ -863,7 +866,7 @@
                     {
                         \tweak Accidental.stencil #ly:text-interface::print
                         \tweak Accidental.text \markup \concat { \one-seventeen-limit-schisma-down \hspace #0.125 \double-sharp  }
-                        css''8.
+                        css''!8.
                         % AFTER:
                         % ARTICULATIONS:
                         - \espressivo
@@ -872,7 +875,7 @@
                         r8
                         \tweak Accidental.stencil #ly:text-interface::print
                         \tweak Accidental.text \markup \concat { \one-nineteen-limit-schisma-up \hspace #0.125 \abjad-flat  }
-                        gf''16
+                        gf''!16
                         % AFTER:
                         % ARTICULATIONS:
                         - \espressivo
@@ -882,7 +885,7 @@
                     }
                     \tweak Accidental.stencil #ly:text-interface::print
                     \tweak Accidental.text \markup \concat { \one-twenty-three-limit-comma-up \hspace #0.125 \one-septimal-comma-down  }
-                    c''8.
+                    c''!8.
                     % AFTER:
                     % ARTICULATIONS:
                     - \espressivo
@@ -891,7 +894,7 @@
                     r32.
                     \tweak Accidental.stencil #ly:text-interface::print
                     \tweak Accidental.text \markup \concat { \one-seventeen-limit-schisma-down \hspace #0.125 \double-sharp  }
-                    gss''16.
+                    gss''!16.
                     % AFTER:
                     % ARTICULATIONS:
                     - \espressivo
@@ -906,7 +909,7 @@
                         \override Staff.Stem.stemlet-length = 0.75
                         \tweak Accidental.stencil #ly:text-interface::print
                         \tweak Accidental.text \markup { \abjad-natural  }
-                        e''16
+                        e''!16
                         % AFTER:
                         % ARTICULATIONS:
                         - \espressivo
@@ -916,7 +919,7 @@
                         [
                         \tweak Accidental.stencil #ly:text-interface::print
                         \tweak Accidental.text \markup { \one-forty-three-limit-comma-up  }
-                        a''16
+                        a''!16
                         % AFTER:
                         % ARTICULATIONS:
                         - \espressivo
@@ -927,7 +930,7 @@
                         \revert Staff.Stem.stemlet-length
                         \tweak Accidental.stencil #ly:text-interface::print
                         \tweak Accidental.text \markup \concat { \one-seventeen-limit-schisma-down \hspace #0.125 \abjad-sharp  }
-                        es''16
+                        es''!16
                         % AFTER:
                         % ARTICULATIONS:
                         - \espressivo
@@ -945,7 +948,7 @@
                         \override Staff.Stem.stemlet-length = 0.75
                         \tweak Accidental.stencil #ly:text-interface::print
                         \tweak Accidental.text \markup \concat { \one-twenty-three-limit-comma-up \hspace #0.125 \one-septimal-comma-down \hspace #0.125 \abjad-sharp  }
-                        gs''16
+                        gs''!16
                         % AFTER:
                         % ARTICULATIONS:
                         - \espressivo
@@ -958,7 +961,7 @@
                         \revert Staff.Stem.stemlet-length
                         \tweak Accidental.stencil #ly:text-interface::print
                         \tweak Accidental.text \markup \concat { \one-twenty-nine-limit-comma-up \hspace #0.125 \sharp-one-syntonic-comma-down  }
-                        fs''16
+                        fs''!16
                         % AFTER:
                         % ARTICULATIONS:
                         - \espressivo
@@ -972,7 +975,7 @@
                         \override Staff.Stem.stemlet-length = 0.75
                         \tweak Accidental.stencil #ly:text-interface::print
                         \tweak Accidental.text \markup { \one-nineteen-limit-schisma-up  }
-                        d'''16
+                        d'''!16
                         % AFTER:
                         % ARTICULATIONS:
                         - \espressivo
@@ -982,7 +985,7 @@
                         [
                         \tweak Accidental.stencil #ly:text-interface::print
                         \tweak Accidental.text \markup \concat { \one-twenty-three-limit-comma-up \hspace #0.125 \one-septimal-comma-down \hspace #0.125 \abjad-sharp  }
-                        gs''16
+                        gs''!16
                         % AFTER:
                         % ARTICULATIONS:
                         - \espressivo
@@ -990,7 +993,7 @@
                         ^ \markup \center-align { \concat { -3 } }
                         \tweak Accidental.stencil #ly:text-interface::print
                         \tweak Accidental.text \markup \concat { \one-seventeen-limit-schisma-down \hspace #0.125 \abjad-sharp  }
-                        bs''16
+                        bs''!16
                         % AFTER:
                         % ARTICULATIONS:
                         - \espressivo
@@ -998,7 +1001,7 @@
                         ^ \markup \center-align { \concat { +7 } }
                         \tweak Accidental.stencil #ly:text-interface::print
                         \tweak Accidental.text \markup { \abjad-natural  }
-                        b''16
+                        b''!16
                         % AFTER:
                         % ARTICULATIONS:
                         - \espressivo
@@ -1006,7 +1009,7 @@
                         ^ \markup \center-align { \concat { +2 } }
                         \tweak Accidental.stencil #ly:text-interface::print
                         \tweak Accidental.text \markup { \abjad-natural  }
-                        e''16
+                        e''!16
                         % AFTER:
                         % ARTICULATIONS:
                         - \espressivo
@@ -1017,7 +1020,7 @@
                         \revert Staff.Stem.stemlet-length
                         \tweak Accidental.stencil #ly:text-interface::print
                         \tweak Accidental.text \markup \concat { \one-seventeen-limit-schisma-down \hspace #0.125 \abjad-sharp  }
-                        bs''16
+                        bs''!16
                         % AFTER:
                         % ARTICULATIONS:
                         - \espressivo
@@ -1028,7 +1031,7 @@
                         r8.
                         \tweak Accidental.stencil #ly:text-interface::print
                         \tweak Accidental.text \markup \concat { \one-seventeen-limit-schisma-down \hspace #0.125 \one-septimal-comma-down \hspace #0.125 \abjad-sharp  }
-                        ds'''16
+                        ds'''!16
                         % AFTER:
                         % ARTICULATIONS:
                         - \espressivo
@@ -1047,7 +1050,7 @@
                         \override Staff.Stem.stemlet-length = 0.75
                         \tweak Accidental.stencil #ly:text-interface::print
                         \tweak Accidental.text \markup { \abjad-flat  }
-                        af''16
+                        af''!16
                         % AFTER:
                         % ARTICULATIONS:
                         - \espressivo
@@ -1061,7 +1064,7 @@
                         \>
                         \tweak Accidental.stencil #ly:text-interface::print
                         \tweak Accidental.text \markup \concat { \one-forty-three-limit-comma-up \hspace #0.125 \abjad-flat  }
-                        ff''''16
+                        ff''''!16
                         % AFTER:
                         % ARTICULATIONS:
                         - \espressivo
@@ -1069,7 +1072,7 @@
                         ^ \markup \center-align { \concat { +12 } }
                         \tweak Accidental.stencil #ly:text-interface::print
                         \tweak Accidental.text \markup { \one-seventeen-limit-schisma-down  }
-                        a''16
+                        a''!16
                         % AFTER:
                         % ARTICULATIONS:
                         - \espressivo
@@ -1077,7 +1080,7 @@
                         ^ \markup \center-align { \concat { +5 } }
                         \tweak Accidental.stencil #ly:text-interface::print
                         \tweak Accidental.text \markup \concat { \one-twenty-three-limit-comma-up \hspace #0.125 \one-septimal-comma-down  }
-                        c'''16
+                        c'''!16
                         % AFTER:
                         % ARTICULATIONS:
                         - \espressivo
@@ -1085,7 +1088,7 @@
                         ^ \markup \center-align { \concat { -3 } }
                         \tweak Accidental.stencil #ly:text-interface::print
                         \tweak Accidental.text \markup \concat { \one-twenty-nine-limit-comma-up \hspace #0.125 \flat-one-syntonic-comma-down  }
-                        bf''16
+                        bf''!16
                         % AFTER:
                         % ARTICULATIONS:
                         - \espressivo
@@ -1093,7 +1096,7 @@
                         ^ \markup \center-align { \concat { +16 } }
                         \tweak Accidental.stencil #ly:text-interface::print
                         \tweak Accidental.text \markup \concat { \one-nineteen-limit-schisma-up \hspace #0.125 \abjad-flat  }
-                        bff''''16
+                        bff''''!16
                         % AFTER:
                         % ARTICULATIONS:
                         - \espressivo
@@ -1101,7 +1104,7 @@
                         ^ \markup \center-align { \concat { -1 } }
                         \tweak Accidental.stencil #ly:text-interface::print
                         \tweak Accidental.text \markup \concat { \one-twenty-three-limit-comma-up \hspace #0.125 \one-septimal-comma-down  }
-                        c'''16
+                        c'''!16
                         % AFTER:
                         % ARTICULATIONS:
                         - \espressivo
@@ -1109,7 +1112,7 @@
                         ^ \markup \center-align { \concat { -3 } }
                         \tweak Accidental.stencil #ly:text-interface::print
                         \tweak Accidental.text \markup { \one-seventeen-limit-schisma-down  }
-                        g''''16
+                        g''''!16
                         % AFTER:
                         % ARTICULATIONS:
                         - \espressivo
@@ -1117,7 +1120,7 @@
                         ^ \markup \center-align { \concat { +7 } }
                         \tweak Accidental.stencil #ly:text-interface::print
                         \tweak Accidental.text \markup { \abjad-flat  }
-                        ef'''16
+                        ef'''!16
                         % AFTER:
                         % ARTICULATIONS:
                         - \espressivo
@@ -1125,7 +1128,7 @@
                         ^ \markup \center-align { \concat { +2 } }
                         \tweak Accidental.stencil #ly:text-interface::print
                         \tweak Accidental.text \markup { \abjad-flat  }
-                        cf''''16
+                        cf''''!16
                         % AFTER:
                         % ARTICULATIONS:
                         - \espressivo
@@ -1133,7 +1136,7 @@
                         ^ \markup \center-align { \concat { +0 } }
                         \tweak Accidental.stencil #ly:text-interface::print
                         \tweak Accidental.text \markup { \one-seventeen-limit-schisma-down  }
-                        e'''16
+                        e'''!16
                         % AFTER:
                         % ARTICULATIONS:
                         - \espressivo
@@ -1141,7 +1144,7 @@
                         ^ \markup \center-align { \concat { +7 } }
                         \tweak Accidental.stencil #ly:text-interface::print
                         \tweak Accidental.text \markup \concat { \one-seventeen-limit-schisma-down \hspace #0.125 \one-septimal-comma-down  }
-                        bf''''16
+                        bf''''!16
                         % AFTER:
                         % ARTICULATIONS:
                         - \espressivo
@@ -1149,7 +1152,7 @@
                         ^ \markup \center-align { \concat { -26 } }
                         \tweak Accidental.stencil #ly:text-interface::print
                         \tweak Accidental.text \markup { \abjad-flat  }
-                        af''16
+                        af''!16
                         % AFTER:
                         % ARTICULATIONS:
                         - \espressivo
@@ -1160,7 +1163,7 @@
                         \revert Staff.Stem.stemlet-length
                         \tweak Accidental.stencil #ly:text-interface::print
                         \tweak Accidental.text \markup \concat { \one-forty-three-limit-comma-up \hspace #0.125 \abjad-flat  }
-                        df'''16
+                        df'''!16
                         % AFTER:
                         % ARTICULATIONS:
                         - \espressivo
@@ -1178,7 +1181,7 @@
                         \override Staff.Stem.stemlet-length = 0.75
                         \tweak Accidental.stencil #ly:text-interface::print
                         \tweak Accidental.text \markup { \one-seventeen-limit-schisma-down  }
-                        a''16
+                        a''!16
                         % AFTER:
                         % ARTICULATIONS:
                         - \espressivo
@@ -1188,7 +1191,7 @@
                         [
                         \tweak Accidental.stencil #ly:text-interface::print
                         \tweak Accidental.text \markup \concat { \one-twenty-three-limit-comma-up \hspace #0.125 \one-septimal-comma-down  }
-                        ef''''16
+                        ef''''!16
                         % AFTER:
                         % ARTICULATIONS:
                         - \espressivo
@@ -1196,7 +1199,7 @@
                         ^ \markup \center-align { \concat { -3 } }
                         \tweak Accidental.stencil #ly:text-interface::print
                         \tweak Accidental.text \markup \concat { \one-twenty-nine-limit-comma-up \hspace #0.125 \flat-one-syntonic-comma-down  }
-                        bf''16
+                        bf''!16
                         % AFTER:
                         % ARTICULATIONS:
                         - \espressivo
@@ -1204,7 +1207,7 @@
                         ^ \markup \center-align { \concat { +16 } }
                         \tweak Accidental.stencil #ly:text-interface::print
                         \tweak Accidental.text \markup \concat { \one-nineteen-limit-schisma-up \hspace #0.125 \abjad-flat  }
-                        bff''''16
+                        bff''''!16
                         % AFTER:
                         % ARTICULATIONS:
                         - \espressivo
@@ -1215,7 +1218,7 @@
                         \revert Staff.Stem.stemlet-length
                         \tweak Accidental.stencil #ly:text-interface::print
                         \tweak Accidental.text \markup \concat { \one-twenty-three-limit-comma-up \hspace #0.125 \one-septimal-comma-down  }
-                        c'''16
+                        c'''!16
                         % AFTER:
                         % ARTICULATIONS:
                         - \espressivo
@@ -1234,7 +1237,7 @@
                         \override Staff.Stem.stemlet-length = 0.75
                         \tweak Accidental.stencil #ly:text-interface::print
                         \tweak Accidental.text \markup { \one-seventeen-limit-schisma-down  }
-                        g''''16
+                        g''''!16
                         % AFTER:
                         % ARTICULATIONS:
                         - \espressivo
@@ -1244,7 +1247,7 @@
                         [
                         \tweak Accidental.stencil #ly:text-interface::print
                         \tweak Accidental.text \markup { \abjad-flat  }
-                        ef'''16
+                        ef'''!16
                         % AFTER:
                         % ARTICULATIONS:
                         - \espressivo
@@ -1252,7 +1255,7 @@
                         ^ \markup \center-align { \concat { +2 } }
                         \tweak Accidental.stencil #ly:text-interface::print
                         \tweak Accidental.text \markup { \abjad-flat  }
-                        cf''''16
+                        cf''''!16
                         % AFTER:
                         % ARTICULATIONS:
                         - \espressivo
@@ -1260,7 +1263,7 @@
                         ^ \markup \center-align { \concat { +0 } }
                         \tweak Accidental.stencil #ly:text-interface::print
                         \tweak Accidental.text \markup { \one-seventeen-limit-schisma-down  }
-                        e'''16
+                        e'''!16
                         % AFTER:
                         % ARTICULATIONS:
                         - \espressivo
@@ -1268,7 +1271,7 @@
                         ^ \markup \center-align { \concat { +7 } }
                         \tweak Accidental.stencil #ly:text-interface::print
                         \tweak Accidental.text \markup \concat { \one-seventeen-limit-schisma-down \hspace #0.125 \one-septimal-comma-down  }
-                        g'''16
+                        g'''!16
                         % AFTER:
                         % ARTICULATIONS:
                         - \espressivo
@@ -1276,7 +1279,7 @@
                         ^ \markup \center-align { \concat { -26 } }
                         \tweak Accidental.stencil #ly:text-interface::print
                         \tweak Accidental.text \markup { \abjad-flat  }
-                        af''16
+                        af''!16
                         % AFTER:
                         % ARTICULATIONS:
                         - \espressivo
@@ -1284,7 +1287,7 @@
                         ^ \markup \center-align { \concat { +0 } }
                         \tweak Accidental.stencil #ly:text-interface::print
                         \tweak Accidental.text \markup \concat { \one-forty-three-limit-comma-up \hspace #0.125 \abjad-flat  }
-                        ff''''16
+                        ff''''!16
                         % AFTER:
                         % ARTICULATIONS:
                         - \espressivo
@@ -1292,7 +1295,7 @@
                         ^ \markup \center-align { \concat { +12 } }
                         \tweak Accidental.stencil #ly:text-interface::print
                         \tweak Accidental.text \markup { \one-seventeen-limit-schisma-down  }
-                        a''16
+                        a''!16
                         % AFTER:
                         % ARTICULATIONS:
                         - \espressivo
@@ -1300,7 +1303,7 @@
                         ^ \markup \center-align { \concat { +5 } }
                         \tweak Accidental.stencil #ly:text-interface::print
                         \tweak Accidental.text \markup \concat { \one-twenty-three-limit-comma-up \hspace #0.125 \one-septimal-comma-down  }
-                        ef''''16
+                        ef''''!16
                         % AFTER:
                         % ARTICULATIONS:
                         - \espressivo
@@ -1308,7 +1311,7 @@
                         ^ \markup \center-align { \concat { -3 } }
                         \tweak Accidental.stencil #ly:text-interface::print
                         \tweak Accidental.text \markup \concat { \one-twenty-nine-limit-comma-up \hspace #0.125 \flat-one-syntonic-comma-down  }
-                        bf''16
+                        bf''!16
                         % AFTER:
                         % ARTICULATIONS:
                         - \espressivo
@@ -1316,7 +1319,7 @@
                         ^ \markup \center-align { \concat { +16 } }
                         \tweak Accidental.stencil #ly:text-interface::print
                         \tweak Accidental.text \markup \concat { \one-nineteen-limit-schisma-up \hspace #0.125 \abjad-flat  }
-                        bff''''16
+                        bff''''!16
                         % AFTER:
                         % ARTICULATIONS:
                         - \espressivo
@@ -1324,7 +1327,7 @@
                         ^ \markup \center-align { \concat { -1 } }
                         \tweak Accidental.stencil #ly:text-interface::print
                         \tweak Accidental.text \markup \concat { \one-twenty-three-limit-comma-up \hspace #0.125 \one-septimal-comma-down  }
-                        c'''16
+                        c'''!16
                         % AFTER:
                         % ARTICULATIONS:
                         - \espressivo
@@ -1332,7 +1335,7 @@
                         ^ \markup \center-align { \concat { -3 } }
                         \tweak Accidental.stencil #ly:text-interface::print
                         \tweak Accidental.text \markup { \one-seventeen-limit-schisma-down  }
-                        g''''16
+                        g''''!16
                         % AFTER:
                         % ARTICULATIONS:
                         - \espressivo
@@ -1340,7 +1343,7 @@
                         ^ \markup \center-align { \concat { +7 } }
                         \tweak Accidental.stencil #ly:text-interface::print
                         \tweak Accidental.text \markup { \abjad-flat  }
-                        ef'''16
+                        ef'''!16
                         % AFTER:
                         % ARTICULATIONS:
                         - \espressivo
@@ -1348,7 +1351,7 @@
                         ^ \markup \center-align { \concat { +2 } }
                         \tweak Accidental.stencil #ly:text-interface::print
                         \tweak Accidental.text \markup { \abjad-flat  }
-                        af''16
+                        af''!16
                         % AFTER:
                         % ARTICULATIONS:
                         - \espressivo
@@ -1356,7 +1359,7 @@
                         ^ \markup \center-align { \concat { +0 } }
                         \tweak Accidental.stencil #ly:text-interface::print
                         \tweak Accidental.text \markup { \one-seventeen-limit-schisma-down  }
-                        e'''16
+                        e'''!16
                         % AFTER:
                         % ARTICULATIONS:
                         - \espressivo
@@ -1364,7 +1367,7 @@
                         ^ \markup \center-align { \concat { +7 } }
                         \tweak Accidental.stencil #ly:text-interface::print
                         \tweak Accidental.text \markup \concat { \one-seventeen-limit-schisma-down \hspace #0.125 \one-septimal-comma-down  }
-                        bf''''16
+                        bf''''!16
                         % AFTER:
                         % ARTICULATIONS:
                         - \espressivo
@@ -1375,7 +1378,7 @@
                         \revert Staff.Stem.stemlet-length
                         \tweak Accidental.stencil #ly:text-interface::print
                         \tweak Accidental.text \markup { \abjad-flat  }
-                        af''16
+                        af''!16
                         % AFTER:
                         % ARTICULATIONS:
                         - \espressivo
@@ -1390,7 +1393,7 @@
                     \override Staff.Stem.stemlet-length = 0.75
                     \tweak Accidental.stencil #ly:text-interface::print
                     \tweak Accidental.text \markup \concat { \one-forty-three-limit-comma-up \hspace #0.125 \abjad-flat  }
-                    ff''''16
+                    ff''''!16
                     % AFTER:
                     % ARTICULATIONS:
                     - \espressivo
@@ -1403,7 +1406,7 @@
                     \revert Staff.Stem.stemlet-length
                     \tweak Accidental.stencil #ly:text-interface::print
                     \tweak Accidental.text \markup { \one-seventeen-limit-schisma-down  }
-                    a''16
+                    a''!16
                     % AFTER:
                     % ARTICULATIONS:
                     - \espressivo
@@ -1416,7 +1419,7 @@
                     \override Staff.Stem.stemlet-length = 0.75
                     \tweak Accidental.stencil #ly:text-interface::print
                     \tweak Accidental.text \markup \concat { \one-twenty-three-limit-comma-up \hspace #0.125 \one-septimal-comma-down  }
-                    ef''''16
+                    ef''''!16
                     % AFTER:
                     % ARTICULATIONS:
                     - \espressivo
@@ -1429,7 +1432,7 @@
                     \revert Staff.Stem.stemlet-length
                     \tweak Accidental.stencil #ly:text-interface::print
                     \tweak Accidental.text \markup \concat { \one-twenty-nine-limit-comma-up \hspace #0.125 \flat-one-syntonic-comma-down  }
-                    bf''16
+                    bf''!16
                     % AFTER:
                     % ARTICULATIONS:
                     - \espressivo
@@ -1445,7 +1448,7 @@
                         \override Staff.Stem.stemlet-length = 0.75
                         \tweak Accidental.stencil #ly:text-interface::print
                         \tweak Accidental.text \markup \concat { \one-nineteen-limit-schisma-up \hspace #0.125 \abjad-flat  }
-                        bff''''16
+                        bff''''!16
                         % AFTER:
                         % ARTICULATIONS:
                         - \espressivo
@@ -1455,7 +1458,7 @@
                         [
                         \tweak Accidental.stencil #ly:text-interface::print
                         \tweak Accidental.text \markup \concat { \one-twenty-three-limit-comma-up \hspace #0.125 \one-septimal-comma-down  }
-                        c'''16
+                        c'''!16
                         % AFTER:
                         % ARTICULATIONS:
                         - \espressivo
@@ -1463,7 +1466,7 @@
                         ^ \markup \center-align { \concat { -3 } }
                         \tweak Accidental.stencil #ly:text-interface::print
                         \tweak Accidental.text \markup { \one-seventeen-limit-schisma-down  }
-                        e'''16
+                        e'''!16
                         % AFTER:
                         % ARTICULATIONS:
                         - \espressivo
@@ -1471,7 +1474,7 @@
                         ^ \markup \center-align { \concat { +7 } }
                         \tweak Accidental.stencil #ly:text-interface::print
                         \tweak Accidental.text \markup { \abjad-flat  }
-                        ef'''16
+                        ef'''!16
                         % AFTER:
                         % ARTICULATIONS:
                         - \espressivo
@@ -1479,7 +1482,7 @@
                         ^ \markup \center-align { \concat { +2 } }
                         \tweak Accidental.stencil #ly:text-interface::print
                         \tweak Accidental.text \markup { \abjad-flat  }
-                        cf''''16
+                        cf''''!16
                         % AFTER:
                         % ARTICULATIONS:
                         - \espressivo
@@ -1487,7 +1490,7 @@
                         ^ \markup \center-align { \concat { +0 } }
                         \tweak Accidental.stencil #ly:text-interface::print
                         \tweak Accidental.text \markup { \one-seventeen-limit-schisma-down  }
-                        e'''16
+                        e'''!16
                         % AFTER:
                         % ARTICULATIONS:
                         - \espressivo
@@ -1495,7 +1498,7 @@
                         ^ \markup \center-align { \concat { +7 } }
                         \tweak Accidental.stencil #ly:text-interface::print
                         \tweak Accidental.text \markup \concat { \one-seventeen-limit-schisma-down \hspace #0.125 \one-septimal-comma-down  }
-                        bf''''16
+                        bf''''!16
                         % AFTER:
                         % ARTICULATIONS:
                         - \espressivo
@@ -1503,7 +1506,7 @@
                         ^ \markup \center-align { \concat { -26 } }
                         \tweak Accidental.stencil #ly:text-interface::print
                         \tweak Accidental.text \markup { \abjad-flat  }
-                        af''16
+                        af''!16
                         % AFTER:
                         % ARTICULATIONS:
                         - \espressivo
@@ -1511,7 +1514,7 @@
                         ^ \markup \center-align { \concat { +0 } }
                         \tweak Accidental.stencil #ly:text-interface::print
                         \tweak Accidental.text \markup \concat { \one-forty-three-limit-comma-up \hspace #0.125 \abjad-flat  }
-                        ff''''16
+                        ff''''!16
                         % AFTER:
                         % ARTICULATIONS:
                         - \espressivo
@@ -1519,7 +1522,7 @@
                         ^ \markup \center-align { \concat { +12 } }
                         \tweak Accidental.stencil #ly:text-interface::print
                         \tweak Accidental.text \markup { \one-seventeen-limit-schisma-down  }
-                        a''16
+                        a''!16
                         % AFTER:
                         % ARTICULATIONS:
                         - \espressivo
@@ -1527,7 +1530,7 @@
                         ^ \markup \center-align { \concat { +5 } }
                         \tweak Accidental.stencil #ly:text-interface::print
                         \tweak Accidental.text \markup \concat { \one-twenty-three-limit-comma-up \hspace #0.125 \one-septimal-comma-down  }
-                        ef''''16
+                        ef''''!16
                         % AFTER:
                         % ARTICULATIONS:
                         - \espressivo
@@ -1535,7 +1538,7 @@
                         ^ \markup \center-align { \concat { -3 } }
                         \tweak Accidental.stencil #ly:text-interface::print
                         \tweak Accidental.text \markup \concat { \one-twenty-nine-limit-comma-up \hspace #0.125 \flat-one-syntonic-comma-down  }
-                        bf''16
+                        bf''!16
                         % AFTER:
                         % ARTICULATIONS:
                         - \espressivo
@@ -1546,7 +1549,7 @@
                         \revert Staff.Stem.stemlet-length
                         \tweak Accidental.stencil #ly:text-interface::print
                         \tweak Accidental.text \markup \concat { \one-nineteen-limit-schisma-up \hspace #0.125 \abjad-flat  }
-                        gf'''16
+                        gf'''!16
                         % AFTER:
                         % ARTICULATIONS:
                         - \espressivo
@@ -1564,7 +1567,7 @@
                         \override Staff.Stem.stemlet-length = 0.75
                         \tweak Accidental.stencil #ly:text-interface::print
                         \tweak Accidental.text \markup \concat { \one-twenty-three-limit-comma-up \hspace #0.125 \one-septimal-comma-down  }
-                        c'''16
+                        c'''!16
                         % AFTER:
                         % ARTICULATIONS:
                         - \espressivo
@@ -1574,7 +1577,7 @@
                         [
                         \tweak Accidental.stencil #ly:text-interface::print
                         \tweak Accidental.text \markup { \one-seventeen-limit-schisma-down  }
-                        g''''16
+                        g''''!16
                         % AFTER:
                         % ARTICULATIONS:
                         - \espressivo
@@ -1582,7 +1585,7 @@
                         ^ \markup \center-align { \concat { +7 } }
                         \tweak Accidental.stencil #ly:text-interface::print
                         \tweak Accidental.text \markup { \abjad-flat  }
-                        ef'''16
+                        ef'''!16
                         % AFTER:
                         % ARTICULATIONS:
                         - \espressivo
@@ -1590,7 +1593,7 @@
                         ^ \markup \center-align { \concat { +2 } }
                         \tweak Accidental.stencil #ly:text-interface::print
                         \tweak Accidental.text \markup { \abjad-flat  }
-                        cf''''16
+                        cf''''!16
                         % AFTER:
                         % ARTICULATIONS:
                         - \espressivo
@@ -1598,7 +1601,7 @@
                         ^ \markup \center-align { \concat { +0 } }
                         \tweak Accidental.stencil #ly:text-interface::print
                         \tweak Accidental.text \markup { \one-seventeen-limit-schisma-down  }
-                        e'''16
+                        e'''!16
                         % AFTER:
                         % ARTICULATIONS:
                         - \espressivo
@@ -1609,7 +1612,7 @@
                         \revert Staff.Stem.stemlet-length
                         \tweak Accidental.stencil #ly:text-interface::print
                         \tweak Accidental.text \markup \concat { \one-seventeen-limit-schisma-down \hspace #0.125 \one-septimal-comma-down  }
-                        bf''''16
+                        bf''''!16
                         % AFTER:
                         % ARTICULATIONS:
                         - \espressivo
@@ -1628,7 +1631,7 @@
                         \override Staff.Stem.stemlet-length = 0.75
                         \tweak Accidental.stencil #ly:text-interface::print
                         \tweak Accidental.text \markup { \abjad-flat  }
-                        af''16
+                        af''!16
                         % AFTER:
                         % ARTICULATIONS:
                         - \espressivo
@@ -1638,7 +1641,7 @@
                         [
                         \tweak Accidental.stencil #ly:text-interface::print
                         \tweak Accidental.text \markup \concat { \one-forty-three-limit-comma-up \hspace #0.125 \abjad-flat  }
-                        ff''''16
+                        ff''''!16
                         % AFTER:
                         % ARTICULATIONS:
                         - \espressivo
@@ -1646,7 +1649,7 @@
                         ^ \markup \center-align { \concat { +12 } }
                         \tweak Accidental.stencil #ly:text-interface::print
                         \tweak Accidental.text \markup { \one-seventeen-limit-schisma-down  }
-                        a''16
+                        a''!16
                         % AFTER:
                         % ARTICULATIONS:
                         - \espressivo
@@ -1654,7 +1657,7 @@
                         ^ \markup \center-align { \concat { +5 } }
                         \tweak Accidental.stencil #ly:text-interface::print
                         \tweak Accidental.text \markup \concat { \one-twenty-three-limit-comma-up \hspace #0.125 \one-septimal-comma-down  }
-                        c'''16
+                        c'''!16
                         % AFTER:
                         % ARTICULATIONS:
                         - \espressivo
@@ -1662,7 +1665,7 @@
                         ^ \markup \center-align { \concat { -3 } }
                         \tweak Accidental.stencil #ly:text-interface::print
                         \tweak Accidental.text \markup \concat { \one-twenty-nine-limit-comma-up \hspace #0.125 \flat-one-syntonic-comma-down  }
-                        bf''16
+                        bf''!16
                         % AFTER:
                         % ARTICULATIONS:
                         - \espressivo
@@ -1670,7 +1673,7 @@
                         ^ \markup \center-align { \concat { +16 } }
                         \tweak Accidental.stencil #ly:text-interface::print
                         \tweak Accidental.text \markup \concat { \one-nineteen-limit-schisma-up \hspace #0.125 \abjad-flat  }
-                        bff''''16
+                        bff''''!16
                         % AFTER:
                         % ARTICULATIONS:
                         - \espressivo
@@ -1678,7 +1681,7 @@
                         ^ \markup \center-align { \concat { -1 } }
                         \tweak Accidental.stencil #ly:text-interface::print
                         \tweak Accidental.text \markup \concat { \one-twenty-three-limit-comma-up \hspace #0.125 \one-septimal-comma-down  }
-                        c'''16
+                        c'''!16
                         % AFTER:
                         % ARTICULATIONS:
                         - \espressivo
@@ -1686,7 +1689,7 @@
                         ^ \markup \center-align { \concat { -3 } }
                         \tweak Accidental.stencil #ly:text-interface::print
                         \tweak Accidental.text \markup { \one-seventeen-limit-schisma-down  }
-                        g''''16
+                        g''''!16
                         % AFTER:
                         % ARTICULATIONS:
                         - \espressivo
@@ -1697,7 +1700,7 @@
                         \revert Staff.Stem.stemlet-length
                         \tweak Accidental.stencil #ly:text-interface::print
                         \tweak Accidental.text \markup { \abjad-flat  }
-                        ef'''16
+                        ef'''!16
                         % AFTER:
                         % ARTICULATIONS:
                         - \espressivo
@@ -1718,7 +1721,7 @@
             \context Staff = "piano 3 staff"
             {
                 % OPEN_BRACKETS:
-                \context Voice = "piano 3 voice"
+                \context Staff = "piano 3 voice"
                 {
                     % BEFORE:
                     % COMMANDS:
@@ -1734,7 +1737,7 @@
                         r8
                         \tweak Accidental.stencil #ly:text-interface::print
                         \tweak Accidental.text \markup { \abjad-natural  }
-                        e16
+                        e!16
                         % AFTER:
                         % ARTICULATIONS:
                         - \espressivo
@@ -1753,7 +1756,7 @@
                         \clef "treble"
                         \tweak Accidental.stencil #ly:text-interface::print
                         \tweak Accidental.text \markup { \one-forty-three-limit-comma-up  }
-                        e''16
+                        e''!16
                         % AFTER:
                         % ARTICULATIONS:
                         - \espressivo
@@ -1768,7 +1771,7 @@
                         r8.
                         \tweak Accidental.stencil #ly:text-interface::print
                         \tweak Accidental.text \markup { \one-seventeen-limit-schisma-down  }
-                        a'16
+                        a'!16
                         % AFTER:
                         % ARTICULATIONS:
                         - \espressivo
@@ -1785,7 +1788,7 @@
                         r4.
                         \tweak Accidental.stencil #ly:text-interface::print
                         \tweak Accidental.text \markup \concat { \one-twenty-three-limit-comma-up \hspace #0.125 \one-septimal-comma-down \hspace #0.125 \abjad-sharp  }
-                        gs''16
+                        gs''!16
                         % AFTER:
                         % ARTICULATIONS:
                         - \espressivo
@@ -1801,7 +1804,7 @@
                         r4..
                         \tweak Accidental.stencil #ly:text-interface::print
                         \tweak Accidental.text \markup \concat { \one-twenty-nine-limit-comma-up \hspace #0.125 \natural-one-syntonic-comma-down  }
-                        g''16
+                        g''!16
                         % AFTER:
                         % ARTICULATIONS:
                         - \espressivo
@@ -1819,7 +1822,7 @@
                     \override Staff.Stem.stemlet-length = 0.75
                     \tweak Accidental.stencil #ly:text-interface::print
                     \tweak Accidental.text \markup \concat { \one-twenty-three-limit-comma-up \hspace #0.125 \one-septimal-comma-down \hspace #0.125 \abjad-sharp  }
-                    as''32.
+                    as''!32.
                     % AFTER:
                     % ARTICULATIONS:
                     - \espressivo
@@ -1833,7 +1836,7 @@
                     \>
                     \tweak Accidental.stencil #ly:text-interface::print
                     \tweak Accidental.text \markup \concat { \one-twenty-nine-limit-comma-up \hspace #0.125 \sharp-one-syntonic-comma-down  }
-                    fss'''32.
+                    fss'''!32.
                     % AFTER:
                     % ARTICULATIONS:
                     - \espressivo
@@ -1841,7 +1844,7 @@
                     ^ \markup \center-align { \concat { +16 } }
                     \tweak Accidental.stencil #ly:text-interface::print
                     \tweak Accidental.text \markup { \one-nineteen-limit-schisma-up  }
-                    e'''32
+                    e'''!32
                     % AFTER:
                     % ARTICULATIONS:
                     - \espressivo
@@ -1851,10 +1854,10 @@
                     ~
                     \tweak Accidental.stencil #ly:text-interface::print
                     \tweak Accidental.text \markup { \one-nineteen-limit-schisma-up  }
-                    e'''64
+                    e'''!64
                     \tweak Accidental.stencil #ly:text-interface::print
                     \tweak Accidental.text \markup \concat { \one-twenty-three-limit-comma-up \hspace #0.125 \one-septimal-comma-down \hspace #0.125 \abjad-sharp  }
-                    as''32.
+                    as''!32.
                     % AFTER:
                     % ARTICULATIONS:
                     - \espressivo
@@ -1865,7 +1868,7 @@
                     \revert Staff.Stem.stemlet-length
                     \tweak Accidental.stencil #ly:text-interface::print
                     \tweak Accidental.text \markup \concat { \one-seventeen-limit-schisma-down \hspace #0.125 \double-sharp  }
-                    css'''32.
+                    css'''!32.
                     % AFTER:
                     % ARTICULATIONS:
                     - \espressivo
@@ -1880,7 +1883,7 @@
                     \override Staff.Stem.stemlet-length = 0.75
                     \tweak Accidental.stencil #ly:text-interface::print
                     \tweak Accidental.text \markup { \abjad-sharp  }
-                    bs'''32.
+                    bs'''!32.
                     % AFTER:
                     % ARTICULATIONS:
                     - \espressivo
@@ -1893,7 +1896,7 @@
                     \revert Staff.Stem.stemlet-length
                     \tweak Accidental.stencil #ly:text-interface::print
                     \tweak Accidental.text \markup { \abjad-sharp  }
-                    fs''32.
+                    fs''!32.
                     % AFTER:
                     % ARTICULATIONS:
                     - \espressivo
@@ -1909,7 +1912,7 @@
                         \override Staff.Stem.stemlet-length = 0.75
                         \tweak Accidental.stencil #ly:text-interface::print
                         \tweak Accidental.text \markup \concat { \one-seventeen-limit-schisma-down \hspace #0.125 \double-sharp  }
-                        bss'''16
+                        bss'''!16
                         % AFTER:
                         % ARTICULATIONS:
                         - \espressivo
@@ -1919,7 +1922,7 @@
                         [
                         \tweak Accidental.stencil #ly:text-interface::print
                         \tweak Accidental.text \markup \concat { \one-seventeen-limit-schisma-down \hspace #0.125 \one-septimal-comma-down \hspace #0.125 \abjad-sharp  }
-                        es'''16
+                        es'''!16
                         % AFTER:
                         % ARTICULATIONS:
                         - \espressivo
@@ -1927,7 +1930,7 @@
                         ^ \markup \center-align { \concat { -26 } }
                         \tweak Accidental.stencil #ly:text-interface::print
                         \tweak Accidental.text \markup { \abjad-sharp  }
-                        es'''16
+                        es'''!16
                         % AFTER:
                         % ARTICULATIONS:
                         - \espressivo
@@ -1938,7 +1941,7 @@
                         \revert Staff.Stem.stemlet-length
                         \tweak Accidental.stencil #ly:text-interface::print
                         \tweak Accidental.text \markup { \one-forty-three-limit-comma-up  }
-                        b''16
+                        b''!16
                         % AFTER:
                         % ARTICULATIONS:
                         - \espressivo
@@ -1959,7 +1962,7 @@
                         \override Staff.Stem.stemlet-length = 0.75
                         \tweak Accidental.stencil #ly:text-interface::print
                         \tweak Accidental.text \markup \concat { \one-seventeen-limit-schisma-down \hspace #0.125 \double-sharp  }
-                        ess'''16
+                        ess'''!16
                         % AFTER:
                         % ARTICULATIONS:
                         - \espressivo
@@ -1972,7 +1975,7 @@
                         \revert Staff.Stem.stemlet-length
                         \tweak Accidental.stencil #ly:text-interface::print
                         \tweak Accidental.text \markup \concat { \one-twenty-three-limit-comma-up \hspace #0.125 \one-septimal-comma-down \hspace #0.125 \abjad-sharp  }
-                        as''16
+                        as''!16
                         % AFTER:
                         % ARTICULATIONS:
                         - \espressivo
@@ -1986,7 +1989,7 @@
                         \override Staff.Stem.stemlet-length = 0.75
                         \tweak Accidental.stencil #ly:text-interface::print
                         \tweak Accidental.text \markup \concat { \one-twenty-nine-limit-comma-up \hspace #0.125 \sharp-one-syntonic-comma-down  }
-                        gs''16
+                        gs''!16
                         % AFTER:
                         % ARTICULATIONS:
                         - \espressivo
@@ -1996,7 +1999,7 @@
                         [
                         \tweak Accidental.stencil #ly:text-interface::print
                         \tweak Accidental.text \markup { \one-nineteen-limit-schisma-up  }
-                        e'''16
+                        e'''!16
                         % AFTER:
                         % ARTICULATIONS:
                         - \espressivo
@@ -2004,7 +2007,7 @@
                         ^ \markup \center-align { \concat { -1 } }
                         \tweak Accidental.stencil #ly:text-interface::print
                         \tweak Accidental.text \markup \concat { \one-twenty-three-limit-comma-up \hspace #0.125 \one-septimal-comma-down \hspace #0.125 \abjad-sharp  }
-                        gss'''16
+                        gss'''!16
                         % AFTER:
                         % ARTICULATIONS:
                         - \espressivo
@@ -2015,7 +2018,7 @@
                         \revert Staff.Stem.stemlet-length
                         \tweak Accidental.stencil #ly:text-interface::print
                         \tweak Accidental.text \markup \concat { \one-seventeen-limit-schisma-down \hspace #0.125 \double-sharp  }
-                        css'''16
+                        css'''!16
                         % AFTER:
                         % ARTICULATIONS:
                         - \espressivo
@@ -2033,7 +2036,7 @@
                         \override Staff.Stem.stemlet-length = 0.75
                         \tweak Accidental.stencil #ly:text-interface::print
                         \tweak Accidental.text \markup { \abjad-sharp  }
-                        bs'''16
+                        bs'''!16
                         % AFTER:
                         % ARTICULATIONS:
                         - \espressivo
@@ -2043,7 +2046,7 @@
                         [
                         \tweak Accidental.stencil #ly:text-interface::print
                         \tweak Accidental.text \markup { \abjad-sharp  }
-                        fs''16
+                        fs''!16
                         % AFTER:
                         % ARTICULATIONS:
                         - \espressivo
@@ -2051,7 +2054,7 @@
                         ^ \markup \center-align { \concat { +0 } }
                         \tweak Accidental.stencil #ly:text-interface::print
                         \tweak Accidental.text \markup \concat { \one-seventeen-limit-schisma-down \hspace #0.125 \double-sharp  }
-                        bss'''16
+                        bss'''!16
                         % AFTER:
                         % ARTICULATIONS:
                         - \espressivo
@@ -2059,7 +2062,7 @@
                         ^ \markup \center-align { \concat { +7 } }
                         \tweak Accidental.stencil #ly:text-interface::print
                         \tweak Accidental.text \markup \concat { \one-seventeen-limit-schisma-down \hspace #0.125 \one-septimal-comma-down \hspace #0.125 \abjad-sharp  }
-                        es'''16
+                        es'''!16
                         % AFTER:
                         % ARTICULATIONS:
                         - \espressivo
@@ -2070,7 +2073,7 @@
                         \revert Staff.Stem.stemlet-length
                         \tweak Accidental.stencil #ly:text-interface::print
                         \tweak Accidental.text \markup { \abjad-sharp  }
-                        es'''16
+                        es'''!16
                         % AFTER:
                         % ARTICULATIONS:
                         - \espressivo
@@ -2085,7 +2088,7 @@
                     \override Staff.Stem.stemlet-length = 0.75
                     \tweak Accidental.stencil #ly:text-interface::print
                     \tweak Accidental.text \markup { \one-forty-three-limit-comma-up  }
-                    b''32.
+                    b''!32.
                     % AFTER:
                     % ARTICULATIONS:
                     - \espressivo
@@ -2095,7 +2098,7 @@
                     [
                     \tweak Accidental.stencil #ly:text-interface::print
                     \tweak Accidental.text \markup \concat { \one-seventeen-limit-schisma-down \hspace #0.125 \double-sharp  }
-                    fss''32.
+                    fss''!32.
                     % AFTER:
                     % ARTICULATIONS:
                     - \espressivo
@@ -2103,7 +2106,7 @@
                     ^ \markup \center-align { \concat { +5 } }
                     \tweak Accidental.stencil #ly:text-interface::print
                     \tweak Accidental.text \markup \concat { \one-twenty-three-limit-comma-up \hspace #0.125 \one-septimal-comma-down \hspace #0.125 \abjad-sharp  }
-                    as''32
+                    as''!32
                     % AFTER:
                     % ARTICULATIONS:
                     - \espressivo
@@ -2113,10 +2116,10 @@
                     ~
                     \tweak Accidental.stencil #ly:text-interface::print
                     \tweak Accidental.text \markup \concat { \one-twenty-three-limit-comma-up \hspace #0.125 \one-septimal-comma-down \hspace #0.125 \abjad-sharp  }
-                    as''64
+                    as''!64
                     \tweak Accidental.stencil #ly:text-interface::print
                     \tweak Accidental.text \markup \concat { \one-twenty-nine-limit-comma-up \hspace #0.125 \sharp-one-syntonic-comma-down  }
-                    fss'''32.
+                    fss'''!32.
                     % AFTER:
                     % ARTICULATIONS:
                     - \espressivo
@@ -2127,7 +2130,7 @@
                     \revert Staff.Stem.stemlet-length
                     \tweak Accidental.stencil #ly:text-interface::print
                     \tweak Accidental.text \markup { \one-nineteen-limit-schisma-up  }
-                    e'''32.
+                    e'''!32.
                     % AFTER:
                     % ARTICULATIONS:
                     - \espressivo
@@ -2142,7 +2145,7 @@
                     \override Staff.Stem.stemlet-length = 0.75
                     \tweak Accidental.stencil #ly:text-interface::print
                     \tweak Accidental.text \markup \concat { \one-twenty-three-limit-comma-up \hspace #0.125 \one-septimal-comma-down \hspace #0.125 \abjad-sharp  }
-                    gss'''32.
+                    gss'''!32.
                     % AFTER:
                     % ARTICULATIONS:
                     - \espressivo
@@ -2155,7 +2158,7 @@
                     \revert Staff.Stem.stemlet-length
                     \tweak Accidental.stencil #ly:text-interface::print
                     \tweak Accidental.text \markup \concat { \one-seventeen-limit-schisma-down \hspace #0.125 \double-sharp  }
-                    css'''32.
+                    css'''!32.
                     % AFTER:
                     % ARTICULATIONS:
                     - \espressivo
@@ -2171,7 +2174,7 @@
                         \override Staff.Stem.stemlet-length = 0.75
                         \tweak Accidental.stencil #ly:text-interface::print
                         \tweak Accidental.text \markup { \abjad-sharp  }
-                        bs'''16
+                        bs'''!16
                         % AFTER:
                         % ARTICULATIONS:
                         - \espressivo
@@ -2181,7 +2184,7 @@
                         [
                         \tweak Accidental.stencil #ly:text-interface::print
                         \tweak Accidental.text \markup { \abjad-sharp  }
-                        fs''16
+                        fs''!16
                         % AFTER:
                         % ARTICULATIONS:
                         - \espressivo
@@ -2189,7 +2192,7 @@
                         ^ \markup \center-align { \concat { +0 } }
                         \tweak Accidental.stencil #ly:text-interface::print
                         \tweak Accidental.text \markup \concat { \one-seventeen-limit-schisma-down \hspace #0.125 \double-sharp  }
-                        bss'''16
+                        bss'''!16
                         % AFTER:
                         % ARTICULATIONS:
                         - \espressivo
@@ -2200,7 +2203,7 @@
                         \revert Staff.Stem.stemlet-length
                         \tweak Accidental.stencil #ly:text-interface::print
                         \tweak Accidental.text \markup \concat { \one-seventeen-limit-schisma-down \hspace #0.125 \one-septimal-comma-down \hspace #0.125 \abjad-sharp  }
-                        es'''16
+                        es'''!16
                         % AFTER:
                         % ARTICULATIONS:
                         - \espressivo
@@ -2220,7 +2223,7 @@
                         \override Staff.Stem.stemlet-length = 0.75
                         \tweak Accidental.stencil #ly:text-interface::print
                         \tweak Accidental.text \markup { \abjad-sharp  }
-                        fs''16
+                        fs''!16
                         % AFTER:
                         % ARTICULATIONS:
                         - \espressivo
@@ -2233,7 +2236,7 @@
                         \revert Staff.Stem.stemlet-length
                         \tweak Accidental.stencil #ly:text-interface::print
                         \tweak Accidental.text \markup { \one-forty-three-limit-comma-up  }
-                        b''16
+                        b''!16
                         % AFTER:
                         % ARTICULATIONS:
                         - \espressivo
@@ -2247,7 +2250,7 @@
                         \override Staff.Stem.stemlet-length = 0.75
                         \tweak Accidental.stencil #ly:text-interface::print
                         \tweak Accidental.text \markup \concat { \one-seventeen-limit-schisma-down \hspace #0.125 \double-sharp  }
-                        ess'''16
+                        ess'''!16
                         % AFTER:
                         % ARTICULATIONS:
                         - \espressivo
@@ -2257,7 +2260,7 @@
                         [
                         \tweak Accidental.stencil #ly:text-interface::print
                         \tweak Accidental.text \markup \concat { \one-twenty-three-limit-comma-up \hspace #0.125 \one-septimal-comma-down \hspace #0.125 \abjad-sharp  }
-                        as''16
+                        as''!16
                         % AFTER:
                         % ARTICULATIONS:
                         - \espressivo
@@ -2265,7 +2268,7 @@
                         ^ \markup \center-align { \concat { -3 } }
                         \tweak Accidental.stencil #ly:text-interface::print
                         \tweak Accidental.text \markup \concat { \one-twenty-nine-limit-comma-up \hspace #0.125 \sharp-one-syntonic-comma-down  }
-                        fss'''16
+                        fss'''!16
                         % AFTER:
                         % ARTICULATIONS:
                         - \espressivo
@@ -2273,7 +2276,7 @@
                         ^ \markup \center-align { \concat { +16 } }
                         \tweak Accidental.stencil #ly:text-interface::print
                         \tweak Accidental.text \markup { \one-nineteen-limit-schisma-up  }
-                        e'''16
+                        e'''!16
                         % AFTER:
                         % ARTICULATIONS:
                         - \espressivo
@@ -2281,7 +2284,7 @@
                         ^ \markup \center-align { \concat { -1 } }
                         \tweak Accidental.stencil #ly:text-interface::print
                         \tweak Accidental.text \markup \concat { \one-twenty-three-limit-comma-up \hspace #0.125 \one-septimal-comma-down \hspace #0.125 \abjad-sharp  }
-                        gss'''16
+                        gss'''!16
                         % AFTER:
                         % ARTICULATIONS:
                         - \espressivo
@@ -2292,7 +2295,7 @@
                         \revert Staff.Stem.stemlet-length
                         \tweak Accidental.stencil #ly:text-interface::print
                         \tweak Accidental.text \markup \concat { \one-seventeen-limit-schisma-down \hspace #0.125 \double-sharp  }
-                        css'''32
+                        css'''!32
                         % AFTER:
                         % ARTICULATIONS:
                         - \espressivo
@@ -2313,7 +2316,7 @@
             \context Staff = "piano 4 staff"
             {
                 % OPEN_BRACKETS:
-                \context Voice = "piano 4 voice"
+                \context Staff = "piano 4 voice"
                 {
                     % BEFORE:
                     % COMMANDS:
@@ -2347,7 +2350,7 @@
             \context Staff = "piano 5 staff"
             {
                 % OPEN_BRACKETS:
-                \context Voice = "piano 5 voice"
+                \context Staff = "piano 5 voice"
                 {
                     % BEFORE:
                     % COMMANDS:
@@ -2361,7 +2364,7 @@
                         r8
                         \tweak Accidental.stencil #ly:text-interface::print
                         \tweak Accidental.text \markup { \abjad-flat  }
-                        ef16
+                        ef!16
                         % AFTER:
                         % ARTICULATIONS:
                         - \espressivo
@@ -2382,7 +2385,7 @@
                         \clef "treble"
                         \tweak Accidental.stencil #ly:text-interface::print
                         \tweak Accidental.text \markup \concat { \one-forty-three-limit-comma-up \hspace #0.125 \abjad-flat  }
-                        bff'16
+                        bff'!16
                         % AFTER:
                         % ARTICULATIONS:
                         - \espressivo
@@ -2394,7 +2397,7 @@
                         \clef "bass"
                         \tweak Accidental.stencil #ly:text-interface::print
                         \tweak Accidental.text \markup \concat { \one-seventeen-limit-schisma-down \hspace #0.125 \double-sharp  }
-                        fss16
+                        fss!16
                         % AFTER:
                         % ARTICULATIONS:
                         - \espressivo
@@ -2406,7 +2409,7 @@
                         r16
                         \tweak Accidental.stencil #ly:text-interface::print
                         \tweak Accidental.text \markup \concat { \one-twenty-three-limit-comma-up \hspace #0.125 \one-septimal-comma-down \hspace #0.125 \abjad-sharp  }
-                        as16
+                        as!16
                         % AFTER:
                         % ARTICULATIONS:
                         - \espressivo
@@ -2421,7 +2424,7 @@
                         r16
                         \tweak Accidental.stencil #ly:text-interface::print
                         \tweak Accidental.text \markup \concat { \one-twenty-nine-limit-comma-up \hspace #0.125 \sharp-one-syntonic-comma-down  }
-                        gs16
+                        gs!16
                         % AFTER:
                         % ARTICULATIONS:
                         - \espressivo
@@ -2440,7 +2443,7 @@
                         \clef "treble"
                         \tweak Accidental.stencil #ly:text-interface::print
                         \tweak Accidental.text \markup { \one-nineteen-limit-schisma-up  }
-                        g'16
+                        g'!16
                         % AFTER:
                         % ARTICULATIONS:
                         - \espressivo
@@ -2456,7 +2459,7 @@
                     {
                         \tweak Accidental.stencil #ly:text-interface::print
                         \tweak Accidental.text \markup \concat { \one-twenty-three-limit-comma-up \hspace #0.125 \one-septimal-comma-down \hspace #0.125 \abjad-sharp  }
-                        ds''16
+                        ds''!16
                         % AFTER:
                         % ARTICULATIONS:
                         - \espressivo
@@ -2465,7 +2468,7 @@
                         r8.
                         \tweak Accidental.stencil #ly:text-interface::print
                         \tweak Accidental.text \markup \concat { \one-seventeen-limit-schisma-down \hspace #0.125 \abjad-sharp  }
-                        es'8
+                        es'!8
                         % AFTER:
                         % ARTICULATIONS:
                         - \espressivo
@@ -2474,7 +2477,7 @@
                         r8
                         \tweak Accidental.stencil #ly:text-interface::print
                         \tweak Accidental.text \markup { \abjad-flat  }
-                        ef'8.
+                        ef'!8.
                         % AFTER:
                         % ARTICULATIONS:
                         - \espressivo
@@ -2490,7 +2493,7 @@
                         r8.
                         \tweak Accidental.stencil #ly:text-interface::print
                         \tweak Accidental.text \markup { \abjad-natural  }
-                        b''16
+                        b''!16
                         % AFTER:
                         % ARTICULATIONS:
                         - \espressivo
@@ -2501,7 +2504,7 @@
                         r16
                         \tweak Accidental.stencil #ly:text-interface::print
                         \tweak Accidental.text \markup \concat { \one-forty-three-limit-comma-up \hspace #0.125 \abjad-flat  }
-                        ef''16
+                        ef''!16
                         % AFTER:
                         % ARTICULATIONS:
                         - \espressivo
@@ -2517,7 +2520,7 @@
                         r8
                         \tweak Accidental.stencil #ly:text-interface::print
                         \tweak Accidental.text \markup \concat { \one-seventeen-limit-schisma-down \hspace #0.125 \double-sharp  }
-                        dss'''16
+                        dss'''!16
                         % AFTER:
                         % ARTICULATIONS:
                         - \espressivo
@@ -2532,7 +2535,7 @@
                     {
                         \tweak Accidental.stencil #ly:text-interface::print
                         \tweak Accidental.text \markup \concat { \one-twenty-three-limit-comma-up \hspace #0.125 \one-septimal-comma-down  }
-                        a''8
+                        a''!8
                         % AFTER:
                         % ARTICULATIONS:
                         - \espressivo
@@ -2541,7 +2544,7 @@
                         r8
                         \tweak Accidental.stencil #ly:text-interface::print
                         \tweak Accidental.text \markup \concat { \one-nineteen-limit-schisma-up \hspace #0.125 \abjad-flat  }
-                        ef'''8.
+                        ef'''!8.
                         % AFTER:
                         % ARTICULATIONS:
                         - \espressivo
@@ -2556,7 +2559,7 @@
                         r4
                         \tweak Accidental.stencil #ly:text-interface::print
                         \tweak Accidental.text \markup { \abjad-natural  }
-                        fs''16
+                        fs''!16
                         % AFTER:
                         % ARTICULATIONS:
                         - \espressivo
@@ -2565,7 +2568,7 @@
                         r16
                         \tweak Accidental.stencil #ly:text-interface::print
                         \tweak Accidental.text \markup { \abjad-natural  }
-                        a16
+                        a!16
                         % AFTER:
                         % ARTICULATIONS:
                         - \espressivo
@@ -2585,7 +2588,7 @@
                         \override Staff.Stem.stemlet-length = 0.75
                         \tweak Accidental.stencil #ly:text-interface::print
                         \tweak Accidental.text \markup { \abjad-natural  }
-                        g''16
+                        g''!16
                         % AFTER:
                         % ARTICULATIONS:
                         - \espressivo
@@ -2599,7 +2602,7 @@
                         \>
                         \tweak Accidental.stencil #ly:text-interface::print
                         \tweak Accidental.text \markup { \one-forty-three-limit-comma-up  }
-                        d''''16
+                        d''''!16
                         % AFTER:
                         % ARTICULATIONS:
                         - \espressivo
@@ -2607,7 +2610,7 @@
                         ^ \markup \center-align { \concat { +12 } }
                         \tweak Accidental.stencil #ly:text-interface::print
                         \tweak Accidental.text \markup \concat { \one-seventeen-limit-schisma-down \hspace #0.125 \abjad-sharp  }
-                        gs''16
+                        gs''!16
                         % AFTER:
                         % ARTICULATIONS:
                         - \espressivo
@@ -2615,7 +2618,7 @@
                         ^ \markup \center-align { \concat { +5 } }
                         \tweak Accidental.stencil #ly:text-interface::print
                         \tweak Accidental.text \markup \concat { \one-twenty-three-limit-comma-up \hspace #0.125 \one-septimal-comma-down  }
-                        b''16
+                        b''!16
                         % AFTER:
                         % ARTICULATIONS:
                         - \espressivo
@@ -2623,7 +2626,7 @@
                         ^ \markup \center-align { \concat { -3 } }
                         \tweak Accidental.stencil #ly:text-interface::print
                         \tweak Accidental.text \markup \concat { \one-twenty-nine-limit-comma-up \hspace #0.125 \natural-one-syntonic-comma-down  }
-                        a''16
+                        a''!16
                         % AFTER:
                         % ARTICULATIONS:
                         - \espressivo
@@ -2631,7 +2634,7 @@
                         ^ \markup \center-align { \concat { +16 } }
                         \tweak Accidental.stencil #ly:text-interface::print
                         \tweak Accidental.text \markup { \one-nineteen-limit-schisma-up  }
-                        g''''16
+                        g''''!16
                         % AFTER:
                         % ARTICULATIONS:
                         - \espressivo
@@ -2642,7 +2645,7 @@
                         \revert Staff.Stem.stemlet-length
                         \tweak Accidental.stencil #ly:text-interface::print
                         \tweak Accidental.text \markup \concat { \one-twenty-three-limit-comma-up \hspace #0.125 \one-septimal-comma-down  }
-                        b''16
+                        b''!16
                         % AFTER:
                         % ARTICULATIONS:
                         - \espressivo
@@ -2661,7 +2664,7 @@
                         \override Staff.Stem.stemlet-length = 0.75
                         \tweak Accidental.stencil #ly:text-interface::print
                         \tweak Accidental.text \markup \concat { \one-seventeen-limit-schisma-down \hspace #0.125 \abjad-sharp  }
-                        es''''16
+                        es''''!16
                         % AFTER:
                         % ARTICULATIONS:
                         - \espressivo
@@ -2671,7 +2674,7 @@
                         [
                         \tweak Accidental.stencil #ly:text-interface::print
                         \tweak Accidental.text \markup { \abjad-natural  }
-                        d'''16
+                        d'''!16
                         % AFTER:
                         % ARTICULATIONS:
                         - \espressivo
@@ -2679,7 +2682,7 @@
                         ^ \markup \center-align { \concat { +2 } }
                         \tweak Accidental.stencil #ly:text-interface::print
                         \tweak Accidental.text \markup { \abjad-natural  }
-                        a'''16
+                        a'''!16
                         % AFTER:
                         % ARTICULATIONS:
                         - \espressivo
@@ -2687,7 +2690,7 @@
                         ^ \markup \center-align { \concat { +0 } }
                         \tweak Accidental.stencil #ly:text-interface::print
                         \tweak Accidental.text \markup \concat { \one-seventeen-limit-schisma-down \hspace #0.125 \abjad-sharp  }
-                        ds'''16
+                        ds'''!16
                         % AFTER:
                         % ARTICULATIONS:
                         - \espressivo
@@ -2695,7 +2698,7 @@
                         ^ \markup \center-align { \concat { +7 } }
                         \tweak Accidental.stencil #ly:text-interface::print
                         \tweak Accidental.text \markup \concat { \one-seventeen-limit-schisma-down \hspace #0.125 \one-septimal-comma-down \hspace #0.125 \abjad-sharp  }
-                        gs''''16
+                        gs''''!16
                         % AFTER:
                         % ARTICULATIONS:
                         - \espressivo
@@ -2703,7 +2706,7 @@
                         ^ \markup \center-align { \concat { -26 } }
                         \tweak Accidental.stencil #ly:text-interface::print
                         \tweak Accidental.text \markup { \abjad-natural  }
-                        g''16
+                        g''!16
                         % AFTER:
                         % ARTICULATIONS:
                         - \espressivo
@@ -2711,7 +2714,7 @@
                         ^ \markup \center-align { \concat { +0 } }
                         \tweak Accidental.stencil #ly:text-interface::print
                         \tweak Accidental.text \markup { \one-forty-three-limit-comma-up  }
-                        c'''16
+                        c'''!16
                         % AFTER:
                         % ARTICULATIONS:
                         - \espressivo
@@ -2719,7 +2722,7 @@
                         ^ \markup \center-align { \concat { +12 } }
                         \tweak Accidental.stencil #ly:text-interface::print
                         \tweak Accidental.text \markup \concat { \one-seventeen-limit-schisma-down \hspace #0.125 \abjad-sharp  }
-                        gs''16
+                        gs''!16
                         % AFTER:
                         % ARTICULATIONS:
                         - \espressivo
@@ -2727,7 +2730,7 @@
                         ^ \markup \center-align { \concat { +5 } }
                         \tweak Accidental.stencil #ly:text-interface::print
                         \tweak Accidental.text \markup \concat { \one-twenty-three-limit-comma-up \hspace #0.125 \one-septimal-comma-down  }
-                        cs''''16
+                        cs''''!16
                         % AFTER:
                         % ARTICULATIONS:
                         - \espressivo
@@ -2735,7 +2738,7 @@
                         ^ \markup \center-align { \concat { -3 } }
                         \tweak Accidental.stencil #ly:text-interface::print
                         \tweak Accidental.text \markup \concat { \one-twenty-nine-limit-comma-up \hspace #0.125 \natural-one-syntonic-comma-down  }
-                        a''16
+                        a''!16
                         % AFTER:
                         % ARTICULATIONS:
                         - \espressivo
@@ -2743,7 +2746,7 @@
                         ^ \markup \center-align { \concat { +16 } }
                         \tweak Accidental.stencil #ly:text-interface::print
                         \tweak Accidental.text \markup { \one-nineteen-limit-schisma-up  }
-                        g''''16
+                        g''''!16
                         % AFTER:
                         % ARTICULATIONS:
                         - \espressivo
@@ -2754,7 +2757,7 @@
                         \revert Staff.Stem.stemlet-length
                         \tweak Accidental.stencil #ly:text-interface::print
                         \tweak Accidental.text \markup \concat { \one-twenty-three-limit-comma-up \hspace #0.125 \one-septimal-comma-down  }
-                        b''16
+                        b''!16
                         % AFTER:
                         % ARTICULATIONS:
                         - \espressivo
@@ -2769,7 +2772,7 @@
                     \override Staff.Stem.stemlet-length = 0.75
                     \tweak Accidental.stencil #ly:text-interface::print
                     \tweak Accidental.text \markup \concat { \one-seventeen-limit-schisma-down \hspace #0.125 \abjad-sharp  }
-                    es''''16
+                    es''''!16
                     % AFTER:
                     % ARTICULATIONS:
                     - \espressivo
@@ -2782,7 +2785,7 @@
                     \revert Staff.Stem.stemlet-length
                     \tweak Accidental.stencil #ly:text-interface::print
                     \tweak Accidental.text \markup { \abjad-natural  }
-                    d'''16
+                    d'''!16
                     % AFTER:
                     % ARTICULATIONS:
                     - \espressivo
@@ -2795,7 +2798,7 @@
                     \override Staff.Stem.stemlet-length = 0.75
                     \tweak Accidental.stencil #ly:text-interface::print
                     \tweak Accidental.text \markup { \abjad-natural  }
-                    a'''16
+                    a'''!16
                     % AFTER:
                     % ARTICULATIONS:
                     - \espressivo
@@ -2805,7 +2808,7 @@
                     [
                     \tweak Accidental.stencil #ly:text-interface::print
                     \tweak Accidental.text \markup \concat { \one-seventeen-limit-schisma-down \hspace #0.125 \abjad-sharp  }
-                    ds'''16
+                    ds'''!16
                     % AFTER:
                     % ARTICULATIONS:
                     - \espressivo
@@ -2813,7 +2816,7 @@
                     ^ \markup \center-align { \concat { +7 } }
                     \tweak Accidental.stencil #ly:text-interface::print
                     \tweak Accidental.text \markup \concat { \one-seventeen-limit-schisma-down \hspace #0.125 \one-septimal-comma-down \hspace #0.125 \abjad-sharp  }
-                    fs'''16
+                    fs'''!16
                     % AFTER:
                     % ARTICULATIONS:
                     - \espressivo
@@ -2824,7 +2827,7 @@
                     \revert Staff.Stem.stemlet-length
                     \tweak Accidental.stencil #ly:text-interface::print
                     \tweak Accidental.text \markup { \abjad-natural  }
-                    g''16
+                    g''!16
                     % AFTER:
                     % ARTICULATIONS:
                     - \espressivo
@@ -2837,7 +2840,7 @@
                     \override Staff.Stem.stemlet-length = 0.75
                     \tweak Accidental.stencil #ly:text-interface::print
                     \tweak Accidental.text \markup { \one-forty-three-limit-comma-up  }
-                    d''''16
+                    d''''!16
                     % AFTER:
                     % ARTICULATIONS:
                     - \espressivo
@@ -2847,7 +2850,7 @@
                     [
                     \tweak Accidental.stencil #ly:text-interface::print
                     \tweak Accidental.text \markup \concat { \one-seventeen-limit-schisma-down \hspace #0.125 \abjad-sharp  }
-                    gs''16
+                    gs''!16
                     % AFTER:
                     % ARTICULATIONS:
                     - \espressivo
@@ -2855,7 +2858,7 @@
                     ^ \markup \center-align { \concat { +5 } }
                     \tweak Accidental.stencil #ly:text-interface::print
                     \tweak Accidental.text \markup \concat { \one-twenty-three-limit-comma-up \hspace #0.125 \one-septimal-comma-down  }
-                    cs''''16
+                    cs''''!16
                     % AFTER:
                     % ARTICULATIONS:
                     - \espressivo
@@ -2866,7 +2869,7 @@
                     \revert Staff.Stem.stemlet-length
                     \tweak Accidental.stencil #ly:text-interface::print
                     \tweak Accidental.text \markup \concat { \one-twenty-nine-limit-comma-up \hspace #0.125 \natural-one-syntonic-comma-down  }
-                    a''16
+                    a''!16
                     % AFTER:
                     % ARTICULATIONS:
                     - \espressivo
@@ -2879,7 +2882,7 @@
                     \override Staff.Stem.stemlet-length = 0.75
                     \tweak Accidental.stencil #ly:text-interface::print
                     \tweak Accidental.text \markup { \one-nineteen-limit-schisma-up  }
-                    g''''16
+                    g''''!16
                     % AFTER:
                     % ARTICULATIONS:
                     - \espressivo
@@ -2892,7 +2895,7 @@
                     \revert Staff.Stem.stemlet-length
                     \tweak Accidental.stencil #ly:text-interface::print
                     \tweak Accidental.text \markup \concat { \one-twenty-three-limit-comma-up \hspace #0.125 \one-septimal-comma-down  }
-                    b''16
+                    b''!16
                     % AFTER:
                     % ARTICULATIONS:
                     - \espressivo
@@ -2908,7 +2911,7 @@
                         \override Staff.Stem.stemlet-length = 0.75
                         \tweak Accidental.stencil #ly:text-interface::print
                         \tweak Accidental.text \markup \concat { \one-seventeen-limit-schisma-down \hspace #0.125 \abjad-sharp  }
-                        es''''16
+                        es''''!16
                         % AFTER:
                         % ARTICULATIONS:
                         - \espressivo
@@ -2918,7 +2921,7 @@
                         [
                         \tweak Accidental.stencil #ly:text-interface::print
                         \tweak Accidental.text \markup { \abjad-natural  }
-                        d'''16
+                        d'''!16
                         % AFTER:
                         % ARTICULATIONS:
                         - \espressivo
@@ -2926,7 +2929,7 @@
                         ^ \markup \center-align { \concat { +2 } }
                         \tweak Accidental.stencil #ly:text-interface::print
                         \tweak Accidental.text \markup { \abjad-natural  }
-                        g''16
+                        g''!16
                         % AFTER:
                         % ARTICULATIONS:
                         - \espressivo
@@ -2934,7 +2937,7 @@
                         ^ \markup \center-align { \concat { +0 } }
                         \tweak Accidental.stencil #ly:text-interface::print
                         \tweak Accidental.text \markup \concat { \one-seventeen-limit-schisma-down \hspace #0.125 \abjad-sharp  }
-                        ds'''16
+                        ds'''!16
                         % AFTER:
                         % ARTICULATIONS:
                         - \espressivo
@@ -2942,7 +2945,7 @@
                         ^ \markup \center-align { \concat { +7 } }
                         \tweak Accidental.stencil #ly:text-interface::print
                         \tweak Accidental.text \markup \concat { \one-seventeen-limit-schisma-down \hspace #0.125 \one-septimal-comma-down \hspace #0.125 \abjad-sharp  }
-                        gs''''16
+                        gs''''!16
                         % AFTER:
                         % ARTICULATIONS:
                         - \espressivo
@@ -2950,7 +2953,7 @@
                         ^ \markup \center-align { \concat { -26 } }
                         \tweak Accidental.stencil #ly:text-interface::print
                         \tweak Accidental.text \markup { \abjad-natural  }
-                        g''16
+                        g''!16
                         % AFTER:
                         % ARTICULATIONS:
                         - \espressivo
@@ -2961,7 +2964,7 @@
                         \revert Staff.Stem.stemlet-length
                         \tweak Accidental.stencil #ly:text-interface::print
                         \tweak Accidental.text \markup { \one-forty-three-limit-comma-up  }
-                        d''''16
+                        d''''!16
                         % AFTER:
                         % ARTICULATIONS:
                         - \espressivo
@@ -2979,7 +2982,7 @@
                         \override Staff.Stem.stemlet-length = 0.75
                         \tweak Accidental.stencil #ly:text-interface::print
                         \tweak Accidental.text \markup \concat { \one-seventeen-limit-schisma-down \hspace #0.125 \abjad-sharp  }
-                        gs''16
+                        gs''!16
                         % AFTER:
                         % ARTICULATIONS:
                         - \espressivo
@@ -2989,7 +2992,7 @@
                         [
                         \tweak Accidental.stencil #ly:text-interface::print
                         \tweak Accidental.text \markup \concat { \one-twenty-three-limit-comma-up \hspace #0.125 \one-septimal-comma-down  }
-                        cs''''16
+                        cs''''!16
                         % AFTER:
                         % ARTICULATIONS:
                         - \espressivo
@@ -2997,7 +3000,7 @@
                         ^ \markup \center-align { \concat { -3 } }
                         \tweak Accidental.stencil #ly:text-interface::print
                         \tweak Accidental.text \markup \concat { \one-twenty-nine-limit-comma-up \hspace #0.125 \natural-one-syntonic-comma-down  }
-                        a''16
+                        a''!16
                         % AFTER:
                         % ARTICULATIONS:
                         - \espressivo
@@ -3005,7 +3008,7 @@
                         ^ \markup \center-align { \concat { +16 } }
                         \tweak Accidental.stencil #ly:text-interface::print
                         \tweak Accidental.text \markup { \one-nineteen-limit-schisma-up  }
-                        g''''16
+                        g''''!16
                         % AFTER:
                         % ARTICULATIONS:
                         - \espressivo
@@ -3013,7 +3016,7 @@
                         ^ \markup \center-align { \concat { -1 } }
                         \tweak Accidental.stencil #ly:text-interface::print
                         \tweak Accidental.text \markup \concat { \one-twenty-three-limit-comma-up \hspace #0.125 \one-septimal-comma-down  }
-                        b''16
+                        b''!16
                         % AFTER:
                         % ARTICULATIONS:
                         - \espressivo
@@ -3021,7 +3024,7 @@
                         ^ \markup \center-align { \concat { -3 } }
                         \tweak Accidental.stencil #ly:text-interface::print
                         \tweak Accidental.text \markup \concat { \one-seventeen-limit-schisma-down \hspace #0.125 \abjad-sharp  }
-                        ds'''16
+                        ds'''!16
                         % AFTER:
                         % ARTICULATIONS:
                         - \espressivo
@@ -3029,7 +3032,7 @@
                         ^ \markup \center-align { \concat { +7 } }
                         \tweak Accidental.stencil #ly:text-interface::print
                         \tweak Accidental.text \markup { \abjad-natural  }
-                        d'''16
+                        d'''!16
                         % AFTER:
                         % ARTICULATIONS:
                         - \espressivo
@@ -3037,7 +3040,7 @@
                         ^ \markup \center-align { \concat { +2 } }
                         \tweak Accidental.stencil #ly:text-interface::print
                         \tweak Accidental.text \markup { \abjad-natural  }
-                        a'''16
+                        a'''!16
                         % AFTER:
                         % ARTICULATIONS:
                         - \espressivo
@@ -3045,7 +3048,7 @@
                         ^ \markup \center-align { \concat { +0 } }
                         \tweak Accidental.stencil #ly:text-interface::print
                         \tweak Accidental.text \markup \concat { \one-seventeen-limit-schisma-down \hspace #0.125 \abjad-sharp  }
-                        ds'''16
+                        ds'''!16
                         % AFTER:
                         % ARTICULATIONS:
                         - \espressivo
@@ -3053,7 +3056,7 @@
                         ^ \markup \center-align { \concat { +7 } }
                         \tweak Accidental.stencil #ly:text-interface::print
                         \tweak Accidental.text \markup \concat { \one-seventeen-limit-schisma-down \hspace #0.125 \one-septimal-comma-down \hspace #0.125 \abjad-sharp  }
-                        gs''''16
+                        gs''''!16
                         % AFTER:
                         % ARTICULATIONS:
                         - \espressivo
@@ -3061,7 +3064,7 @@
                         ^ \markup \center-align { \concat { -26 } }
                         \tweak Accidental.stencil #ly:text-interface::print
                         \tweak Accidental.text \markup { \abjad-natural  }
-                        g''16
+                        g''!16
                         % AFTER:
                         % ARTICULATIONS:
                         - \espressivo
@@ -3069,7 +3072,7 @@
                         ^ \markup \center-align { \concat { +0 } }
                         \tweak Accidental.stencil #ly:text-interface::print
                         \tweak Accidental.text \markup { \one-forty-three-limit-comma-up  }
-                        d''''16
+                        d''''!16
                         % AFTER:
                         % ARTICULATIONS:
                         - \espressivo
@@ -3077,7 +3080,7 @@
                         ^ \markup \center-align { \concat { +12 } }
                         \tweak Accidental.stencil #ly:text-interface::print
                         \tweak Accidental.text \markup \concat { \one-seventeen-limit-schisma-down \hspace #0.125 \abjad-sharp  }
-                        gs''16
+                        gs''!16
                         % AFTER:
                         % ARTICULATIONS:
                         - \espressivo
@@ -3085,7 +3088,7 @@
                         ^ \markup \center-align { \concat { +5 } }
                         \tweak Accidental.stencil #ly:text-interface::print
                         \tweak Accidental.text \markup \concat { \one-twenty-three-limit-comma-up \hspace #0.125 \one-septimal-comma-down  }
-                        cs''''16
+                        cs''''!16
                         % AFTER:
                         % ARTICULATIONS:
                         - \espressivo
@@ -3096,7 +3099,7 @@
                         \revert Staff.Stem.stemlet-length
                         \tweak Accidental.stencil #ly:text-interface::print
                         \tweak Accidental.text \markup \concat { \one-twenty-nine-limit-comma-up \hspace #0.125 \natural-one-syntonic-comma-down  }
-                        a''16
+                        a''!16
                         % AFTER:
                         % ARTICULATIONS:
                         - \espressivo
@@ -3115,7 +3118,7 @@
                         \override Staff.Stem.stemlet-length = 0.75
                         \tweak Accidental.stencil #ly:text-interface::print
                         \tweak Accidental.text \markup { \one-nineteen-limit-schisma-up  }
-                        f'''16
+                        f'''!16
                         % AFTER:
                         % ARTICULATIONS:
                         - \espressivo
@@ -3125,7 +3128,7 @@
                         [
                         \tweak Accidental.stencil #ly:text-interface::print
                         \tweak Accidental.text \markup \concat { \one-twenty-three-limit-comma-up \hspace #0.125 \one-septimal-comma-down  }
-                        b''16
+                        b''!16
                         % AFTER:
                         % ARTICULATIONS:
                         - \espressivo
@@ -3133,7 +3136,7 @@
                         ^ \markup \center-align { \concat { -3 } }
                         \tweak Accidental.stencil #ly:text-interface::print
                         \tweak Accidental.text \markup \concat { \one-seventeen-limit-schisma-down \hspace #0.125 \abjad-sharp  }
-                        es''''16
+                        es''''!16
                         % AFTER:
                         % ARTICULATIONS:
                         - \espressivo
@@ -3141,7 +3144,7 @@
                         ^ \markup \center-align { \concat { +7 } }
                         \tweak Accidental.stencil #ly:text-interface::print
                         \tweak Accidental.text \markup { \abjad-natural  }
-                        d'''16
+                        d'''!16
                         % AFTER:
                         % ARTICULATIONS:
                         - \espressivo
@@ -3152,7 +3155,7 @@
                         \revert Staff.Stem.stemlet-length
                         \tweak Accidental.stencil #ly:text-interface::print
                         \tweak Accidental.text \markup { \abjad-natural  }
-                        a'''32
+                        a'''!32
                         % AFTER:
                         % ARTICULATIONS:
                         - \espressivo
